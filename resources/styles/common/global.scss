@@ -1,0 +1,299 @@
+@import '~hamburgers/_sass/hamburgers/hamburgers';
+@import '/node_modules/@splidejs/splide/dist/css/splide.min.css'; 
+
+@font-face {
+  font-family: 'takhie';
+  src: url('../fonts/takhie.woff2') format('woff2'),
+    url('../fonts/takhie.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'advent-pro-regular';
+  src: url('../fonts/advent-pro-regular.woff2') format('woff2'),
+    url('../fonts/advent-pro-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'advent-pro-light';
+  src: url('../fonts/advent-pro-light.woff2') format('woff2'),
+    url('../fonts/advent-pro-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'advent-pro-semi-bold';
+  src: url('../fonts/advent-pro-semi-bold.woff2') format('woff2'),
+    url('../fonts/advent-pro-semi-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+button:focus {
+  outline: none;
+}
+
+body.customize-support #sticky-header {
+  top: 32px;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: none;
+}
+:-moz-focus-inner {
+  border: none;
+}
+
+body {
+  @apply font-advent-pro-regular text-black text-xl leading-normal tracking-normal subpixel-antialiased;
+}
+
+.brand {
+  @apply text-3xl;
+}
+
+ul#socials li i {
+  @apply text-light-green;
+}
+
+ul#socials li {
+  @apply pl-5;
+}
+
+h1,
+h3 {
+  @apply text-5xl text-grey font-advent-pro-light;
+}
+
+.btn {
+  @apply transition duration-500 ease-in-out leading-none border-2 border-light-green py-4 px-10 text-2xl uppercase text-light-green;
+}
+
+.btn:hover {
+  @apply bg-light-green text-light-grey;
+}
+
+#menu-modal {
+  @apply transition duration-500 ease-in-out;
+}
+
+.active {
+  @apply block;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: white;
+}
+
+.sidebar ul li a {
+  @apply text-light-grey text-base;
+}
+
+#footer-menu li {
+  @apply uppercase text-dark-green;
+}
+
+.filter-active {
+  @apply text-dark-green;
+}
+
+.fade-in {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.fade-in-fast {
+  animation: fadeInFast 1s;
+  -webkit-animation: fadeInFast 1s;
+  -moz-animation: fadeInFast 1s;
+  -o-animation: fadeInFast 1s;
+  -ms-animation: fadeInFast 1s;
+}
+@keyframes fadeInFast {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInFast {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInFast {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeInFast {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeInFast {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.splide__arrow {
+	background: transparent;
+}
+
+.splide__pagination__page.is-active {
+	transform: scale(1.4);
+	background: rgb(181, 217, 99)
+}
+
+#recipies-title {
+  opacity: 0;
+  transition: .5s;
+}
+
+#recipies-title:hover {
+  opacity: 1;
+}
+
+#splide-product-thumbs .splide__slide.is-active {
+	padding: 1rem;
+  border: 1px solid #e5e5e5;
+}
+
+#splide-product-thumbs .splide__slide {
+	padding: 1rem;
+  display: flex;
+
+}
+
+
+// #menu-modal { @apply h-screen fixed bg-light-green top-0 left-0 overflow-x-hidden transition duration-500 z-50 w-0}
+
+#menu-modal {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  background: rgb(181, 217, 99);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.menu-active {width:60%!important}
+
+ul#menu-main-menu li {margin-bottom: 1rem}
+
+ul#menu-main-menu li a {transition: .3s;}
+
+ul#menu-main-menu li a:hover {@apply text-dark-green}
+
+.filter-active {color: rgb(126, 154, 61) !important}
+
+
+ button.splide__arrow svg {fill:#B5D963}
+
+ ul.faq li::marker {
+  color: red;
+  font-size: 1.5em;
+}
+
+summary::marker {
+  color: #797979;
+  font-size: 0.6em;
+}
+
+.wpcf7 input {
+	background-color: #ECECEC;
+	padding: 1rem;
+	color: rgb(135, 153, 163);
+	margin-right: 2rem;
+	max-width: 242px;
+}
+
+.contact-submit {
+  @apply transition duration-500 ease-in-out leading-none border-2 border-light-green py-4 px-10 text-2xl uppercase text-light-green;
+}
+
+.contact-submit:hover {
+  @apply bg-light-green text-light-grey;
+}
+
+
