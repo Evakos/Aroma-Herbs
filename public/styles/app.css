@@ -1384,6 +1384,7 @@ h1, h3{
 }
 
 .btn{
+	cursor: pointer;
 	border-width: 2px;
 	--tw-border-opacity: 1;
 	border-color: rgba(181, 217, 99, var(--tw-border-opacity));
@@ -1558,24 +1559,41 @@ summary::marker {
   font-size: 0.6em;
 }
 
-.wpcf7 input {
-  background-color: #ECECEC;
-  padding: 1rem;
-  color: #8799a3;
-  margin-right: 2rem;
-  max-width: 242px;
+.wpcf7 input{
+	margin-right: 2.5rem;
+	width: 242px;
+	--tw-bg-opacity: 1;
+	background-color: rgba(252, 252, 252, var(--tw-bg-opacity));
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	--tw-text-opacity: 1;
+	color: rgba(162, 164, 170, var(--tw-text-opacity));
 }
 
-.contact-submit{
+.wpcf7-textarea{
+	width: 100%;
+	--tw-bg-opacity: 1;
+	background-color: rgba(252, 252, 252, var(--tw-bg-opacity));
+	padding: 2.5rem;
+	--tw-text-opacity: 1;
+	color: rgba(162, 164, 170, var(--tw-text-opacity));
+}
+
+input.contact-submit{
+	margin-top: 2.5rem;
+	cursor: pointer;
 	border-width: 2px;
 	--tw-border-opacity: 1;
 	border-color: rgba(181, 217, 99, var(--tw-border-opacity));
+	background-color: transparent;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	padding-left: 2.5rem;
 	padding-right: 2.5rem;
-	font-size: 1.5rem;
-	line-height: 2rem;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
 	text-transform: uppercase;
 	line-height: 1;
 	--tw-text-opacity: 1;
@@ -1594,6 +1612,15 @@ summary::marker {
 	background-color: rgba(181, 217, 99, var(--tw-bg-opacity));
 	--tw-text-opacity: 1;
 	color: rgba(252, 252, 252, var(--tw-text-opacity));
+}
+
+input::placeholder, textarea::placeholder{
+	--tw-text-opacity: 1;
+	color: rgba(162, 164, 170, var(--tw-text-opacity));
+}
+
+.contact-submit::focus{
+	background-color: transparent;
 }
 
 .container{
@@ -1726,6 +1753,14 @@ summary::marker {
 	margin-top: 5rem;
 	margin-bottom: 5rem;
 }
+.my-5{
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+}
+.my-8{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
 .ml-12{
 	margin-left: 3rem;
 }
@@ -1761,6 +1796,27 @@ summary::marker {
 }
 .mt-10{
 	margin-top: 2.5rem;
+}
+.ml-20{
+	margin-left: 5rem;
+}
+.ml-44{
+	margin-left: 11rem;
+}
+.ml-52{
+	margin-left: 13rem;
+}
+.ml-56{
+	margin-left: 14rem;
+}
+.ml-32{
+	margin-left: 8rem;
+}
+.ml-28{
+	margin-left: 7rem;
+}
+.ml-24{
+	margin-left: 6rem;
 }
 .contents{
 	display: contents;
@@ -1806,6 +1862,9 @@ summary::marker {
 }
 .h-screen{
 	height: 100vh;
+}
+.h-\[500px\]{
+	height: 500px;
 }
 .w-\[681px\]{
 	width: 681px;
@@ -1875,6 +1934,30 @@ summary::marker {
 }
 .w-\[709px\]{
 	width: 709px;
+}
+.w-\[298px\]{
+	width: 298px;
+}
+.w-\[198px\]{
+	width: 198px;
+}
+.w-\[900px\]{
+	width: 900px;
+}
+.w-\[1100px\]{
+	width: 1100px;
+}
+.w-\[271px\]{
+	width: 271px;
+}
+.w-\[228px\]{
+	width: 228px;
+}
+.w-\[1200px\]{
+	width: 1200px;
+}
+.w-\[1250px\]{
+	width: 1250px;
 }
 .min-w-max{
 	min-width: max-content;
@@ -1975,6 +2058,10 @@ summary::marker {
 	--tw-border-opacity: 1;
 	border-color: rgba(181, 217, 99, var(--tw-border-opacity));
 }
+.border-white{
+	--tw-border-opacity: 1;
+	border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+}
 .bg-light-green{
 	--tw-bg-opacity: 1;
 	background-color: rgba(181, 217, 99, var(--tw-bg-opacity));
@@ -2027,8 +2114,14 @@ summary::marker {
 .bg-blog-hero{
 	background-image: url('../images/blog-hero.jpg');
 }
+.bg-modal-product-bg{
+	background-image: url('../images/modal-prod-bg.png');
+}
 .bg-auto{
 	background-size: auto;
+}
+.bg-cover{
+	background-size: cover;
 }
 .bg-center{
 	background-position: center;
@@ -2047,6 +2140,9 @@ summary::marker {
 }
 .p-2{
 	padding: 0.5rem;
+}
+.p-20{
+	padding: 5rem;
 }
 .py-24{
 	padding-top: 6rem;
@@ -2095,11 +2191,14 @@ summary::marker {
 .pt-10{
 	padding-top: 2.5rem;
 }
-.pl-20{
-	padding-left: 5rem;
+.pr-44{
+	padding-right: 11rem;
 }
 .pr-10{
 	padding-right: 2.5rem;
+}
+.pl-20{
+	padding-left: 5rem;
 }
 .pl-10{
 	padding-left: 2.5rem;
@@ -2208,6 +2307,10 @@ summary::marker {
 .text-dark-green{
 	--tw-text-opacity: 1;
 	color: rgba(126, 154, 62, var(--tw-text-opacity));
+}
+.text-aroma-grey{
+	--tw-text-opacity: 1;
+	color: rgba(162, 164, 170, var(--tw-text-opacity));
 }
 .text-light-green{
 	--tw-text-opacity: 1;

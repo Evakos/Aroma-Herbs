@@ -1,19 +1,45 @@
 
 <div class="" id="menu-modal">
 
-<div class="container justify-center items-center h-screen flex">
+<div class="items-center h-screen flex w-[1250px]">
 
-<div class="flex min-w-max">
+<div class="flex flex-1 flex-col items-center justify-center ml-24">
 
-<img src="@asset('./images/french-spices-menu-title.svg')" class="w-[171px]"/>
+
+
+
+
+@php
+  $query = new WP_Query([
+    'post_type' => 'products',
+    'orderby' => 'rand', 
+    'showposts' => 1,
+  ]);
+@endphp
+
+@posts($query)
+<div class="flex flex-col justify-center items-center">
+<img src="@asset('images/fresh-spices-menu-title.svg')" class="w-[228px]"/>
+  <h2 class="font-takhie text-dark-green my-8 text-5xl">@title</h2>
+  <div class="bg-modal-product-bg bg-no-repeat bg-cover w-[298px] h-[500px] flex items-center justify-center p-10">
+  <img src="@thumbnail('large', false)" class="w-[198px]" alt="Full Image" />
+  
+</div>
+</div>
+
+
+
+<a class="btn border-white text-white mt-10" href="@permalink"> ΠΕΡΙΣΣΟΤΕΡΑ </a>
+
+@endposts
 
 </div>
 
-<div class="flex min-w-max pr-96">
+<div class="flex flex-1">
   
   <nav class="nav-primary text-right">
       @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav advent-pro-bold text-5xl text-white', 'echo' => false]) !!}
+        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav advent-pro-bold text-4xl text-white', 'echo' => false]) !!}
       @endif
     </nav>
 

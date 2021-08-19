@@ -19,3 +19,7 @@ add_filter('excerpt_more', function () {
 add_filter('acf/format_value/name=contact_form', 'eks_acf_format_value', 10, 3);
 
 
+//Remove P tags in Contact Form Field
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+

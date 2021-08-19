@@ -16,6 +16,7 @@ module.exports = {
       'products-hero': "url('../images/products-hero.jpg')",
       'recipies-hero': "url('../images/recipies-hero.jpg')",
       'product-detail-hero': "url('../images/product-detail-hero.jpg')",
+      'modal-product-bg': "url('../images/modal-prod-bg.png')",
       'blog-hero': "url('../images/blog-hero.jpg')",
       'home-main': "url('../images/vine.jpg')",
       'sec-c': "url('../images/sec-c.jpg')",
@@ -30,7 +31,7 @@ module.exports = {
     },
     colors: {
       primary: '#525ddc',
-      white: '#fff',
+      white: '#ffffff',
       gray: {
         100: '#f7fafc',
         200: '#edf2f7',
@@ -45,11 +46,13 @@ module.exports = {
       transparent: 'transparent',
       'dark-green': '#7E9A3E',
       'light-green': '#B5D963',
-      'light-grey': '#FCFCFC', 
+      'light-grey': '#FCFCFC',  
       'pink': '#EB3766',
       'grey': '#797979',
       'aroma-grey': '#A2A4AA',
       'black': '#252525',
+      
+      
       
     },
     shadows: {

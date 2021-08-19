@@ -75,7 +75,7 @@ h3 {
 }
 
 .btn {
-  @apply transition duration-500 ease-in-out leading-none border-2 border-light-green py-4 px-10 text-2xl uppercase text-light-green;
+  @apply transition duration-500 ease-in-out cursor-pointer leading-none border-2 border-light-green py-4 px-10 text-2xl uppercase text-light-green;
 }
 
 .btn:hover {
@@ -281,19 +281,28 @@ summary::marker {
 }
 
 .wpcf7 input {
-	background-color: #ECECEC;
-	padding: 1rem;
-	color: rgb(135, 153, 163);
-	margin-right: 2rem;
-	max-width: 242px;
+
+	@apply bg-light-grey w-[242px] mr-10 px-10 py-5 text-aroma-grey;
 }
 
-.contact-submit {
-  @apply transition duration-500 ease-in-out leading-none border-2 border-light-green py-4 px-10 text-2xl uppercase text-light-green;
+.wpcf7-textarea {
+
+  @apply bg-light-grey w-full p-10 text-aroma-grey;
+
+}
+
+input.contact-submit {
+  @apply transition duration-500 ease-in-out leading-none border-2 bg-transparent border-light-green py-4 px-10 text-lg uppercase cursor-pointer text-light-green mt-10;
 }
 
 .contact-submit:hover {
   @apply bg-light-green text-light-grey;
 }
+
+input::placeholder, textarea::placeholder {
+	@apply text-aroma-grey;
+}
+
+.contact-submit::focus {@apply bg-transparent}
 
 
