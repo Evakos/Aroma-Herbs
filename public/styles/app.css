@@ -1753,10 +1753,6 @@ input::placeholder, textarea::placeholder{
 	margin-top: 5rem;
 	margin-bottom: 5rem;
 }
-.my-5{
-	margin-top: 1.25rem;
-	margin-bottom: 1.25rem;
-}
 .my-8{
 	margin-top: 2rem;
 	margin-bottom: 2rem;
@@ -1796,24 +1792,6 @@ input::placeholder, textarea::placeholder{
 }
 .mt-10{
 	margin-top: 2.5rem;
-}
-.ml-20{
-	margin-left: 5rem;
-}
-.ml-44{
-	margin-left: 11rem;
-}
-.ml-52{
-	margin-left: 13rem;
-}
-.ml-56{
-	margin-left: 14rem;
-}
-.ml-32{
-	margin-left: 8rem;
-}
-.ml-28{
-	margin-left: 7rem;
 }
 .ml-24{
 	margin-left: 6rem;
@@ -1929,11 +1907,11 @@ input::placeholder, textarea::placeholder{
 .w-\[171px\]{
 	width: 171px;
 }
-.w-\[140px\]{
-	width: 140px;
+.w-\[1250px\]{
+	width: 1250px;
 }
-.w-\[709px\]{
-	width: 709px;
+.w-\[228px\]{
+	width: 228px;
 }
 .w-\[298px\]{
 	width: 298px;
@@ -1941,26 +1919,11 @@ input::placeholder, textarea::placeholder{
 .w-\[198px\]{
 	width: 198px;
 }
-.w-\[900px\]{
-	width: 900px;
+.w-\[140px\]{
+	width: 140px;
 }
-.w-\[1100px\]{
-	width: 1100px;
-}
-.w-\[271px\]{
-	width: 271px;
-}
-.w-\[228px\]{
-	width: 228px;
-}
-.w-\[1200px\]{
-	width: 1200px;
-}
-.w-\[1250px\]{
-	width: 1250px;
-}
-.min-w-max{
-	min-width: max-content;
+.w-\[709px\]{
+	width: 709px;
 }
 .max-w-6xl{
 	max-width: 72rem;
@@ -2141,9 +2104,6 @@ input::placeholder, textarea::placeholder{
 .p-2{
 	padding: 0.5rem;
 }
-.p-20{
-	padding: 5rem;
-}
 .py-24{
 	padding-top: 6rem;
 	padding-bottom: 6rem;
@@ -2214,9 +2174,6 @@ input::placeholder, textarea::placeholder{
 }
 .pt-24{
 	padding-top: 6rem;
-}
-.pr-96{
-	padding-right: 24rem;
 }
 .text-center{
 	text-align: center;
