@@ -1,1 +1,1 @@
-Custom WordPress Theme
+Custom WordPress Theme 1.0
