@@ -18,7 +18,7 @@
     <li>
 
     <details class="mb-4">
-                <summary class="text-dark-green text-6xl py-2 px-4">
+                <summary class="text-dark-green text-3xl sm:text-6xl py-2 px-4">
                 @sub('question') 
                 </summary>
 

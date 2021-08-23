@@ -6,42 +6,39 @@
 
 @include('partials.modal')
 
-  <header class="mx-auto bg-home-hero bg-auto bg-center bg-no-repeat h-[900px] bg-white mt-24 md:mt-18">
 
   @include('partials.header')
 
-  </header>
+
 
   <div class="container relative mx-auto">
 
-<div class="flex items-center justify-center">
+<div class="flex items-center my-20 justify-center">
 
-
-<img src="@asset('images/home-title-nine.svg')" class="w-[681px]"/> 
+<img src="@asset('images/harvest-title-alt.svg')" class="w-[289px] sm:w-[681px]"/> 
  
  </div>
 
  </div>
 
+
+ @fields('section_1')
  <div class="flex mt-5 justify-center">
-          <img src="@asset('images/sec-f.jpg')" class=""/> 
+          <img src="@sub('image')" class=""/> 
         </div>
-
-
-
 <div class="container flex justify-center relative mx-auto">
-        <div class="flex flex-col py-24 w-1/2 justify-center">
-          <h3 class="mb-10 px-24 text-center">Μεγαλώνουν στην ύπαιθρο
-κάτω από τον ελληνικό ήλιο</h3>
-            <p class="mb-10">Παράγουμε, με παραδοσιακές μεθόδους παραγωγής, αξιοποιώντας τις γηγενείς ποικιλίες της ελληνικής γης.  Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        <div class="flex flex-col py-24 sm:w-1/2 justify-center">
+        
+          <h3 class="mb-10 sm:px-24 text-center">@sub('title')</h3>
+            <p class="mb-10">@sub('text')</p>
+            @endfields
     
           </div>  
 
     </div>
 
 
+    
     <div class="container relative mx-auto">
 
 <div class="flex items-center justify-center">
@@ -60,9 +57,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 
 
         <div class="container flex justify-center relative mx-auto">
-        <div class="flex flex-col py-24 w-1/2 justify-center">
-          <!-- <h3 class="mb-10 px-24 text-center">Μεγαλώνουν στην ύπαιθρο
-κάτω από τον ελληνικό ήλιο</h3> -->
+        <div class="flex flex-col py-24 sm:w-1/2 justify-center">
+
             <p class="mb-10">Η εταιρεία μας αποτελείται από ανθρώπους με εμπειρία στον αγροτικό τομέα από το 1974. Καλλιεργούμε, συσκευάζουμε και διακινούμε, στην εγχώρια αλλά και στη διεθνή αγορά, υψηλής ποιότητας και διατροφικής αξίας προϊόντα, ακολουθώντας παραδοσιακές μεθόδους παραγωγής και αξιοποιώντας τις γηγενείς ποικιλίες της ελληνικής γης. Προσπαθούμε να αξιοποιούμε τα ιδιαίτερα χαρακτηριστικά του μικροκλίματος της περιοχής, όπου ευδοκιμεί το κάθε προϊόν, ώστε να μη χρειάζεται να επέμβουμε με τεχνικά μέσα στην καλλιέργειά του. </p>
 
             <p class="mb-10">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.
@@ -109,7 +105,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 
 
         <div class="container flex justify-center relative mx-auto">
-        <div class="flex flex-col py-24 w-1/2 justify-center">
+        <div class="flex flex-col py-24 sm:w-1/2 justify-center">
 
             <p class="mb-10">Αποστολή μας είναι η παραγωγή ασφαλών και ποιοτικών προϊόντων, με βασικούς άξονες την αειφορία και την ισορροπία της φύσης.</p>
 
@@ -131,7 +127,7 @@ I
 
 <div class="flex items-center justify-center">
 
-<div class="grid grid-rows-2 grid-flow-col">
+<div class="grid sm:grid-rows-2 sm:grid-flow-col">
   <div class="col-span-1"><img src="@asset('images/our-mission-img-1.jpg')"/></div>
 
   <div class="col-span-2"><img src="@asset('images/our-mission-img-2.jpg')"/></div>
@@ -159,7 +155,7 @@ I
         </div>
 
  <div class="container flex justify-center relative mx-auto">
-        <div class="flex flex-col py-24 w-1/2 justify-center">
+        <div class="flex flex-col py-24 sm:w-1/2 justify-center">
           <!-- <h3 class="mb-10 px-24 text-center">Μεγαλώνουν στην ύπαιθρο
 κάτω από τον ελληνικό ήλιο</h3> -->
             <p class="mb-10">Πρωτοποριακά σκεπτόμενοι, το 2005 παρουσιάσαμε πρώτοι στην ελληνική αγορά τα συσκευασμένα φρέσκα μυρωδικά για την κουζίνα –  σε γλαστράκι και κομμένο –, χρησιμοποιώντας εξειδικευμένες και καλαίσθητες συσκευασίες, και «εκπαιδεύσαμε» τον Έλληνα καταναλωτή να τα χρησιμοποιεί καθημερινά στη μαγειρική του, προσφέροντάς του επώνυμα προϊόντα, ασφαλή και με υψηλές προδιαγραφές.  </p>
@@ -176,7 +172,7 @@ I
 
 
 
- <div class="quote flex flex-col py-24 px-24 justify-center">
+ <div class="quote flex flex-col py-24 sm:px-24 justify-center">
 
  <h4 class="text-2xl">Qodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum quam nunc putamus claram est usus autem vel.
   

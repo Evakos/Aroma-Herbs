@@ -3,7 +3,7 @@
     <div class="flex items-center justify-center my-20">
 
 
-        <img src="@asset('images/home-title-seven.svg')" class="w-[709px]" />
+        <img src="@asset('images/home-title-seven.svg')" class="w-[328px] sm:w-[709px]" />
 
 
     </div>
@@ -24,7 +24,7 @@
         </div>
 
 
-        <div class="container mx-auto -mt-96">
+        <div class="container mx-auto -mt-10 sm:-mt-96">
 
     <div id="splide-recipie-slider" class="splide">
         <div class="splide__track">

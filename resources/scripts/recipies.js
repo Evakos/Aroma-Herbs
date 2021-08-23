@@ -26,33 +26,3 @@
  },
   
 } ).mount();
- 
- var secondarySlider = new Splide( '#splide-product-thumbs', {
-  direction: 'ttb',
-  height   : '35rem',
-  isNavigation: true,
-  pagination : false,
-	arrows     : false,
-	cover      : false,
-  type     : 'loop',
-  perPage: 2,
-  gap: '2rem',
-  breakpoints: {
-		640: {
-			direction: 'ltr',
-		},
-	},
- 
-} ).mount();
-
-
-// Create the main slider.
-var primarySlider = new Splide( '#splide-product-main', {
-	type       : 'fade',
-	pagination : false,
-	arrows     : false,
-	cover      : true,
-} );
-
-
-primarySlider.sync( secondarySlider ).mount();

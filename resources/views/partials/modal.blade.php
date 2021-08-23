@@ -1,13 +1,9 @@
 
 <div class="" id="menu-modal">
 
-<div class="items-center h-screen flex w-[1250px]">
+<div class="items-center h-screen flex sm:w-[1250px]">
 
-<div class="flex flex-1 flex-col items-center justify-center ml-24">
-
-
-
-
+<div class="hidden sm:flex px-32 flex-col items-center justify-center">
 
 @php
   $query = new WP_Query([
@@ -35,11 +31,11 @@
 
 </div>
 
-<div class="flex flex-1">
+<div class="flex sm:flex-1 w-screen sm:w-auto justify-end sm:justify-start px-10 sm:px-0">
   
   <nav class="nav-primary text-right">
       @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav advent-pro-bold text-4xl text-white', 'echo' => false]) !!}
+        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav advent-pro-bold sm:text-4xl text-white', 'echo' => false]) !!}
       @endif
     </nav>
 

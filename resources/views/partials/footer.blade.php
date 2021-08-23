@@ -1,16 +1,14 @@
-<footer class="bg-light-grey relative h-[621px]">
+<footer class="bg-aroma-x-light-grey relative sm:h-[621px]">
 
-    <!-- @php(dynamic_sidebar('sidebar-footer')) -->
+    <div class="container mx-auto pt-20 sm:pt-52">
 
-    <div class="container mx-auto pt-52">
-
-        <div class="flex justify-center">
-            <div class="flex flex-col flex-1 justify-center pr-32">
+        <div class="flex flex-col sm:flex-row justify-center">
+            <div class="flex flex-col flex-1 justify-center mb-10 sm:mb-0 sm:pr-32">
                 <img src="@asset('images/logo-footer.svg')" class="w-[93px] mb-5" />
                 <p>Κάνετε εγγραφή στο newsletter μας για να ενημερώνεστε για όλα τα νέα προϊόντα, 
                     προσφορές αλλά και τις γευστικές συνταγές μας.</p>
             </div>
-            <div class="flex flex-col flex-1 justify-center">
+            <div class="flex flex-col flex-1 justify-center mb-10 sm:mb-0">
                 <ul id="footer-menu" class=''>
 
                     <li>ΦρΕσκα ΜυρωδικΑ & ΛαχανικΑ</li>
@@ -21,10 +19,8 @@
                     <li>Συχνες Ερωτησεις</li>
 
                 </ul>
-
-
-                </ul>
             </div>
+
             <div class="flex flex-col flex-1">
                 <h4 class="text-dark-green mb-5">Επικοινωνία</h4>
                 <ul>
@@ -34,13 +30,9 @@
                 </ul>
             </div>
 
-
-
-
-
         </div>
 
-        <div class="flex justify-end border-b-2 border-light-green items-center h-28">
+        <div class="flex sm:justify-end border-b-2 border-light-green items-center h-28">
 
             <ul class='flex' id="socials">
                 <li class="text-light-green"><i class="fab fa-facebook fa-2x"></i></li>
@@ -49,13 +41,13 @@
 
         </div>
 
-        <div class="flex justify-between items-center h-28">
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center sm:h-28">
 
-            <div class="">© 2021 Aroma Herbs. </div>
+            <div class="mb-10 mt-10 sm:mt-0 sm:mb-0">© 2021 Aroma Herbs. </div>
 
-            <div classs=""><img src="@asset('images/ifs.svg')" class="w-[82px]" /></div>
+            <div classs="mb-10 sm:mb-0"><img src="@asset('images/ifs.svg')" class="w-[82px]" /></div>
 
-            <div class="">Site by fluid</div>
+            <div class="mt-10 sm:mt-0">Site by Fluid</div>
 
         </div>
 

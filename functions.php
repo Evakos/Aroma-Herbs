@@ -179,12 +179,6 @@ function filter_products(){
     
 		<a href="<?php echo $product_link ?>" class="">
 	  
-	  
-	  <!-- <div class="bg-light-green p-2 text-white absolute bottom-0 z-50 flex justify-right w-full opacity-80">
-	  
-	  
-	  
-	  </div> -->
 	  <img src="<?php echo $featured_img_url?>" alt="" class="" />
 	  
 	  <p class="font-takhie text-dark-green text-center p-10 text-3xl">

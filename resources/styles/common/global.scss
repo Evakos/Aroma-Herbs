@@ -75,11 +75,11 @@ h3 {
 }
 
 .btn {
-  @apply transition duration-500 ease-in-out cursor-pointer leading-none border-2 border-light-green py-4 px-10 text-2xl uppercase text-light-green;
+  @apply transition duration-500 ease-in-out cursor-pointer leading-none border-2 border-light-green py-4 px-10 text-2xl uppercase text-light-green self-center;
 }
 
 .btn:hover {
-  @apply bg-light-green text-light-grey;
+  @apply bg-light-green text-aroma-grey;
 }
 
 #menu-modal {
@@ -97,7 +97,7 @@ h3 {
 }
 
 .sidebar ul li a {
-  @apply text-light-grey text-base;
+  @apply text-aroma-grey text-base;
 }
 
 #footer-menu li {
@@ -243,8 +243,6 @@ h3 {
 }
 
 
-// #menu-modal { @apply h-screen fixed bg-light-green top-0 left-0 overflow-x-hidden transition duration-500 z-50 w-0}
-
 #menu-modal {
   height: 100%;
   width: 0;
@@ -257,7 +255,16 @@ h3 {
   transition: 0.5s;
 }
 
-.menu-active {width:60%!important}
+
+.menu-active {width:100%!important}
+
+@media (min-width: 480px) {
+
+  .menu-active {width:60%!important}
+  
+}
+
+
 
 ul#menu-main-menu li {margin-bottom: 1rem}
 
@@ -282,12 +289,12 @@ summary::marker {
 
 .wpcf7 input {
 
-	@apply bg-light-grey w-[242px] mr-10 px-10 py-5 text-aroma-grey;
+	@apply bg-aroma-light-grey sm:w-[242px] sm:mr-10 px-10 py-5 text-aroma-grey;
 }
 
 .wpcf7-textarea {
 
-  @apply bg-light-grey w-full p-10 text-aroma-grey;
+  @apply bg-aroma-light-grey w-full p-10 text-aroma-grey;
 
 }
 
@@ -296,7 +303,7 @@ input.contact-submit {
 }
 
 .contact-submit:hover {
-  @apply bg-light-green text-light-grey;
+  @apply bg-light-green text-aroma-grey;
 }
 
 input::placeholder, textarea::placeholder {
@@ -304,5 +311,18 @@ input::placeholder, textarea::placeholder {
 }
 
 .contact-submit::focus {@apply bg-transparent}
+
+.contact-input {@apply mb-5 w-full sm:mb-0}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+	width: 40px;
+	height: 4px;
+	background-color: #B5D963;
+	border-radius: 4px;
+	position: absolute;
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
+}
 
 

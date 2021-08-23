@@ -12,11 +12,7 @@
 
 
 
-    <!-- <aside class="sidebar w-1/3">
-        @yield('sidebar-primary')
-
-        @php(dynamic_sidebar('sidebar-primary'))
-    </aside> -->
+ 
 
 
 

@@ -3,7 +3,7 @@
 <nav class="container absolute mx-auto right-0 left-0 top-0 flex items-center justify-between flex-wrap pt-16 scroll">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
       <a class="text-white no-underline hover:text-white hover:no-underline" href="@permalink(11)" id="site-logo">
-        <span class=""><img src="@asset('images/logo.svg')" class="w-[171px]"/></span>  
+        <span class=""><img src="@asset('images/logo.svg')" class="w-[63px] sm:w-[171px]"/></span>  
       </a>
     </div>
       <button class="hamburger hamburger--collapse self-end z-50" onclick="showDialog()" type="button">

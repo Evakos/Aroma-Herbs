@@ -30,6 +30,13 @@ add_action('wp_enqueue_scripts', function () {
         
     }
 
+    if ( is_page(20) ) {
+
+        wp_enqueue_script('sage/recipies.js', asset('scripts/recipies.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+        
+    }
+
+
       // + Localize script /Providers/Ajax
     //   wp_localize_script('sage/app.js', 'sage', Providers\Ajax::localize_script_vars());
 
@@ -76,6 +83,10 @@ add_action('after_setup_theme', function () {
         'relative-urls'
     ]);
 
+        if (! defined('WP_DEBUG') || WP_DEBUG === false) {
+            $previous_handler = set_error_handler(null);
+        }
+  
     /**
      * Disable full-site editing support.
      *
@@ -188,6 +199,7 @@ add_action('after_setup_theme', function () {
         'script',
         'style'
     ]);
+
 
     /**
      * Enable selective refresh for widgets in customizer.
