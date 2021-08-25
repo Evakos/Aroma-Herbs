@@ -1,67 +1,32 @@
-<div class="container relative mx-auto mb-24 mt-10">
-
-        <div class="flex flex-col  items-center justify-center">
-
-
-        <!-- <p class="uppercase font-advent-pro-light text-2xl sm:text-5xl tracking-widest text-dark-green"> <img src="@asset('images/fresh-title.svg')" class="w-[208px]"/> </p> -->
-    
-
-        <div class="flex items-center justify-center my-10">
-    
-         
-        <img src="@asset('images/fresh-title.svg')" class="w-[208px]"/> 
-      
-    
-      </div>
-
-        
-
-
-      <p class="font-takhie text-dark-green tracking-widest text-7xl sm:text-9xl">@title</p>
-         
-         </div>
-
-         </div>
-
-
-
 <div class="flex max-w-6xl mx-auto">
 
 <article @php(post_class())>
 
+<!-- Thumbs Column -->
+
 <div class="flex flex-col sm:flex-row mb-20">
 
-  <div class="flex justify-center sm:w-2/6">
+  <div class="flex justify-center sm:w-1/6">
+
+
   @include('partials.product-thumbs-slider')
 
-        </div> <!-- Close Column -->
+        </div> 
+        
+        <!-- Close Thumbs Column -->
+
+        <!-- Main Image Column -->
+
+  <div class="flex justify-center sm:w-3/6">
+
+  @include('partials.product-main-image-slider')
+
+</div> <!-- Close Main Image Column -->
 
 
-  <div class="flex justify-center sm:w-2/6">
+<!-- Third Column -->
 
-  <?php 
-$images = get_field('gallery');
-if( $images ): ?>
-   <div id="splide-product-main" class="splide">
-        <div class="splide__track">
-
-            <ul class="splide__list">
-        <?php foreach( $images as $image ): ?>
-          <li class="splide__slide">
-                <a href="<?php echo esc_url($image['url']); ?>">
-                     <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="w-[229px] sm:w-[390px]" alt="<?php echo esc_attr($image['alt']); ?>""  />
-                </a>
-                <p><?php echo esc_html($image['caption']); ?></p>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-<?php endif; ?>
-        </div>
-        </div>
-
-</div> <!-- Close Column -->
-
-<div class="flex flex-col">
+<div class="flex flex-col sm:w-2/6">
 <div class="flex flex-row w-full sm:flex-col mt-20 sm:pl-20">
 <div class="flex flex-col pr-10 items-center sm:items-start">
 <p class="mb-5 text-sm font-advent-pro-light text-aroma-grey">8571018926</p>
@@ -87,11 +52,19 @@ if( $packages ): ?>
 
     </div>
 
-</div> <!-- Close Column -->
+</div> 
 
 </div>
 
+</article>
+
     </div>
+
+
+
+
+
+
 
 
 <hr>
@@ -101,12 +74,8 @@ if( $packages ): ?>
 
 <div class="flex flex-col sm:flex-row mt-20">
 
-<div class="flex sm:w-2/6">
 
-</div>  
-
-<div class="flex flex-col sm:w-3/6 sm:pr-10 sm:border-r sm:border-gray-300">
-
+<div class="flex flex-col sm:w-4/6 sm:pr-10 sm:border-r sm:border-gray-300">
 
 <p class="uppercase font-advent-pro-semi-bold flex sm:self-center mb-10 sm:mb-20">περιγραφη</p>
 
@@ -118,7 +87,7 @@ if( $packages ): ?>
 </div>
 
 
-<div class="flex flex-col mt-10 sm:mt-0 sm:w-1/6 sm:pl-10">
+<div class="flex flex-col mt-10 sm:mt-0 sm:w-2/6 sm:pl-10">
 
 <p class="uppercase flex font-advent-pro-semi-bold mb-10 sm:mb-20">Περισσοτερες ΠΛΗΡΟΦΟΡΙΕΣ</p>
 
@@ -143,15 +112,9 @@ if( $packages ): ?>
 </div>
 </div>
 
-</article>
-
-</div> <!-- Close Narrow Column -->
 
 
-
-
-
- 
+</div>
 
   <footer>
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}

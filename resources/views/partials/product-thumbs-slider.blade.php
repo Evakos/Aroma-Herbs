@@ -14,8 +14,12 @@ if( $images ): ?>
                 <p><?php echo esc_html($image['caption']); ?></p>
             </li>
         <?php endforeach; ?>
-    </ul>
-<?php endif; ?>
-        </div>
+    </ul><?
+else: echo 'No Thumb Images - Add Image';
+?>
 
-        </div>
+<? endif; ?>
+
+</div>
+
+</div>

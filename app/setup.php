@@ -66,6 +66,9 @@ add_action('enqueue_block_editor_assets', function () {
     wp_enqueue_style('sage/editor.css', asset('styles/editor.css')->uri(), false, null);
 }, 100);
 
+
+
+
 /**
  * Register the initial theme setup.
  *
@@ -83,9 +86,9 @@ add_action('after_setup_theme', function () {
         'relative-urls'
     ]);
 
-        if (! defined('WP_DEBUG') || WP_DEBUG === false) {
-            $previous_handler = set_error_handler(null);
-        }
+  
+   
+    
   
     /**
      * Disable full-site editing support.

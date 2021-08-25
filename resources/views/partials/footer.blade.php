@@ -47,7 +47,9 @@
 
             <div classs="mb-10 sm:mb-0"><img src="@asset('images/ifs.svg')" class="w-[82px]" /></div>
 
-            <div class="mt-10 sm:mt-0">Site by Fluid</div>
+            <div class="mt-10 sm:mt-0">Site by 
+<a href="url" class="text-light-green">Fluid</a>
+</div>
 
         </div>
 

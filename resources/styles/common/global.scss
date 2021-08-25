@@ -75,11 +75,11 @@ h3 {
 }
 
 .btn {
-  @apply transition duration-500 ease-in-out cursor-pointer leading-none border-2 border-light-green py-4 px-10 text-2xl uppercase text-light-green self-center;
+  @apply transition duration-500 ease-in-out cursor-pointer leading-none border-2 border-light-green py-4 px-10 text-2xl uppercase text-light-green;
 }
 
 .btn:hover {
-  @apply bg-light-green text-aroma-grey;
+  @apply bg-light-green text-white;
 }
 
 #menu-modal {

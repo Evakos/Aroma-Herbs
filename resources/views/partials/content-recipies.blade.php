@@ -12,9 +12,9 @@
     
   </div>
 
-  <div class="flex flex-1 flex-col sm:items-end sm:text-right">
-    <h3 class="mb-10 sm:mb-20 text-center">@title</h3>
-      <p class="mb-10 sm:mb-20 px-10">Τι θα λέγατε να δοκιμάσετε μια εύκολη νηστίσιμη συνταγή, 
+  <div class="flex flex-1 flex-col sm:px-32 sm:items-end sm:text-right">
+    <h3 class="mb-10  text-center">@title</h3>
+      <p class="mb-10 px-10 sm:px-0">Τι θα λέγατε να δοκιμάσετε μια εύκολη νηστίσιμη συνταγή, 
         γεμάτη άρωμα και νοστιμιά;</p>
 
 

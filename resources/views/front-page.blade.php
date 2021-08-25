@@ -2,11 +2,7 @@
   Template Name: Front Page Template
 --}}
 
-
-
 @include('partials.modal')
-
-
 
   @include('partials.header')
 
@@ -22,9 +18,7 @@
       </div>
     </div>
 
-
-
-  <div class="flex justify-center h-[1000px]">
+  <div class="flex justify-center h-[800px]">
 
     <div class="flex flex-1 justify-center relative w-36">
       <img src="@asset('images/home-img-3.jpg')" class="absolute"/>
@@ -42,10 +36,8 @@
 
   <div class="flex justify-center h-[1000px]">
 
-    
     <div class="flex flex-1">
   
-
     </div>
 
     <div class="flex flex-1 justify-center relative">
@@ -54,25 +46,33 @@
     </div>
   
     
-  
   </div>
 
 
-  <div class="flex justify-center">
-    <div class="flex flex-1">
+  <div class="flex justify-center h-[1200px]">
+    <div class="flex flex-1 justify-center relative">
 
-    <img src="@asset('images/home-img-7.jpg')" class=""/>
+    <img src="@asset('images/home-img-5.jpg')" class="absolute top-0"/>
     </div>
-    <div class="flex flex-1">
-    <img src="@asset('images/home-img-8.jpg')" class=""/>
+    <div class="flex flex-1 justify-center relative">
+    <img src="@asset('images/home-img-10.png')" class="absolute bottom-0 right-0"/>
     </div>
   </div>
 
-  <div class="flex justify-center">
-    <div class="flex flex-1 justify-center">
+  <div class="flex justify-center h-[800px]">
+    <div class="flex justify-center relative">
     </div>
-    <div class="flex flex-1 justify-center">
-      <img src="@asset('images/home-img-8.jpg')" class=""/>
+    <div class="flex flex-1 justify-center relative">
+      <img src="@asset('images/home-img-8.jpg')" class="absolute right-20 top-0"/>
+    </div>
+  </div>
+
+  <div class="flex justify-center h-[800px]">
+    <div class="flex flex-1 justify-center relative">
+    <img src="@asset('images/home-img-9.jpg')" class="absolute right-20 top-0"/>
+    </div>
+    <div class="flex flex-1 justify-center relative">
+      <img src="@asset('images/home-img-12.png')" class="absolute right-20 top-0"/>
     </div>
   </div>
 
@@ -83,6 +83,8 @@
 
   <!-- Mobile Tree -->
   <div class="container mx-auto relative sm:hidden">
+
+  
 
   <div class="flex justify-center">
       <div class="flex flex-1 justify-center">
@@ -181,11 +183,12 @@
   </div>
 
 
-  <div class="items-center justify-center hidden sm:flex">
-    
-  <img src="@asset('images/home-img-9.jpg')" class="w-[573px]"/>
-  
-  </div>
+  <div class="flex items-center justify-center my-20">
+       
+    <img src="@asset('images/home-title-six.svg')" class="w-[573px]"/> 
+      
+</div>
+
 
 
   <div class="flex mt-5 justify-center">

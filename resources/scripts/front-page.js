@@ -49,7 +49,7 @@ import "jquery";
 		next  : 'splide__arrow--next your-class-next',
 		
 		// Add classes for pagination.
-		pagination: 'splide__pagination relative sm:absolute', // container
+		pagination: 'splide__pagination relative my-20', // container
 		page      : 'splide__pagination__page your-class-page', // each button
 	},
  } ).mount();

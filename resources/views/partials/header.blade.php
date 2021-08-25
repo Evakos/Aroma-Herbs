@@ -1,4 +1,4 @@
-<header class="mx-auto bg-auto bg-center bg-no-repeat bg-white">
+<header class="mx-auto bg-auto bg-center bg-no-repeat bg-white mb-20">
   
 <nav class="container absolute mx-auto right-0 left-0 top-0 flex items-center justify-between flex-wrap pt-16 scroll">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -15,7 +15,7 @@
 
 <div class="flex justify-center mx-auto">
 @hasfield('hero_image')
-<img src="@field('hero_image')" alt="Hero Image" class="pt-24"/> 
+<img src="@field('hero_image')" alt="Hero Image" class="pt-24 max-w-3xl sm:max-w-full"/> 
 @endfield
 </div>
 

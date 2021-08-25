@@ -23,8 +23,9 @@
 
 
  @fields('section_1')
- <div class="flex mt-5 justify-center">
-          <img src="@sub('image')" class=""/> 
+ <div class="flex mt-5 justify-center ">
+          <img src="@sub('image')" class="max-w-3xl sm:max-w-full"/> 
+          
         </div>
 <div class="container flex justify-center relative mx-auto">
         <div class="flex flex-col py-24 sm:w-1/2 justify-center">
@@ -41,7 +42,7 @@
     
     <div class="container relative mx-auto">
 
-<div class="flex items-center justify-center">
+<div class="flex items-center my-20 justify-center">
 
 
 <img src="@asset('images/our-history-title.svg')" class="w-[681px]"/> 
@@ -51,36 +52,34 @@
 
  </div>
 
+ @fields('section_2')
  <div class="flex mt-5 justify-center">
-          <img src="@asset('images/our-history-img.jpg')" class=""/> 
+ <img src="@sub('image')" class="max-w-3xl sm:max-w-full"/> 
         </div>
-
-
         <div class="container flex justify-center relative mx-auto">
         <div class="flex flex-col py-24 sm:w-1/2 justify-center">
 
-            <p class="mb-10">Η εταιρεία μας αποτελείται από ανθρώπους με εμπειρία στον αγροτικό τομέα από το 1974. Καλλιεργούμε, συσκευάζουμε και διακινούμε, στην εγχώρια αλλά και στη διεθνή αγορά, υψηλής ποιότητας και διατροφικής αξίας προϊόντα, ακολουθώντας παραδοσιακές μεθόδους παραγωγής και αξιοποιώντας τις γηγενείς ποικιλίες της ελληνικής γης. Προσπαθούμε να αξιοποιούμε τα ιδιαίτερα χαρακτηριστικά του μικροκλίματος της περιοχής, όπου ευδοκιμεί το κάθε προϊόν, ώστε να μη χρειάζεται να επέμβουμε με τεχνικά μέσα στην καλλιέργειά του. </p>
+            <p class="mb-10">@sub('text')</p>
+        
 
-            <p class="mb-10">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.
- </p>
-
+      
  <div class="quote flex flex-col py-24 px-24 justify-center">
 
- <h4 class="text-2xl">Qodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum quam nunc putamus claram est usus autem vel.
+ <h4 class="text-2xl">@sub('quote')</h4>
   
-</h4>
 
-<p class="text-sm pt-10">Chef Kim Maom</p>
+<p class="text-sm pt-10">@sub('author')</p>
 
-<p class="text-sm">NOBU Restaurant</p>
-
+<p class="text-sm">@sub('position')</p>
 
 
 </div>
 
-<p class="mb-10">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant usus legentis in iis qui facit autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla.
+<p class="mb-10">@sub('text_2')
 
  </p>
+
+ @endfields
     
           </div>  
 
@@ -88,7 +87,7 @@
 
     <div class="container relative mx-auto">
 
-<div class="flex items-center justify-center">
+<div class="flex items-center my-20 justify-center">
 
 
 <img src="@asset('images/our-mission-title.svg')" class="w-[680px]"/> 
@@ -98,45 +97,56 @@
 
  </div>
 
+ @fields('section_3')
  <div class="flex mt-5 justify-center">
-          <img src="@asset('images/our-mission-img.jpg')" class=""/> 
+          <img src="@sub('image')" class="max-w-3xl sm:max-w-full"/> 
         </div>
 
 
-
+       
         <div class="container flex justify-center relative mx-auto">
         <div class="flex flex-col py-24 sm:w-1/2 justify-center">
 
-            <p class="mb-10">Αποστολή μας είναι η παραγωγή ασφαλών και ποιοτικών προϊόντων, με βασικούς άξονες την αειφορία και την ισορροπία της φύσης.</p>
+            <p class="mb-10">@sub('text')</p>
 
-            <p class="mb-10">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.
-I
- </p>
-
- <p class="mb-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-I
- </p>
-
+            @endfields
     
           </div>  
 
     </div>
 
 
-    <div class="container mx-auto mb-20">
+    <div class="sm:container mx-auto mb-20">
 
 <div class="flex items-center justify-center">
 
-<div class="grid sm:grid-rows-2 sm:grid-flow-col">
-  <div class="col-span-1"><img src="@asset('images/our-mission-img-1.jpg')"/></div>
+    <?php 
+$images = get_field('gallery');
+$classes = array('span-1', 'span-2', 'span-2 row-span-3');
+if( $images ): ?>
+    <div class="grid sm:grid-rows-2 sm:grid-flow-col">
+        <?php foreach( $images as $key => $image ): ?>
 
-  <div class="col-span-2"><img src="@asset('images/our-mission-img-2.jpg')"/></div>
-  <div class="col-span-2 row-span-3"><img src="@asset('images/our-mission-img-3.jpg')"/></div>
-</div>
+          <div class="col-<?php echo $classes[$key % 3]; ?>">
 
-</div>
+                <a href="<?php echo esc_url($image['url']); ?>">
+                     <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class=""/>
+                </a>
+            
+        </div>
+        <?php endforeach; ?>
+        </div>
+<?php endif; ?>
 
   </div>
+
+</div>
+
+
+
+
+
+
 
 
   <div class="container relative mx-auto">
@@ -150,46 +160,36 @@ I
 
  </div>
 
+ @fields('section_4')
  <div class="flex mt-5 justify-center">
-          <img src="@asset('images/center-excellence-img.jpg')" class=""/> 
+        <img src="@sub('image')" class="max-w-3xl sm:max-w-full"/> 
         </div>
 
  <div class="container flex justify-center relative mx-auto">
         <div class="flex flex-col py-24 sm:w-1/2 justify-center">
-          <!-- <h3 class="mb-10 px-24 text-center">Μεγαλώνουν στην ύπαιθρο
-κάτω από τον ελληνικό ήλιο</h3> -->
-            <p class="mb-10">Πρωτοποριακά σκεπτόμενοι, το 2005 παρουσιάσαμε πρώτοι στην ελληνική αγορά τα συσκευασμένα φρέσκα μυρωδικά για την κουζίνα –  σε γλαστράκι και κομμένο –, χρησιμοποιώντας εξειδικευμένες και καλαίσθητες συσκευασίες, και «εκπαιδεύσαμε» τον Έλληνα καταναλωτή να τα χρησιμοποιεί καθημερινά στη μαγειρική του, προσφέροντάς του επώνυμα προϊόντα, ασφαλή και με υψηλές προδιαγραφές.  </p>
 
-            <p class="mb-10">
-Σήμερα, έχουμε αναπτύξει ένα ισχυρό δίκτυο συνεργασίας, με αλυσίδες σούπερ μάρκετ και μίνι μάρκετ, καθώς και με επιλεγμένα μανάβικα, παντοπωλεία και deli, σε όλη την Ελλάδα.
-
- </p>
-
- <p class="mb-10">
- Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.
-
- </p>
+        <p class="mb-10">@sub('text')</p>
 
 
 
  <div class="quote flex flex-col py-24 sm:px-24 justify-center">
 
- <h4 class="text-2xl">Qodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum quam nunc putamus claram est usus autem vel.
+
+ <h4 class="text-2xl">@sub('quote')</h4>
   
-</h4>
 
-<p class="text-sm pt-10">Chef Kim Maom</p>
+<p class="text-sm pt-10">@sub('author')</p>
 
-<p class="text-sm">NOBU Restaurant</p>
+<p class="text-sm">@sub('position')</p>
 
 
 
 </div>
 
-<p class="mb-10">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant usus legentis in iis qui facit autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla.
-
- </p>
+<p class="mb-10">@sub('text_2')</p>
     
           </div>  
 
     </div>
+
+    @endfields

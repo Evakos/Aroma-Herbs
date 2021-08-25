@@ -9,6 +9,13 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+
+      backgroundSize: {
+        
+
+       '200%': '200%',
+
+      },
       
     backgroundImage: {
 
