@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'env' => defined('WP_ENV') ? WP_ENV : env('WP_ENV', 'production'),
+    'env' => defined('WP_ENV') ? WP_ENV : env('WP_ENV', 'development'),
 
     /*
     |--------------------------------------------------------------------------

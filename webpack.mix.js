@@ -29,6 +29,7 @@ mix
   .js('resources/scripts/product.js', 'scripts')
   .js('resources/scripts/front-page.js', 'scripts')
   .js('resources/scripts/customizer.js', 'scripts')
+  .js('resources/scripts/animation.js', 'scripts')
   .blocks('resources/scripts/editor.js', 'scripts')
   .autoload({ jquery: ['$', 'window.jQuery'] })
   .extract();

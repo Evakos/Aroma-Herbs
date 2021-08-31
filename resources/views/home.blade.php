@@ -4,11 +4,10 @@
 
 
 
-<header class="mx-auto bg-blog-hero bg-auto bg-center bg-no-repeat h-[900px] bg-white mt-24 md:mt-18">
 
 @include('partials.header')
 
-</header>
+
 
 <div class="container relative mx-auto mb-24">
 

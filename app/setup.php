@@ -23,14 +23,16 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_script('sage/product.js', asset('scripts/product.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         
     }
+    
 
     if ( is_front_page() ) {
 
         wp_enqueue_script('sage/front-page.js', asset('scripts/front-page.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+        wp_enqueue_script('sage/animation.js', asset('scripts/animation.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         
     }
 
-    if ( is_page(20) ) {
+    if ( is_page(30) ) {
 
         wp_enqueue_script('sage/recipies.js', asset('scripts/recipies.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         
@@ -218,7 +220,7 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget %1$s %2$s bg-light-green ml-12 p-12">',
+        'before_widget' => '<section class="widget %1$s %2$s">',
         'after_widget' => '</section>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'
@@ -265,6 +267,14 @@ add_action( 'init', function() {
 
 'show_in_feed' => true,
 'menu_icon'    => 'dashicons-food',
+'show_in_rest' => true,
+'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+
+
+
+'taxonomies' => array('recipies', 'category', 'post_tag'),
+
+
 
 # Add some custom columns to the admin screen:
 		// 'admin_cols' => [
@@ -318,6 +328,8 @@ add_action( 'init', function() {
 'menu_icon'    => 'dashicons-store',
 'taxonomies' => array( 'product', 'category' ),
 
+
+
 # Add some custom columns to the admin screen:
 		'admin_cols' => [
 
@@ -366,5 +378,4 @@ add_action( 'init', function() {
 // ) );
 
 } );
-
 

@@ -16,6 +16,13 @@ module.exports = {
        '200%': '200%',
 
       },
+     
+    // screens: {
+    //   '3xl': '2560px',
+    //   // => @media (min-width: 2560px) { ... }
+
+    // },
+  
       
     backgroundImage: {
 
@@ -72,6 +79,7 @@ module.exports = {
     },
     },
   },
+  
   variants: [
     `responsive`,
     `dark`,
@@ -92,6 +100,14 @@ module.exports = {
     `active`,
     `disabled`,
   ],
+
+  variants: {
+    
+      animation: ['hover', 'group-hover'],
+      transform: ['hover', 'focus'],
+      padding: ['first'],
+    
+  },
   plugins: [require('@tailwindcss/typography')],
 };
 

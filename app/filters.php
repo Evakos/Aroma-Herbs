@@ -23,3 +23,30 @@ add_filter('acf/format_value/name=contact_form', 'eks_acf_format_value', 10, 3);
 add_filter('wpcf7_autop_or_not', '__return_false');
 
 
+// Allow SVG// Allow SVG
+add_filter('wp_check_filetype_and_ext', function ($data, $file, $filename, $mimes) {
+
+    if (!$data['type']) {
+        $wp_filetype = wp_check_filetype($filename, $mimes);
+        $ext = $wp_filetype['ext'];
+        $type = $wp_filetype['type'];
+        $proper_filename = $filename;
+        if ($type && 0 === strpos($type, 'image/') && $ext !== 'svg') {
+            $ext = $type = false;
+        }
+        $data['ext'] = $ext;
+        $data['type'] = $type;
+        $data['proper_filename'] = $proper_filename;
+    }
+    return $data;
+
+
+}, 10, 4);
+
+
+add_filter('upload_mimes', function ($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+});
+
+

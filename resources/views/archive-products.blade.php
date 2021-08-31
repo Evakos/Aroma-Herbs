@@ -7,38 +7,44 @@
   @include('partials.header')
 
 
-  <div class="container mx-auto">
+  <div class="container mx-auto mb-30">
 
 <div class="flex justify-center">
-    <div class="flex flex-1 justify-center">
+    <div class="hidden sm:flex flex-1 justify-center">
     <img src="@asset('images/products-img-1.jpg')" class=""/> 
     </div>
     <div class="flex flex-1 justify-center">
     <img src="@asset('images/fresh-spices.svg')" class="">
     </div>
-    <div class="flex flex-1 justify-center">
+    <div class="hidden sm:flex flex-1 justify-center">
     <img src="@asset('images/home-img-2.jpg')" class="">
     </div>
   </div>
 </div>
 
+<div class="flex justify-center">
+  
+    <img src="@asset('images/discover.svg')" class="w-[254px]">
+
+  
+  </div>
+
+
 <div class="container mx-auto py-20">
 
 
-<!--
+
+
+
+<!-- <div class="hidden"> 
 <div class=""> 
-
-    <div class=""> 
-
-    <!-- <div class="filter-mob-menu"><span class="mob-filter-text">Filter Stories</span><span id="mobile-filter-button"><i class="fas fa-bars"></i></span></div> -->
-
-	<!-- <?php
+<div class="filter-mob-menu"><span class="mob-filter-text">Filter Stories</span><span id="mobile-filter-button"><i class="fas fa-bars"></i></span></div>
+<?php
 		if( $terms = get_terms( array( 'taxonomy' => 'category', 'exclude'=>1, 'orderby' => 'date', 'hide_empty' => false ) ) ) : 
             
-?> -->
+?>
 
-
-  <!-- <div class="filter-button-container" id="mobile-filter-menu"><?php
+<?php
 			foreach ( $terms as $term ) :
 
                  echo '<a class="prod-filter font-takhie text-grey text-center p-10 text-3xl"  product-id="' . $term->term_id . '" href="#">' . $term->name . '</a>';
@@ -54,32 +60,29 @@
 	?>
 
 
-  </div>
-
   </div> -->
+
+
 
 
   <div class="flex justify-center items-center ">
 
-      <a class="prod-filter font-takhie text-center leading-none text-gray-300 p-10 text-5xl transition duration-500 ease-in-out hover:text-dark-green filter-active"  product-id="3" href="#">ΦΡΕΣΚΑ ΜΥΡΩΔΙΚΑ</a>
+      <a class="prod-filter font-takhie text-center leading-none text-gray-300 p-10 text-2xl sm:text-5xl transition duration-500 ease-in-out hover:text-dark-green filter-active"  product-id="3" href="#">ΦΡΕΣΚΑ ΜΥΡΩΔΙΚΑ</a>
 
-<div class="flex"><img src="@asset('images/leaf.svg')" class=""></div>
+<div id="leaf-element"><img src="@asset('images/leaf.svg')" class="flex -mt-5 w-[40px]"></div>
 
-      <a class="prod-filter font-takhie text-gray-300 text-center leading-none p-10 text-5xl transition duration-500 ease-in-out hover:text-dark-green"  product-id="4" href="#">ΦΡΕΣΚΑ ΛΑΧΑΝΙΚΑ</a>
-
-      <!-- <a class="prod-filter font-takhie text-grey text-center p-10 text-3xl"  product-id="' . $fresh_veg . '" href="#">' . $term->name . '</a>' -->
+      <a class="prod-filter font-takhie text-gray-300 text-center leading-none p-10 text-2xl sm:text-5xl transition duration-500 ease-in-out hover:text-dark-green"  product-id="4" href="#">ΦΡΕΣΚΑ ΛΑΧΑΝΙΚΑ</a>
 
       </div>
 
 
-  <div id="products" class=""></div>
+  <div id="products" class="min-h-screen"></div>
 
 
 <!-- Initial display of products -->
-<div id="all-products" class="fade-in">
+<div id="all-products" class="min-h-screen">
 
 @section('content')
-  <!-- @include('partials.page-header') -->
 
   @if (!have_posts())
     <x-alert type="warning">
@@ -89,10 +92,10 @@
     {!! get_search_form(false) !!}
   @endif
 
-  <div class="flex">
+  <div class="grid sm:grid-cols-4 sm:gap-4">
 
   @php
-$args = array('post_type' => 'products', 'tax_query' => array(
+$args = array('post_type' => 'products', 'posts_per_page' => -1, 'tax_query' => array(
         array(
             'taxonomy' => 'category',
             'field' => 'id',
@@ -106,19 +109,13 @@ $loop = new WP_Query($args);
   @while($loop->have_posts()) @php($loop->the_post())
 
 
-  <div class="p-16">
+  <div class="p-16 flex items-end single-product">
     
-  <a href="@permalink" class="">
+  <a href="@permalink" class="cursor-pointer">
 
-
-<!-- <div class="bg-light-green p-2 text-white absolute bottom-0 z-50 flex justify-right w-full opacity-80">
-
-
-
-</div> -->
 <img src="@thumbnail('full', false)" alt="Full Image" />
 
-<p class="font-takhie text-dark-green text-center p-10 text-3xl">
+<p class="font-takhie text-dark-green text-center py-10 text-3xl">
 @title
 </p>
 

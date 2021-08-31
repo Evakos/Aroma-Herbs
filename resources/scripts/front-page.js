@@ -27,7 +27,7 @@ import "jquery";
 		
 		// Add classes for pagination.
 		pagination: 'splide__pagination relative sm:absolute', // container
-		page      : 'splide__pagination__page your-class-page', // each button
+		page      : 'splide__pagination__page w-4 h-4 m-1', // each button
 	},
 	 
  } ).mount();
@@ -37,7 +37,9 @@ import "jquery";
 	 type   : 'loop',
 	 perPage: 4,
 	 breakpoints: {
+		 
 		640: {
+			pagination: false,
 			perPage: 1,
 		},
 	},
@@ -45,11 +47,11 @@ import "jquery";
 		// Add classes for arrows.
 		arrows: 'splide__arrows your-class-arrows',
 		arrow : 'splide__arrow your-class-arrow',
-		prev  : 'splide__arrow--prev your-class-prev',
-		next  : 'splide__arrow--next your-class-next',
+		prev  : 'splide__arrow--prev -left-5 sm:-left-10',
+		next  : 'splide__arrow--next -right-5 sm:-right-10',
 		
 		// Add classes for pagination.
 		pagination: 'splide__pagination relative my-20', // container
-		page      : 'splide__pagination__page your-class-page', // each button
+		page      : 'splide__pagination__page w-4 h-4 m-1', // each button
 	},
  } ).mount();

@@ -3,11 +3,9 @@
 
 @include('partials.modal')
 
-<header class="mx-auto bg-recipies-hero bg-auto bg-center bg-no-repeat h-[900px] bg-white mt-24 md:mt-18">
-
     @include('partials.header')
 
-</header>
+
 
 @section('content')
 
@@ -34,7 +32,7 @@ $query = new WP_Query([
 @endphp
 
 
-<div class="container mx-auto">
+<div class="">
 
     <div class="grid grid-cols-4">
         @posts($query)

@@ -1,13 +1,13 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'wordpress-theme',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '9f3127f4bcf4cbe74ac01827bc4fab34c8a24d50',
         'name' => 'roots/sage',
-        'dev' => true,
+        'dev' => false,
     ),
     'versions' => array(
         'brick/math' => array(
@@ -27,15 +27,6 @@
             'aliases' => array(),
             'reference' => '9cf661f4eb38f7c881cac67c75ea9b00bf97b210',
             'dev_requirement' => false,
-        ),
-        'filp/whoops' => array(
-            'pretty_version' => '2.12.1',
-            'version' => '2.12.1.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../filp/whoops',
-            'aliases' => array(),
-            'reference' => 'c13c0be93cff50f88bbd70827d993026821914dd',
-            'dev_requirement' => true,
         ),
         'graham-campbell/result-type' => array(
             'pretty_version' => 'v1.0.1',
@@ -342,12 +333,12 @@
             'dev_requirement' => false,
         ),
         'roots/sage' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'wordpress-theme',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '9f3127f4bcf4cbe74ac01827bc4fab34c8a24d50',
             'dev_requirement' => false,
         ),
         'roots/support' => array(
@@ -358,15 +349,6 @@
             'aliases' => array(),
             'reference' => '0c5231dc194407e32bfee000d49a36775040289a',
             'dev_requirement' => false,
-        ),
-        'squizlabs/php_codesniffer' => array(
-            'pretty_version' => '3.6.0',
-            'version' => '3.6.0.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../squizlabs/php_codesniffer',
-            'aliases' => array(),
-            'reference' => 'ffced0d2c8fa8e6cdc4d695a743271fab6c38625',
-            'dev_requirement' => true,
         ),
         'symfony/console' => array(
             'pretty_version' => 'v5.2.8',

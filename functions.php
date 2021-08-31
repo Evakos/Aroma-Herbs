@@ -142,6 +142,7 @@ function filter_products(){
 	$args = array(
 		'orderby' => 'date', 
 		'post_type' => 'products',
+		'posts_per_page' => -1,
 		
 	);
 
@@ -159,7 +160,7 @@ function filter_products(){
     //var_dump($query);
  
 	if( $query->have_posts() ) :
-        echo '<div class="flex">';
+        echo '<div class="grid grid-cols-4 gap-4">';
 		while( $query->have_posts() ): $query->the_post(); 
 
 		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
@@ -175,13 +176,13 @@ function filter_products(){
 		// var_dump($product_link);
 
 		?>
-		<div class="p-16 mb-10 flex">
+		<div class="p-16 flex items-end single-product">
     
-		<a href="<?php echo $product_link ?>" class="">
+		<a href="<?php echo $product_link ?>" class="cursor-pointer">
 	  
 	  <img src="<?php echo $featured_img_url?>" alt="" class="" />
 	  
-	  <p class="font-takhie text-dark-green text-center p-10 text-3xl">
+	  <p class="font-takhie text-dark-green text-center py-10 text-3xl">
 	  <?php the_title(); ?>
 	  </p>
 	  
@@ -218,3 +219,73 @@ add_action('acf/render_field_settings/type=image', 'add_defult_image_field');
 		// Render shortcodes in all textarea values.
 		return do_shortcode( $value );
 	}
+
+
+
+
+
+function aroma_customizer_social_media_array() {
+	/* store social site names in array */
+	$social_sites = 
+	array(
+		'twitter', 
+		'facebook', 
+		'google-plus', 
+		'flickr', 
+		'pinterest', 
+		'youtube', 
+		'tumblr', 
+		'dribbble', 
+		'rss', 
+		'linkedin', 
+		'instagram', 
+		'email'
+	);
+	
+	return $social_sites;
+}
+
+
+/* takes user input from the customizer and outputs linked social media icons */
+function aroma_social_media_icons() {
+	$social_sites = aroma_customizer_social_media_array();
+	
+	/* any inputs that aren't empty are stored in $active_sites array */
+	foreach($social_sites as $social_site) {
+		if( strlen( get_theme_mod( $social_site ) ) > 0 ) {
+			$active_sites[] = $social_site;
+		}
+	}
+	
+	/* for each active social site, add it as a list item */
+	if ( ! empty( $active_sites ) ) {
+		echo "<ul class='social-media-icons flex'>";
+		foreach ( $active_sites as $active_site ) {
+		
+		/* setup the class */
+		$class = 'fab fa-' . $active_site . ' fa-2x';
+		if ( $active_site == 'email' ) {
+	?>
+	<li class="text-light-green">
+		<a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>">
+			<i class="fa fa-envelope" title="<?php _e('email icon', 'text-domain'); ?>"></i>
+		</a>
+	</li>
+
+<?php 
+	} 
+	else { ?>
+	<li class="text-light-green">
+		<a class="<?php echo $active_site; ?> hover:animate-bounce" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site) ); ?>">
+			<i class="<?php echo esc_attr( $class ); ?>" title="<?php printf( __('%s icon', 'text-domain'), $active_site ); ?>"></i>
+		</a>
+	</li>
+	<?php
+	}
+	}
+	echo "</ul>";
+	}
+}
+
+
+		

@@ -39,8 +39,11 @@
 
 </div>
 
-<aside class="sidebar w-1/3">
+<aside class="sidebar w-1/3 bg-light-green ml-12 p-12">
+
+<p class="text-white py-3 font-advent-pro-semi-bold mb-20 border-b-2 border-white">Πρόσφατα</p>
   
   @php(dynamic_sidebar('sidebar-primary'))
+  
 </aside> 
 </div>

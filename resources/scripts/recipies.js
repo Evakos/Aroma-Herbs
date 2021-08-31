@@ -10,7 +10,8 @@
   perPage: 1,
   breakpoints: {
    640: {
-     arrows: false
+     arrows: false,
+     pagination: false,
    },
  },
   classes: {

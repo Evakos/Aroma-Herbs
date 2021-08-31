@@ -1,22 +1,21 @@
-<div class="container relative mx-auto">
+
     <a class="sr-only focus:not-sr-only" href="#main">
         {{ __('Skip to content') }}
     </a>
 
-    <!-- @include('partials.header') -->
 
 
-
+<div id="scroll">
 
         @yield('content')
 
-
+</div>
 
  
 
 
 
-</div>
+
 
 
 @include('partials.instagram')

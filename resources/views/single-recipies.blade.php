@@ -2,20 +2,22 @@
 
 @include('partials.modal')
 
-
-
-<header class="mx-auto bg-recipies-hero bg-auto bg-center bg-no-repeat h-[900px] bg-white mt-24 md:mt-18">
+<!-- <header class="mx-auto bg-recipies-hero bg-auto bg-center bg-no-repeat h-[900px] bg-white mt-24 md:mt-18">
 
 @include('partials.header')
 
-</header>
+</header> -->
+
+
+@include('partials.header')
+
 
 <div class="container relative mx-auto mb-24">
 
         <div class="flex items-center justify-center">
     
         
-       <img src="@asset('images/from-kitchen.svg')" class="w-[382px]"/> 
+       <img src="@asset('images/from-kitchen.svg')" class="w-[700px]"/> 
          
          </div>
 
