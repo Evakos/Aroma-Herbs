@@ -20,10 +20,10 @@ import "jquery";
 	},
 	 classes: {
 		// Add classes for arrows.
-		arrows: 'splide__arrows your-class-arrows',
-		arrow : 'splide__arrow your-class-arrow',
-		prev  : 'splide__arrow--prev your-class-prev',
-		next  : 'splide__arrow--next your-class-next',
+		arrows: 'splide__arrows invisible sm:visible',
+		arrow : 'splide__arrow ',
+		prev  : 'splide__arrow--prev ',
+		next  : 'splide__arrow--next' ,
 		
 		// Add classes for pagination.
 		pagination: 'splide__pagination relative sm:absolute', // container

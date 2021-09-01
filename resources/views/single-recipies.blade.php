@@ -2,12 +2,6 @@
 
 @include('partials.modal')
 
-<!-- <header class="mx-auto bg-recipies-hero bg-auto bg-center bg-no-repeat h-[900px] bg-white mt-24 md:mt-18">
-
-@include('partials.header')
-
-</header> -->
-
 
 @include('partials.header')
 

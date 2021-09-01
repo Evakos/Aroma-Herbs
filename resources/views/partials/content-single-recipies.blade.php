@@ -82,7 +82,7 @@
 
 <aside class="sidebar w-1/3">
 
-<div class="flex flex-col ml-20 mt-20 bg-light-green sm:p-10">
+<div class="flex flex-col ml-20  bg-light-green sm:p-10">
 
 @hasfield('sidebar')
 <div class="flex flex-1 text-left flex-col bg-light-green rounded-lg sm:p-10">

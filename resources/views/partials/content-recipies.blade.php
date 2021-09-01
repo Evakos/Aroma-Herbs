@@ -8,7 +8,7 @@
 
   <img src="@thumbnail('full', false)" class="sm:h-[464px]" alt="Full Image" />
 
-  <img src="@field('slider_image_inset')" class="sm:w-[220px] absolute left-28 -bottom-14"/> 
+  <img src="@field('slider_image_inset')" class="w-[100px] sm:w-[220px] absolute left-0 -bottom-10 sm:left-28 sm:-bottom-14"/> 
 
  
     
@@ -16,8 +16,7 @@
 
   <div class="flex flex-1 flex-col sm:px-52 sm:items-end sm:text-right  mt-20">
     <h3 class="mb-10 text-center">@title</h3>
-      <p class="mb-10 px-10 sm:px-0">Τι θα λέγατε να δοκιμάσετε μια εύκολη νηστίσιμη συνταγή, 
-        γεμάτη άρωμα και νοστιμιά;</p>
+      <p class="mb-10 px-10 sm:px-0">@field('intro_text')</p>
 
 
 

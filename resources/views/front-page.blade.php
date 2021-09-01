@@ -201,7 +201,7 @@
 
 
   <div class="flex mt-5 justify-center">
-          <img src="@asset('images/sec-c.jpg')" class=""/> 
+          <img src="@asset('images/sec-c.jpg')" class="w-screen object-cover"/>  
         </div>
 
         @php
@@ -288,8 +288,9 @@
 
          </div>
 
+</div>
         <div class="flex mt-5 justify-center">
-          <img src="@field('harvest_image')" class=""/> 
+          <img src="@field('harvest_image')" class="w-screen object-cover"/> 
         </div>
 
         <div class="container relative mx-auto mt-10 mb-10 sm:mb-0 sm:mt-10">
@@ -330,8 +331,10 @@
 
          </div>
 
+</div>
+
         <div class="flex flex-1 justify-center">
-          <img src="@field('locator_image')" class=""/> 
+          <img src="@field('locator_image')" class="w-screen object-cover"/> 
         </div>
   
         <div class="container relative mx-auto">

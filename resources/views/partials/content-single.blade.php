@@ -8,7 +8,6 @@
       {!! $title !!}
     </h1>
 
-    <!-- @include('partials/entry-meta') -->
   </header>
 
   
@@ -34,12 +33,12 @@
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
   </footer>
 
-  <!-- @php(comments_template()) -->
+
 </article>
 
 </div>
 
-<aside class="sidebar w-1/3 bg-light-green ml-12 p-12">
+<aside class="sidebar flex flex-col self-start w-1/3 bg-light-green ml-12 p-12">
 
 <p class="text-white py-3 font-advent-pro-semi-bold mb-20 border-b-2 border-white">Πρόσφατα</p>
   

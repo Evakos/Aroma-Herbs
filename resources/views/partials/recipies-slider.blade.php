@@ -15,7 +15,7 @@
     @endphp
 
     <div class="flex mt-5 justify-center">
-          <img src="@asset('images/sec-d.jpg')" class=""/> 
+          <img src="@asset('images/sec-d.jpg')" class="w-screen object-cover"/>   
         </div>
 
 

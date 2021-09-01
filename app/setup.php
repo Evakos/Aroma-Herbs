@@ -16,6 +16,7 @@ use function Roots\asset;
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/vendor.js', asset('scripts/vendor.js')->uri(), ['jquery'], null, true);
     wp_enqueue_script('sage/app.js', asset('scripts/app.js')->uri(), ['sage/vendor.js'], null, true);
+    wp_enqueue_script('sage/recipies.js', asset('scripts/recipies.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
 
 
     if ( 'products' == get_post_type() ) {
@@ -32,9 +33,9 @@ add_action('wp_enqueue_scripts', function () {
         
     }
 
-    if ( is_page(30) ) {
+    if ( is_page('30') ) {
 
-        wp_enqueue_script('sage/recipies.js', asset('scripts/recipies.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+        
         
     }
 

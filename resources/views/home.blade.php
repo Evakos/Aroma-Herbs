@@ -32,6 +32,9 @@
     {!! get_search_form(false) !!}
   @endif
 
+
+<div class="container relative mx-auto mb-24">
+
   <div class="grid grid-cols-2 gap-4">
 
   @while(have_posts()) @php(the_post())
@@ -40,6 +43,7 @@
 
   @endwhile
   </div>
+</div>
 
   {!! get_the_posts_navigation() !!}
 @endsection

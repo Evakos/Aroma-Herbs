@@ -280,6 +280,27 @@ h3 {
   
 }
 
+.overlay-top {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 950px;
+  background: rgba(255,255,255,1);
+  clip-path: polygon(0 0, 100% 0, 100% 8%, 0 15%);
+  
+}
+
+.overlay-bot {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 950px;
+  background: rgba(255,255,255,1);
+  clip-path: polygon(0 98%, 100% 92%, 100% 100%, 0% 100%);
+  
+}
 
 
 ul#menu-main-menu li {margin-bottom: 1rem}

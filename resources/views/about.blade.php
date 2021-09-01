@@ -24,7 +24,7 @@
 
  @fields('section_1')
  <div class="flex mt-5 justify-center ">
-          <img src="@sub('image')" class="max-w-3xl sm:max-w-full"/> 
+          <img src="@sub('image')" class="w-screen object-cover min-h-[300px]"/>  
           
         </div>
 <div class="container flex justify-center relative mx-auto">
@@ -54,7 +54,7 @@
 
  @fields('section_2')
  <div class="flex mt-5 justify-center">
- <img src="@sub('image')" class="max-w-3xl sm:max-w-full"/> 
+ <img src="@sub('image')" class="w-screen object-cover min-h-[300px]"/> 
         </div>
         <div class="container flex justify-center relative mx-auto">
         <div class="flex flex-col py-24 sm:w-1/2 justify-center">
@@ -99,7 +99,7 @@
 
  @fields('section_3')
  <div class="flex mt-5 justify-center">
-          <img src="@sub('image')" class="max-w-3xl sm:max-w-full"/> 
+          <img src="@sub('image')" class="w-screen object-cover min-h-[300px]"/> 
         </div>
 
 
@@ -162,7 +162,7 @@ if( $images ): ?>
 
  @fields('section_4')
  <div class="flex mt-5 justify-center">
-        <img src="@sub('image')" class="max-w-3xl sm:max-w-full"/> 
+        <img src="@sub('image')" class="w-screen object-cover min-h-[300px]"/> 
         </div>
 
  <div class="container flex justify-center relative mx-auto">
