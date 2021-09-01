@@ -44,8 +44,8 @@
 
       <img src="@asset('images/spring-onion-slices.png')" class="absolute h-[147px] left-0 top-1/4" data-aos=""/>
       <img src="@asset('images/radish.png')" class="absolute h-[673px] right-0 top-0"  data-aos="move-left-straight"/>
-      <img src="@asset('images/spring-onion.png')" class="absolute h-[687px] left-20 top-0" data-aos-offset="200" data-aos-delay="350"  data-aos="rotate-right-5"/>
-      <img src="@asset('images/chilli-pepper-slices.png')" class="absolute w-[244px] bottom-0 right-0" data-aos-delay="650" data-aos="rotate-left"/>
+      <img src="@asset('images/spring-onion.png')" class="absolute h-[687px] left-20 top-0" data-aos="rotate-right-5"/>
+      <img src="@asset('images/chilli-pepper-slices.png')" class="absolute w-[244px] bottom-0 right-0" data-aos="rotate-left"/>
     </div>
   
     
@@ -127,7 +127,7 @@
   <div class="flex items-center justify-center my-20">
     
          
-    <img src="@asset('images/grown-countryside-title.svg')" class="w-[272px]"/> 
+    <img src="@asset('images/grown-countryside-title.svg')" class="w-[272px]" data-aos="fade"/>
 
       </div>
 
@@ -254,7 +254,7 @@
 
       <div class="flex items-center justify-center my-20">
     
-    <img src="@asset('images/home-title-eight.svg')" class="w-[158px] sm:w-[367px]"/> 
+    <img src="@asset('images/home-title-eight.svg')" class="w-[158px] sm:w-[367px]" data-aos="animate__animated animate__fadeIn animate__slow"/> 
       
       </div>
       @php

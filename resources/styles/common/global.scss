@@ -236,12 +236,12 @@ h3 {
   opacity: 1;
 }
 
-#splide-product-thumbs .splide__slide.is-active {
+#splide-product-thumbs .splide__slide.is-active, #splide-product-thumbs-mobile .splide__slide.is-active {
 	padding: 1rem;
   border: 1px solid #e5e5e5;
 }
 
-#splide-product-thumbs .splide__slide {
+#splide-product-thumbs .splide__slide, #splide-product-thumbs-mobile .splide__slide {
 	padding: 1rem;
   display: flex;
 
@@ -407,10 +407,37 @@ a.blog-card:hover .blog-title{
  }
 
  .rotate-right-5 {
- 
-  transform: rotate(3deg);
-  animation-delay: 5s;
+
+  animation-name: fall;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+         animation-fill-mode: forwards;
+  
+  animation-iteration-count: once;
+  animation-timing-function: ease-in;
+  animation-direction: normal ;
+  
+
+  
+  
  }
+
+ @keyframes fall {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    animation-delay: 3s;
+    transform: translate(0rem, 2rem) rotate(3deg);
+  }
+
+}
+
+// .spin-animation {
+//   animation: spin 2s linear forwards;
+// }
+
 
 //  .rotate-move {
 
@@ -473,3 +500,26 @@ a.blog-card:hover .blog-title{
 
 
 ul.social-media-icons li:first-child {margin-right:20px}
+
+// [data-aos] {
+//   visibility: hidden;
+// }
+
+// [data-aos].animated {
+//   visibility: visible;
+//   pointer-events: auto;
+// }
+
+// [data-aos] {
+//   @for $i from 1 through 60 {
+//     body[data-aos-delay='#{$i * 50}'] &,
+//     &[data-aos][data-aos-delay='#{$i * 50}'] {
+//       animation-delay: #{$i * 50}ms;
+
+//       &.aos-animate {
+//         animation-delay: #{$i * 50}ms;
+//       }
+//     }
+//   }
+// }
+

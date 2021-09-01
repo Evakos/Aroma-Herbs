@@ -23,28 +23,40 @@
 
         <div class="flex flex-col sm:flex-row mb-20">
 
-            <div class="flex justify-center sm:w-4/12">
+            <div class="hidden sm:flex justify-center sm:w-3/12">
 
 
                 @include('partials.product-thumbs-slider')
 
             </div>
 
+            
+
             <!-- Close Thumbs Column -->
 
             <!-- Main Image Column -->
 
-            <div class="flex justify-center sm:w-4/12">
+            <div class="flex relative min-h-[550px] justify-center sm:w-4/12">
+
+            <img src="@asset('images/product-bg.jpg')" alt="" class="absolute object-cover w-screen"/> 
 
                 @include('partials.product-main-image-slider')
 
             </div> <!-- Close Main Image Column -->
 
 
+            <div class="sm:hidden flex justify-center sm:w-4/12">
+
+
+@include('partials.product-thumbs-slider-mobile')
+
+</div>
+
+
             <!-- Third Column -->
 
-            <div class="flex flex-col sm:w-4/12">
-                <div class="flex flex-row w-full sm:flex-col mt-20 sm:pl-20">
+            <div class="flex flex-col px-10 sm:w-5/12">
+                <div class="flex flex-row w-full sm:flex-col mt-20 sm:mt-0 sm:pl-20">
                     <div class="flex flex-col pr-10 items-center sm:items-start">
                         <p class="mb-5 text-sm font-advent-pro-light text-aroma-grey"><?php echo get_field('product_code');?></p>
                         <p class="text-3xl sm:text-5xl mb-5"><?php echo get_field('weight');?></p>
@@ -75,7 +87,7 @@ if( $packages ): ?>
 
 
 
-                    <div class="flex flex-col mt-20 bg-light-green sm:p-10">
+                    <div class="flex flex-col mt-20 bg-light-green p-10">
 
 <p class="uppercase mb-10 font-advent-pro-semi-bold text-white">ΑΓΟΡΑ ONLINE</p>
 

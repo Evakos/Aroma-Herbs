@@ -5,7 +5,7 @@
         'type' => 'wordpress-theme',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '315ce0a95d32da3f373d72966a84e2209f7ea81f',
+        'reference' => 'c5edbb8b03043a140a269e6e0e686ba646dc384c',
         'name' => 'roots/sage',
         'dev' => false,
     ),
@@ -338,7 +338,7 @@
             'type' => 'wordpress-theme',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '315ce0a95d32da3f373d72966a84e2209f7ea81f',
+            'reference' => 'c5edbb8b03043a140a269e6e0e686ba646dc384c',
             'dev_requirement' => false,
         ),
         'roots/support' => array(

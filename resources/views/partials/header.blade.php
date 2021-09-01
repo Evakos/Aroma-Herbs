@@ -14,7 +14,7 @@
   </nav>
 
   @hasfield('hero_image')
-<div class="flex justify-center mx-auto pt-24 animate__animated animate__fadeIn">
+<div class="flex justify-center mx-auto pt-24 animate__animated animate__fadeIn animate__slow">
   <!-- <div class="overlay-top"></div>
   <div class="overlay-bot"></div> -->
 
