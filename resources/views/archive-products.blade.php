@@ -33,38 +33,6 @@
 <div class="container mx-auto py-20">
 
 
-
-
-
-<!-- <div class="hidden"> 
-<div class=""> 
-<div class="filter-mob-menu"><span class="mob-filter-text">Filter Stories</span><span id="mobile-filter-button"><i class="fas fa-bars"></i></span></div>
-<?php
-		if( $terms = get_terms( array( 'taxonomy' => 'category', 'exclude'=>1, 'orderby' => 'date', 'hide_empty' => false ) ) ) : 
-            
-?>
-
-<?php
-			foreach ( $terms as $term ) :
-
-                 echo '<a class="prod-filter font-takhie text-grey text-center p-10 text-3xl"  product-id="' . $term->term_id . '" href="#">' . $term->name . '</a>';
-             
-			endforeach;
-?>
-      
-	<?
-		endif;
-        echo '</div>';
-        
- 
-	?>
-
-
-  </div> -->
-
-
-
-
   <div class="flex justify-center items-center ">
 
       <a class="prod-filter font-takhie text-center leading-none text-gray-300 p-10 text-2xl sm:text-5xl transition duration-500 ease-in-out hover:text-dark-green filter-active"  product-id="3" href="#">ΦΡΕΣΚΑ ΜΥΡΩΔΙΚΑ</a>
@@ -99,7 +67,7 @@ $args = array('post_type' => 'products', 'posts_per_page' => -1, 'tax_query' => 
         array(
             'taxonomy' => 'category',
             'field' => 'id',
-            'terms' => $term->term_id,
+            'terms' => 'fresh-spices',
         )
      ));
 $loop = new WP_Query($args);

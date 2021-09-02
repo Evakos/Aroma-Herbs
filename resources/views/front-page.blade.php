@@ -7,83 +7,50 @@
   @include('partials.header')
 
 
-  <div class="container mx-auto relative hidden sm:block">
+  <div class="container mx-auto  relative h-[5500px] hidden sm:flex">
 
-  <div class="flex justify-center h-[800px] 2xl:h-[1000px]">
-      <div class="flex flex-1 relative">
+
+  <!-- First Image Row -->
       <img src="@asset('images/home-img-1.jpg')" class="absolute top-64 left-0" data-aos="move-right"/> 
-      </div>
-      <div class="flex flex-1 relative">
       <img src="@asset('images/home-img-2.jpg')" class="absolute right-0 bottom-auto top-56 2xl:top-96" data-aos="move-left"/>
-      </div>
-    </div>
 
-  <div class="flex justify-center h-[800px]">
 
-    <div class="flex flex-1 relative w-36">
-      <img src="@asset('images/home-img-3.jpg')" class="absolute" data-aos="rotate-right"/>
-    </div>
-    
-    <div class="flex flex-1">
+
+<!-- Second Image Row -->
+      <img src="@asset('images/home-img-3.jpg')" class="max-w-full absolute top-[800px] 2xl:top-[1000px]" data-aos="rotate-right"/>
+
+
+      <!-- Third Image Row -->
+      <div class="flex">
+      <img src="@asset('images/spring-onion-slices.png')" class="absolute max-h-full right-[600px] top-[1800px] 2xl:top-[2000px]" data-aos=""/>
+      <img src="@asset('images/radish.png')" class="absolute max-h-full right-0 top-[1400px] 2xl:top-[1600px]"  data-aos="move-left-straight"/>
+      <img src="@asset('images/spring-onion.png')" class="absolute max-h-full right-[300px] top-[1600px] 2xl:top-[1800px]" data-aos="rotate-right-5"/>
+      <img src="@asset('images/chilli-pepper-slices.png')" class="absolute max-w-full right-0 top-[2200px] 2xl:top-[2400px]" data-aos="rotate-left"/>
+</div>
+
+
+  <!-- Forth Image Row -->
+    <img src="@asset('images/leek.png')" class="absolute h-[620px] 2xl:h-[720px] left-[300px] 2xl-[400px] top-[2200px] 2xl:top-[2800px]" data-aos="rotate-right"/>
+    <img src="@asset('images/leaves.png')" class="absolute max-w-[192px] left-[350px] top-[2700px] 2xl:top-[3300px]" data-aos="shake"/>
+
+
+
   
+  <!-- Fifth Image Row -->
+    <img src="@asset('images/croutons.png')" class="absolute right-0 top-[3300px]"/>
+    <img src="@asset('images/parsley-partial.png')" class="max-w-[268px] absolute right-[300px] top-[3600px]" data-aos="rotate-left"/>
+
+
+      <img src="@asset('images/basil-angle.png')" class="absolute max-w-[500px] left-[600px] top-[4000px]" data-aos-delay="350" data-aos-offset="200" data-aos="rotate-left"/>
+      <img src="@asset('images/quark-with-herbs.png')" class="max-w-[244px] absolute right-[200px] top-[4400px]" data-aos-offset="300" data-aos="rotate-right"/>
+
+
+
+    <img src="@asset('images/aroma_peppers_habanero_pack-front.png')" class="absolute max-w-[500px] left-0 bottom-[10px]"/>
+
   
-    </div>
-    
-  
-  </div>
-
-
-
-  <div class="flex justify-center h-[1000px]">
-
-    <div class="flex flex-1">
-  
-    </div>
-
-    <div class="flex flex-1 justify-center relative">
-
-      <img src="@asset('images/spring-onion-slices.png')" class="absolute h-[147px] left-0 top-1/4" data-aos=""/>
-      <img src="@asset('images/radish.png')" class="absolute h-[673px] right-0 top-0"  data-aos="move-left-straight"/>
-      <img src="@asset('images/spring-onion.png')" class="absolute h-[687px] left-20 top-0" data-aos="rotate-right-5"/>
-      <img src="@asset('images/chilli-pepper-slices.png')" class="absolute w-[244px] bottom-0 right-0" data-aos="rotate-left"/>
-    </div>
-  
-    
-  </div>
-
-
-  <div class="flex justify-center h-[1200px]">
-    <div class="flex flex-1 justify-center relative">
-
-    <img src="@asset('images/leek.png')" class="absolute h-[720px] right-0 top-0" data-aos="rotate-right"/>
-    <img src="@asset('images/leaves.png')" class="absolute w-[192px] left-1/3 bottom-1/3" data-aos="shake"/>
-    </div>
-    <div class="flex flex-1 justify-center relative">
-    <img src="@asset('images/croutons.png')" class="absolute bottom-5 right-0"/>
-    <img src="@asset('images/parsley-partial.png')" class="w-[268px] absolute bottom-0 left-36" data-aos="rotate-left"/>
-    </div>
-  </div>
-
-  <div class="flex justify-center h-[800px]">
-    <div class="flex justify-center relative">
-    </div>
-    <div class="flex flex-1 justify-center relative">
-      <img src="@asset('images/basil-angle.png')" class="w-[500px] absolute right-96 top-0" data-aos-delay="350" data-aos-offset="200" data-aos="rotate-left"/>
-      <img src="@asset('images/quark-with-herbs.png')" class="w-[244px] absolute bottom-40 right-64" data-aos-offset="300" data-aos="rotate-right"/>
-
-
-      
-    </div>
-  </div>
-
-  <div class="flex justify-center h-[450px]">
-    <div class="flex flex-1 justify-center relative">
-    <img src="@asset('images/home-img-9.jpg')" class="absolute right-20 -top-1/4"/>
-    </div>
-    <div class="flex flex-1 justify-center relative">
-      <img src="@asset('images/home-img-12.png')" class="absolute right-20 top-0"/>
-    </div>
-  </div>
+      <img src="@asset('images/home-img-12.png')" class="absolute right-[100px] bottom-[10px]"/>
+ 
 
   <div class="absolute mx-auto right-0 left-0 bottom-0 top-0 z-0"/>
 
@@ -91,7 +58,8 @@
 
 </div>
   
-  </div> 
+</div>
+
 
 
   <!-- Mobile Tree -->
@@ -201,7 +169,7 @@
 
 
   <div class="flex mt-5 justify-center">
-          <img src="@asset('images/sec-c.jpg')" class="w-screen object-cover"/>  
+          <img src="@field('product_background_image')" class="w-screen object-cover"/>  
         </div>
 
         @php
