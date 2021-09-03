@@ -1,5 +1,8 @@
 
 
+ 
+ <div class="relative">
+
 <a href="@permalink" class="blog-card">
 
 
@@ -13,3 +16,9 @@
 <img src="@thumbnail('full', false)" alt="Full Image" />
 
 </a>
+
+</div>
+
+
+
+

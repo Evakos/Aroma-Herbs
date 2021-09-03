@@ -76,7 +76,6 @@ $loop = new WP_Query($args);
 
   @while($loop->have_posts()) @php($loop->the_post())
 
-
   <div class="p-16 flex items-end single-product">
     
   <a href="@permalink" class="cursor-pointer">
@@ -96,9 +95,14 @@ $loop = new WP_Query($args);
 
   </div>
 
+    </div>
+
+    </div>
+
   {!! get_the_posts_navigation() !!}
+  
 @endsection
 
-@section('sidebar')
+<!-- @section('sidebar')
   @include('partials.sidebar')
-@endsection
+@endsection -->

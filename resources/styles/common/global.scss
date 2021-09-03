@@ -507,3 +507,9 @@ ul.social-media-icons li:first-child {margin-right:20px}
 }
 }
 
+.widget {@apply bg-light-green mb-10 p-10}
+
+.widget h3 {@apply text-white text-2xl border-b-2 border-white py-5 mb-10}
+
+.tag-cloud-link {@apply bg-white py-4 px-6 rounded-full inline-block mb-5}
+

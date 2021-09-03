@@ -3,8 +3,6 @@
 @include('partials.modal')
 
 
-
-
 @include('partials.header')
 
 

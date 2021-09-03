@@ -1,7 +1,28 @@
 @extends('layouts.app')
 
+@include('partials.modal')
+
+
+@include('partials.header')
+
+
+
+<div class="container relative mx-auto mb-24">
+
+        <div class="flex items-center justify-center">
+    
+        
+       <img src="@asset('images/fresh-news.svg')" class="w-[382px]"/> 
+         
+         </div>
+
+         </div>
+
+
 @section('content')
-  @include('partials.page-header')
+
+
+
 
   @if (! have_posts())
     <x-alert type="warning">
@@ -11,13 +32,20 @@
     {!! get_search_form(false) !!}
   @endif
 
+
+<div class="container relative mx-auto mb-24">
+
+@include('partials.page-header')
+
+  <div class="grid grid-cols-2 gap-4">
+
   @while(have_posts()) @php(the_post())
-    @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
+
+   <div class="relative"> @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])</div>
+
   @endwhile
+  </div>
+</div>
 
   {!! get_the_posts_navigation() !!}
-@endsection
-
-@section('sidebar')
-  @include('partials.sidebar')
 @endsection
