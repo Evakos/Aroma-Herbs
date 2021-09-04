@@ -222,7 +222,7 @@
 
       <div class="flex items-center justify-center my-20">
     
-    <img src="@asset('images/home-title-eight.svg')" class="w-[158px] sm:w-[367px]" data-aos="animate__animated animate__fadeIn animate__slow"/> 
+    <img src="@asset('images/home-title-eight.svg')" class="w-[158px] sm:w-[367px]" data-aos="fade-up"/> 
       
       </div>
       @php

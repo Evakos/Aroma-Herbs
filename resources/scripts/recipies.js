@@ -23,7 +23,7 @@
    
    // Add classes for pagination.
    pagination: 'splide__pagination relative sm:absolute', // container
-   page      : 'splide__pagination__page your-class-page', // each button
+   		page      : 'splide__pagination__page w-4 h-4 m-1', // each button
  },
   
 } ).mount();
