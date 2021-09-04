@@ -7,7 +7,7 @@
   @include('partials.header')
 
 
-  <div class="container mx-auto  relative h-[5500px] hidden sm:flex">
+  <div class="container mx-auto relative h-[5500px] hidden md:flex">
 
 
   <!-- First Image Row -->
@@ -63,13 +63,16 @@
 
 
   <!-- Mobile Tree -->
-  <div class="container mx-auto relative sm:hidden">
+
+  <div class="container mx-auto relative md:hidden">
   <div class="flex justify-center">
       <div class="flex flex-1 justify-center items-center">
-      <img src="@asset('images/home-img-1.jpg')" class="w-[145px]"> 
+      <img src="@asset('images/home-img-1.jpg')" class="w-[145px]"/>
+
+
       </div>
       <div class="flex flex-1 justify-center items-center">
-      <img src="@asset('images/home-img-2.jpg')" class="w-[145px]">
+      <img src="@asset('images/home-img-2.jpg')" class="w-[145px]"/>
       </div>
     </div>
 
@@ -95,7 +98,7 @@
   <div class="flex items-center justify-center my-20">
     
          
-    <img src="@asset('images/grown-countryside-title.svg')" class="w-[272px]" data-aos="fade"/>
+    <img src="@asset('images/grown-countryside-title.svg')" class="w-[272px]"/>
 
       </div>
 
@@ -222,7 +225,7 @@
 
       <div class="flex items-center justify-center my-20">
     
-    <img src="@asset('images/home-title-eight.svg')" class="w-[158px] sm:w-[367px]" data-aos="fade-up"/> 
+    <img src="@asset('images/home-title-eight.svg')" class="w-[158px] sm:w-[367px]"/> 
       
       </div>
       @php
@@ -231,7 +234,7 @@
   ]);
 @endphp
 
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 @posts($query)
 
 
@@ -258,18 +261,18 @@
 
 </div>
         <div class="flex mt-5 justify-center">
-          <img src="@field('harvest_image')" class="w-screen object-cover"/> 
+          <img src="@field('harvest_image')" class="h-[288px] sm:h-auto w-screen object-cover"/> 
         </div>
 
-        <div class="container relative mx-auto mt-10 mb-10 sm:mb-0 sm:mt-10">
-        <div class="flex sm:py-24 sm:px-48">
+        <div class="container relative mx-auto mt-10 mb-10 md:mb-0 md:mt-10">
+        <div class="flex md:py-24 md:px-48">
 
-        <div class="hidden sm:flex flex-1 justify-center">
+        <div class="hidden md:flex flex-1 justify-center">
           <img src="@asset('images/ifs.svg')" class="w-[287px]"/> 
         </div>
   
-        <div class="flex flex-1 flex-col sm:items-end sm:text-right">
-          <h3 class="mb-10 text-center sm:text-right"> @field('harvest_title')</h3>
+        <div class="flex flex-1 flex-col md:items-end md:text-right">
+          <h3 class="mb-10 text-center md:text-right"> @field('harvest_title')</h3>
             <p class="mb-10">@field('harvest_text')</p>
     
               
@@ -293,7 +296,7 @@
         <div class="flex items-center justify-center">
     
         
-       <img src="@asset('images/home-title-ten.svg')" class="w-[276px] sm:w-[681px]"/> 
+       <img src="@asset('images/home-title-ten.svg')" class="my-20 w-[276px] sm:w-[681px]"/> 
          
          </div>
 
@@ -302,12 +305,12 @@
 </div>
 
         <div class="flex flex-1 justify-center">
-          <img src="@field('locator_image')" class="w-screen object-cover"/> 
+          <img src="@field('locator_image')" class="h-[288px] sm:h-auto w-screen object-cover"/> 
         </div>
   
         <div class="container relative mx-auto">
-        <div class="flex flex-col sm:flex-row sm:py-24 sm:px-48">
-          <div class="flex flex-1 flex-col sm:items-start">
+        <div class="flex flex-col md:flex-row py-24 md:px-48">
+          <div class="flex flex-1 flex-col md:items-start">
             <h3 class="mb-10 mt-10 sm:mt-0 text-center sm:text-left">@field('locator_title')</h3>
               <p class="mb-10">@field('locator_text')</p>
       

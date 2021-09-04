@@ -1,9 +1,9 @@
 <footer class="bg-aroma-x-light-grey relative">
 
-    <div class="container mx-auto pt-20 sm:pt-52">
+    <div class="container mx-auto pt-20 md:pt-52">
 
-        <div class="flex flex-col sm:flex-row justify-center">
-            <div class="flex flex-col flex-1 justify-center mb-10 sm:mb-0 sm:pr-32">
+        <div class="flex flex-col md:flex-row justify-center">
+            <div class="flex flex-col flex-1 justify-center mb-10 md:mb-0 md:pr-32">
                 <img src="@asset('images/logo-footer.svg')" class="w-[93px] mb-5" />
             
 
@@ -13,7 +13,7 @@
 
                     <!-- @shortcode('[contact-form-7 id="286"]') -->
             </div>
-            <div class="flex flex-col flex-1 justify-center mb-10 sm:mb-0">
+            <div class="flex flex-col flex-1 justify-center mb-10 md:mb-0">
              <nav class="">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav text-dark-green']) !!}
@@ -32,18 +32,18 @@
 
         </div>
 
-        <div class="flex sm:justify-end border-b-2 border-light-green items-center h-28">
+        <div class="flex md:justify-end border-b-2 border-light-green items-center h-28">
         @php aroma_social_media_icons() @endphp
 
         </div>
 
-        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center sm:h-28">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center md:h-28">
 
-            <div class="mb-10 mt-10 sm:mt-0 sm:mb-0">© 2021 Aroma Herbs. </div>
+            <div class="mb-10 mt-10 md:mt-0 md:mb-0">© 2021 Aroma Herbs. </div>
 
-            <div classs="mb-10 sm:mb-0"><img src="@asset('images/ifs.svg')" class="w-[82px]" /></div>
+            <div classs="mb-10 md:mb-0"><img src="@asset('images/ifs.svg')" class="w-[82px]" /></div>
 
-            <div class="mt-10 sm:mt-0">Site by 
+            <div class="mt-10 md:mt-0">Site by 
 <a href="url" class="text-light-green">Fluid</a>
 </div>
 

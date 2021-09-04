@@ -1,2 +1,30 @@
-(self.webpackChunk=self.webpackChunk||[]).push([[878],{242:function(r,e,s){"use strict";var a=s(595);new(s.n(a)())("#splide-recipie-slider",{type:"loop",perPage:1,breakpoints:{640:{arrows:!1,pagination:!1}},classes:{arrows:"splide__arrows your-class-arrows",arrow:"splide__arrow your-class-arrow",prev:"splide__arrow--prev your-class-prev",next:"splide__arrow--next your-class-next",pagination:"splide__pagination relative sm:absolute",page:"splide__pagination__page w-4 h-4 m-1"}}).mount()}},function(r){"use strict";r.O(0,[941],(function(){return e=242,r(r.s=e);var e}));r.O()}]);
-//# sourceMappingURL=recipies.js.map
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["/scripts/recipies"],{
+
+/***/ "./resources/scripts/recipies.js":
+/*!***************************************!*\
+  !*** ./resources/scripts/recipies.js ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ \"./node_modules/@splidejs/splide/dist/js/splide.esm.js\");\n/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_splidejs_splide__WEBPACK_IMPORTED_MODULE_0__);\n/**\n * Splide Imports\n */\n //Recipie Slider\n\nnew (_splidejs_splide__WEBPACK_IMPORTED_MODULE_0___default())('#splide-recipie-slider', {\n  type: 'loop',\n  perPage: 1,\n  breakpoints: {\n    640: {\n      arrows: false,\n      pagination: true\n    }\n  },\n  classes: {\n    // Add classes for arrows.\n    arrows: 'splide__arrows your-class-arrows',\n    arrow: 'splide__arrow your-class-arrow',\n    prev: 'splide__arrow--prev your-class-prev',\n    next: 'splide__arrow--next your-class-next',\n    // Add classes for pagination.\n    pagination: 'splide__pagination relative md:absolute md:py-10',\n    // container\n    page: 'splide__pagination__page w-4 h-4 m-1' // each button\n\n  }\n}).mount();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2NyaXB0cy9yZWNpcGllcy5qcz84MWVhIl0sIm5hbWVzIjpbInR5cGUiLCJwZXJQYWdlIiwiYnJlYWtwb2ludHMiLCJhcnJvd3MiLCJwYWdpbmF0aW9uIiwiY2xhc3NlcyIsImFycm93IiwicHJldiIsIm5leHQiLCJwYWdlIl0sIm1hcHBpbmdzIjoiOzs7QUFBQTtBQUNBO0FBQ0E7Q0FJQzs7QUFDQSx3RkFBc0M7QUFDckNBLE1BQUksRUFEaUM7QUFFckNDLFNBQU8sRUFGOEI7QUFHckNDLGFBQVcsRUFBRTtBQUNaLFNBQUs7QUFDSEMsWUFBTSxFQURIO0FBRUhDLGdCQUFVLEVBQUU7QUFGVDtBQURPLEdBSHdCO0FBU3JDQyxTQUFPLEVBQUU7QUFDUjtBQUNBRixVQUFNLEVBRkU7QUFHUkcsU0FBSyxFQUhHO0FBSVJDLFFBQUksRUFKSTtBQUtSQyxRQUFJLEVBTEk7QUFPUjtBQUNBSixjQUFVLEVBUkY7QUFRd0Q7QUFDOURLLFFBQUksRUFURSx1Q0FTOEM7O0FBVDlDO0FBVDRCLENBQXRDIiwiZmlsZSI6Ii4vcmVzb3VyY2VzL3NjcmlwdHMvcmVjaXBpZXMuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIFNwbGlkZSBJbXBvcnRzXG4gKi9cbiBpbXBvcnQgU3BsaWRlIGZyb20gJ0BzcGxpZGVqcy9zcGxpZGUnO1xuXG5cbiAvL1JlY2lwaWUgU2xpZGVyXG4gbmV3IFNwbGlkZSggJyNzcGxpZGUtcmVjaXBpZS1zbGlkZXInLCB7XG4gIHR5cGUgICA6ICdsb29wJyxcbiAgcGVyUGFnZTogMSxcbiAgYnJlYWtwb2ludHM6IHtcbiAgIDY0MDoge1xuICAgICBhcnJvd3M6IGZhbHNlLFxuICAgICBwYWdpbmF0aW9uOiB0cnVlLFxuICAgfSxcbiB9LFxuICBjbGFzc2VzOiB7XG4gICAvLyBBZGQgY2xhc3NlcyBmb3IgYXJyb3dzLlxuICAgYXJyb3dzOiAnc3BsaWRlX19hcnJvd3MgeW91ci1jbGFzcy1hcnJvd3MnLFxuICAgYXJyb3cgOiAnc3BsaWRlX19hcnJvdyB5b3VyLWNsYXNzLWFycm93JyxcbiAgIHByZXYgIDogJ3NwbGlkZV9fYXJyb3ctLXByZXYgeW91ci1jbGFzcy1wcmV2JyxcbiAgIG5leHQgIDogJ3NwbGlkZV9fYXJyb3ctLW5leHQgeW91ci1jbGFzcy1uZXh0JyxcbiAgIFxuICAgLy8gQWRkIGNsYXNzZXMgZm9yIHBhZ2luYXRpb24uXG4gICBwYWdpbmF0aW9uOiAnc3BsaWRlX19wYWdpbmF0aW9uIHJlbGF0aXZlIG1kOmFic29sdXRlIG1kOnB5LTEwJywgLy8gY29udGFpbmVyXG4gICBcdFx0cGFnZSAgICAgIDogJ3NwbGlkZV9fcGFnaW5hdGlvbl9fcGFnZSB3LTQgaC00IG0tMScsIC8vIGVhY2ggYnV0dG9uXG4gfSxcbiAgXG59ICkubW91bnQoKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/scripts/recipies.js\n");
+
+/***/ })
+
+},
+/******/ function(__webpack_require__) { // webpackRuntimeModules
+/******/ "use strict";
+/******/ 
+/******/ var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
+/******/ __webpack_require__.O(0, ["/scripts/vendor"], function() { return __webpack_exec__("./resources/scripts/recipies.js"); });
+/******/ var __webpack_exports__ = __webpack_require__.O();
+/******/ }
+]);

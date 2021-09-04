@@ -19,7 +19,7 @@
 <div class="flex items-center justify-center my-20">
 
 
-    <img src="@asset('images/recipies-recipies-title.svg')" class="w-[448px]" />
+    <img src="@asset('images/recipies-recipies-title.svg')" class="w-[300px] md:w-[448px]" />
 
 </div>
 
@@ -114,10 +114,10 @@ $query = new WP_Query([
 
 
 
-    <div class="grid grid-cols-4">
+    <div class="grid md:grid-cols-4">
         @posts($query)
       
-<div class="flex relative" id="recipies-thumbs">
+<div class="flex relative mb-10 sm:m-0" id="recipies-thumbs">
   
 <img src="@thumbnail('full', false)" alt="Full Image" />
 

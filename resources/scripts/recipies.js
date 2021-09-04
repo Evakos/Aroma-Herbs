@@ -11,7 +11,7 @@
   breakpoints: {
    640: {
      arrows: false,
-     pagination: false,
+     pagination: true,
    },
  },
   classes: {
@@ -22,7 +22,7 @@
    next  : 'splide__arrow--next your-class-next',
    
    // Add classes for pagination.
-   pagination: 'splide__pagination relative sm:absolute', // container
+   pagination: 'splide__pagination relative md:absolute md:py-10', // container
    		page      : 'splide__pagination__page w-4 h-4 m-1', // each button
  },
   

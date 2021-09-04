@@ -12,7 +12,7 @@
         <div class="flex items-center justify-center">
     
         
-       <img src="@asset('images/fresh-news.svg')" class="w-[382px]"/> 
+       <img src="@asset('images/fresh-news.svg')" class="w-[158px] md:w-[382px]"/> 
          
          </div>
 
@@ -33,7 +33,7 @@
 
 <div class="container relative mx-auto mb-24">
 
-  <div class="grid grid-cols-2 gap-4">
+  <div class="grid md:grid-cols-2 gap-4">
 
   @while(have_posts()) @php(the_post())
 

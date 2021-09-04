@@ -22,7 +22,7 @@
   </div>
 </div>
 
-<div class="flex justify-center">
+<div class="flex justify-center py-10">
   
     <img src="@asset('images/discover.svg')" class="w-[254px]">
 
@@ -30,7 +30,7 @@
   </div>
 
 
-<div class="container mx-auto py-20">
+<div class="container mx-auto py-10 md:py-20">
 
 
   <div class="flex justify-center items-center ">
@@ -60,7 +60,7 @@
     {!! get_search_form(false) !!}
   @endif
 
-  <div class="grid sm:grid-cols-4 sm:gap-4">
+  <div class="grid md:grid-cols-4 md:gap-4">
 
   @php
 $args = array('post_type' => 'products', 'posts_per_page' => -1, 'tax_query' => array(
@@ -76,7 +76,7 @@ $loop = new WP_Query($args);
 
   @while($loop->have_posts()) @php($loop->the_post())
 
-  <div class="p-16 flex items-end single-product">
+  <div class="py-10 px-20 md:p-16 flex items-end single-product">
     
   <a href="@permalink" class="cursor-pointer">
 

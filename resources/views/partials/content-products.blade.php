@@ -1,8 +1,6 @@
+<a href="@permalink">
 
-
-<a href="@permalink" class="" id="">
-
-<div class="flex justify-center p-12">
+<div class="flex justify-center p-20 md:p-12">
 
 <img src="@thumbnail('full', false)" alt="Full Image" class="" />
 
@@ -15,6 +13,5 @@
 </p>
 
 </div>
-
 
 </a>

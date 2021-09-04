@@ -28,7 +28,7 @@
           
         </div>
 <div class="container flex justify-center relative mx-auto">
-        <div class="flex flex-col py-24 sm:w-1/2 justify-center">
+        <div class="flex flex-col py-24 md:w-1/2 justify-center">
         
           <h3 class="mb-10 sm:px-24 text-center">@sub('title')</h3>
             <p class="mb-10">@sub('text')</p>
@@ -57,20 +57,24 @@
  <img src="@sub('image')" class="w-screen object-cover min-h-[300px]"/> 
         </div>
         <div class="container flex justify-center relative mx-auto">
-        <div class="flex flex-col py-24 sm:w-1/2 justify-center">
+        <div class="flex flex-col py-24 md:w-1/2 justify-center">
 
             <p class="mb-10">@sub('text')</p>
         
 
       
- <div class="quote flex flex-col py-24 px-24 justify-center">
+ <div class="quote flex flex-col py-12 px-12 md:py-24 md:px-24 justify-center">
+
+ <div class="mb-5">
+ <img src="@asset('images/quote.svg')" class="w-[68px]"/> 
+</div>
 
  <h4 class="text-2xl">@sub('quote')</h4>
   
 
-<p class="text-sm pt-10">@sub('author')</p>
+<p class="text-sm font-advent-pro-semi-bold text-red-500 pt-10">@sub('author')</p>
 
-<p class="text-sm">@sub('position')</p>
+<p class="text-sm text-aroma-grey">@sub('position')</p>
 
 
 </div>
@@ -105,7 +109,7 @@
 
        
         <div class="container flex justify-center relative mx-auto">
-        <div class="flex flex-col py-24 sm:w-1/2 justify-center">
+        <div class="flex flex-col py-24 md:w-1/2 justify-center">
 
             <p class="mb-10">@sub('text')</p>
 
@@ -166,7 +170,7 @@ if( $images ): ?>
         </div>
 
  <div class="container flex justify-center relative mx-auto">
-        <div class="flex flex-col py-24 sm:w-1/2 justify-center">
+        <div class="flex flex-col py-24 md:w-1/2 justify-center">
 
         <p class="mb-10">@sub('text')</p>
 
@@ -174,13 +178,17 @@ if( $images ): ?>
 
  <div class="quote flex flex-col py-24 sm:px-24 justify-center">
 
+ <div class="mb-5">
+ <img src="@asset('images/quote.svg')" class="w-[68px]"/> 
+</div>
+
 
  <h4 class="text-2xl">@sub('quote')</h4>
   
 
-<p class="text-sm pt-10">@sub('author')</p>
+<p class="text-sm font-advent-pro-semi-bold text-red-500 pt-10">@sub('author')</p>
 
-<p class="text-sm">@sub('position')</p>
+<p class="text-sm text-aroma-grey">@sub('position')</p>
 
 
 

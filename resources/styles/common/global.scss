@@ -80,7 +80,7 @@ h3 {
 }
 
 .btn {
-  @apply transition duration-500 ease-in-out cursor-pointer leading-none border-2 border-light-green py-4 px-10 text-2xl text-center uppercase text-light-green;
+  @apply transition duration-500 ease-in-out cursor-pointer leading-none border-2 border-light-green py-4 px-10 text-2xl text-center uppercase text-light-green self-center;
 }
 
 .btn:hover {
@@ -113,110 +113,110 @@ h3 {
   @apply text-dark-green;
 }
 
-// .fade-in {
-//   animation: fadeIn 5s;
-//   -webkit-animation: fadeIn 5s;
-//   -moz-animation: fadeIn 5s;
-//   -o-animation: fadeIn 5s;
-//   -ms-animation: fadeIn 5s;
-// }
-// @keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+.fade-in {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-// @-moz-keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-// @-webkit-keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-// @-o-keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-// @-ms-keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 
-// .fade-in-fast {
-//   animation: fadeInFast 1s;
-//   -webkit-animation: fadeInFast 1s;
-//   -moz-animation: fadeInFast 1s;
-//   -o-animation: fadeInFast 1s;
-//   -ms-animation: fadeInFast 1s;
-// }
-// @keyframes fadeInFast {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+.fade-in-fast {
+  animation: fadeInFast 1s;
+  -webkit-animation: fadeInFast 1s;
+  -moz-animation: fadeInFast 1s;
+  -o-animation: fadeInFast 1s;
+  -ms-animation: fadeInFast 1s;
+}
+@keyframes fadeInFast {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-// @-moz-keyframes fadeInFast {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@-moz-keyframes fadeInFast {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-// @-webkit-keyframes fadeInFast {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@-webkit-keyframes fadeInFast {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-// @-o-keyframes fadeInFast {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@-o-keyframes fadeInFast {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-// @-ms-keyframes fadeInFast {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@-ms-keyframes fadeInFast {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .splide__arrow {
 	background: transparent;
@@ -507,9 +507,22 @@ ul.social-media-icons li:first-child {margin-right:20px}
 }
 }
 
+@media screen and (max-width: 768px) {
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+
+    height: 3px;
+  
+  }
+}
+
+
 .widget {@apply bg-light-green mb-10 p-10}
 
 .widget h3 {@apply text-white text-2xl border-b-2 border-white py-5 mb-10}
 
 .tag-cloud-link {@apply bg-white py-4 px-6 rounded-full inline-block mb-5}
+
+
+
+
 

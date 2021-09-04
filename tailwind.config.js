@@ -35,6 +35,7 @@ module.exports = {
       'home-main': "url('../images/vine.jpg')",
       'sec-c': "url('../images/sec-c.jpg')",
       'sec-d': "url('../images/sec-d.jpg')",
+      
  
      },
     fontFamily: {

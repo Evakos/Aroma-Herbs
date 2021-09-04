@@ -19,7 +19,7 @@
         </div>
 
 
-        <div class="container mx-auto -mt-10 sm:-mt-96">
+        <div class="container mx-auto -mt-10 md:-mt-96">
 
     <div id="splide-recipie-slider" class="splide">
         <div class="splide__track">

@@ -39,7 +39,7 @@ import "jquery";
 	 perPage: 4,
 	 breakpoints: {
 		 
-		640: {
+		768: {
 			pagination: false,
 			perPage: 1,
 		},

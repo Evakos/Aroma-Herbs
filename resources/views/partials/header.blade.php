@@ -1,9 +1,9 @@
 <header class="mx-auto bg-auto bg-center bg-no-repeat bg-white mb-20">
   
-<nav class="container absolute mx-auto right-0 left-0 top-0 flex items-center justify-between flex-wrap pt-24 sm:px-16 scroll">
+<nav class="container absolute mx-auto right-0 left-0 top-0 flex items-center justify-between flex-wrap pt-14 md:px-16 scroll">
     <div class="flex items-center flex-shrink-0 text-white mr-6 z-10">
       <a class="text-white no-underline hover:text-white hover:no-underline" href="@permalink(11)" id="site-logo">
-        <span class="flex w-[63px] sm:w-[171px]"><img src="@asset('images/logo.svg')"/></span>  
+        <span class="flex w-[63px] md:w-[171px]"><img src="@asset('images/logo.svg')"/></span>  
       </a>
     </div>
       <button class="hamburger hamburger--collapse self-end z-50" onclick="showDialog()" type="button">

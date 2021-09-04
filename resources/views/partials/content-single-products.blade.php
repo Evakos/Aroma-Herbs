@@ -8,7 +8,7 @@
 
         </div>
 
-        <p class="font-takhie text-dark-green tracking-widest text-7xl sm:text-9xl">@title</p>
+        <p class="font-takhie text-dark-green tracking-widest text-7xl md:text-9xl">@title</p>
 
     </div>
 
@@ -21,9 +21,9 @@
 
         <!-- Thumbs Column -->
 
-        <div class="flex flex-col sm:flex-row mb-20">
+        <div class="flex flex-col md:flex-row mb-20">
 
-            <div class="hidden sm:flex justify-center sm:w-3/12">
+            <div class="hidden md:flex justify-center md:w-3/12">
 
 
                 @include('partials.product-thumbs-slider')
@@ -36,9 +36,9 @@
 
             <!-- Main Image Column -->
 
-            <div class="flex relative min-h-[550px] justify-center sm:w-4/12">
+            <div class="flex relative min-h-[550px] justify-center md:w-4/12">
 
-            <img src="@asset('images/product-bg.jpg')" alt="" class="absolute object-cover w-screen"/> 
+            <img src="@asset('images/product-bg.jpg')" alt="" class="absolute object-cover w-screen sm:w-auto"/> 
 
                 @include('partials.product-main-image-slider')
 
@@ -55,11 +55,11 @@
 
             <!-- Third Column -->
 
-            <div class="flex flex-col px-10 sm:w-5/12">
-                <div class="flex flex-row w-full sm:flex-col mt-20 sm:mt-0 sm:pl-20">
-                    <div class="flex flex-col pr-10 items-center sm:items-start">
-                        <p class="mb-5 text-sm font-advent-pro-light text-aroma-grey"><?php echo get_field('product_code');?></p>
-                        <p class="text-3xl sm:text-5xl mb-5"><?php echo get_field('weight');?></p>
+            <div class="flex flex-col px-10 md:w-5/12">
+                <div class="flex flex-row w-full md:flex-col mt-20 md:mt-0 md:pl-20">
+                    <div class="flex flex-col pr-10 items-center md:items-start">
+                        <p class="mb-5 text-md font-advent-pro-light text-aroma-grey"><?php echo get_field('product_code');?></p>
+                        <p class="text-3xl md:text-5xl mb-5"><?php echo get_field('weight');?></p>
                     </div>
                     <p class="mb-5 font-advent-pro-light text-aroma-grey">
                       
@@ -69,7 +69,7 @@
 
                 </div>
 
-                <div class="flex flex-col mt-20 sm:pl-20">
+                <div class="flex flex-col mt-20 md:pl-20">
 
                     <p class="uppercase mb-10">ΔιαθΕσιμο ΣΕ</p>
 
@@ -79,7 +79,7 @@ if( $packages ): ?>
                     <ul class="flex">
                         <?php foreach( $packages as $package ): ?>
                         <li><span
-                                class="text-white py-3 sm:py-4 px-8 sm:px-10 mr-3 sm:mr-6 bg-pink"><?php echo $package['label']; ?></span>
+                                class="text-white py-3 md:py-4 px-8 md:px-10 mr-3 md:mr-6 bg-pink"><?php echo $package['label']; ?></span>
                         </li>
                         <?php endforeach; ?>
                     </ul>
@@ -135,12 +135,12 @@ if( $packages ): ?>
 
 <div class="container relative mx-auto mb-44">
 
-    <div class="flex flex-col sm:flex-row mt-20">
+    <div class="flex flex-col md:flex-row mt-20">
 
 
-        <div class="flex flex-col sm:w-4/6 sm:pr-10 sm:pl-80 sm:border-r sm:border-gray-300">
+        <div class="flex flex-col md:w-4/6 md:pr-10 md:pl-80 md:border-r md:border-gray-300">
 
-            <p class="uppercase font-advent-pro-semi-bold flex sm:self-center mb-10 sm:mb-20">περιγραφη</p>
+            <p class="uppercase font-advent-pro-semi-bold flex md:self-center mb-10 md:mb-20">περιγραφη</p>
 
             <p>          <?php echo get_field('long_description');?></p>
 
@@ -150,9 +150,9 @@ if( $packages ): ?>
         </div>
 
 
-        <div class="flex flex-col mt-10 sm:mt-0 sm:w-2/6 sm:pl-10">
+        <div class="flex flex-col mt-10 md:mt-0 md:w-2/6 md:pl-10">
 
-            <p class="uppercase flex font-advent-pro-semi-bold mb-10 sm:mb-20">Περισσοτερες ΠΛΗΡΟΦΟΡΙΕΣ</p>
+            <p class="uppercase flex font-advent-pro-semi-bold mb-10 md:mb-20">Περισσοτερες ΠΛΗΡΟΦΟΡΙΕΣ</p>
 
             <p class="flex font-advent-pro-bold uppercase mb-10 text-aroma-grey">ΟδηγΙες ΣυντΗρησης</p>
 

@@ -1,7 +1,7 @@
 
 
 
-<div class="flex flex-col sm:py-24 sm:px-48">
+<div class="flex flex-col md:py-24 md:px-48">
 
   <div class="flex relative justify-center">
 
@@ -14,7 +14,7 @@
     
   </div>
 
-  <div class="flex flex-1 flex-col sm:px-52 sm:items-end sm:text-right  mt-20">
+  <div class="flex flex-1 flex-col md:px-52 md:items-end md:text-right mt-20">
     <h3 class="mb-10 text-center">@title</h3>
       <p class="mb-10 px-10 sm:px-0">@field('intro_text')</p>
 

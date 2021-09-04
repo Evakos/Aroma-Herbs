@@ -31,9 +31,9 @@
 
 </div>
 
-<div class="flex sm:flex-1 w-screen sm:w-auto justify-end sm:justify-start px-10 sm:px-0">
+<div class="flex sm:flex-1 w-screen md:w-auto justify-end md:justify-start px-10 md:px-0">
   
-  <nav class="nav-primary text-right">
+  <nav class="nav-primary text-right w-screen">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav advent-pro-semi-bold sm:text-2xl md:text-3xl 3xl:text-4xl text-white', 'echo' => false]) !!}
       @endif

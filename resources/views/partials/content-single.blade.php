@@ -1,6 +1,6 @@
-<div class="flex max-w-6xl mx-auto">
+<div class="flex flex-col md:flex-row max-w-6xl mx-auto">
 
-<div class="flex w-2/3">
+<div class="flex md:w-2/3 px-10 md:px-0 mb-10 md:mb-0">
 
 <article @php(post_class())>
   <header>
@@ -38,7 +38,7 @@
 
 </div>
 
-<aside class="sidebar flex flex-col self-start w-1/3 ml-12">
+<aside class="sidebar flex flex-col md:self-start md:w-1/3 md:ml-12">
 
   
   @php(dynamic_sidebar('sidebar-primary'))

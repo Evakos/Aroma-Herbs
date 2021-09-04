@@ -1,6 +1,6 @@
-<div class="flex max-w-6xl mx-auto">
+<div class="flex flex-col md:flex-row max-w-6xl mx-auto">
 
-<div class="flex w-2/3">
+<div class="flex md:w-2/3 px-10 md:px-0 mb-10 md:mb-0">
 
 <article @php(post_class())>
   <header>
@@ -11,17 +11,33 @@
     <!-- @include('partials/entry-meta') -->
   </header>
 
+
   
 
   <div class="entry-content text-right">
 
-
     @php(the_content())
 
-  <div class="flex">
+  <div class="flex flex-col md:flex-row">
+
+
+  <div class="flex flex-col mb-10 md:mb-0 md:ml-20 bg-light-green p-10">
+
+@hasfield('sidebar')
+<div class="flex flex-1 text-left flex-col bg-light-green rounded-lg sm:p-10">
+<p class="uppercase text-white font-advent-pro-semi-bold mb-10">ΕΥΚΟΛΗ</p>
+<ul>
+  @fields('sidebar')
+    <li class="text-white">@sub('title') <br> @sub('details')</li>
+  @endfields
+</ul>
+</div>
+@endfield
+
+</div>
 
 @hasfield('ingredients')
-<div class="flex text-left flex-1 flex-col bg-light-green rounded-lg mr-10 sm:p-10">
+<div class="flex text-left flex-1 flex-col mb-10 bg-light-green rounded-lg md:mr-10 p-10">
 <p class="uppercase text-white font-advent-pro-semi-bold mb-10">Υλικα</p>
 <ul>
   @fields('ingredients')
@@ -33,7 +49,7 @@
 
 
 @hasfield('directions')
-<div class="flex flex-1 text-left flex-col bg-light-green rounded-lg sm:p-10">
+<div class="flex flex-1 text-left flex-col mb-10 bg-light-green rounded-lg p-10">
 <p class="uppercase text-white font-advent-pro-semi-bold mb-10">ΕκτΕλεση</p>
 <ul>
   @fields('directions')
@@ -46,20 +62,23 @@
 
   </div>
 
-  <div class="flex py-20">
+  <div class="flex mb-10 md:my-20">
 
   <?php echo get_the_tag_list( sprintf( '<p class="font-advent-pro-light text-left"><span class="uppercase font-advent-pro-semi-bold">%s:&nbsp; &nbsp;</p> ', __( 'Tags', 'sage' ) ), ', ', '</p>' );?>
 
 </div>
-@hasfield('chef_name')
-  <div class="flex flex-1 text-left flex-col bg-light-green rounded-lg sm:p-10">
 
-<div class="flex">
+
+@hasfield('chef_name')
+  <div class="flex flex-1 text-left flex-col bg-light-green rounded-lg p-10">
+
+<div class="flex flex-col">
+
 <div class="flex items-center mr-10">
 <img src="@field('chef_image')" alt="Chef Image" class="rounded-full" width="100" height="100"> 
 </div>
 <div class="flex flex-col">
-<p class="font-advent-pro-semi-bold text-white mb-10">@field('chef_name')</p>
+<p class="font-advent-pro-semi-bold text-white mt-10 md:mt-0 mb-10">@field('chef_name')</p>
 <p class="">@field('chef_text')</p>
 </div>
 </div>
@@ -80,9 +99,9 @@
 
 </div>
 
-<aside class="sidebar w-1/3">
+<aside class="sidebar hidden md:flex flex-col md:self-start md:w-1/3 md:ml-12">
 
-<div class="flex flex-col ml-20  bg-light-green sm:p-10">
+<div class="flex flex-col ml-20 bg-light-green sm:p-10">
 
 @hasfield('sidebar')
 <div class="flex flex-1 text-left flex-col bg-light-green rounded-lg sm:p-10">

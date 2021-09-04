@@ -160,7 +160,7 @@ function filter_products(){
     //var_dump($query);
  
 	if( $query->have_posts() ) :
-        echo '<div class="grid grid-cols-4 gap-4">';
+        echo '<div class="grid md:grid-cols-4 gap-4">';
 		while( $query->have_posts() ): $query->the_post(); 
 
 		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
@@ -176,7 +176,7 @@ function filter_products(){
 		// var_dump($product_link);
 
 		?>
-		<div class="p-16 flex items-end single-product">
+		<div class="py-10 px-20 md:p-16 flex items-end single-product">
     
 		<a href="<?php echo $product_link ?>" class="cursor-pointer">
 	  

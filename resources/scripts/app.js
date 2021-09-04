@@ -164,9 +164,9 @@ $(() => {
 
         $("#products").show();
 
-        $('#products').removeClass('fade-in');
+        // $('#products').removeClass('fade-in');
 
-        $('#products').addClass('fade-in');
+        // $('#products').addClass('fade-in');
        
 
 
