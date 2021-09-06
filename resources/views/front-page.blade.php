@@ -14,42 +14,33 @@
       <img src="@asset('images/home-img-1.jpg')" class="absolute top-64 left-0" data-aos="move-right"/> 
       <img src="@asset('images/home-img-2.jpg')" class="absolute right-0 bottom-auto top-56 2xl:top-96" data-aos="move-left"/>
 
-
-
 <!-- Second Image Row -->
       <img src="@asset('images/home-img-3.jpg')" class="max-w-full absolute top-[800px] 2xl:top-[1000px]" data-aos="rotate-right"/>
 
-
-      <!-- Third Image Row -->
-      <div class="flex">
-      <img src="@asset('images/spring-onion-slices.png')" class="absolute max-h-full right-[600px] top-[1800px] 2xl:top-[2000px]" data-aos=""/>
-      <img src="@asset('images/radish.png')" class="absolute max-h-full right-0 top-[1400px] 2xl:top-[1600px]"  data-aos="move-left-straight"/>
-      <img src="@asset('images/spring-onion.png')" class="absolute max-h-full right-[300px] top-[1600px] 2xl:top-[1800px]" data-aos="rotate-right-5"/>
-      <img src="@asset('images/chilli-pepper-slices.png')" class="absolute max-w-full right-0 top-[2200px] 2xl:top-[2400px]" data-aos="rotate-left"/>
-</div>
-
+<!-- Third Image Row -->
+      <img src="@asset('images/spring-onion-slices.png')" class="absolute right-[600px] top-[1800px] 2xl:top-[2000px]" data-aos=""/>
+      <img src="@asset('images/radish.png')" class="absolute right-0 w-[208px] 2xl:w-auto top-[1400px] 2xl:top-[1600px]"  data-aos="move-left-straight"/>
+      <img src="@asset('images/spring-onion.png')" class="absolute w-[310px] 2xl:w-auto right-[300px] top-[1600px] 2xl:top-[1800px]" data-aos="rotate-right-5"/>
+      <img src="@asset('images/chilli-pepper-slices.png')" class="absolute w-[234px] right-0 top-[2000px] 2xl:top-[2400px]" data-aos="rotate-left"/>
 
   <!-- Forth Image Row -->
-    <img src="@asset('images/leek.png')" class="absolute h-[620px] 2xl:h-[720px] left-[300px] 2xl-[400px] top-[2200px] 2xl:top-[2800px]" data-aos="rotate-right"/>
-    <img src="@asset('images/leaves.png')" class="absolute max-w-[192px] left-[350px] top-[2700px] 2xl:top-[3300px]" data-aos="shake"/>
+    <img src="@asset('images/leek.png')" class="absolute h-[520px] 2xl:h-[720px] left-[300px] 2xl-[400px] top-[2400px] 2xl:top-[2800px]" data-aos="rotate-right"/>
+    <img src="@asset('images/leaves.png')" class="absolute left-[300px] 2xl:left-[350px] top-[2800px] 2xl:top-[3300px]" data-aos="shake"/>
 
 
-
-  
   <!-- Fifth Image Row -->
-    <img src="@asset('images/croutons.png')" class="absolute right-0 top-[3300px]"/>
-    <img src="@asset('images/parsley-partial.png')" class="max-w-[268px] absolute right-[300px] top-[3600px]" data-aos="rotate-left"/>
+    <img src="@asset('images/croutons.png')" class="absolute right-0 top-[2900px] 2xl:top-[3300px]"/>
+    <img src="@asset('images/parsley-partial.png')" class="absolute right-[300px] top-[3200px] 2xl:top-[3600px]" data-aos="rotate-left"/>
 
 
-      <img src="@asset('images/basil-angle.png')" class="absolute max-w-[500px] left-[600px] top-[4000px]" data-aos-delay="350" data-aos-offset="200" data-aos="rotate-left"/>
-      <img src="@asset('images/quark-with-herbs.png')" class="max-w-[244px] absolute right-[200px] top-[4400px]" data-aos-offset="300" data-aos="rotate-right"/>
+  <!-- Sixth Image Row -->
+      <img src="@asset('images/basil-angle.png')" class="absolute max-w-[420px] left-[600px] top-[3500px] 2xl:top-[4000px]" data-aos-delay="350" data-aos-offset="200" data-aos="rotate-left"/>
+      <img src="@asset('images/quark-with-herbs.png')" class="max-w-[244px] absolute right-[180px] 2xl:right-[200px] top-[3800px] 2xl:top-[4400px]" data-aos-offset="300" data-aos="rotate-right"/>
 
 
-
-    <img src="@asset('images/aroma_peppers_habanero_pack-front.png')" class="absolute max-w-[500px] left-0 bottom-[10px]"/>
-
-  
-      <img src="@asset('images/home-img-12.png')" class="absolute right-[100px] bottom-[10px]"/>
+<!-- LastImage Row -->
+    <img src="@asset('images/aroma_peppers_habanero_pack-front.png')" class="absolute max-w-[500px] left-0 bottom-[900px] 2xl:bottom-[10px]"/>
+      <img src="@asset('images/home-img-12.png')" class="absolute right-[100px] bottom-[900px] 2xl:bottom-[10px]"/>
  
 
   <div class="absolute mx-auto right-0 left-0 bottom-0 top-0 z-0"/>
