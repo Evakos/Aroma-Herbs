@@ -38,10 +38,20 @@ import "jquery";
 	 type   : 'loop',
 	 perPage: 4,
 	 breakpoints: {
+
+		600: {
+			pagination: false,
+			perPage: 1,
+		},
 		 
 		768: {
 			pagination: false,
-			perPage: 1,
+			perPage: 2,
+		},
+
+		1024: {
+			pagination: false,
+			perPage: 3,
 		},
 	},
 	classes: {

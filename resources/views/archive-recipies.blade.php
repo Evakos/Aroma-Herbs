@@ -19,7 +19,7 @@
 <div class="flex items-center justify-center my-20">
 
 
-    <img src="@asset('images/recipies-recipies-title.svg')" class="w-[300px] md:w-[448px]" />
+    <img src="@asset('images/recipies-recipies-title.svg')" class="w-[300px] lg:w-[448px]" />
 
 </div>
 

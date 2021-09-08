@@ -22,7 +22,7 @@
    next  : 'splide__arrow--next your-class-next',
    
    // Add classes for pagination.
-   pagination: 'splide__pagination relative md:absolute md:py-10', // container
+   pagination: 'splide__pagination relative', // container
    		page      : 'splide__pagination__page w-4 h-4 m-1', // each button
  },
   

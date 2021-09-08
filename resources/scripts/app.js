@@ -108,6 +108,16 @@ $(document).ready(function(){
 
 
 
+$('.grid .relative:nth-child(4n + 1)').addClass('half-div-left');  
+
+$('.grid .relative:nth-child(4n + 2)').addClass('half-div-right');
+
+
+
+
+
+
+
 
 
 $(".hamburger").click(function () {

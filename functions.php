@@ -176,7 +176,7 @@ function filter_products(){
 		// var_dump($product_link);
 
 		?>
-		<div class="py-10 px-20 md:p-16 flex items-end single-product">
+		<div class="py-10 px-20 md:py-0 md:p-16 flex items-end single-product">
     
 		<a href="<?php echo $product_link ?>" class="cursor-pointer">
 	  

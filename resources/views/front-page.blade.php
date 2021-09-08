@@ -7,7 +7,7 @@
   @include('partials.header')
 
 
-  <div class="container mx-auto relative h-[5500px] hidden md:flex">
+  <div class="container mx-auto relative h-[5500px] hidden lg:flex">
 
 
   <!-- First Image Row -->
@@ -55,7 +55,7 @@
 
   <!-- Mobile Tree -->
 
-  <div class="container mx-auto relative md:hidden">
+  <div class="container mx-auto relative lg:hidden">
   <div class="flex justify-center">
       <div class="flex flex-1 justify-center items-center">
       <img src="@asset('images/home-img-1.jpg')" class="w-[145px]"/>
@@ -197,7 +197,7 @@
    
 
 </div>
-<div class="flex justify-center mt-10 sm:mt-0">
+<div class="flex justify-center mt-10">
 
 <a href="/products/" class="btn">
                 περισσοτερα     
@@ -216,7 +216,7 @@
 
       <div class="flex items-center justify-center my-20">
     
-    <img src="@asset('images/home-title-eight.svg')" class="w-[158px] sm:w-[367px]"/> 
+    <img src="@asset('images/home-title-eight.svg')" class="w-[158px] lg:w-[367px]"/> 
       
       </div>
       @php
@@ -225,11 +225,17 @@
   ]);
 @endphp
 
+
+
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 @posts($query)
 
 
-<div class="relative"> @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])</div>
+<div class="relative overflow-hidden"> @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
+
+
+
+</div>
 
   
 @endposts
@@ -244,7 +250,7 @@
         <div class="flex items-center justify-center my-20">
     
         
-       <img src="@asset('images/home-title-nine.svg')" class="w-[300px] sm:w-[681px]"/> 
+       <img src="@asset('images/home-title-nine.svg')" class="w-[300px] lg:w-[681px]"/> 
          
          </div>
 
@@ -256,10 +262,10 @@
         </div>
 
         <div class="container relative mx-auto mt-10 mb-10 md:mb-0 md:mt-10">
-        <div class="flex md:py-24 md:px-48">
+        <div class="flex md:py-24 md:px-24 lg:px-48">
 
         <div class="hidden md:flex flex-1 justify-center">
-          <img src="@asset('images/ifs.svg')" class="w-[287px]"/> 
+          <img src="@asset('images/ifs.svg')" class="max-w-[287px]"/> 
         </div>
   
         <div class="flex flex-1 flex-col md:items-end md:text-right">
@@ -268,7 +274,7 @@
     
               
 
-              <a href="@field('harvest_button')" class="btn cursor-pointer">
+              <a href="@field('harvest_button')" class="btn md:self-end cursor-pointer">
                 περισσοτερα
 </a>
           
@@ -287,7 +293,7 @@
         <div class="flex items-center justify-center">
     
         
-       <img src="@asset('images/home-title-ten.svg')" class="my-20 w-[276px] sm:w-[681px]"/> 
+       <img src="@asset('images/home-title-ten.svg')" class="my-20 w-[276px] lg:w-[681px]"/> 
          
          </div>
 
@@ -300,12 +306,12 @@
         </div>
   
         <div class="container relative mx-auto">
-        <div class="flex flex-col md:flex-row py-24 md:px-48">
+        <div class="flex flex-col md:flex-row py-24 md:px-24">
           <div class="flex flex-1 flex-col md:items-start">
             <h3 class="mb-10 mt-10 sm:mt-0 text-center sm:text-left">@field('locator_title')</h3>
               <p class="mb-10">@field('locator_text')</p>
       
-              <a href="@field('locator_button')" class="btn cursor-pointer">
+              <a href="@field('locator_button')" class="btn md:self-start cursor-pointer">
                 περισσοτερα
 </a>
             

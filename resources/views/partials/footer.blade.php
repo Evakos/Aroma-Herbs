@@ -2,18 +2,18 @@
 
     <div class="container mx-auto pt-20 md:pt-52">
 
-        <div class="flex flex-col md:flex-row justify-center">
-            <div class="flex flex-col flex-1 justify-center mb-10 md:mb-0 md:pr-32">
+        <div class="flex flex-col lg:flex-row justify-center">
+            <div class="flex flex-col flex-1 justify-center mb-10 md:mb-0 lg:pr-32">
                 <img src="@asset('images/logo-footer.svg')" class="w-[93px] mb-5" />
             
 
                     <p><?php echo get_theme_mod( 'subscribe_text') ?></p>
 
-                    <div class="flex justify-between w-[260px] mt-20 bg-light-green py-5 px-8 text-white rounded-full"> <input type="text" id="sign-up" class="bg-transparent w-3/4 placeholder-white" placeholder="Email Address" name=""><img src="@asset('images/envelope-white.svg')" class="w-[16px] fill-current text-white" /></div>
+                    <div class="flex justify-between w-[260px] mt-20 md:mt-10 bg-light-green py-5 px-8 text-white rounded-full"> <input type="text" id="sign-up" class="bg-transparent w-3/4 placeholder-white" placeholder="Email Address" name=""><img src="@asset('images/envelope-white.svg')" class="w-[16px] fill-current text-white" /></div>
 
                     <!-- @shortcode('[contact-form-7 id="286"]') -->
             </div>
-            <div class="flex flex-col flex-1 justify-center mb-10 md:mb-0">
+            <div class="flex flex-col flex-1 mb-10">
              <nav class="">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav text-dark-green']) !!}
