@@ -26,6 +26,7 @@ mix
 
 mix
   .js('resources/scripts/app.js', 'scripts')
+  .js('resources/scripts/accents.js', 'scripts')
   .js('resources/scripts/product.js', 'scripts')
   .js('resources/scripts/recipies.js', 'scripts')
   .js('resources/scripts/front-page.js', 'scripts')

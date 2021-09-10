@@ -4,6 +4,9 @@
      
     <img src="@asset('images/instagram-heading.svg')" class="w-[367px]"/> 
 
+
+     @shortcode('[instagram-feed]')
+
 </div>
 
 </div>

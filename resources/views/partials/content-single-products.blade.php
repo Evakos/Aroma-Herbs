@@ -2,13 +2,13 @@
 
     <div class="flex flex-col items-center justify-center">
 
-        <div class="flex items-center justify-center my-10">
+        <div class="flex flex-col items-center justify-center my-10" id="product-title">
 
-            <img src="@asset('images/fresh-title.svg')" class="w-[208px]" />
-
-        </div>
+        <p class="text-dark-green font-advent-pro-semi-bold uppercase tracking-widest text-5xl"> @field('fresh_title')</p>
 
         <p class="font-takhie text-dark-green tracking-widest text-7xl md:text-9xl">@title</p>
+
+        </div>
 
     </div>
 
@@ -71,7 +71,7 @@
 
                 <div class="flex flex-col mt-20 md:pl-20">
 
-                    <p class="uppercase mb-10">ΔιαθΕσιμο ΣΕ</p>
+                    <p class="uppercase mb-10">Διαθεσιμο ΣΕ</p>
 
                     <?php
 $packages = get_field('packaging');
@@ -89,7 +89,7 @@ if( $packages ): ?>
 
                     <div class="flex flex-col mt-20 bg-light-green p-10">
 
-<p class="uppercase mb-10 font-advent-pro-semi-bold text-white">ΑΓΟΡΑ ONLINE</p>
+<p class="uppercase mb-10 font-advent-pro-semi-bold text-white">Αγορα ONLINE</p>
 
 @hasfields('supermarkets')
                     <ul class="">

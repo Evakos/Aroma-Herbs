@@ -5902,7 +5902,7 @@ ul.social-media-icons li:first-child {
 
 @media screen and (min-width: 2560px) {
   .modal-product {
-    padding: 0 10rem !important;
+    padding: 0 12rem !important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -6155,6 +6155,12 @@ ul.social-media-icons li:first-child {
 .row-span-3{
 	grid-row: span 3 / span 3;
 }
+.row-span-2{
+	grid-row: span 2 / span 2;
+}
+.row-span-1{
+	grid-row: span 1 / span 1;
+}
 .m-1{
 	margin: 0.25rem;
 }
@@ -6188,6 +6194,9 @@ ul.social-media-icons li:first-child {
 }
 .-mt-5{
 	margin-top: -1.25rem;
+}
+.mr-4{
+	margin-right: 1rem;
 }
 .-mt-44{
 	margin-top: -11rem;
@@ -6452,6 +6461,15 @@ ul.social-media-icons li:first-child {
 .grid-cols-2{
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+.grid-rows-2{
+	grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+.grid-rows-1{
+	grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+.grid-rows-4{
+	grid-template-rows: repeat(4, minmax(0, 1fr));
+}
 .flex-col{
 	flex-direction: column;
 }
@@ -6655,6 +6673,9 @@ ul.social-media-icons li:first-child {
 .pt-20{
 	padding-top: 5rem;
 }
+.pt-12{
+	padding-top: 3rem;
+}
 .pt-24{
 	padding-top: 6rem;
 }
@@ -6702,12 +6723,12 @@ ul.social-media-icons li:first-child {
 	font-size: 2.25rem;
 	line-height: 2.5rem;
 }
-.text-7xl{
-	font-size: 4.5rem;
-	line-height: 1;
-}
 .text-5xl{
 	font-size: 3rem;
+	line-height: 1;
+}
+.text-7xl{
+	font-size: 4.5rem;
 	line-height: 1;
 }
 .uppercase{
@@ -7077,6 +7098,12 @@ ul.social-media-icons li:first-child {
 	.md\:grid-cols-2{
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
+	.md\:grid-rows-4{
+		grid-template-rows: repeat(4, minmax(0, 1fr));
+	}
+	.md\:grid-rows-2{
+		grid-template-rows: repeat(2, minmax(0, 1fr));
+	}
 	.md\:flex-row{
 		flex-direction: row;
 	}
@@ -7181,9 +7208,6 @@ ul.social-media-icons li:first-child {
 	.md\:pt-52{
 		padding-top: 13rem;
 	}
-	.md\:pt-12{
-		padding-top: 3rem;
-	}
 	.md\:text-right{
 		text-align: right;
 	}
@@ -7203,12 +7227,6 @@ ul.social-media-icons li:first-child {
 @media (min-width: 1024px){
 	.lg\:-mt-96{
 		margin-top: -24rem;
-	}
-	.lg\:flex{
-		display: flex;
-	}
-	.lg\:hidden{
-		display: none;
 	}
 	.lg\:h-\[464px\]{
 		height: 464px;
@@ -7244,6 +7262,14 @@ ul.social-media-icons li:first-child {
 	}
 	.lg\:pt-20{
 		padding-top: 5rem;
+	}
+}
+@media (min-width: 1280px){
+	.xl\:flex{
+		display: flex;
+	}
+	.xl\:hidden{
+		display: none;
 	}
 }
 @media (min-width: 1536px){

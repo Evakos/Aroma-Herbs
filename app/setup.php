@@ -16,6 +16,7 @@ use function Roots\asset;
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/vendor.js', asset('scripts/vendor.js')->uri(), ['jquery'], null, true);
     wp_enqueue_script('sage/app.js', asset('scripts/app.js')->uri(), ['sage/vendor.js'], null, true);
+    wp_enqueue_script('sage/accents.js', asset('scripts/accents.js')->uri(), ['sage/vendor.js'], null, true);
     
 
 
@@ -35,8 +36,6 @@ add_action('wp_enqueue_scripts', function () {
     }
 
     if ( 'recipies' == get_post_type() ) {
-
-
 
         wp_enqueue_script('sage/recipies.js', asset('scripts/recipies.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
 
@@ -266,32 +265,29 @@ function my_acf_settings_dir( $dir ) {
 include_once( get_stylesheet_directory() . '/resources/acf/acf.php' );
 
 
+ 
+
+
+
 
 
 add_action( 'init', function() {
 	register_extended_post_type( 'recipies', [
-
 'show_in_feed' => true,
 'menu_icon'    => 'dashicons-food',
 'show_in_rest' => true,
 'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
-
-
-
-'taxonomies' => array('recipies', 'category', 'post_tag'),
-
-
+'taxonomies' => array('recipies', 'category', 'courses', 'dietary_restrictions'),
 
 # Add some custom columns to the admin screen:
-		// 'admin_cols' => [
-		// 	'course_dept' => [
-        //     'taxonomy' => 'department'
-		// 	],
-		// 	'team_role' => [
-		// 		'taxonomy' => 'team-roles'
-		// ]
-		// ],
-
+		'admin_cols' => [
+			'courses' => [
+            'taxonomy' => 'courses'
+            ],
+			'dietary_restrictions' => [
+				'taxonomy' => 'dietary_restrictions'
+		]
+		],
 		'archive' => [
 			'nopaging' => true,
 		],
@@ -304,25 +300,51 @@ add_action( 'init', function() {
 
 	] );
 
-// 	register_extended_taxonomy( 'team-roles', 'team', array(
+	register_extended_taxonomy( 'courses', 'recipies', array(
 
-// 		'dashboard_glance' => true,
+		'dashboard_glance' => true,
+        'show_in_rest'      => true, // Needed for tax to appear in Gutenberg editor.
 
-// 		'admin_cols' => array(
-// 				'updated' => array(
-// 						'title'       => 'Updated',
-// 						'meta_key'    => 'updated_date',
-// 						'date_format' => 'd/m/Y'
-// 				),
-// 		),
+		'admin_cols' => array(
+				'updated' => array(
+						'title'       => 'Updated',
+						'meta_key'    => 'updated_date',
+						'date_format' => 'd/m/Y'
+				),
+		),
 
-// ), array(
+), array(
 
-// 		'singular' => 'Role',
-// 		'plural'   => 'Roles',
-// 		'slug'     => 'team-roles'
+		'singular' => 'Course',
+		'plural'   => 'Courses',
+		'slug'     => 'course'
 
-// ) );
+) );
+
+
+register_extended_taxonomy( 'dietary_restrictions', 'recipies', array(
+
+    'dashboard_glance' => true,
+    'show_in_rest'      => true, // Needed for tax to appear in Gutenberg editor.
+
+    'admin_cols' => array(
+            'updated' => array(
+                    'title'       => 'Updated',
+                    'meta_key'    => 'updated_date',
+                    'date_format' => 'd/m/Y'
+            ),
+    ),
+
+), array(
+
+    'singular' => 'Diet Restriction',
+    'plural'   => 'Dietary Restrictions',
+    'slug'     => 'dietary_restrictions'
+
+) );
+
+
+
 
 } );
 
@@ -332,9 +354,7 @@ add_action( 'init', function() {
 
 'show_in_feed' => true,
 'menu_icon'    => 'dashicons-store',
-'taxonomies' => array( 'product', 'category' ),
-
-
+'taxonomies' => array( 'product', 'category', 'post_tag' ),
 
 # Add some custom columns to the admin screen:
 		'admin_cols' => [
@@ -363,7 +383,7 @@ add_action( 'init', function() {
 
 	] );
 
-// 	register_extended_taxonomy( 'team-roles', 'team', array(
+// 	register_extended_taxonomy( 'courses', 'products', array(
 
 // 		'dashboard_glance' => true,
 
@@ -377,9 +397,9 @@ add_action( 'init', function() {
 
 // ), array(
 
-// 		'singular' => 'Role',
-// 		'plural'   => 'Roles',
-// 		'slug'     => 'team-roles'
+// 		'singular' => 'Course',
+// 		'plural'   => 'Courses',
+// 		'slug'     => 'courses'
 
 // ) );
 
