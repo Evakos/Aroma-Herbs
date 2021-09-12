@@ -105,23 +105,52 @@ $(document).ready(function () {
 
 const mql = window.matchMedia('(max-width: 768px)');
 
+$("#blog-card:nth-child(4n + 1)").addClass("half-div-left");
+
+$("#blog-card:nth-child(4n + 2)").addClass("half-div-right");
+
 function screenTest(e) {
   if (e.matches) {
     /* the viewport is 600 pixels wide or less */
-    $(".grid .relative:nth-child(4n + 1)").removeClass("half-div-left");
+    $("#blog-card:nth-child(4n + 1)").removeClass("half-div-left");
 
-    $(".grid .relative:nth-child(4n + 2)").removeClass("half-div-right");
+    $("#blog-card:nth-child(4n + 2)").removeClass("half-div-right");
   } else {
     /* the viewport is more than 600 pixels wide */
-    $(".grid .relative:nth-child(4n + 1)").addClass("half-div-left");
+    $("#blog-card:nth-child(4n + 1)").addClass("half-div-left");
 
-    $(".grid .relative:nth-child(4n + 2)").addClass("half-div-right");
+    $("#blog-card:nth-child(4n + 2)").addClass("half-div-right");
   }
 }
 
 mql.addEventListener('change', screenTest);
 
 
+//Floating Nav Bar
+window.addEventListener("scroll", function() {
+  const navOuter= document.getElementById("sticky-nav");
+  const logo = document.getElementById("site-logo");
+  const navInner = document.getElementById("sticky-nav-inner");
+  
+  if (window.pageYOffset > 0) {
+  navOuter.classList.add("is-sticky");
+  logo.classList.add("shrink-logo");
+  navOuter.classList.add("fade-in-fast");
+  navInner.classList.remove("py-10");
+  navInner.classList.add("py-2");
+  
+  
+
+  } else {
+  navOuter.classList.remove("is-sticky");
+  logo.classList.remove("shrink-logo");
+  navOuter.classList.remove("fade-in-fast");
+  navInner.classList.add("py-10");
+  navInner.classList.remove("py-2");
+ 
+  }
+  });
+  
 
 
 

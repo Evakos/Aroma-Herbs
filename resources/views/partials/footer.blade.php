@@ -39,7 +39,7 @@
 
         <div class="flex flex-col md:flex-row md:justify-between md:items-center md:h-28">
 
-            <div class="mb-10 mt-10 md:mt-0 md:mb-0">© 2021 Aroma Herbs. </div>
+            <div class="mb-10 mt-10 md:mt-0 md:mb-0">© 2021 Aroma Herbs.</div>
 
             <div classs="mb-10 md:mb-0"><img src="@asset('images/ifs.svg')" class="w-[82px]" /></div>
 

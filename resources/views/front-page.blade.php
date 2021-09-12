@@ -237,9 +237,13 @@ $query = new WP_Query([
     $query = new WP_Query([
     'post_type' => 'post',
     'posts_per_page' => -1,
-    'taxonomy' => 'category',
+    'tax_query' => array(
+            array(
+                'taxonomy' => 'category',
                 'field' => 'id',
-                'terms' => 5
+                'terms' => 32
+            ),
+    ),
     ]);
     @endphp
 
@@ -253,7 +257,7 @@ $query = new WP_Query([
         @posts($query)
 
 
-        <div class="relative overflow-hidden"> @includeFirst(['partials.content-' . get_post_type(),
+        <div class="relative overflow-hidden block max-h-[300px]" id="blog-card"> @includeFirst(['partials.content-' . get_post_type(),
             'partials.content'])
 
 
