@@ -1,5 +1,10 @@
-<header class="mx-auto bg-auto bg-center bg-no-repeat bg-white mb-20">
+<button class="hamburger hamburger--collapse fixed right-[10%] top-[10%] z-50" onclick="showDialog()" type="button" id="hamburger">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+        </button>
 
+<header class="mx-auto bg-auto bg-center bg-no-repeat bg-white mb-20">
 
 <div class="" id="sticky-nav">
 
@@ -9,22 +14,22 @@
         <span class="flex w-[63px] md:w-[171px]" id="site-logo"><img src="<?php echo get_theme_mod( 'custom_logo') ?> "/></span>  
       </a>
     </div>
-      <button class="hamburger hamburger--collapse self-end z-50" onclick="showDialog()" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-        </button>
+     
   </nav>
 
 </div>
 
+<!-- <?php 
+if ( is_home())  {
+?>
+<img src="<?php the_field( "hero_image", 14);?>" alt="Hero Image" class="object-cover w-screen min-h-[300px] md:min-h-[600px] -mt-16 md:-mt-44"/>'
+<?php
+}
+?> -->
 
 
-
-  @hasfield('hero_image')
+@hasfield('hero_image')
 <div class="flex justify-center mx-auto animate__animated animate__fadeIn animate__slow ">
-  <!-- <div class="overlay-top"></div>
-  <div class="overlay-bot"></div> -->
 
 <img src="@field('hero_image')" alt="Hero Image" class="object-cover w-screen min-h-[300px] md:min-h-[600px] -mt-16 md:-mt-44"/> 
 @endfield

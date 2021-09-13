@@ -7,11 +7,10 @@
                 <img src="@asset('images/logo-footer.svg')" class="w-[93px] mb-5" />
             
 
-                    <p><?php echo get_theme_mod( 'subscribe_text') ?></p>
+                    <p>@option('subscribe_text')</p>
 
-                    <div class="flex justify-between w-[260px] mt-20 md:mt-10 bg-light-green py-5 px-8 text-white rounded-full"> <input type="text" id="sign-up" class="bg-transparent w-3/4 placeholder-white" placeholder="Email Address" name=""><img src="@asset('images/envelope-white.svg')" class="w-[16px] fill-current text-white" /></div>
+                    <div class="flex justify-between w-[260px] mt-10 md:mt-10 bg-light-green py-5 px-8 text-white rounded-full"> <input type="text" id="sign-up" class="bg-transparent w-3/4 placeholder-white" placeholder="Email Address" name=""><img src="@asset('images/envelope-white.svg')" class="w-[16px] fill-current text-white" /></div>
 
-                    <!-- @shortcode('[contact-form-7 id="286"]') -->
             </div>
             <div class="flex flex-col flex-1 mb-10">
              <nav class="">

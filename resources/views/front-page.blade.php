@@ -8,8 +8,6 @@
 
 
 <div class="container mx-auto relative h-[5500px] hidden xl:flex">
-
-
     <!-- First Image Row -->
     <img src="@asset('images/home-img-1.jpg')" class="absolute top-64 left-0" data-aos="move-right" />
     <img src="@asset('images/home-img-2.jpg')" class="absolute right-0 bottom-auto top-56 2xl:top-96"
@@ -52,7 +50,7 @@
         data-aos-offset="300" data-aos="rotate-right" />
 
 
-    <!-- LastImage Row -->
+    <!-- Last Image Row -->
     <img src="@asset('images/aroma_peppers_habanero_pack-front.png')"
         class="absolute max-w-[500px] left-0 bottom-[900px] 2xl:bottom-[10px]" />
     <img src="@asset('images/home-img-12.png')" class="absolute right-[100px] bottom-[900px] 2xl:bottom-[10px]" />
@@ -82,13 +80,9 @@
 
     <div class="flex items-center justify-center my-20">
 
-
         <img src="@asset('images/fresh-spices.svg')" class="w-[300px]" />
 
-
     </div>
-
-
 
     <div class="flex justify-center">
 
@@ -100,7 +94,6 @@
 
 
     <div class="flex items-center justify-center my-20">
-
 
         <img src="@asset('images/grown-countryside-title.svg')" class="w-[272px]" />
 
@@ -169,14 +162,14 @@
 
 <div class="flex items-center justify-center my-20">
 
-    <img src="@asset('images/home-title-six.svg')" class="w-[573px] z-50" />
+    <img src="@asset('images/home-title-six.svg')" class="w-[573px]" />
 
 </div>
 
 
 
 <div class="flex mt-5 justify-center">
-    <img src="@field('product_background_image')" class="w-screen object-cover" />
+    <img src="@field('product_background_image')" class="object-cover w-screen min-h-[300px] md:min-h-[600px]" />
 </div>
 
 @php
@@ -221,8 +214,8 @@ $query = new WP_Query([
 
 </div>
 
+<!-- Recipies Slider -->
 @include('partials.recipies-slider')
-
 
 <!-- Blog Grid Fresh News -->
 
@@ -246,12 +239,6 @@ $query = new WP_Query([
     ),
     ]);
     @endphp
-
-
-
-
-
-
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         @posts($query)
@@ -307,9 +294,6 @@ $query = new WP_Query([
 
     </div>
 </div>
-
-
-
 
 
 <!-- Find Us -->

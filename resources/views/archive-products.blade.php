@@ -26,12 +26,10 @@
   
     <img src="@asset('images/discover.svg')" class="w-[254px]">
 
-  
   </div>
 
 
 <div class="container mx-auto py-10 md:py-20">
-
 
   <div class="flex justify-center items-center ">
 
@@ -43,9 +41,15 @@
 
       </div>
 
+</div>
+
+<div class="flex mt-5 justify-center">
+    <img src="<?php the_field( "product_background_image", 11 ); ?>" class="object-cover w-screen min-h-[300px] md:min-h-[600px]" />
+</div>
+
+<div class="container mx-auto">
 
   <div id="products" class="min-h-screen"></div>
-
 
 <!-- Initial display of products -->
 <div id="all-products" class="min-h-screen">
@@ -60,7 +64,7 @@
     {!! get_search_form(false) !!}
   @endif
 
-  <div class="grid md:grid-cols-4 md:gap-4">
+  <div class="grid md:grid-cols-4 md:gap-4 -mt-28 md:-mt-64">
 
   @php
 $args = array('post_type' => 'products', 'posts_per_page' => -1, 'tax_query' => array(
@@ -90,8 +94,6 @@ $loop = new WP_Query($args);
 
     </div>
   @endwhile
-
- 
 
   </div>
 

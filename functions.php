@@ -160,7 +160,7 @@ function filter_products(){
     //var_dump($query);
  
 	if( $query->have_posts() ) :
-        echo '<div class="grid md:grid-cols-4 gap-4">';
+        echo '<div class="grid md:grid-cols-4 md:gap-4 -mt-28 md:-mt-64">';
 		while( $query->have_posts() ): $query->the_post(); 
 
 		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 

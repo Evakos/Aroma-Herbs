@@ -1,3 +1,9 @@
+{{--
+  Template Name: Blog Archive Template
+--}}
+
+
+
 @extends('layouts.app')
 
 @include('partials.modal')
@@ -37,7 +43,7 @@
 
   @while(have_posts()) @php(the_post())
 
-   <div class="relative"> @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])</div>
+  <div class="relative overflow-hidden block max-h-[300px]" id="blog-card"> @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])</div>
 
   @endwhile
   </div>

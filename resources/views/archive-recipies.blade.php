@@ -40,7 +40,7 @@ $the_query = new WP_Query( ['post_type' => 'products' ]);
   
 // The Loop
 if ( $the_query->have_posts() ) {
-    echo '<select name="categoryfilter" class="bg-light-green text-white mr-4 p-5 rounded-full">';
+    echo '<select name="categoryfilter" class="bg-light-green text-white mr-4 p-5 rounded-full mb-5 w-full md:w-auto">';
     while ( $the_query->have_posts() ) {
         $the_query->the_post();
         echo '<option value="' . get_the_id() . '">' . get_the_title() . '</option>';
@@ -77,7 +77,7 @@ $restrictions = get_terms( array(
 
 
 if ( !empty($restrictions) ) :
-    echo '<select name="categoryfilter" class="bg-light-green text-white p-5 mr-4 rounded-full">';
+    echo '<select name="categoryfilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-auto">';
     foreach( $restrictions as $term ) {
 
 
@@ -99,7 +99,7 @@ $courses = get_terms( array(
 ) );
  
 if ( !empty($courses) ) :
-    echo '<select name="categoryfilter" class="bg-light-green text-white p-5 mr-4 rounded-full">';
+    echo '<select name="categoryfilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-auto">';
     foreach( $courses as $term ) {
      
                 echo '<option value="'. esc_attr( $term->term_id ) .'">
