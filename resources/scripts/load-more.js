@@ -22,7 +22,7 @@ function load_posts(){
             }
         },
         error : function(jqXHR, textStatus, errorThrown) {
-            $loader.html(jqXHR + " :: " + textStatus + " :: " + errorThrown);
+            //$loader.html(jqXHR + " :: " + textStatus + " :: " + errorThrown);
         }
 
     });

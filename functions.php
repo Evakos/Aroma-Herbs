@@ -354,7 +354,7 @@ $featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $loop-
     endwhile;
     endif;
     wp_reset_postdata();
-    die($out);
+    //die($out);
 }
 
 add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
