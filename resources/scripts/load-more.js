@@ -18,6 +18,7 @@ function load_posts(){
             } else{
                 $("#more-posts").attr("disabled",true);
                 $("#more-posts").addClass("opacity-20");
+                $("#more-posts").html("All Loaded!");
             }
         },
         error : function(jqXHR, textStatus, errorThrown) {
