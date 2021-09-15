@@ -20,9 +20,6 @@ function load_posts(){
                 $("#more-posts").addClass("opacity-20");
                 $("#more-posts").html("All Loaded!");
             }
-        },
-        error : function(jqXHR, textStatus, errorThrown) {
-            //$loader.html(jqXHR + " :: " + textStatus + " :: " + errorThrown);
         }
 
     });
