@@ -2,7 +2,7 @@
 
     <div class="flex items-center justify-center my-20">
 
-        <img src="@asset('images/home-title-seven.svg')" class="w-[328px] lg:w-[709px]" />
+        <img src="@asset('images/from-kitchen.svg')" class="w-[328px] lg:w-[709px]" />
 
     </div>
 

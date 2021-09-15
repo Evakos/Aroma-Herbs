@@ -99,60 +99,115 @@ $(document).ready(function () {
   });
 });
 
+// Define our viewportWidth variable
+let viewportWidth;
 
+// Set/update the viewportWidth value
+let setViewportWidth = function () {
+	viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+}
 
+// Log the viewport width into the console
+const logWidth = function () {
+	if (viewportWidth > 768) {
+		console.log('Wide viewport');
 
-
-const mql = window.matchMedia('(max-width: 768px)');
-
-
-function screenTest(e) {
-  if (e.matches) {
-    /* the viewport is 768 pixels wide or less */
-    $("#blog-card:nth-child(4n + 1)").removeClass("half-div-left");
-
-    $("#blog-card:nth-child(4n + 2)").removeClass("half-div-right");
-  } else {
-    /* the viewport is more than 768 pixels wide */
     $("#blog-card:nth-child(4n + 1)").addClass("half-div-left");
 
     $("#blog-card:nth-child(4n + 2)").addClass("half-div-right");
-  }
+
+
+
+	} else {
+		console.log('Small viewport');
+
+
+    $("#blog-card:nth-child(4n + 1)").removeClass("half-div-left");
+
+    $("#blog-card:nth-child(4n + 2)").removeClass("half-div-right");
+	}
 }
 
-mql.addEventListener('change', screenTest);
+// Set our initial width and log it
+setViewportWidth();
+logWidth();
+
+// On resize events, recalculate and log
+window.addEventListener('resize', function () {
+	setViewportWidth();
+	logWidth();
+}, false);
 
 
-//Floating Nav Bar
-window.addEventListener("scroll", function() {
-  const navOuter= document.getElementById("sticky-nav");
+window.onscroll = function() {
+
+  stickyHeader()
+
+};
+
+// Get the header
+
+
+
+
+//console.log("This is the sticky logo:" + stickyLogo)
+
+const navOuter = document.getElementById("sticky-nav");
+
+// Get the offset position of the navbar
+const sticky = navOuter.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function stickyHeader() {
+
+  
   const logo = document.getElementById("site-logo");
   const navInner = document.getElementById("sticky-nav-inner");
   const getHamburger = document.getElementById("hamburger");
 
-  //console.log(getHamburger);
-  
-  if (window.pageYOffset > 0) {
-  navOuter.classList.add("is-sticky");
-  logo.classList.add("shrink-logo");
-  navOuter.classList.add("fade-in-fast");
-  navInner.classList.remove("py-10");
-  navInner.classList.add("py-2");
-  getHamburger.classList.remove("top-[10%]");
-  getHamburger.classList.add("top-[3%]");
-
-
+  if (window.pageYOffset > sticky) {
+    navOuter.classList.add("is-sticky");
+    logo.classList.add("shrink-logo");
+    navOuter.classList.add("fade-in-fast");
+    navInner.classList.remove("py-10");
+    navInner.classList.add("py-2");
+    getHamburger.classList.remove("top-[10%]");
+    getHamburger.classList.add("top-[3%]");
   } else {
-  navOuter.classList.remove("is-sticky");
+    navOuter.classList.remove("is-sticky");
   logo.classList.remove("shrink-logo");
   navOuter.classList.remove("fade-in-fast");
   navInner.classList.add("py-10");
   navInner.classList.remove("py-2");
   getHamburger.classList.add("top-[10%]");
   getHamburger.classList.remove("top-[3%]");
- 
+
   }
-  });
+} 
+
+
+
+// //Floating Nav Bar
+
+// // const setScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+
+
+// window.addEventListener("scroll", function() {
+ 
+
+//   //console.log(getHamburger);
+
+
+  
+//   if (window.pageYOffset > 0) {
+
+
+
+//   } else {
+
+ 
+//   }
+//   });
   
 
 

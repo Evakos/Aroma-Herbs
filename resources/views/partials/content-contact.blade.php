@@ -2,11 +2,11 @@
 
         <div class="flex flex-col items-center justify-center md:py-20">
           
-        <img src="@asset('images/contact-title.svg')" class="w-[411px]">
+        <img src="@asset('images/contact-title.svg')" class="w-[229px] lg:w-[411px]">
       
       </div>
 
-<div class="flex flex-col sm:flex-row">
+<div class="flex flex-col sm:flex-row mt-10 sm:mt-auto flex-wrap-reverse">
 
 <div class="flex flex-1 flex-col sm:pr-44">
 
