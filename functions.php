@@ -288,3 +288,119 @@ function aroma_social_media_icons() {
 }
 
 
+
+
+function more_post_ajax(){
+
+    $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 4;
+    $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
+
+    header("Content-Type: text/html");
+
+    $args = array(
+        'suppress_filters' => true,
+        'post_type' => 'post',
+        'posts_per_page' => $ppp,
+        'paged'    => $page,
+		'tax_query' => array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'id',
+                'terms' => 32
+            ),
+    ),
+    );
+
+    $loop = new WP_Query($args);
+
+   // $out = '';
+
+    if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
+?>
+
+<div class="relative overflow-hidden block max-h-[300px] fade-in">
+
+
+	<a href="<?php the_permalink();?>" class="blog-card">
+
+	
+<div class="blog-title transition duration-700 ease-in-out bg-light-green p-5 text-white absolute bottom-0 z-40 flex justify-right opacity-80 xl:opacity-0">
+
+
+<?php
+
+
+$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->ID ), 'full' );
+
+?>
+
+
+<p>
+<?php echo esc_html( get_the_title() );?>
+</p>
+
+</div>
+<img src="<?php echo $featured_image_url[0]; ?>" alt="Full Image" class="object-cover w-full h-full xl:h-auto"/>
+
+</a>
+
+</div>
+
+
+
+<?
+		 
+
+    endwhile;
+    endif;
+    wp_reset_postdata();
+    die($out);
+}
+
+add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
+add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
+
+
+
+//     add_action('wp_ajax_loadmore', 'load_more'); 
+//     add_action('wp_ajax_nopriv_loadmore', 'load_more');
+     
+//     function load_more(){
+
+
+//     $query = new WP_Query([
+//     'post_type' => 'post',
+//     'posts_per_page' => -1,
+//     'tax_query' => array(
+//             array(
+//                 'taxonomy' => 'category',
+//                 'field' => 'id',
+//                 'terms' => 32
+//             ),
+//     ),
+//     ]);
+
+    
+// if( $query->have_posts() ) :
+//     echo '<div>';
+	
+
+//     while( $query->have_posts() ): $query->the_post(); 
+
+// echo '<div class="relative overflow-hidden block max-h-[300px]" id="blog-card">'; 
+
+// get_template_part( 'partials/content', 'single' );
+
+//         echo '</div>';
+
+//     endwhile;
+
+
+//     echo '</div>';
+
+// endif;
+
+
+// } 
+
+

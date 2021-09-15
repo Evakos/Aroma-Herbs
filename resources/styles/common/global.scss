@@ -228,12 +228,23 @@ h3 {
 }
 
 #recipies-title {
-  opacity: 0;
+  opacity: 0.9;
   transition: .5s;
 }
 
 #recipies-title:hover {
   opacity: 1;
+}
+
+@media screen and (min-width: 1280px) {
+  #recipies-title {
+    opacity: 0;
+    transition: .5s;
+  }
+  
+  #recipies-title:hover {
+    opacity: 1;
+  }
 }
 
 #splide-product-thumbs .splide__slide.is-active, #splide-product-thumbs-mobile .splide__slide.is-active {

@@ -40,7 +40,7 @@ $the_query = new WP_Query( ['post_type' => 'products' ]);
   
 // The Loop
 if ( $the_query->have_posts() ) {
-    echo '<select name="categoryfilter" class="bg-light-green text-white mr-4 p-5 rounded-full mb-5 w-full md:w-auto">';
+    echo '<select name="categoryfilter" class="bg-light-green text-white mr-4 p-5 rounded-full mb-5 w-full md:w-[250px]">';
     while ( $the_query->have_posts() ) {
         $the_query->the_post();
         echo '<option value="' . get_the_id() . '">' . get_the_title() . '</option>';
@@ -77,7 +77,7 @@ $restrictions = get_terms( array(
 
 
 if ( !empty($restrictions) ) :
-    echo '<select name="categoryfilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-auto">';
+    echo '<select name="categoryfilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
     foreach( $restrictions as $term ) {
 
 
@@ -99,7 +99,7 @@ $courses = get_terms( array(
 ) );
  
 if ( !empty($courses) ) :
-    echo '<select name="categoryfilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-auto">';
+    echo '<select name="categoryfilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
     foreach( $courses as $term ) {
      
                 echo '<option value="'. esc_attr( $term->term_id ) .'">
@@ -150,9 +150,9 @@ $query = new WP_Query([
 <img src="@thumbnail('full', false)" alt="Full Image" />
 
 
-<a href="@permalink" class="absolute flex flex-col w-full h-full justify-center items-center bg-light-green" id="recipies-title">
+<a href="@permalink" class="absolute flex flex-col w-full bottom-0 xl:bottom-auto p-3 xl:p-0 xl:h-full justify-center items-center bg-light-green" id="recipies-title">
 
-<p class="text-white text-2xl mb-10">@title</p>
+<p class="text-white text-2xl mb-2 xl:mb-10">@title</p>
 
 <p class="font-takhie text-xl text-white">Μάθε Περισσότερα</p>
 
@@ -206,9 +206,10 @@ else {echo 'row-span-1';}
         <img src="@thumbnail('full', false)" alt="Full Image" class="object-cover h-full" />
 
 
-<a href="@permalink" class="absolute flex flex-col w-full h-full justify-center items-center bg-light-green" id="recipies-title">
+<a href="@permalink" class="absolute flex flex-col w-full bottom-0 xl:bottom-auto p-3 xl:p-0 xl:h-full justify-center items-center bg-light-green" id="twists-title">
 
-<p class="text-white text-2xl mb-10">@title</p>
+<p class="text-white text-2xl mb-2 xl:mb-10">@title</p>
+
 
 <p class="font-takhie text-xl text-white">Μάθε Περισσότερα</p>
 

@@ -219,6 +219,8 @@ $query = new WP_Query([
 
 <!-- Blog Grid Fresh News -->
 
+
+
 <div class="container mx-auto mt-10 sm:mt-0">
 
     <div class="flex items-center justify-center my-20">
@@ -226,10 +228,11 @@ $query = new WP_Query([
         <img src="@asset('images/home-title-eight.svg')" class="w-[158px] lg:w-[367px]" />
 
     </div>
+
     @php
     $query = new WP_Query([
     'post_type' => 'post',
-    'posts_per_page' => -1,
+    'posts_per_page' => 4,
     'tax_query' => array(
             array(
                 'taxonomy' => 'category',
@@ -240,21 +243,23 @@ $query = new WP_Query([
     ]);
     @endphp
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="ajax-posts">
         @posts($query)
 
 
         <div class="relative overflow-hidden block max-h-[300px]" id="blog-card"> @includeFirst(['partials.content-' . get_post_type(),
             'partials.content'])
 
-
-
         </div>
-
 
         @endposts
 
     </div>
+
+    <div id="more-posts" class="btn mx-auto max-w-max mt-10 flex self-center justify-center md:self-end cursor-pointer">
+                περισσοτερα
+</div>
+
 
 </div>
 

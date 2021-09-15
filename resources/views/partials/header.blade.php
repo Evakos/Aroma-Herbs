@@ -4,7 +4,7 @@
         </span>
         </button>
 
-<header class="mx-auto bg-auto bg-center bg-no-repeat bg-white mb-20">
+<header class="mx-auto bg-auto bg-center bg-no-repeat bg-white mb-20" id="header">
 
 <div class="" id="sticky-nav">
 
