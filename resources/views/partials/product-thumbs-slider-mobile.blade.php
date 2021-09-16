@@ -1,6 +1,4 @@
-
-<?php 
-$images = get_field('gallery');
+<?php $images = get_field('gallery');
 if( $images ): ?>
    <div id="splide-product-thumbs-mobile" class="splide">
         <div class="splide__track">
@@ -14,11 +12,12 @@ if( $images ): ?>
                 <p><?php echo esc_html($image['caption']); ?></p>
             </li>
         <?php endforeach; ?>
-    </ul><?
-else: echo 'No Thumb Images - Add Image';
-?>
+    </ul><?php else: echo 'No Thumb Images - Add Image';
 
-<? endif; ?>
+
+endif; 
+
+?>
 
 </div>
 

@@ -184,7 +184,7 @@ $query = new WP_Query([
 
 <div class="container bg-auto bg-center bg-no-repeat mx-auto">
 
-    <div class="container mx-auto -mt-44 sm:-mt-96">
+    <div class="container mx-auto -mt-52 sm:-mt-96">
 
         <div id="splide-products" class="splide">
             <div class="splide__track">

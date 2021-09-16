@@ -4,7 +4,7 @@
 
         <div class="flex flex-col items-center justify-center my-10" id="product-title">
 
-        <p class="text-dark-green font-advent-pro-semi-bold uppercase tracking-widest text-5xl"> @field('fresh_title')</p>
+        <p class="text-dark-green font-advent-pro-semi-bold uppercase tracking-widest md:text-5xl"> @field('fresh_title')</p>
 
         <p class="font-takhie text-dark-green tracking-widest text-7xl md:text-9xl">@title</p>
 
@@ -73,8 +73,8 @@
 
                     <p class="uppercase mb-10">Διαθεσιμο ΣΕ</p>
 
-                    <?php
-$packages = get_field('packaging');
+                    
+                    <?php $packages = get_field('packaging');
 if( $packages ): ?>
                     <ul class="flex">
                         <?php foreach( $packages as $package ): ?>
