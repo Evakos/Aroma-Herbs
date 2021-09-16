@@ -6267,11 +6267,11 @@ select {
 .mt-10{
 	margin-top: 2.5rem;
 }
-.mb-24{
-	margin-bottom: 6rem;
-}
 .mr-2{
 	margin-right: 0.5rem;
+}
+.mb-24{
+	margin-bottom: 6rem;
 }
 .mb-4{
 	margin-bottom: 1rem;
@@ -7420,10 +7420,6 @@ select {
 	.\32xl\:px-64{
 		padding-left: 16rem;
 		padding-right: 16rem;
-	}
-	.\32xl\:px-32{
-		padding-left: 8rem;
-		padding-right: 8rem;
 	}
 	.\32xl\:px-28{
 		padding-left: 7rem;
