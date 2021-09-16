@@ -6270,6 +6270,9 @@ select {
 .mb-24{
 	margin-bottom: 6rem;
 }
+.mr-2{
+	margin-right: 0.5rem;
+}
 .mb-4{
 	margin-bottom: 1rem;
 }
@@ -6296,9 +6299,6 @@ select {
 }
 .-mt-10{
 	margin-top: -2.5rem;
-}
-.mr-2{
-	margin-right: 0.5rem;
 }
 .contents{
 	display: contents;
@@ -6862,14 +6862,11 @@ select {
 	--tw-placeholder-opacity: 1;
 	color: rgba(255, 255, 255, var(--tw-placeholder-opacity));
 }
-.opacity-20{
-	opacity: 0.2;
+.opacity-30{
+	opacity: 0.3;
 }
 .opacity-80{
 	opacity: 0.8;
-}
-.opacity-30{
-	opacity: 0.3;
 }
 .transition{
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
