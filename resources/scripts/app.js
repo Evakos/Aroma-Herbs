@@ -168,7 +168,7 @@ function stickyHeader() {
   const navInner = document.getElementById("sticky-nav-inner");
   const getHamburger = document.getElementById("hamburger");
 
-  if (sticky <= "-10") {
+  if (sticky <= "0") {
     navOuter.classList.add("is-sticky");
     logo.classList.add("shrink-logo");
     navOuter.classList.add("fade-in-fast");
