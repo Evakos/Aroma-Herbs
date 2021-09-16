@@ -5615,7 +5615,7 @@ h3{
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 40;
+  z-index: 50;
   top: 0;
   right: 0;
   background: #b5d963;
@@ -5976,7 +5976,7 @@ ul.social-media-icons li:first-child {
 
 .is-sticky{
 	position: fixed;
-	z-index: 20;
+	z-index: 40;
 	width: 100%;
 	--tw-bg-opacity: 1;
 	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -5986,6 +5986,7 @@ ul.social-media-icons li:first-child {
 
 .shrink-logo {
   width: 50% !important;
+  padding: 0.7rem;
 }
 
 select {
@@ -6193,14 +6194,17 @@ select {
 .z-0{
 	z-index: 0;
 }
-.z-40{
-	z-index: 40;
+.z-20{
+	z-index: 20;
 }
 .z-50{
 	z-index: 50;
 }
 .z-10{
 	z-index: 10;
+}
+.z-40{
+	z-index: 40;
 }
 .z-30{
 	z-index: 30;

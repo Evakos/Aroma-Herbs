@@ -268,7 +268,7 @@ h3 {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 40;
+  z-index: 50;
   top: 0;
   right: 0;
   background: rgb(181, 217, 99);
@@ -535,9 +535,12 @@ ul.social-media-icons li:first-child {margin-right:20px}
 
 .half-div-right .blog-title {margin-right: 20%; width: 80%}
 
-.is-sticky {@apply bg-white w-full fixed z-20 shadow-md}
+.is-sticky {@apply bg-white w-full fixed z-40 shadow-md}
 
-.shrink-logo {width:50% !important}
+.shrink-logo {
+	width: 50% !important;
+	padding:0.7rem;
+}
 
 select {
 	background: url('../images/down.svg') no-repeat 90% 50%;
