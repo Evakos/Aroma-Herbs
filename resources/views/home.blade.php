@@ -39,17 +39,46 @@
 
 <div class="container relative mx-auto mb-24">
 
-  <div class="grid md:grid-cols-2 gap-4">
 
-  @while(have_posts()) @php(the_post())
 
-  <div class="relative overflow-hidden block max-h-[300px]" id="blog-card"> @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])</div>
+@php
+    $query = new WP_Query([
+    'post_type' => 'post',
+    'posts_per_page' => 4,
+    'tax_query' => array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'id',
+                'terms' => 32
+            ),
+    ),
+    ]);
+    @endphp
 
-  @endwhile
-  </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="ajax-posts">
+        @posts($query)
+
+
+        <div class="relative overflow-hidden block max-h-[300px]" id="blog-card"> @includeFirst(['partials.content-' . get_post_type(),
+            'partials.content'])
+
+        </div>
+
+        @endposts
+
+    </div>
+
+    <div id="more-posts" class="btn mx-auto max-w-max mt-10 flex self-center justify-center md:self-end cursor-pointer">
+
+<span id="loader" class="hidden mr-2"><i class="fas fa-circle-notch fa-spin"></i></span>
+
+                περισσοτερα
 </div>
 
-  {!! get_the_posts_navigation() !!}
+
+</div>
+
+  <!-- {!! get_the_posts_navigation() !!} -->
 @endsection
 
 

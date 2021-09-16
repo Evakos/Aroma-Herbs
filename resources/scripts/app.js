@@ -168,7 +168,7 @@ function stickyHeader() {
   const navInner = document.getElementById("sticky-nav-inner");
   const getHamburger = document.getElementById("hamburger");
 
-  if (sticky <= "0") {
+  if (sticky < "0") {
     navOuter.classList.add("is-sticky");
     logo.classList.add("shrink-logo");
     navOuter.classList.add("fade-in-fast");
@@ -272,8 +272,13 @@ import { library, dom } from "@fortawesome/fontawesome-svg-core";
 // import the Facebook and Twitter icons
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
+
+import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
+
+
+
 // add the imported icons to the library
-library.add(faFacebook, faInstagram);
+library.add(faFacebook, faInstagram, faCircleNotch);
 
 // tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
 dom.watch();

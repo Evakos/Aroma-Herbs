@@ -19,15 +19,6 @@
 
 </div>
 
-<!-- <?php 
-if ( is_home())  {
-?>
-<img src="<?php the_field( "hero_image", 14);?>" alt="Hero Image" class="object-cover w-screen min-h-[300px] md:min-h-[600px] -mt-16 md:-mt-44"/>'
-<?php
-}
-?> -->
-
-
 @hasfield('hero_image')
 <div class="flex justify-center mx-auto animate__animated animate__fadeIn animate__slow ">
 

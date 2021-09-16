@@ -6261,8 +6261,8 @@ select {
 .mb-2{
 	margin-bottom: 0.5rem;
 }
-.-mt-44{
-	margin-top: -11rem;
+.-mt-52{
+	margin-top: -13rem;
 }
 .mt-10{
 	margin-top: 2.5rem;
@@ -6297,8 +6297,8 @@ select {
 .-mt-10{
 	margin-top: -2.5rem;
 }
-.-mt-52{
-	margin-top: -13rem;
+.mr-2{
+	margin-right: 0.5rem;
 }
 .contents{
 	display: contents;
@@ -6789,12 +6789,12 @@ select {
 	font-size: 2.25rem;
 	line-height: 2.5rem;
 }
-.text-5xl{
-	font-size: 3rem;
-	line-height: 1;
-}
 .text-7xl{
 	font-size: 4.5rem;
+	line-height: 1;
+}
+.text-5xl{
+	font-size: 3rem;
 	line-height: 1;
 }
 .uppercase{
@@ -6867,6 +6867,9 @@ select {
 }
 .opacity-80{
 	opacity: 0.8;
+}
+.opacity-30{
+	opacity: 0.3;
 }
 .transition{
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -7176,9 +7179,6 @@ select {
 	.md\:grid-cols-4{
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
-	.md\:grid-cols-2{
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
 	.md\:grid-rows-2{
 		grid-template-rows: repeat(2, minmax(0, 1fr));
 	}
@@ -7289,12 +7289,12 @@ select {
 	.md\:text-right{
 		text-align: right;
 	}
-	.md\:text-9xl{
-		font-size: 8rem;
-		line-height: 1;
-	}
 	.md\:text-5xl{
 		font-size: 3rem;
+		line-height: 1;
+	}
+	.md\:text-9xl{
+		font-size: 8rem;
 		line-height: 1;
 	}
 	.md\:text-3xl{

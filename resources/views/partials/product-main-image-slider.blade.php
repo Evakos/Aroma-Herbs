@@ -12,8 +12,7 @@ if( $images ): ?>
                 <p><?php echo esc_html($image['caption']); ?></p>
             </li>
         <?php endforeach; ?>
-        </ul><?
-else: echo 'No Main Image - Add Image';
+        </ul><?php else: echo 'No Main Image - Add Image';
 endif; ?>
         </div>
 
