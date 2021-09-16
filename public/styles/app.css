@@ -7425,4 +7425,8 @@ select {
 		padding-left: 8rem;
 		padding-right: 8rem;
 	}
+	.\32xl\:px-28{
+		padding-left: 7rem;
+		padding-right: 7rem;
+	}
 }

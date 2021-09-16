@@ -3,7 +3,7 @@
 
 <div class="items-center h-screen flex sm:w-[1250px]">
 
-<div class="hidden sm:flex sm:invisible 2xl:visible md:px-12 2xl:px-32 flex-col items-center justify-center modal-product">
+<div class="hidden sm:flex sm:invisible 2xl:visible md:px-12 2xl:px-28 flex-col items-center justify-center modal-product">
 
 @php
   $query = new WP_Query([

@@ -257,6 +257,8 @@ $query = new WP_Query([
     </div>
 
     <div id="more-posts" class="btn mx-auto max-w-max mt-10 flex self-center justify-center md:self-end cursor-pointer">
+
+    <span id="loader" class="hidden mr-2"><i class="fas fa-circle-notch fa-spin"></i></span>
                 περισσοτερα
 </div>
 
