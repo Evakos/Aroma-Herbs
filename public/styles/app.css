@@ -5976,6 +5976,7 @@ ul.social-media-icons li:first-child {
 
 .is-sticky{
 	position: fixed;
+	top: 0px;
 	z-index: 20;
 	width: 100%;
 	--tw-bg-opacity: 1;
