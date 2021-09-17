@@ -1,9 +1,19 @@
+<div class="flex container mx-auto fixed left-0 right-0 pt-24 justify-end z-50" id="floating">
+
+<button class="hamburger hamburger--collapse" onclick="showDialog()" type="button" id="hamburger">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+        </button>
+
+</div>
+
 
 <div class="z-40" id="menu-modal">
 
 <div class="items-center h-screen flex sm:w-[1250px]">
 
-<div class="hidden sm:flex sm:invisible 2xl:visible md:px-12 2xl:px-28 flex-col items-center justify-center modal-product">
+<div class="hidden sm:flex sm:invisible 2xl:visible md:px-12 2xl:px-28 2xl:w-[550px] flex-col items-center justify-center modal-product">
 
 @php
   $query = new WP_Query([
@@ -31,11 +41,11 @@
 
 </div>
 
-<div class="flex sm:flex-1 w-screen md:w-auto justify-end md:justify-start px-12 md:px-0">
+<div class="flex sm:flex-1 w-screen md:w-auto justify-end md:justify-start mt-28 inset-0px-12 md:px-0">
   
   <nav class="nav-primary text-right w-screen sm:w-auto">
       @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav advent-pro-semi-bold text-xl sm:text-2xl md:text-3xl 3xl:text-4xl text-white', 'echo' => false]) !!}
+        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav advent-pro-semi-bold text-xl sm:text-2xl md:text-3xl 3xl:text-4xl text-white mr-10 ml-10', 'echo' => false]) !!}
       @endif
     </nav>
 

@@ -167,6 +167,8 @@ function stickyHeader() {
   const logo = document.getElementById("site-logo");
   const navInner = document.getElementById("sticky-nav-inner");
   const getHamburger = document.getElementById("hamburger");
+  const floating = document.getElementById("floating");
+
 
   if (sticky < 0) {
     navOuter.classList.add("is-sticky");
@@ -174,16 +176,23 @@ function stickyHeader() {
     navOuter.classList.add("fade-in-fast");
     navInner.classList.remove("py-10");
     navInner.classList.add("py-2");
-    getHamburger.classList.remove("top-[6rem]");
-    getHamburger.classList.add("top-[2rem]");
+    // getHamburger.classList.remove("top-[6rem]");
+    // getHamburger.classList.add("top-[2rem]");
+    floating.classList.remove("pt-24");
+
+    floating.classList.add("pt-6");
   } else {
     navOuter.classList.remove("is-sticky");
     logo.classList.remove("shrink-logo");
     navOuter.classList.remove("fade-in-fast");
     navInner.classList.add("py-10");
     navInner.classList.remove("py-2");
-    getHamburger.classList.add("top-[6rem]");
-    getHamburger.classList.remove("top-[2rem]");
+    // getHamburger.classList.add("top-[6rem]");
+    // getHamburger.classList.remove("top-[2rem]");
+    floating.classList.add("pt-24");
+    floating.classList.remove("pt-6");
+
+
   }
 }
 
