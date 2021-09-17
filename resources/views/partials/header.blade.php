@@ -1,4 +1,4 @@
-<button class="hamburger hamburger--collapse fixed right-[10%] top-[10%] z-50" onclick="showDialog()" type="button" id="hamburger">
+<button class="hamburger hamburger--collapse fixed right-[10%] top-[6rem] z-50" onclick="showDialog()" type="button" id="hamburger">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>

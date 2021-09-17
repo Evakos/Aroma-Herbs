@@ -6088,11 +6088,11 @@ select {
 .sticky{
 	position: sticky;
 }
-.top-\[10\%\]{
-	top: 10%;
+.top-\[6rem\]{
+	top: 6rem;
 }
-.top-\[4\%\]{
-	top: 4%;
+.top-\[2rem\]{
+	top: 2rem;
 }
 .-left-5{
 	left: -1.25rem;
@@ -6442,6 +6442,12 @@ select {
 }
 .w-\[16px\]{
 	width: 16px;
+}
+.w-\[170px\]{
+	width: 170px;
+}
+.w-\[22px\]{
+	width: 22px;
 }
 .w-\[82px\]{
 	width: 82px;
@@ -6857,6 +6863,9 @@ select {
 .placeholder-white::placeholder{
 	--tw-placeholder-opacity: 1;
 	color: rgba(255, 255, 255, var(--tw-placeholder-opacity));
+}
+.placeholder-current::placeholder{
+	color: currentColor;
 }
 .opacity-30{
 	opacity: 0.3;

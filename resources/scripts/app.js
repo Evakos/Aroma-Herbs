@@ -174,16 +174,16 @@ function stickyHeader() {
     navOuter.classList.add("fade-in-fast");
     navInner.classList.remove("py-10");
     navInner.classList.add("py-2");
-    getHamburger.classList.remove("top-[10%]");
-    getHamburger.classList.add("top-[4%]");
+    getHamburger.classList.remove("top-[6rem]");
+    getHamburger.classList.add("top-[2rem]");
   } else {
     navOuter.classList.remove("is-sticky");
     logo.classList.remove("shrink-logo");
     navOuter.classList.remove("fade-in-fast");
     navInner.classList.add("py-10");
     navInner.classList.remove("py-2");
-    getHamburger.classList.add("top-[10%]");
-    getHamburger.classList.remove("top-[4%]");
+    getHamburger.classList.add("top-[6rem]");
+    getHamburger.classList.remove("top-[2rem]");
   }
 }
 
@@ -283,7 +283,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   var $form = $('#mc-embedded-subscribe-form')
   if ($form.length > 0) {
-    $('form input[type="submit"]').bind('click', function (event) {
+    $('form input[type="image"]').bind('click', function (event) {
       if (event) event.preventDefault()
       register($form)
     })

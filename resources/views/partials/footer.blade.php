@@ -17,13 +17,14 @@
 
 
     <form action="https://evakos.us5.list-manage.com/subscribe/post?u=dd1bc7cedc4df039c67a9f1ab&amp;id=66edf0c659" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate flex">
-                <input type="email" value="" name="EMAIL" class="email bg-transparent w-{160px]" id="mce-EMAIL" placeholder="" required>
+                <input type="email" value="" name="EMAIL" class="email bg-transparent w-[170px] placeholder-current" id="mce-EMAIL" placeholder="Email" required>
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                     <input type="text" name="b_e44c1f194bec93e238615469e_f6f826e769" tabindex="-1" value="">
                 </div>
 
 
-                <input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" src="@asset('images/envelope-white.svg')" border="0" alt="Submit" typr="submit" class="w-[16px] fill-current text-white">                <div id="subscribe-result">
+                <input type="image" value="" name="subscribe" id="mc-embedded-subscribe" src="@asset('images/envelope-white.svg')" border="0" alt="Submit" class="w-[22px] fill-current text-white">              
+                <div id="subscribe-result">
                 </div>
             </form>
 
