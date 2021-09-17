@@ -18,7 +18,7 @@ if( $images ): ?>
 else: echo 'No Thumb Images - Add Image';
 ?>
 
-<? endif; ?>
+<?php endif; ?>
 
 </div>
 
