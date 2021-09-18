@@ -166,18 +166,21 @@ function stickyHeader() {
 
   const logo = document.getElementById("site-logo");
   const navInner = document.getElementById("sticky-nav-inner");
-  const getHamburger = document.getElementById("hamburger");
+ 
   const floating = document.getElementById("floating");
 
 
   if (sticky < 0) {
+
+
+console.log("This is the sticky position:" + sticky)
+
     navOuter.classList.add("is-sticky");
     logo.classList.add("shrink-logo");
     navOuter.classList.add("fade-in-fast");
     navInner.classList.remove("py-10");
     navInner.classList.add("py-2");
-    // getHamburger.classList.remove("top-[6rem]");
-    // getHamburger.classList.add("top-[2rem]");
+   
     floating.classList.remove("pt-24");
 
     floating.classList.add("pt-6");
@@ -187,8 +190,6 @@ function stickyHeader() {
     navOuter.classList.remove("fade-in-fast");
     navInner.classList.add("py-10");
     navInner.classList.remove("py-2");
-    // getHamburger.classList.add("top-[6rem]");
-    // getHamburger.classList.remove("top-[2rem]");
     floating.classList.add("pt-24");
     floating.classList.remove("pt-6");
 

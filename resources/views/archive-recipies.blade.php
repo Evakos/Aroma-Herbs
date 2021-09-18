@@ -30,42 +30,37 @@
 Φιλτρα συνταγών
 </p>
 
+
+
+
+
+<!-- Start Filter by Category and Tasks Here: -->
+
 <div class="flex flex-wrap mb-10">
 
-<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
+<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="recipiefilter">
 
- <?php
-// The Query
-$the_query = new WP_Query( ['post_type' => 'products' ]);
-  
-// The Loop
-if ( $the_query->have_posts() ) {
-    echo '<select name="categoryfilter" class="bg-light-green text-white mr-4 p-5 rounded-full mb-5 w-full md:w-[250px]">';
-    while ( $the_query->have_posts() ) {
-        $the_query->the_post();
-        echo '<option value="' . get_the_id() . '">' . get_the_title() . '</option>';
+<?php
+
+$product = get_terms( array(
+	'taxonomy' => 'product',
+	'hide_empty' => false,
+	'orderby'       => 'id',
+	'order'         => 'ASC',
+) );
+
+if ( !empty($product) ) :
+    echo '<select name="productrecipiefilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
+    echo '<option value="select" name="select">Product</option>';
+    foreach( $product as $term ) {
+
+		echo '<option value="' . esc_attr( $term->term_id )  . '">' . esc_html( $term->name ) . '</option>';
+     
     }
     echo '</select>';
-} else {
-    // no posts found
-}
+   
+endif;
 
-// $post_tags = get_the_tags();
-
-// // The Loop
-// if ( $post_tags ) {
-//     echo '<select name="tagfilter" class="bg-light-green text-white p-5 rounded-full">';
-// 	foreach( $post_tags as $tag ){
-  
-//         echo '<option value="' . $tag->name . '">' . $tag->name . '</option>';
-//     }
-//     echo '</select>';
-// } else {
-//     // no posts found
-// }
-
-/* Restore original Post Data */
-wp_reset_postdata();
 
 $restrictions = get_terms( array(
 	'taxonomy' => 'dietary_restrictions',
@@ -74,22 +69,17 @@ $restrictions = get_terms( array(
 	'order'         => 'ASC',
 ) );
 
-
-
 if ( !empty($restrictions) ) :
-    echo '<select name="categoryfilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
+    echo '<select name="dietrecipiefilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
+    echo '<option value="select" name="select">Diet Requirements</option>';
     foreach( $restrictions as $term ) {
-
 
 		echo '<option value="' . esc_attr( $term->term_id )  . '">' . esc_html( $term->name ) . '</option>';
      
-                }
-    
-    
+    }
     echo '</select>';
-
+   
 endif;
-
 
 
 
@@ -99,7 +89,9 @@ $courses = get_terms( array(
 ) );
  
 if ( !empty($courses) ) :
-    echo '<select name="categoryfilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
+    echo '<select name="coursesrecipiefilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
+    echo '<option value="select" name="select">Courses</option>';
+    
     foreach( $courses as $term ) {
      
                 echo '<option value="'. esc_attr( $term->term_id ) .'">
@@ -113,28 +105,22 @@ endif;
 
 ?> 
 
+<?php echo "<input type='checkbox' name='viewall' checked> View All";?>
 
-
-
-
-	<!-- <input type="text" name="price_min" placeholder="Min price" />
-	<input type="text" name="price_max" placeholder="Max price" />
-	<label>
-		<input type="radio" name="date" value="ASC" /> Date: Ascending
-	</label>
-	<label>
-		<input type="radio" name="date" value="DESC" selected="selected" /> Date: Descending
-	</label>
-	<label>
-		<input type="checkbox" name="featured_image" /> Only posts with featured images
-	</label> -->
-	<!-- <button>Apply filter</button>
-	<input type="hidden" name="action" value="myfilter"> -->
+	<!-- <button>View All</button> -->
+	<input type="hidden" name="action" value="recipiefilter">
 </form>
 
     </div>
-<div id="response"></div>
 
+
+
+<div id="recipie-response" class="container"></div>
+
+
+
+
+<!-- 
 
 @php
 $query = new WP_Query([
@@ -161,7 +147,7 @@ $query = new WP_Query([
 </div>
 
         @endposts
-    </div>
+    </div> -->
 
 
 	<div class="flex items-center justify-center my-20">
@@ -170,10 +156,6 @@ $query = new WP_Query([
 <img src="@asset('images/tips-twists.svg')" class="w-[300px] lg:w-[448px]" />
 
 </div>
-
-
-
-
 
 <?php
     $args = array(
@@ -191,7 +173,7 @@ $query = new WP_Query([
 
     <?php $count = 1 ?>
     <?php $loop = new WP_Query( $args ); ?>
-    <div class="grid md:grid-cols-4 md:grid-rows-2">
+    <div class="grid md:grid-cols-4 md:grid-rows-2 mb-0 sm:mb-20">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="grid relative mb-10 sm:m-0
         
@@ -262,5 +244,5 @@ else {echo 'row-span-1';}
 
 
 
-
+</div>
 </div>

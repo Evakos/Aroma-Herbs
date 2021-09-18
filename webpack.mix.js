@@ -33,6 +33,7 @@ mix
   .js('resources/scripts/customizer.js', 'scripts')
   .js('resources/scripts/animation.js', 'scripts')
   .js('resources/scripts/load-more.js', 'scripts')
+  .js('resources/scripts/recipies-filter.js', 'scripts')
   .blocks('resources/scripts/editor.js', 'scripts')
   .autoload({ jquery: ['$', 'window.jQuery'] })
   .extract();

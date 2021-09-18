@@ -43,6 +43,16 @@ button:focus {
   outline: none;
 }
 
+.customize-support #sticky-nav, .customize-support #floating {margin-top:32px}
+
+
+// @media screen and (max-width: 768px) {
+//   .customize-support #sticky-nav, .customize-support #floating {margin-top:24px}
+
+// }
+
+
+
 
 
 /* remember to define focus styles! */

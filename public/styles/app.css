@@ -5410,6 +5410,10 @@ button:focus {
   outline: none;
 }
 
+.customize-support #sticky-nav, .customize-support #floating {
+  margin-top: 32px;
+}
+
 /* remember to define focus styles! */
 :focus {
   outline: none;
@@ -6093,12 +6097,6 @@ select {
 .sticky{
 	position: sticky;
 }
-.top-\[6rem\]{
-	top: 6rem;
-}
-.top-\[2rem\]{
-	top: 2rem;
-}
 .-left-5{
 	left: -1.25rem;
 }
@@ -6192,9 +6190,6 @@ select {
 .z-0{
 	z-index: 0;
 }
-.z-20{
-	z-index: 20;
-}
 .z-10{
 	z-index: 10;
 }
@@ -6258,6 +6253,9 @@ select {
 }
 .mb-2{
 	margin-bottom: 0.5rem;
+}
+.mb-0{
+	margin-bottom: 0px;
 }
 .-mt-52{
 	margin-top: -13rem;
@@ -6990,6 +6988,9 @@ select {
 	}
 	.sm\:m-0{
 		margin: 0px;
+	}
+	.sm\:mb-20{
+		margin-bottom: 5rem;
 	}
 	.sm\:-mt-96{
 		margin-top: -24rem;

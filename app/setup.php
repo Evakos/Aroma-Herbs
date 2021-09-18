@@ -18,15 +18,11 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/app.js', asset('scripts/app.js')->uri(), ['sage/vendor.js'], null, true);
     wp_enqueue_script('sage/accents.js', asset('scripts/accents.js')->uri(), ['sage/vendor.js'], null, true);
     wp_enqueue_script('sage/load-more.js', asset('scripts/load-more.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
-
-
-    // wp_localize_script( 'core-js', 'ajax_posts', array(
-    //     'ajaxurl' => admin_url( 'admin-ajax.php' ),
-    //     'noposts' => __('No older posts found', 'sage'),
-    // ));	
+    wp_enqueue_script('sage/recipies-filter.js', asset('scripts/recipies-filter.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
 
 
 
+    
     if ( 'products' == get_post_type() ) {
 
         wp_enqueue_script('sage/product.js', asset('scripts/product.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
@@ -351,6 +347,28 @@ register_extended_taxonomy( 'dietary_restrictions', 'recipies', array(
     'singular' => 'Diet Restriction',
     'plural'   => 'Dietary Restrictions',
     'slug'     => 'dietary_restrictions'
+
+) );
+
+
+register_extended_taxonomy( 'product', 'recipies', array(
+
+    'dashboard_glance' => true,
+    'show_in_rest'      => true, // Needed for tax to appear in Gutenberg editor.
+
+    'admin_cols' => array(
+            'updated' => array(
+                    'title'       => 'Updated',
+                    'meta_key'    => 'updated_date',
+                    'date_format' => 'd/m/Y'
+            ),
+    ),
+
+), array(
+
+    'singular' => 'Product',
+    'plural'   => 'Products',
+    'slug'     => 'product'
 
 ) );
 

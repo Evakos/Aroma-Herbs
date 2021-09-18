@@ -167,14 +167,6 @@ function filter_products(){
 
         $product_link = get_permalink();
 
-// 		$thumbnail_id = get_post_meta( $post->ID, '_thumbnail_id', true );
-// $img_alt = get_post_meta ( $thumbnail_id, '_wp_attachment_image_alt', true );
-
-		//$img_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-
-		// var_dump($featured_img_url);
-		// var_dump($product_link);
-
 		?>
 		<div class="py-10 px-20 md:py-0 md:p-16 flex items-end single-product">
     
@@ -324,7 +316,7 @@ function more_post_ajax(){
 	<a href="<?php the_permalink();?>" class="blog-card">
 
 	
-<div class="blog-title transition duration-700 ease-in-out bg-light-green p-5 text-white absolute bottom-0 z-20 flex justify-right opacity-80 xl:opacity-0">
+<div class="blog-title transition duration-700 ease-in-out bg-light-green p-5 text-white absolute bottom-0 flex justify-right opacity-80 xl:opacity-0">
 
 
 <?php
@@ -359,3 +351,116 @@ $featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $loop-
 
 add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
+
+
+
+
+add_action('wp_ajax_recipiefilter', 'recipie_filter'); // wp_ajax_{ACTION HERE} 
+add_action('wp_ajax_nopriv_recipiefilter', 'recipie_filter');
+
+
+
+function recipie_filter(){
+
+
+	if( empty( $_POST['viewall'] )) {
+	
+	$args = array(
+		'orderby' => 'date', // we will sort posts by date
+		'order'	=> 'ASC', // ASC or DESC
+		'posts_per_page' => -1, // get all posts
+	);
+ 
+	
+	//The Category Type of Product
+	if( isset( $_POST['productrecipiefilter'] ) )
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'product',
+				'field' => 'id',
+				'terms' => $_POST['productrecipiefilter']
+			)
+		);
+
+		 
+	// for taxonomies / categories
+	if( isset( $_POST['dietrecipiefilter'] ) )
+	$args['tax_query'] = array(
+		array(
+			'taxonomy' => 'dietary_restrictions',
+			'field' => 'id',
+			'terms' => $_POST['dietrecipiefilter']
+		)
+	);
+
+	 
+	//for taxonomies / categories
+	if( isset( $_POST['coursesrecipiefilter'] ) )
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'courses',
+				'field' => 'id',
+				'terms' => $_POST['coursesrecipiefilter']
+			)
+		);
+ 
+	// if you want to use multiple checkboxed, just duplicate the above 5 lines for each checkbox
+
+	}
+
+	else {
+
+		$args = array(
+			'orderby' => 'date', // we will sort posts by date
+			'order'	=> 'ASC', // ASC or DESC
+			'posts_per_page' => -1, // get all posts
+			'post_type' => 'recipies',
+			'post_status' => 'publish',
+		);
+	}
+ 
+
+	$query = new WP_Query( $args );
+
+    //var_dump($query);
+ 
+	if( $query->have_posts() ) :
+        echo '<div class="grid md:grid-cols-4 md:gap-4">';
+		while( $query->have_posts() ): $query->the_post(); 
+
+		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+
+        $product_link = get_permalink();
+
+		?>
+		<div class="flex relative mb-10 sm:m-0">
+
+		<img src="<?php echo $featured_img_url?>" alt="" class="" />
+    
+		<a href="<?php echo $product_link ?>" class="absolute flex flex-col w-full bottom-0 xl:bottom-auto p-3 xl:p-0 xl:h-full justify-center items-center bg-light-green" id="recipies-title"/>
+	  
+
+	  <p class="text-white text-2xl mb-2 xl:mb-10"><?php the_title(); ?></p>
+
+<p class="font-takhie text-xl text-white">Μάθε Περισσότερα</p>
+	  
+	  </a>
+	  
+		  </div>
+
+		  <?php
+		endwhile;
+        echo '</div>';
+		wp_reset_postdata();
+	else :
+		echo 'Nothing Found';
+	endif;
+ 
+	die();
+    
+    //die();
+
+    //var_dump($query);
+	
+
+}
