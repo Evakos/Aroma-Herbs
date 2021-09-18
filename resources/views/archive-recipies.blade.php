@@ -36,9 +36,9 @@
 
 <!-- Start Filter by Category and Tasks Here: -->
 
-<div class="flex flex-wrap mb-10">
 
-<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="recipiefilter">
+
+<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="recipiefilter" class="flex flex-wrap mb-10">
 
 <?php
 
@@ -105,12 +105,9 @@ endif;
 
 ?> 
 
-<div class="flex pl-6 py-6 items-center">
-<!-- <?php echo "<input type='checkbox' name='viewall' checked> View All";?> -->
 
-
-<label class="check-box">
-    View All Recipies
+<label class="check-box flex text-dark-green p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">
+    <p class="pl-10">View All Recipies</p>
   <input type="checkbox" name='viewall' checked="checked">
   <span class="checkmark"></span>
 </label>
@@ -118,12 +115,12 @@ endif;
 
 
 
-</div>
+
 
 	<input type="hidden" name="action" value="recipiefilter">
 </form>
 
-    </div>
+
 
 
 
