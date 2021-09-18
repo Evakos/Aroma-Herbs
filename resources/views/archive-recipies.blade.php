@@ -105,9 +105,21 @@ endif;
 
 ?> 
 
-<?php echo "<input type='checkbox' name='viewall' checked> View All";?>
+<div class="flex pl-6 py-6 items-center">
+<!-- <?php echo "<input type='checkbox' name='viewall' checked> View All";?> -->
 
-	<!-- <button>View All</button> -->
+
+<label class="check-box">
+    View All Recipies
+  <input type="checkbox" name='viewall' checked="checked">
+  <span class="checkmark"></span>
+</label>
+
+
+
+
+</div>
+
 	<input type="hidden" name="action" value="recipiefilter">
 </form>
 

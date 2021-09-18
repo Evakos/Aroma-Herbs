@@ -5414,6 +5414,68 @@ button:focus {
   margin-top: 32px;
 }
 
+/* Customize the label (the container) */
+.check-box {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check-box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.check-box:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check-box input:checked ~ .checkmark {
+  background-color: #7e9a3d;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.check-box input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.check-box .checkmark:after {
+  left: 11px;
+  top: 5px;
+  width: 8px;
+  height: 16px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
 /* remember to define focus styles! */
 :focus {
   outline: none;
@@ -6713,6 +6775,10 @@ select {
 	padding-left: 5rem;
 	padding-right: 5rem;
 }
+.py-6{
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
 .px-4{
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -6749,6 +6815,9 @@ select {
 }
 .pt-10{
 	padding-top: 2.5rem;
+}
+.pl-6{
+	padding-left: 1.5rem;
 }
 .pr-10{
 	padding-right: 2.5rem;
@@ -7434,8 +7503,8 @@ select {
 	.\32xl\:w-auto{
 		width: auto;
 	}
-	.\32xl\:w-\[550px\]{
-		width: 550px;
+	.\32xl\:w-\[500px\]{
+		width: 500px;
 	}
 	.\32xl\:px-64{
 		padding-left: 16rem;
