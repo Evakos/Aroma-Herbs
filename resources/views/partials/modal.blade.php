@@ -1,4 +1,12 @@
+
+<a class="text-white no-underline hover:text-white hover:no-underline fixed h-[200px] w-[200px] ml-20" href="@permalink(11)" style="z-index:999">
+        
+      </a>
+
 <div class="flex container mx-auto fixed left-0 right-0 top-0 pt-24 justify-end z-50" id="floating">
+
+
+
 
 <button class="hamburger hamburger--collapse" onclick="showDialog()" type="button" id="hamburger">
         <span class="hamburger-box">
@@ -18,8 +26,9 @@
 @php
   $query = new WP_Query([
     'post_type' => 'products',
-    'orderby' => 'rand', 
+  'posts_per_page' => 1,
     'showposts' => 1,
+    'category' => 'featured'
   ]);
 @endphp
 
@@ -55,6 +64,6 @@
   
   </div>
 
-  <div id="overlay" class="h-screen fixed bg-black bg-opacity-80 z-30 w-full hidden"></div>
+  <div id="overlay" class="h-screen fixed bg-black bg-opacity-80 z-30 w-full top-0 hidden"></div>
 
 

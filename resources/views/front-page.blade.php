@@ -7,7 +7,9 @@
 @include('partials.header')
 
 
+<!-- Animation Mark Up Desktop -->
 <div class="container mx-auto relative h-[5500px] hidden xl:flex">
+
     <!-- First Image Row -->
     <img src="@asset('images/home-img-1.jpg')" class="absolute top-64 left-0" data-aos="move-right" />
     <img src="@asset('images/home-img-2.jpg')" class="absolute right-0 bottom-auto top-56 2xl:top-96"
@@ -34,12 +36,10 @@
     <img src="@asset('images/leaves.png')" class="absolute left-[300px] 2xl:left-[350px] top-[2800px] 2xl:top-[3300px]"
         data-aos="shake" />
 
-
     <!-- Fifth Image Row -->
     <img src="@asset('images/croutons.png')" class="absolute right-0 top-[2900px] 2xl:top-[3300px]" />
     <img src="@asset('images/parsley-partial.png')" class="absolute right-[300px] top-[3200px] 2xl:top-[3600px]"
         data-aos="rotate-left" />
-
 
     <!-- Sixth Image Row -->
     <img src="@asset('images/basil-angle.png')"
@@ -48,7 +48,6 @@
     <img src="@asset('images/quark-with-herbs.png')"
         class="max-w-[244px] absolute right-[180px] 2xl:right-[200px] top-[3800px] 2xl:top-[4400px]"
         data-aos-offset="300" data-aos="rotate-right" />
-
 
     <!-- Last Image Row -->
     <img src="@asset('images/aroma_peppers_habanero_pack-front.png')"
@@ -64,7 +63,7 @@
 
 </div>
 
-<!-- Mobile Tree -->
+<!-- Animation Mark Up Mobile -->
 
 <div class="container mx-auto relative xl:hidden">
     <div class="flex justify-center">
@@ -187,6 +186,7 @@ $query = new WP_Query([
     <div class="container mx-auto -mt-52 sm:-mt-96">
 
         <div id="splide-products" class="splide">
+
             <div class="splide__track">
 
                 <ul class="splide__list">
@@ -197,29 +197,27 @@ $query = new WP_Query([
                     @endposts
                 </ul>
 
-
             </div>
 
-
-
-
         </div>
+
         <div class="flex justify-center mt-10">
 
             <a href="/products/" class="btn">
-                περισσοτερα
+            <?php _e( 'Περισσοτερα', 'sage'); ?>
             </a>
+
         </div>
+
     </div>
 
 </div>
 
 <!-- Recipies Slider -->
+
 @include('partials.recipies-slider')
 
 <!-- Blog Grid Fresh News -->
-
-
 
 <div class="container mx-auto mt-10 sm:mt-0">
 
@@ -258,8 +256,10 @@ $query = new WP_Query([
 
     <div id="more-posts" class="btn mx-auto max-w-max mt-10 flex self-center justify-center md:self-end cursor-pointer">
 
-    <span id="loader" class="hidden mr-2"><i class="fas fa-circle-notch fa-spin"></i></span>
-                περισσοτερα
+    <span id="loader" class="hidden mr-2">@fas('circle-notch', 'fa-spin')</span>
+
+   <?php _e( 'Περισσοτερα', 'sage'); ?>
+
 </div>
 
 
@@ -294,7 +294,7 @@ $query = new WP_Query([
             <p class="mb-10">@field('harvest_text')</p>
 
             <a href="@field('harvest_button')" class="btn md:self-end cursor-pointer">
-                περισσοτερα
+            <?php _e( 'Περισσοτερα', 'sage'); ?>
             </a>
 
         </div>
@@ -328,7 +328,7 @@ $query = new WP_Query([
             <p class="mb-10">@field('locator_text')</p>
 
             <a href="@field('locator_button')" class="btn md:self-start cursor-pointer">
-                περισσοτερα
+            <?php _e( 'Περισσοτερα', 'sage'); ?>
             </a>
 
         </div>

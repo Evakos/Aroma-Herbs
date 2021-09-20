@@ -25,19 +25,8 @@ AOS.init({
   easing: "ease", // default easing for AOS animations
   once: false, // whether animation should happen only once - while scrolling down
   mirror: true, // whether elements should animate out while scrolling past them
-  anchorPlacement: "bottom-bottom", // defines which position of the element regarding to window should trigger the animation
+  anchorPlacement: "top-top", // defines which position of the element regarding to window should trigger the animation
 });
-
-// getSingleProduct.addEventListener("mouseover", mOver, false);
-// getSingleProduct.addEventListener("mouseout", mOut, false);
-
-// function mOver() {
-//   getSingleProduct.setAttribute("style", "background-color:blue;")
-// }
-
-// function mOut() {
-//   getSingleProduct.setAttribute("style", "background-color:green;")
-// }
 
 const getSingleProducts = document.querySelectorAll(".single-product");
 
@@ -49,14 +38,8 @@ getSingleProducts.forEach((getSingleProduct) => {
     getSingleProduct.classList.remove("slide-up");
   });
 });
-
-// const element = document.querySelector('.my-element');
-// element.classList.add('animate__animated', 'animate__bounceOutLeft');
-
-// element.addEventListener('animationend', () => {
-//   // do something
+ // do something
 // });
-
 const getFilterButtons = document.querySelectorAll(".prod-filter");
 
 const getLeafElement = document.getElementById("leaf-element");
@@ -138,15 +121,6 @@ window.addEventListener(
   false
 );
 
-
-
-// $(function() {
-//   var header = document.getElementById("header");
-//   $(window).scroll(function() {
-//       console.log(header.getBoundingClientRect().top);
-//   });
-// });
-
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyHeader() {
 
@@ -201,20 +175,6 @@ window.onscroll = function () {
   stickyHeader();
 };
 
-// //Floating Nav Bar
-
-// // const setScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-
-// window.addEventListener("scroll", function() {
-
-//   //console.log(getHamburger);
-
-//   if (window.pageYOffset > 0) {
-
-//   } else {
-
-//   }
-//   });
 
 $(".hamburger").click(function () {
   $(this).toggleClass("is-active");

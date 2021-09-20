@@ -1,5 +1,3 @@
-// $("input[name='viewall']").prop( "checked", true );
-
 jQuery(function ($) {
 	
   $("#recipiefilter").change(function () {

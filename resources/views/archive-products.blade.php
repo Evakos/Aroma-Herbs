@@ -64,7 +64,7 @@
     {!! get_search_form(false) !!}
   @endif
 
-  <div class="grid md:grid-cols-4 md:gap-4 -mt-28 md:-mt-64">
+  <div class="grid md:grid-cols-4 md:gap-4 -mt-28 md:-mt-64" id="product-grid">
 
   @php
 $args = array('post_type' => 'products', 'posts_per_page' => -1, 'tax_query' => array(
@@ -80,7 +80,7 @@ $loop = new WP_Query($args);
 
   @while($loop->have_posts()) @php($loop->the_post())
 
-  <div class="py-10 px-20 md:p-16 flex items-end single-product">
+  <div class="py-10 px-20 md:p-16 flex items-end single-product" data-aos="fade-up">
     
   <a href="@permalink" class="cursor-pointer">
 
