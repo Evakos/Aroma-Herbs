@@ -423,7 +423,7 @@ function filter_products(){
 <?php
 		while( $query->have_posts() ): $query->the_post(); 
 
-		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'large'); 
 
         $product_link = get_permalink();
 
@@ -433,7 +433,7 @@ function filter_products(){
     
 		<a href="<?php echo $product_link ?>" class="cursor-pointer">
 	  
-	  <img src="<?php echo $featured_img_url?>" alt="" class="self-end" />
+	  <img src="<?php echo $featured_img_url?>" alt="" class="" />
 	  
 	  <p class="font-takhie text-dark-green text-center py-10 text-3xl">
 	  <?php the_title(); ?>
