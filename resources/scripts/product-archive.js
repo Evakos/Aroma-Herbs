@@ -70,6 +70,9 @@ $(() => {
         // $('#products').addClass('fade-in');
 
         // $("#all-products").toggleClass("fade-in");
+        $("#loader-product").removeClass("hidden"); // Hide loader.
+
+        $("#loader-product").addClass("flex"); // Hide loader.
 
        ;
 
@@ -117,6 +120,11 @@ $(() => {
         // $('#products').addClass('fade-in');
 
         // $("#all-products").toggleClass("fade-in");
+
+        $("#loader-product").removeClass("hidden"); // Hide loader.
+
+        $("#loader-product").addClass("flex"); // Hide loader.
+
 
        ;
 

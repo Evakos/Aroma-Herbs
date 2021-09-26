@@ -660,5 +660,13 @@ select {
   transition: .4s ease-in-out;
 }
 
+#loader-product {
+
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%, 0);
+
+}
+
 
 

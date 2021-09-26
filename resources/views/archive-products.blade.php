@@ -49,9 +49,13 @@
 
 <div class="container mx-auto -mt-24 sm:-mt-96">
 
-  <div id="products" class="min-h-screen"></div>
+  <div id="products" class="">
+
+
 
 
 <?php filter_products();?>
+
+</div>
 
 </div>

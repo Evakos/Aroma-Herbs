@@ -6080,6 +6080,12 @@ select {
   transition: 0.4s ease-in-out;
 }
 
+#loader-product {
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%, 0);
+}
+
 .container{
 	width: 100%;
 	margin-right: auto;
@@ -6433,9 +6439,6 @@ select {
 }
 .min-h-\[300px\]{
 	min-height: 300px;
-}
-.min-h-screen{
-	min-height: 100vh;
 }
 .min-h-\[550px\]{
 	min-height: 550px;

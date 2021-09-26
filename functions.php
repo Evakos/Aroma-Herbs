@@ -416,8 +416,11 @@ function filter_products(){
  
 	if( $query->have_posts() ) :
 
-        echo '<div id="product-grid">';
+        echo '<div id="product-grid" class="relative">'; ?>
 
+		<span id="loader-product" class="hidden text-dark-green absolute"><i class="fas fa-circle-notch fa-7x fa-spin"></i></span>
+
+<?php
 		while( $query->have_posts() ): $query->the_post(); 
 
 		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
