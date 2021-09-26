@@ -7042,14 +7042,8 @@ select {
 			max-width: 1536px;
 		}
 	}
-	.sm\:visible{
-		visibility: visible;
-	}
 	.sm\:invisible{
 		visibility: hidden;
-	}
-	.sm\:absolute{
-		position: absolute;
 	}
 	.sm\:-left-10{
 		left: -2.5rem;

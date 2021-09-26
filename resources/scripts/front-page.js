@@ -35,30 +35,6 @@ AOS.init({
  */
  import Splide from '@splidejs/splide';
 
-
-//  //Recipie Slider
-//  new Splide( '#splide-recipie-slider', {
-// 	 type   : 'slide',
-// 	 rewind: true,
-// 	 perPage: 1,
-// 	 breakpoints: {
-// 		640: {
-// 			arrows: false
-// 		},
-// 	},
-// 	 classes: {
-// 		// Add classes for arrows.
-// 		arrows: 'splide__arrows invisible sm:visible',
-// 		arrow : 'splide__arrow ',
-// 		prev  : 'splide__arrow--prev ',
-// 		next  : 'splide__arrow--next' ,
-		
-// 		// Add classes for pagination.
-// 		pagination: 'splide__pagination relative sm:absolute', // container
-// 		page      : 'splide__pagination__page w-4 h-4 m-1', // each button
-// 	},
-	 
-//  } ).mount();
  
  //Products Slider
  new Splide( '#splide-products', {
