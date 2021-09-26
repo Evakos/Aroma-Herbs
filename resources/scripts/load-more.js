@@ -2,9 +2,9 @@ var ppp = 4; // Post per page
 var pageNumber = 1;
 
 
-function load_posts(){
+function loadPosts(){
     pageNumber++;
-    var str = '&pageNumber=' + pageNumber + '&ppp=' + ppp + '&action=more_post_ajax';
+    var str = '&pageNumber=' + pageNumber + '&ppp=' + ppp + '&action=more_news_ajax';
     $.ajax({
         type: "POST",
         dataType: "html",
@@ -16,7 +16,7 @@ function load_posts(){
             if($data.length){
                 $("#ajax-posts").append($data);
                 $("#more-posts").attr("disabled",false);
-                $("#loader").addClass("hidden"); // Show loader.
+                $("#loader").addClass("hidden"); // Hide loader.
                 
                
             } else{
@@ -33,7 +33,7 @@ function load_posts(){
 $("#more-posts").on("click",function(){ // When btn is pressed.
     $("#more-posts").attr("disabled",true); // Disable the button, temp.
     $("#loader").removeClass("hidden"); // Show loader.
-    load_posts();
+    loadPosts();
     logWidth();
     $(this).insertAfter('#ajax-posts'); // Move the 'Load More' button to the end of the the newly added posts.
 });
@@ -45,13 +45,16 @@ let viewportWidth;
 
 // Set/update the viewportWidth value
 let setViewportWidth = function () {
-  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+viewportWidth =  document.documentElement.clientWidth || window.innerWidth || window.outerWidth;
+
 };
 
-// Log the viewport width into the console
+// Log the viewport width into the 
+
 const logWidth = function () {
   if (viewportWidth > 768) {
-    console.log("Wide viewport");
+    console.log("Checking viewport");
 
     $("#blog-card:nth-child(4n + 1)").addClass("half-div-left");
 

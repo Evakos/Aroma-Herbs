@@ -82,44 +82,6 @@ $(document).ready(function () {
   });
 });
 
-// Define our viewportWidth variable
-let viewportWidth;
-
-// Set/update the viewportWidth value
-let setViewportWidth = function () {
-  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-};
-
-// Log the viewport width into the console
-const logWidth = function () {
-  if (viewportWidth > 768) {
-    console.log("Wide viewport");
-
-    $("#blog-card:nth-child(4n + 1)").addClass("half-div-left");
-
-    $("#blog-card:nth-child(4n + 2)").addClass("half-div-right");
-  } else {
-    console.log("Small viewport");
-
-    $("#blog-card:nth-child(4n + 1)").removeClass("half-div-left");
-
-    $("#blog-card:nth-child(4n + 2)").removeClass("half-div-right");
-  }
-};
-
-// Set our initial width and log it
-setViewportWidth();
-logWidth();
-
-// On resize events, recalculate and log
-window.addEventListener(
-  "resize",
-  function () {
-    setViewportWidth();
-    logWidth();
-  },
-  false
-);
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyHeader() {
@@ -144,10 +106,10 @@ function stickyHeader() {
   const floating = document.getElementById("floating");
 
 
-  if (sticky < 0) {
+  if (sticky <= 0) {
 
 
-console.log("This is the sticky position:" + sticky)
+//console.log("This is the sticky position:" + sticky)
 
     navOuter.classList.add("is-sticky");
     logo.classList.add("shrink-logo");
@@ -194,48 +156,6 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-$(() => {
-  //console.log('Filter Block');
-
-  //var default_id = 3;
-
-  $("#products").hide();
-
-  //$('#products').removeClass('fade-in'); // remove fade-in class
-
-  $(".prod-filter").click(function (e) {
-    //console.log("Filter Clicked");
-
-    var term_id = jQuery(this).attr("product-id");
-
-    //console.log("The ID:" + term_id);
-
-    $.ajax({
-      type: "post",
-      //  url : '<?php echo site_url() ?>/wp-admin/admin-ajax.php',
-      // url : sage.admin_url,
-      url: "/wp-admin/admin-ajax.php",
-      data: { action: "filterproducts", categoryfilter: term_id },
-      success: function (data) {
-        //console.log('This is the data' + data);
-
-        $("#products").show();
-
-        // $('#products').removeClass('fade-in');
-
-        // $('#products').addClass('fade-in');
-
-        // $("#all-products").toggleClass("fade-in");
-
-        $("#products").html(data);
-        $("#all-products").hide();
-        // $(".cat-filter").removeClass("filter-active");
-        // $('[product-id="' + term_id + '"]').addClass("filter-active");
-      },
-    });
-    e.preventDefault();
-  });
-});
 
 
 $(document).ready(function () {

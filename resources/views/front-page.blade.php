@@ -266,6 +266,7 @@ $query = new WP_Query([
 </div>
 
 <!-- Our Harvest -->
+
 <div class="container relative mx-auto mb-10 sm:mb:0">
 
     <div class="flex items-center justify-center my-20">
@@ -286,7 +287,7 @@ $query = new WP_Query([
     <div class="flex md:py-24 md:px-24 lg:px-48">
 
         <div class="hidden md:flex flex-1 justify-center">
-            <img src="@asset('images/ifs.svg')" class="max-w-[287px]" />
+            <img src="@asset('images/IFS.svg')" class="max-w-[287px]" />
         </div>
 
         <div class="flex flex-1 flex-col md:items-end md:text-right">

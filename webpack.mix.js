@@ -34,6 +34,7 @@ mix
   .js('resources/scripts/animation.js', 'scripts')
   .js('resources/scripts/load-more.js', 'scripts')
   .js('resources/scripts/recipies-filter.js', 'scripts')
+  .js('resources/scripts/product-archive.js', 'scripts')
   .blocks('resources/scripts/editor.js', 'scripts')
   .autoload({ jquery: ['$', 'window.jQuery'] })
   .extract();

@@ -1,2 +1,11 @@
 {
+    "stylelint.configOverrides": {
+
+        "rules": {
+            "string-quotes": "single",
+          }
+
+
+
+    }
 }

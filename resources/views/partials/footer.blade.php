@@ -85,7 +85,7 @@
 
             <div class="mb-10 mt-10 md:mt-0 md:mb-0">© 2021 Aroma Herbs.</div>
 
-            <div classs="mb-10 md:mb-0"><img src="@asset('images/ifs.svg')" class="w-[82px]" /></div>
+            <div classs="mb-10 md:mb-0"><img src="@asset('images/IFS.svg')" class="w-[82px]" /></div>
 
             <div class="mt-10 md:mt-0">Site by 
 <a href="url" class="text-light-green">Fluid</a>

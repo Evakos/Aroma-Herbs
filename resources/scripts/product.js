@@ -57,7 +57,7 @@ function switchOrientation(){
         pagination : false,
         arrows     : false,
         cover      : false,
-        type     : 'loop',
+        type     : 'slide',
         perPage: 2,
         gap: '2rem',
       
@@ -76,7 +76,7 @@ function switchOrientation(){
       pagination : false,
       arrows     : false,
       cover      : false,
-      type     : 'loop',
+      type     : 'slide',
       perPage: 2,
       width: '160px',
     

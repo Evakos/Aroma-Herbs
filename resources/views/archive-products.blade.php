@@ -47,64 +47,11 @@
     <img src="<?php the_field( "product_background_image", 11 ); ?>" class="object-cover w-screen min-h-[300px] md:min-h-[600px]" />
 </div>
 
-<div class="container mx-auto">
+<div class="container mx-auto -mt-24 sm:-mt-96">
 
   <div id="products" class="min-h-screen"></div>
 
-<!-- Initial display of products -->
-<div id="all-products" class="min-h-screen">
 
-@section('content')
+<?php filter_products();?>
 
-  @if (!have_posts())
-    <x-alert type="warning">
-      {!! __('Sorry, no results were found.', 'sage') !!}
-    </x-alert>
-
-    {!! get_search_form(false) !!}
-  @endif
-
-  <div class="grid md:grid-cols-4 md:gap-4 -mt-28 md:-mt-64" id="product-grid">
-
-  @php
-$args = array('post_type' => 'products', 'posts_per_page' => -1, 'tax_query' => array(
-        array(
-            'taxonomy' => 'category',
-            'field' => 'id',
-            'terms' => 'fresh-spices',
-        )
-     ));
-$loop = new WP_Query($args);
-@endphp
-  
-
-  @while($loop->have_posts()) @php($loop->the_post())
-
-  <div class="py-10 px-20 md:p-16 flex items-end single-product" data-aos="fade-up">
-    
-  <a href="@permalink" class="cursor-pointer">
-
-<img src="@thumbnail('full', false)" alt="Full Image" />
-
-<p class="font-takhie text-dark-green text-center py-10 text-3xl">
-@title
-</p>
-
-</a>
-
-    </div>
-  @endwhile
-
-  </div>
-
-    </div>
-
-    </div>
-
-  {!! get_the_posts_navigation() !!}
-  
-@endsection
-
-<!-- @section('sidebar')
-  @include('partials.sidebar')
-@endsection -->
+</div>

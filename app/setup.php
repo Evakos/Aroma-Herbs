@@ -25,9 +25,17 @@ add_action('wp_enqueue_scripts', function () {
     
     if ( 'products' == get_post_type() ) {
 
+        wp_enqueue_script('sage/product-archive.js', asset('scripts/product-archive.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+        
+    }
+
+    if ( 'products' == get_post_type() && is_singular() ) {
+
         wp_enqueue_script('sage/product.js', asset('scripts/product.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         
     }
+
+
     
 
     if ( is_front_page() ) {
@@ -35,12 +43,15 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_script('sage/front-page.js', asset('scripts/front-page.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         // wp_enqueue_script('sage/animation.js', asset('scripts/animation.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         wp_enqueue_script('sage/recipies.js', asset('scripts/recipies.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+
+        wp_enqueue_script('sage/load-more.js', asset('scripts/load-more.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         
     }
 
     if ( 'recipies' == get_post_type() ) {
 
         wp_enqueue_script('sage/recipies.js', asset('scripts/recipies.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+        wp_enqueue_script('sage/recipies-filter.js', asset('scripts/recipies-filter.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
 
         
         

@@ -466,6 +466,11 @@ a.blog-card:hover .blog-title{
   transform: translate3d(0, -5%, 0);
 }
 
+.slide-up-long {
+  transition: transform 800ms;
+  transform: translate3d(0, -55%, 0);
+}
+
 .move-right {
  transform: translate(60px, 60px);
 }
@@ -642,6 +647,18 @@ select {
 }
 
 
+// .single-product:nth-child(n+1):nth-child(-n+4) {
+//   background-color: #298EB2;
+//   box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+// }
+
+.single-product-grid {align-items: end;}
+
+
+.slide-up-alt {
+  transform: translateY(50%);
+  transition: .4s ease-in-out;
+}
 
 
 

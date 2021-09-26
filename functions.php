@@ -133,72 +133,12 @@ require_once __DIR__ . '/bootstrap/app.php';
 
 
 
-//Ajax Posts Filter
-add_action('wp_ajax_filterproducts', 'filter_products'); 
-add_action('wp_ajax_nopriv_filterproducts', 'filter_products');
- 
-function filter_products(){
-
-	$args = array(
-		'orderby' => 'date', 
-		'post_type' => 'products',
-		'posts_per_page' => -1,
-		
-	);
-
-	if( isset( $_POST['categoryfilter'] ) )
-		$args['tax_query'] = array(
-			array(
-				'taxonomy' => 'category',
-				'field' => 'id',
-				'terms' => $_POST['categoryfilter']
-			)
-		);
- 
-	$query = new WP_Query( $args );
-
-    //var_dump($query);
- 
-	if( $query->have_posts() ) :
-        echo '<div class="grid md:grid-cols-4 md:gap-4 -mt-28 md:-mt-64">';
-		while( $query->have_posts() ): $query->the_post(); 
-
-		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
-
-        $product_link = get_permalink();
-
-		?>
-		<div class="py-10 px-20 md:py-0 md:p-16 flex items-end single-product">
-    
-		<a href="<?php echo $product_link ?>" class="cursor-pointer">
-	  
-	  <img src="<?php echo $featured_img_url?>" alt="" class="" />
-	  
-	  <p class="font-takhie text-dark-green text-center py-10 text-3xl">
-	  <?php the_title(); ?>
-	  </p>
-	  
-	  </a>
-	  
-		  </div>
-
-		  <?php
-		endwhile;
-        echo '</div>';
-		wp_reset_postdata();
-	else :
-		echo 'Nothing Found';
-	endif;
- 
-	die();
-}
-
 
 //Default Image
 add_action('acf/render_field_settings/type=image', 'add_defult_image_field');
     function add_defult_image_field($field) {
         acf_render_field_setting( $field, array(
-            'label'         => 'Defult Image',
+            'label'         => 'Default Image',
             'instructions'      => 'Appears when creating a new post',
             'type'          => 'image',
             'name'          => 'defult_value',
@@ -282,7 +222,14 @@ function aroma_social_media_icons() {
 
 
 
-function more_post_ajax(){
+
+// Fresh News Show More
+
+add_action('wp_ajax_nopriv_more_news_ajax', 'more_news_ajax');
+add_action('wp_ajax_more_news_ajax', 'more_news_ajax');
+
+
+function more_news_ajax(){
 
     $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 4;
 	
@@ -336,13 +283,14 @@ function more_post_ajax(){
     endif;
     wp_reset_postdata();
     
-	//die($out);
+	// die();
 }
 
-add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
-add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
 
+//Recipie Ajax Posts Filter
 
+add_action('wp_ajax_recipiefilter', 'recipie_filter'); 
+add_action('wp_ajax_nopriv_recipiefilter', 'recipie_filter');
 
 function recipie_filter(){
 
@@ -434,4 +382,71 @@ function recipie_filter(){
 	endif;
  
 	die();
+}
+
+
+
+
+
+//Ajax Posts Filter
+
+add_action('wp_ajax_filterproducts', 'filter_products'); 
+add_action('wp_ajax_nopriv_filterproducts', 'filter_products');
+ 
+function filter_products(){
+
+	$args = array(
+		'orderby' => 'date', 
+		'post_type' => 'products',
+		'posts_per_page' => -1,
+		
+	);
+
+	if( isset( $_POST['categoryfilter'] ) )
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'category',
+				'field' => 'id',
+				'terms' => $_POST['categoryfilter']
+			)
+		);
+ 
+	$query = new WP_Query( $args );
+
+ 
+	if( $query->have_posts() ) :
+
+        echo '<div id="product-grid">';
+
+		while( $query->have_posts() ): $query->the_post(); 
+
+		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+
+        $product_link = get_permalink();
+
+		?>
+		
+		<div class="py-10 md:p-16 flex px-12 items-end single-product-grid">
+    
+		<a href="<?php echo $product_link ?>" class="cursor-pointer">
+	  
+	  <img src="<?php echo $featured_img_url?>" alt="" class="self-end" />
+	  
+	  <p class="font-takhie text-dark-green text-center py-10 text-3xl">
+	  <?php the_title(); ?>
+	  </p>
+	  
+	  </a>
+	  
+		  </div>
+
+		  <?php
+		endwhile;
+        echo '</div>';
+		wp_reset_postdata();
+	else :
+		echo 'Nothing Found';
+	endif;
+ 
+
 }
