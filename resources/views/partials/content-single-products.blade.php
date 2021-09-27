@@ -64,7 +64,7 @@
                         <p class="text-3xl md:text-5xl mb-5">
                             
 
-                        <span id="weight-1" class=""> <?php echo get_field('weight_1');?> </span>
+                        <span id="weight-1" class=""> <?php echo get_field('weight');?> </span>
 
                         <span id="weight-2" class="hidden"> <?php echo get_field('weight_2');?> </span>
                         
