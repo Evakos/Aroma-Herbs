@@ -4,8 +4,12 @@ if( $images ): ?>
         <div class="splide__track">
 
             <ul class="splide__list">
-        <?php foreach( $images as $image ): ?>
-          <li class="splide__slide">
+
+        <?php $count = 1; 
+        
+        foreach( $images as $image ): ?>
+
+<li class="splide__slide" data-weight="<?php echo $count++ ?>">
           
                      <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="" alt="<?php echo esc_attr($image['alt']); ?>" />
               

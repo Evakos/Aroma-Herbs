@@ -1,4 +1,4 @@
-<div class="container relative mx-auto mb-24 mt-10">
+<div class="container relative mx-auto md:mb-24 mt-10">
 
     <div class="flex flex-col items-center justify-center">
 
@@ -38,7 +38,7 @@
 
             <div class="flex relative min-h-[550px] justify-center md:w-4/12">
 
-            <img src="@asset('images/product-bg.jpg')" alt="" class="absolute object-cover w-screen sm:w-auto"/> 
+            <img src="@asset('images/product-bg.jpg')" alt="" class="absolute object-cover w-screen p-10 sm:p-0 sm:w-auto"/> 
 
                 @include('partials.product-main-image-slider')
 
@@ -59,7 +59,23 @@
                 <div class="flex flex-row w-full md:flex-col mt-20 md:mt-0 md:pl-20">
                     <div class="flex flex-col pr-10 items-center md:items-start">
                         <p class="mb-5 text-md font-advent-pro-light text-aroma-grey"><?php echo get_field('product_code');?></p>
-                        <p class="text-3xl md:text-5xl mb-5"><?php echo get_field('weight');?></p>
+
+
+                        <p class="text-3xl md:text-5xl mb-5">
+                            
+
+                        <span id="weight-1" class=""> <?php echo get_field('weight_1');?> </span>
+
+                        <span id="weight-2" class="hidden"> <?php echo get_field('weight_2');?> </span>
+                        
+                       
+            
+                    
+                    
+                    </p>
+                    
+                    
+                    
                     </div>
                     <p class="mb-5 font-advent-pro-light text-aroma-grey">
                       

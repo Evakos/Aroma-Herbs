@@ -54,13 +54,13 @@ viewportWidth =  document.documentElement.clientWidth || window.innerWidth || wi
 
 const logWidth = function () {
   if (viewportWidth > 768) {
-    console.log("Checking viewport");
+    //console.log("Checking viewport");
 
     $("#blog-card:nth-child(4n + 1)").addClass("half-div-left");
 
     $("#blog-card:nth-child(4n + 2)").addClass("half-div-right");
   } else {
-    console.log("Small viewport");
+    //console.log("Small viewport");
 
     $("#blog-card:nth-child(4n + 1)").removeClass("half-div-left");
 

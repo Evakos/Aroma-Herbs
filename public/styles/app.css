@@ -6842,6 +6842,12 @@ select {
 .pt-32{
 	padding-top: 8rem;
 }
+.pt-36{
+	padding-top: 9rem;
+}
+.pt-44{
+	padding-top: 11rem;
+}
 .text-center{
 	text-align: center;
 }
@@ -7135,6 +7141,9 @@ select {
 	.sm\:p-10{
 		padding: 2.5rem;
 	}
+	.sm\:p-0{
+		padding: 0px;
+	}
 	.sm\:px-24{
 		padding-left: 6rem;
 		padding-right: 6rem;
@@ -7149,6 +7158,9 @@ select {
 	}
 	.sm\:pr-44{
 		padding-right: 11rem;
+	}
+	.sm\:pt-32{
+		padding-top: 8rem;
 	}
 	.sm\:text-left{
 		text-align: left;
@@ -7206,6 +7218,9 @@ select {
 	}
 	.md\:-mt-48{
 		margin-top: -12rem;
+	}
+	.md\:mb-24{
+		margin-bottom: 6rem;
 	}
 	.md\:flex{
 		display: flex;

@@ -3,7 +3,7 @@
         
       </a>
 
-<div class="flex container mx-auto fixed left-0 right-0 top-0 pt-24 justify-end z-50" id="floating">
+<div class="flex container mx-auto fixed left-0 right-0 top-0 justify-end pt-24 z-50" id="floating">
 
 
 
