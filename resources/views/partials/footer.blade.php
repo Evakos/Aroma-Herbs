@@ -65,14 +65,14 @@
     </nav>
             </div>
 
-            <div class="flex flex-col flex-1">
+            <address class="flex flex-col flex-1 not-italic">
                 <h4 class="text-dark-green mb-5">Επικοινωνία</h4>
                 <ul>
-                    <li>Διεύθυνση: <?php echo wp_kses_post(get_theme_mod( 'head_office_address')); ?></li>
-                    <li>Τηλέφωνο: <?php echo get_theme_mod( 'phone_number') ?></li>
-                    <li>Email: <a href="mailto:<?php echo get_theme_mod( 'email_address') ?>" class=''><?php echo get_theme_mod( 'email_address') ?></a></li>
+                    <li>Διεύθυνση: <?php echo esc_html(get_theme_mod( 'head_office_address')); ?></li>
+                    <li>Τηλέφωνο: <?php echo esc_html(get_theme_mod( 'phone_number')); ?></li>
+                    <li>Email: <a href="<?php echo esc_url('mailto:' . get_theme_mod( 'email_address')) ?>" class=''><?php echo get_theme_mod( 'email_address') ?></a></li>
                 </ul>
-            </div>
+           </address>
 
         </div>
 

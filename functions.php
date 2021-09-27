@@ -346,11 +346,13 @@ function recipie_filter(){
 		);
 	}
  
-
+	$count = 1;
 	$query = new WP_Query( $args );
  
 	if( $query->have_posts() ) :
         echo '<div class="grid md:grid-cols-4 md:gap-4">';
+
+
 		while( $query->have_posts() ): $query->the_post(); 
 
 		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
@@ -358,9 +360,18 @@ function recipie_filter(){
         $product_link = get_permalink();
 
 		?>
-		<div class="flex relative mb-10 sm:m-0">
+		    <div class="grid relative mb-10 sm:m-0
+        
+        <?php if ($count % 4 == 1)
+        {echo 'row-span-2';}
+        else if ($count % 4 == 4)
+        {echo 'row-span-1';}
+        
+else {echo 'row-span-1';}
+        ?>
+        ">
 
-		<img src="<?php echo $featured_img_url?>" alt="" class="" />
+		<img src="<?php echo $featured_img_url?>" alt="" class="object-cover h-full" />
     
 		<a href="<?php echo $product_link ?>" class="absolute flex flex-col w-full bottom-0 xl:bottom-auto p-3 xl:p-0 xl:h-full justify-center items-center bg-light-green" id="recipies-title"/>
 	  
@@ -374,6 +385,7 @@ function recipie_filter(){
 		  </div>
 
 		  <?php
+	    $count++; 
 		endwhile;
         echo '</div>';
 		wp_reset_postdata();

@@ -20,8 +20,6 @@
 @include('partials.recipies-slider')
 
 
-
-
 <div class="flex items-center justify-center my-20">
 
 
@@ -135,36 +133,6 @@ endif;
 
 
 
-<!-- 
-
-@php
-$query = new WP_Query([
-'post_type' => 'recipies'
-]);
-@endphp
-
-    <div class="grid md:grid-cols-4">
-        @posts($query)
-      
-<div class="flex relative mb-10 sm:m-0" id="recipies-thumbs">
-  
-<img src="@thumbnail('full', false)" alt="Full Image" />
-
-
-<a href="@permalink" class="absolute flex flex-col w-full bottom-0 xl:bottom-auto p-3 xl:p-0 xl:h-full justify-center items-center bg-light-green" id="recipies-title">
-
-<p class="text-white text-2xl mb-2 xl:mb-10">@title</p>
-
-<p class="font-takhie text-xl text-white">Μάθε Περισσότερα</p>
-
-</a>
-
-</div>
-
-        @endposts
-    </div> -->
-
-
 	<div class="flex items-center justify-center my-20">
 
 
@@ -208,55 +176,12 @@ else {echo 'row-span-1';}
 <p class="text-white text-2xl mb-2 xl:mb-10">@title</p>
 
 
-<p class="font-takhie text-xl text-white">Μάθε Περισσότερα</p>
+<p class="font-takhie text-xl text-white"><?php _e( 'Μάθε Περισσότερα', 'sage'); ?></p>
 
 </a>
         </div>
     <?php $count++ ; 
     endwhile ?>
-
-
-
-
-<!-- 
-
-@php
-  $query = new WP_Query([
-    'post_type' => 'post',
-	'tax_query' => array(
-        array(
-            'taxonomy' => 'category',
-            'field' => 'id',
-            'terms' => 5
-        ),
-    ),
-  ]);
-@endphp
-
-    <div class="grid md:grid-cols-4">
-        @posts($query)
-
-<div class="grid relative mb-10 sm:m-0 grid-rows-2" id="recipies-thumbs">
-  
-<img src="@thumbnail('full', false)" alt="Full Image" />
-
-
-<a href="@permalink" class="absolute flex flex-col w-full h-full justify-center items-center bg-light-green" id="recipies-title">
-
-<p class="text-white text-2xl mb-10">@title</p>
-
-<p class="font-takhie text-xl text-white">Μάθε Περισσότερα</p>
-
-</a>
-
-</div>
-
-        @endposts
-    </div> -->
-
-
-
-
 
 
 </div>

@@ -6374,9 +6374,6 @@ select {
 .-mt-16{
 	margin-top: -4rem;
 }
-.-mb-36{
-	margin-bottom: -9rem;
-}
 .mt-28{
 	margin-top: 7rem;
 }
@@ -6897,6 +6894,9 @@ select {
 .lowercase{
 	text-transform: lowercase;
 }
+.not-italic{
+	font-style: normal;
+}
 .italic{
 	font-style: italic;
 }
@@ -7183,6 +7183,9 @@ select {
 		margin-top: 5rem;
 		margin-bottom: 5rem;
 	}
+	.md\:-mb-36{
+		margin-bottom: -9rem;
+	}
 	.md\:mb-0{
 		margin-bottom: 0px;
 	}
@@ -7215,9 +7218,6 @@ select {
 	}
 	.md\:-mt-48{
 		margin-top: -12rem;
-	}
-	.md\:-mb-36{
-		margin-bottom: -9rem;
 	}
 	.md\:flex{
 		display: flex;
