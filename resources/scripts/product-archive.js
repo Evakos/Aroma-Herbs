@@ -52,8 +52,6 @@ $('.product-row').each(function(i) {
 
 $(() => {
 
-
-
     //createRow();
 
     var term_id = jQuery(this).attr("product-id");

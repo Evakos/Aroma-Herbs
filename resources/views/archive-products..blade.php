@@ -53,7 +53,7 @@
     <img src="<?php the_field( "product_background_image", 11 ); ?>" class="object-cover w-screen min-h-[300px] md:min-h-[600px]" />
 </div>
 
-<div class="container mx-auto -mt-24 sm:-mt-96">
+<div class="container mx-auto -mt-24 sm:-mt-96 min-h-[600px]">
 
   <div id="products" class="hidden">
 

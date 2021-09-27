@@ -6440,6 +6440,9 @@ select {
 .min-h-\[300px\]{
 	min-height: 300px;
 }
+.min-h-\[600px\]{
+	min-height: 600px;
+}
 .min-h-\[550px\]{
 	min-height: 550px;
 }
