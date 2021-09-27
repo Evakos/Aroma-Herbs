@@ -1,3 +1,8 @@
+/**
+ * External Dependencies
+ */
+ import "jquery";
+
 
 import AOS from "aos";
 
@@ -61,35 +66,21 @@ $(() => {
       url: "/wp-admin/admin-ajax.php",
       data: { action: "filterproducts", categoryfilter: term_id },
       success: function (data) {
-        //console.log('This is the data' + data);
-
-        //$("#products").show();
-
-        // $('#products').removeClass('fade-in');
-
-        // $('#products').addClass('fade-in');
-
-        // $("#all-products").toggleClass("fade-in");
-        $("#loader-product").removeClass("hidden"); // Hide loader.
-
-        $("#loader-product").addClass("flex"); // Hide loader.
-
-       ;
-
+        
         $("#products").html(data);
 
-        createRow(); //Call this here to create rows
-
-        //$("#all-products").hide();
-        // $(".cat-filter").removeClass("filter-active");
-        // $('[product-id="' + term_id + '"]').addClass("filter-active");
+        createRow();
+      
+        console.log('Got Data')
       },
+
+    }).done(function() {
+     document.getElementById('loader-product').style.display = "none"; 
+
+     $("#products").removeClass("hidden"); // Hide loader.
+
+    //console.log("finished all loaded");
     });
-
-
-
-
-
 
 
   $(".prod-filter").click(function (e) {
@@ -121,9 +112,9 @@ $(() => {
 
         // $("#all-products").toggleClass("fade-in");
 
-        $("#loader-product").removeClass("hidden"); // Hide loader.
+        // $("#loader-product").removeClass("hidden"); // Hide loader.
 
-        $("#loader-product").addClass("flex"); // Hide loader.
+        // $("#loader-product").addClass("flex"); // Hide loader.
 
 
        ;

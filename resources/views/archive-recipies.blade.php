@@ -1,3 +1,9 @@
+{{--
+  Template Name: Recipies Archive Template
+  Template Post Type: post, page, recipies
+--}}
+
+
 @extends('layouts.app')
 
 

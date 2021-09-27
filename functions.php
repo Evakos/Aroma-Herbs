@@ -418,7 +418,7 @@ function filter_products(){
 
         echo '<div id="product-grid" class="relative">'; ?>
 
-		<span id="loader-product" class="hidden text-dark-green absolute"><i class="fas fa-circle-notch fa-7x fa-spin"></i></span>
+		<span id="loader-product" class="text-dark-green absolute"><i class="fas fa-circle-notch fa-7x fa-spin"></i></span>
 
 <?php
 		while( $query->have_posts() ): $query->the_post(); 

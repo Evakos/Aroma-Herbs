@@ -1,3 +1,9 @@
+{{--
+  Template Name: Products Archive Template
+  Template Post Type: post, page, products
+--}}
+
+
 @extends('layouts.app')
 
 
@@ -49,7 +55,7 @@
 
 <div class="container mx-auto -mt-24 sm:-mt-96">
 
-  <div id="products" class="">
+  <div id="products" class="hidden">
 
 
 

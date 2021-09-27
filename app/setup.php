@@ -18,12 +18,12 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/app.js', asset('scripts/app.js')->uri(), ['sage/vendor.js'], null, true);
     wp_enqueue_script('sage/accents.js', asset('scripts/accents.js')->uri(), ['sage/vendor.js'], null, true);
     wp_enqueue_script('sage/load-more.js', asset('scripts/load-more.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
-    wp_enqueue_script('sage/recipies-filter.js', asset('scripts/recipies-filter.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+    //wp_enqueue_script('sage/recipies-filter.js', asset('scripts/recipies-filter.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
 
 
 
     
-    if ( 'products' == get_post_type() ) {
+    if ( is_page( 34 )  ) {
 
         wp_enqueue_script('sage/product-archive.js', asset('scripts/product-archive.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         
@@ -48,7 +48,9 @@ add_action('wp_enqueue_scripts', function () {
         
     }
 
-    if ( 'recipies' == get_post_type() ) {
+    if ( is_page( 30 )  ) 
+
+  {
 
         wp_enqueue_script('sage/recipies.js', asset('scripts/recipies.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         wp_enqueue_script('sage/recipies-filter.js', asset('scripts/recipies-filter.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
@@ -294,6 +296,11 @@ add_action( 'init', function() {
 'show_in_feed' => true,
 'menu_icon'    => 'dashicons-food',
 'show_in_rest' => true,
+
+
+'has_archive'  => false,
+
+
 'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
 'taxonomies' => array('recipies', 'category', 'courses', 'dietary_restrictions'),
 
@@ -391,10 +398,15 @@ register_extended_taxonomy( 'product', 'recipies', array(
 
 add_action( 'init', function() {
 	register_extended_post_type( 'products', [
-
 'show_in_feed' => true,
 'menu_icon'    => 'dashicons-store',
-'taxonomies' => array( 'product', 'category', 'post_tag' ),
+'show_in_rest' => true,
+
+
+'has_archive'  => false,
+
+
+'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
 
 # Add some custom columns to the admin screen:
 		'admin_cols' => [
