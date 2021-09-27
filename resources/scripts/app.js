@@ -81,6 +81,8 @@ function stickyHeader() {
  
   const floating = document.getElementById("floating");
 
+  const hamburger = document.getElementById("hamburger");
+
 
   if (sticky < 0) {
 
@@ -92,6 +94,8 @@ function stickyHeader() {
     navOuter.classList.add("fade-in-fast");
     navInner.classList.remove("py-10");
     navInner.classList.add("py-2");
+
+    hamburger.classList.remove("md:-mb-36");
    
     floating.classList.remove("pt-24");
 
@@ -104,6 +108,18 @@ function stickyHeader() {
     navInner.classList.remove("py-2");
     floating.classList.add("pt-24");
     floating.classList.remove("pt-6");
+
+    if ($(window).width() > 1024) {
+
+      hamburger.classList.add("md:-mb-36");
+   
+  }
+   
+  else {
+      
+    hamburger.classList.remove("md:-mb-36");   
+  }
+    
 
 
   }

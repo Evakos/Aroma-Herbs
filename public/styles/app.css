@@ -6374,6 +6374,9 @@ select {
 .-mt-16{
 	margin-top: -4rem;
 }
+.-mb-36{
+	margin-bottom: -9rem;
+}
 .mt-28{
 	margin-top: 7rem;
 }
@@ -6842,12 +6845,6 @@ select {
 .pt-32{
 	padding-top: 8rem;
 }
-.pt-36{
-	padding-top: 9rem;
-}
-.pt-44{
-	padding-top: 11rem;
-}
 .text-center{
 	text-align: center;
 }
@@ -7138,11 +7135,11 @@ select {
 	.sm\:items-start{
 		align-items: flex-start;
 	}
-	.sm\:p-10{
-		padding: 2.5rem;
-	}
 	.sm\:p-0{
 		padding: 0px;
+	}
+	.sm\:p-10{
+		padding: 2.5rem;
 	}
 	.sm\:px-24{
 		padding-left: 6rem;
@@ -7158,9 +7155,6 @@ select {
 	}
 	.sm\:pr-44{
 		padding-right: 11rem;
-	}
-	.sm\:pt-32{
-		padding-top: 8rem;
 	}
 	.sm\:text-left{
 		text-align: left;
@@ -7195,6 +7189,9 @@ select {
 	.md\:mt-10{
 		margin-top: 2.5rem;
 	}
+	.md\:mb-24{
+		margin-bottom: 6rem;
+	}
 	.md\:mt-0{
 		margin-top: 0px;
 	}
@@ -7219,8 +7216,8 @@ select {
 	.md\:-mt-48{
 		margin-top: -12rem;
 	}
-	.md\:mb-24{
-		margin-bottom: 6rem;
+	.md\:-mb-36{
+		margin-bottom: -9rem;
 	}
 	.md\:flex{
 		display: flex;
