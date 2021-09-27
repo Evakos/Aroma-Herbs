@@ -53,6 +53,7 @@ $('.product-row').each(function(i) {
 $(() => {
 
 
+
     //createRow();
 
     var term_id = jQuery(this).attr("product-id");
@@ -83,63 +84,37 @@ $(() => {
     });
 
 
+
+
+
   $(".prod-filter").click(function (e) {
-    //console.log("Filter Clicked");
-
-
-
-
-    //createRow();
-
+ 
     var term_id = jQuery(this).attr("product-id");
 
-    //console.log("The ID:" + term_id);
 
     $.ajax({
       type: "post",
-      //  url : '<?php echo site_url() ?>/wp-admin/admin-ajax.php',
-      // url : sage.admin_url,
+     
       url: "/wp-admin/admin-ajax.php",
       data: { action: "filterproducts", categoryfilter: term_id },
       success: function (data) {
-        //console.log('This is the data' + data);
-
-        //$("#products").show();
-
-        // $('#products').removeClass('fade-in');
-
-        // $('#products').addClass('fade-in');
-
-        // $("#all-products").toggleClass("fade-in");
-
-        // $("#loader-product").removeClass("hidden"); // Hide loader.
-
-        // $("#loader-product").addClass("flex"); // Hide loader.
-
-
-       ;
-
+      
         $("#products").html(data);
 
         createRow(); //Call this here to create rows
 
-        //$("#all-products").hide();
-        // $(".cat-filter").removeClass("filter-active");
-        // $('[product-id="' + term_id + '"]').addClass("filter-active");
+        document.getElementById('loader-product').style.display = "none"; //Hide Loader
+
+     $("#products").removeClass("hidden"); // Reveal Products.
       },
     });
     e.preventDefault();
 
-
-
-
-
-
-
-
-
-
   });
+
+
+
+  
 });
 
 
