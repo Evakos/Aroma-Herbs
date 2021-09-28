@@ -242,18 +242,19 @@ add_action('after_setup_theme', function () {
 /**
  * Async load CSS
  */
-add_filter('style_loader_tag', function (string $html, string $handle): string {
-    $dom = new \DOMDocument();
-    $dom->loadHTML($html);
-    $tag = $dom->getElementById($handle . '-css');
-    $tag->setAttribute('media', 'print');
-    $tag->setAttribute('onload', "this.media='all'");
-    $tag->removeAttribute('type');
-    $tag->removeAttribute('id');
-    $html = $dom->saveHTML($tag);
 
-    return $html;
-}, 999, 2);
+// add_filter('style_loader_tag', function (string $html, string $handle): string {
+//     $dom = new \DOMDocument();
+//     $dom->loadHTML($html);
+//     $tag = $dom->getElementById($handle . '-css');
+//     $tag->setAttribute('media', 'print');
+//     $tag->setAttribute('onload', "this.media='all'");
+//     $tag->removeAttribute('type');
+//     $tag->removeAttribute('id');
+//     $html = $dom->saveHTML($tag);
+
+//     return $html;
+// }, 999, 2);
 
 /**
  * Register the theme sidebars.
