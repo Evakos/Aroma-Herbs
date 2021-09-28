@@ -21,7 +21,7 @@
   <div class="flex flex-col md:flex-row">
 
 
-  <div class="flex flex-col mb-10 md:mb-0 md:ml-20 bg-light-green p-10">
+  <div class="flex sm:hidden flex-col mb-10 md:mb-0 md:ml-20 bg-light-green p-10">
 
 @hasfield('sidebar')
 <div class="flex flex-1 text-left flex-col bg-light-green rounded-lg sm:p-10">
@@ -72,7 +72,7 @@
 @hasfield('chef_name')
   <div class="flex flex-1 text-left flex-col bg-light-green rounded-lg p-10">
 
-<div class="flex flex-col">
+<div class="flex flex-col sm:flex-row">
 
 <div class="flex items-center mr-10">
 <img src="@field('chef_image')" alt="Chef Image" class="rounded-full" width="100" height="100"> 
@@ -95,15 +95,14 @@
   </footer>
 
 
-  
-  <!-- @php(comments_template()) -->
+
 </article>
 
 </div>
 
 <aside class="sidebar hidden md:flex flex-col md:self-start md:w-1/3 md:ml-12">
 
-<div class="flex flex-col ml-20 bg-light-green sm:p-10">
+<div class="flex flex-col ml-20 bg-light-green">
 
 @hasfield('sidebar')
 <div class="flex flex-1 text-left flex-col bg-light-green rounded-lg sm:p-10">

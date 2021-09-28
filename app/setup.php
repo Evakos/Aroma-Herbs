@@ -407,6 +407,8 @@ add_action( 'init', function() {
 
 
 'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+'taxonomies' => array('category'),
+
 
 # Add some custom columns to the admin screen:
 		'admin_cols' => [
