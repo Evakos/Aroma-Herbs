@@ -1,5 +1,5 @@
 {{--
-  Template Name: recipes Archive Template
+  Template Name: Recipes Archive Template
   Template Post Type: post, page, recipes
 --}}
 
