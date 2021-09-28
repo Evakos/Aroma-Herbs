@@ -156,6 +156,7 @@ endif;
 
     <?php $count = 1 ?>
     <?php $loop = new WP_Query( $args ); ?>
+    <div class="container">
     <div class="grid md:grid-cols-4 md:grid-rows-2 mb-0 sm:mb-20">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="grid relative mb-10 sm:m-0
@@ -184,5 +185,6 @@ else {echo 'row-span-1';}
     endwhile ?>
 
 
+</div>
 </div>
 </div>
