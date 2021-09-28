@@ -111,7 +111,7 @@ endif;
 
 
 <label class="check-box flex text-dark-green p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">
-    <p class="pl-10">View All Recipies</p>
+    <p class="pl-10">View All Recipie</p>
   <input type="checkbox" name='viewall' checked="checked">
   <span class="checkmark"></span>
 </label>
@@ -160,7 +160,7 @@ endif;
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="grid relative mb-10 sm:m-0
         
-        <?php if ($count % 4 == 1)
+        <?php if ($count % 5 == 1)
         {echo 'row-span-2';}
         else if ($count % 4 == 4)
         {echo 'row-span-1';}

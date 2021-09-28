@@ -362,7 +362,7 @@ function recipie_filter(){
 		?>
 		    <div class="grid relative mb-10 sm:m-0
         
-        <?php if ($count % 4 == 1)
+        <?php if ($count % 5 == 1)
         {echo 'row-span-2';}
         else if ($count % 4 == 4)
         {echo 'row-span-1';}
