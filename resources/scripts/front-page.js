@@ -65,7 +65,7 @@ AOS.init({
 		next  : 'splide__arrow--next -right-5 sm:-right-10',
 		
 		// Add classes for pagination.
-		pagination: 'splide__pagination relative my-20', // container
+		pagination: 'splide__pagination relative my-10', // container
 		page      : 'splide__pagination__page w-4 h-4 m-1', // each button
 	},
  } ).mount();

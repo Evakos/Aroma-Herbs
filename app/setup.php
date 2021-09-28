@@ -18,7 +18,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/app.js', asset('scripts/app.js')->uri(), ['sage/vendor.js'], null, true);
     wp_enqueue_script('sage/accents.js', asset('scripts/accents.js')->uri(), ['sage/vendor.js'], null, true);
     wp_enqueue_script('sage/load-more.js', asset('scripts/load-more.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
-    //wp_enqueue_script('sage/recipies-filter.js', asset('scripts/recipies-filter.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+    //wp_enqueue_script('sage/Recipes-filter.js', asset('scripts/Recipes-filter.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
 
 
 
@@ -42,7 +42,7 @@ add_action('wp_enqueue_scripts', function () {
 
         wp_enqueue_script('sage/front-page.js', asset('scripts/front-page.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         // wp_enqueue_script('sage/animation.js', asset('scripts/animation.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
-        wp_enqueue_script('sage/recipies.js', asset('scripts/recipies.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+        wp_enqueue_script('sage/Recipes.js', asset('scripts/Recipes.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
 
         wp_enqueue_script('sage/load-more.js', asset('scripts/load-more.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         
@@ -52,8 +52,8 @@ add_action('wp_enqueue_scripts', function () {
 
   {
 
-        wp_enqueue_script('sage/recipies.js', asset('scripts/recipies.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
-        wp_enqueue_script('sage/recipies-filter.js', asset('scripts/recipies-filter.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+        wp_enqueue_script('sage/Recipes.js', asset('scripts/Recipes.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+        wp_enqueue_script('sage/Recipes-filter.js', asset('scripts/Recipes-filter.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
 
         
         
@@ -238,6 +238,23 @@ add_action('after_setup_theme', function () {
     add_theme_support('customize-selective-refresh-widgets');
 }, 20);
 
+
+/**
+ * Async load CSS
+ */
+add_filter('style_loader_tag', function (string $html, string $handle): string {
+    $dom = new \DOMDocument();
+    $dom->loadHTML($html);
+    $tag = $dom->getElementById($handle . '-css');
+    $tag->setAttribute('media', 'print');
+    $tag->setAttribute('onload', "this.media='all'");
+    $tag->removeAttribute('type');
+    $tag->removeAttribute('id');
+    $html = $dom->saveHTML($tag);
+
+    return $html;
+}, 999, 2);
+
 /**
  * Register the theme sidebars.
  *
@@ -290,9 +307,8 @@ include_once( get_stylesheet_directory() . '/resources/acf/acf.php' );
 
 
 
-
 add_action( 'init', function() {
-	register_extended_post_type( 'recipies', [
+	register_extended_post_type( 'recipes', [
 'show_in_feed' => true,
 'menu_icon'    => 'dashicons-food',
 'show_in_rest' => true,
@@ -302,7 +318,7 @@ add_action( 'init', function() {
 
 
 'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
-'taxonomies' => array('recipies', 'category', 'courses', 'dietary_restrictions'),
+'taxonomies' => array('recipes', 'category', 'courses', 'dietary_restrictions'),
 
 # Add some custom columns to the admin screen:
 		'admin_cols' => [
@@ -319,13 +335,13 @@ add_action( 'init', function() {
 
 	], [
 
-		'singular' => 'Recipie',
-		'plural'   => 'Recipies',
-		'slug'     => 'recipies',
+		'singular' => 'Recipe',
+		'plural'   => 'Recipes',
+		'slug'     => 'Recipes',
 
 	] );
 
-	register_extended_taxonomy( 'courses', 'recipies', array(
+	register_extended_taxonomy( 'courses', 'recipes', array(
 
 		'dashboard_glance' => true,
         'show_in_rest'      => true, // Needed for tax to appear in Gutenberg editor.
@@ -347,7 +363,7 @@ add_action( 'init', function() {
 ) );
 
 
-register_extended_taxonomy( 'dietary_restrictions', 'recipies', array(
+register_extended_taxonomy( 'dietary_restrictions', 'recipes', array(
 
     'dashboard_glance' => true,
     'show_in_rest'      => true, // Needed for tax to appear in Gutenberg editor.
@@ -369,7 +385,7 @@ register_extended_taxonomy( 'dietary_restrictions', 'recipies', array(
 ) );
 
 
-register_extended_taxonomy( 'product', 'recipies', array(
+register_extended_taxonomy( 'product', 'recipes', array(
 
     'dashboard_glance' => true,
     'show_in_rest'      => true, // Needed for tax to appear in Gutenberg editor.

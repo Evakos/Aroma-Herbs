@@ -28,7 +28,7 @@ module.exports = {
 
       'home-hero': "url('../images/home-hero.jpg')",
       'products-hero': "url('../images/products-hero.jpg')",
-      'recipies-hero': "url('../images/recipies-hero.jpg')",
+      'recipes-hero': "url('../images/recipes-hero.jpg')",
       'product-detail-hero': "url('../images/product-detail-hero.jpg')",
       'modal-product-bg': "url('../images/modal-prod-bg.png')",
       'blog-hero': "url('../images/blog-hero.jpg')",

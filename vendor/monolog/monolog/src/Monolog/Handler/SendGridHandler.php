@@ -54,7 +54,7 @@ class SendGridHandler extends MailHandler
      * @param string       $apiUser The SendGrid API User
      * @param string       $apiKey  The SendGrid API Key
      * @param string       $from    The sender of the email
-     * @param string|array $to      The recipients of the email
+     * @param string|array $to      The recipents of the email
      * @param string       $subject The subject of the mail
      * @param int|string   $level   The minimum logging level at which this handler will be triggered
      * @param bool         $bubble  Whether the messages that are handled can bubble up the stack or not
@@ -78,8 +78,8 @@ class SendGridHandler extends MailHandler
         $message['api_user'] = $this->apiUser;
         $message['api_key'] = $this->apiKey;
         $message['from'] = $this->from;
-        foreach ($this->to as $recipient) {
-            $message['to[]'] = $recipient;
+        foreach ($this->to as $recipent) {
+            $message['to[]'] = $recipent;
         }
         $message['subject'] = $this->subject;
         $message['date'] = date('r');

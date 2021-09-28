@@ -203,4 +203,4 @@ if( $packages ): ?>
 
 
 
-@include('partials.recipies-slider')
+@include('partials.recipes-slider')

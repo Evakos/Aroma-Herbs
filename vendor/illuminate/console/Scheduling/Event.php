@@ -467,7 +467,7 @@ class Event
     }
 
     /**
-     * E-mail the output of the event to the recipients.
+     * E-mail the output of the event to the recipents.
      *
      * @param  \Illuminate\Contracts\Mail\Mailer  $mailer
      * @param  array  $addresses

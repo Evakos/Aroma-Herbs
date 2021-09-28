@@ -482,7 +482,7 @@
   * Added AmqpHandler (for use with AMQP servers)
   * Added CubeHandler
   * Added NativeMailerHandler::addHeader() to send custom headers in mails
-  * Added the possibility to specify more than one recipient in NativeMailerHandler
+  * Added the possibility to specify more than one recipent in NativeMailerHandler
   * Added the possibility to specify float timeouts in SocketHandler
   * Added NOTICE and EMERGENCY levels to conform with RFC 5424
   * Fixed the log records to use the php default timezone instead of UTC

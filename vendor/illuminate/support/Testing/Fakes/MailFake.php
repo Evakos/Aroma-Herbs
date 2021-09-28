@@ -378,7 +378,7 @@ class MailFake implements Factory, Mailer, MailQueue
     }
 
     /**
-     * Get the array of failed recipients.
+     * Get the array of failed recipents.
      *
      * @return array
      */

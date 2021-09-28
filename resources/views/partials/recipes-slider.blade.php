@@ -10,18 +10,18 @@
 
     @php
     $query = new WP_Query([
-    'post_type' => 'recipies'
+    'post_type' => 'recipes'
     ]);
     @endphp
 
     <div class="flex mt-5 justify-center">
-          <img src="<?php the_field('recipie_background_image', 11); ?>" class="w-screen object-cover"/>   
+          <img src="<?php the_field('recipe_background_image', 11); ?>" class="w-screen object-cover"/>   
         </div>
 
 
         <div class="container mx-auto -mt-10 md:-mt-48 lg:-mt-96">
 
-    <div id="splide-recipie-slider" class="splide">
+    <div id="splide-recipe-slider" class="splide">
         <div class="splide__track">
 
             <ul class="splide__list">

@@ -213,9 +213,9 @@ $query = new WP_Query([
 
 </div>
 
-<!-- Recipies Slider -->
+<!-- Recipes Slider -->
 
-@include('partials.recipies-slider')
+@include('partials.recipes-slider')
 
 <!-- Blog Grid Fresh News -->
 

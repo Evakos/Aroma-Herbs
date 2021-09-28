@@ -1,4 +1,66 @@
-var ppp = 4; // Post per page
+
+// Define our viewportWidth variable
+//let viewportWidth;
+// function printConsole() {
+
+// console.log('Hello!')  
+//   };
+
+
+// Set/update the viewportWidth value
+ function setViewportWidth() {
+
+  console.log('Set Viewport Width Function')  
+
+viewportWidth =  document.documentElement.clientWidth || window.innerWidth || window.outerWidth;
+
+};
+
+// Log the viewport width into the 
+
+function logWidth() {
+
+  console.log('Log Width Function')  
+
+  if (viewportWidth > 768) {
+    
+    console.log("Large Viewport Width:" + viewportWidth);
+
+    $("#blog-card:nth-child(4n + 1)").addClass("half-div-left");
+
+    $("#blog-card:nth-child(4n + 2)").addClass("half-div-right");
+
+  } else {
+    console.log("Small Viewport Width:" + viewportWidth);
+
+    $("#blog-card:nth-child(4n + 1)").removeClass("half-div-left");
+
+    $("#blog-card:nth-child(4n + 2)").removeClass("half-div-right");
+  }
+};
+
+// Set our initial width and log it
+setViewportWidth();
+logWidth();
+
+// On resize events, recalculate and log
+window.addEventListener(
+  "resize",
+  function () {
+    setViewportWidth();
+    logWidth();
+  },
+  false
+);
+
+
+
+
+
+
+
+
+var ppp = 8; // Post per page
 var pageNumber = 1;
 
 
@@ -33,51 +95,27 @@ function loadPosts(){
 $("#more-posts").on("click",function(){ // When btn is pressed.
     $("#more-posts").attr("disabled",true); // Disable the button, temp.
     $("#loader").removeClass("hidden"); // Show loader.
+
+
+    // $("#ajax-posts").ajaxComplete(function() {
+    //   //$(this).fadeIn().delay(1000).fadeOut();
+
+    //   console.log('complete');
+    // });
+
+
+    //document.getElementById("ajax-posts").addEventListener("load", logWidth());
+  
     loadPosts();
+
+    setViewportWidth();
+    
     logWidth();
+
+    
+    
+    
     $(this).insertAfter('#ajax-posts'); // Move the 'Load More' button to the end of the the newly added posts.
 });
 
 
-
-// Define our viewportWidth variable
-let viewportWidth;
-
-// Set/update the viewportWidth value
-let setViewportWidth = function () {
-
-viewportWidth =  document.documentElement.clientWidth || window.innerWidth || window.outerWidth;
-
-};
-
-// Log the viewport width into the 
-
-const logWidth = function () {
-  if (viewportWidth > 768) {
-    //console.log("Checking viewport");
-
-    $("#blog-card:nth-child(4n + 1)").addClass("half-div-left");
-
-    $("#blog-card:nth-child(4n + 2)").addClass("half-div-right");
-  } else {
-    //console.log("Small viewport");
-
-    $("#blog-card:nth-child(4n + 1)").removeClass("half-div-left");
-
-    $("#blog-card:nth-child(4n + 2)").removeClass("half-div-right");
-  }
-};
-
-// Set our initial width and log it
-setViewportWidth();
-logWidth();
-
-// On resize events, recalculate and log
-window.addEventListener(
-  "resize",
-  function () {
-    setViewportWidth();
-    logWidth();
-  },
-  false
-);

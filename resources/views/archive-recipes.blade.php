@@ -1,6 +1,6 @@
 {{--
-  Template Name: Recipies Archive Template
-  Template Post Type: post, page, recipies
+  Template Name: recipes Archive Template
+  Template Post Type: post, page, recipes
 --}}
 
 
@@ -17,13 +17,13 @@
 
 
 
-@include('partials.recipies-slider')
+@include('partials.recipes-slider')
 
 
 <div class="flex items-center justify-center my-20">
 
 
-    <img src="@asset('images/recipies-recipies-title.svg')" class="w-[300px] lg:w-[448px]" />
+    <img src="@asset('images/recipes-recipes-title.svg')" class="w-[300px] lg:w-[448px]" />
 
 </div>
 
@@ -42,7 +42,7 @@
 
 
 
-<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="recipiefilter" class="flex flex-wrap mb-10">
+<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="recipefilter" class="flex flex-wrap mb-10">
 
 <?php
 
@@ -54,7 +54,7 @@ $product = get_terms( array(
 ) );
 
 if ( !empty($product) ) :
-    echo '<select name="productrecipiefilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
+    echo '<select name="productrecipefilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
     echo '<option value="select" name="select">Product</option>';
     foreach( $product as $term ) {
 
@@ -74,7 +74,7 @@ $restrictions = get_terms( array(
 ) );
 
 if ( !empty($restrictions) ) :
-    echo '<select name="dietrecipiefilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
+    echo '<select name="dietrecipefilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
     echo '<option value="select" name="select">Diet Requirements</option>';
     foreach( $restrictions as $term ) {
 
@@ -93,7 +93,7 @@ $courses = get_terms( array(
 ) );
  
 if ( !empty($courses) ) :
-    echo '<select name="coursesrecipiefilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
+    echo '<select name="coursesrecipefilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
     echo '<option value="select" name="select">Courses</option>';
     
     foreach( $courses as $term ) {
@@ -111,7 +111,7 @@ endif;
 
 
 <label class="check-box flex text-dark-green p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">
-    <p class="pl-10">View All Recipie</p>
+    <p class="pl-10">View All recipes</p>
   <input type="checkbox" name='viewall' checked="checked">
   <span class="checkmark"></span>
 </label>
@@ -121,14 +121,14 @@ endif;
 
 
 
-	<input type="hidden" name="action" value="recipiefilter">
+	<input type="hidden" name="action" value="recipefilter">
 </form>
 
 
 
 
 
-<div id="recipie-response" class="container"></div>
+<div id="recipe-response" class="container"></div>
 
 
 

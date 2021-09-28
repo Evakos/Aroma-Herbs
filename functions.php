@@ -30,22 +30,22 @@ require $composer;
 
 require_once __DIR__ . '/bootstrap/app.php';
 
-// add_action( 'init', 'recipies_cpt' );
+// add_action( 'init', 'recipes_cpt' );
 
-// function recipies_cpt() {
+// function recipes_cpt() {
 
 // 	$labels = array(
-// 		'name' => __( 'Recipies' ),
-// 		'singular_name' => __( 'Recipie' ),
-// 		'all_items' => __('All Recipies'),
-// 		'add_new' => _x('Add Recipie', 'eks'),
-// 		'add_new_item' => __('Add Recipie'),
-// 		'edit_item' => __('Edit Recipie'),
-// 		'new_item' => __('New Recipie'),
-// 		'view_item' => __('View Recipie'),
-// 		'search_items' => __('Search in Recipies'),
-// 		'not_found' =>  __('No Recipie found'),
-// 		'not_found_in_trash' => __('No Recipie found in trash'),
+// 		'name' => __( 'recipes' ),
+// 		'singular_name' => __( 'recipe' ),
+// 		'all_items' => __('All recipes'),
+// 		'add_new' => _x('Add recipe', 'eks'),
+// 		'add_new_item' => __('Add recipe'),
+// 		'edit_item' => __('Edit recipe'),
+// 		'new_item' => __('New recipe'),
+// 		'view_item' => __('View recipe'),
+// 		'search_items' => __('Search in recipes'),
+// 		'not_found' =>  __('No recipe found'),
+// 		'not_found_in_trash' => __('No recipe found in trash'),
 // 		'parent_item_colon' => ''
 // 	);
 
@@ -71,7 +71,7 @@ require_once __DIR__ . '/bootstrap/app.php';
 
 // 	// flush_rewrite_rules( false );
 
-// 	register_post_type( 'recipies_cpt', $args);
+// 	register_post_type( 'recipes_cpt', $args);
 // }
 
 
@@ -287,12 +287,12 @@ function more_news_ajax(){
 }
 
 
-//Recipie Ajax Posts Filter
+//recipe Ajax Posts Filter
 
-add_action('wp_ajax_recipiefilter', 'recipie_filter'); 
-add_action('wp_ajax_nopriv_recipiefilter', 'recipie_filter');
+add_action('wp_ajax_recipefilter', 'recipe_filter'); 
+add_action('wp_ajax_nopriv_recipefilter', 'recipe_filter');
 
-function recipie_filter(){
+function recipe_filter(){
 
 	if( empty( $_POST['viewall'] )) {
 	
@@ -303,33 +303,33 @@ function recipie_filter(){
 	);
  
 	//Taxonomy query for recipe linked to product.
-	if( isset( $_POST['productrecipiefilter'] ) )
+	if( isset( $_POST['productrecipefilter'] ) )
 		$args['tax_query'] = array(
 			array(
 				'taxonomy' => 'product',
 				'field' => 'id',
-				'terms' => $_POST['productrecipiefilter']
+				'terms' => $_POST['productrecipefilter']
 			)
 		);
 
 	//Taxonomy query for diet type.
-	if( isset( $_POST['dietrecipiefilter'] ) )
+	if( isset( $_POST['dietrecipefilter'] ) )
 	$args['tax_query'] = array(
 		array(
 			'taxonomy' => 'dietary_restrictions',
 			'field' => 'id',
-			'terms' => $_POST['dietrecipiefilter']
+			'terms' => $_POST['dietrecipefilter']
 		)
 	);
 
 	 
 	//Taxonomy query for course type.
-	if( isset( $_POST['coursesrecipiefilter'] ) )
+	if( isset( $_POST['coursesrecipefilter'] ) )
 		$args['tax_query'] = array(
 			array(
 				'taxonomy' => 'courses',
 				'field' => 'id',
-				'terms' => $_POST['coursesrecipiefilter']
+				'terms' => $_POST['coursesrecipefilter']
 			)
 		);
  
@@ -341,7 +341,7 @@ function recipie_filter(){
 			'orderby' => 'date', // we will sort posts by date
 			'order'	=> 'ASC', // ASC or DESC
 			'posts_per_page' => -1, // get all posts
-			'post_type' => 'recipies',
+			'post_type' => 'recipes',
 			'post_status' => 'publish',
 		);
 	}
@@ -373,7 +373,7 @@ else {echo 'row-span-1';}
 
 		<img src="<?php echo $featured_img_url?>" alt="" class="object-cover h-full" />
     
-		<a href="<?php echo $product_link ?>" class="absolute flex flex-col w-full bottom-0 xl:bottom-auto p-3 xl:p-0 xl:h-full justify-center items-center bg-light-green" id="recipies-title"/>
+		<a href="<?php echo $product_link ?>" class="absolute flex flex-col w-full bottom-0 xl:bottom-auto p-3 xl:p-0 xl:h-full justify-center items-center bg-light-green" id="recipes-title"/>
 	  
 
 	  <p class="text-white text-2xl mb-2 xl:mb-10"><?php the_title(); ?></p>
@@ -465,3 +465,14 @@ function filter_products(){
  
 
 }
+
+
+// function book_setup_post_type() {
+//     $args = array(
+//         'public'    => true,
+//         'label'     => __( 'Recipes', 'sage' ),
+//         'menu_icon' => 'dashicons-book',
+//     );
+//     register_post_type( 'recipes', $args );
+// }
+// add_action( 'init', 'book_setup_post_type' );

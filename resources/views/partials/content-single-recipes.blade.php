@@ -12,8 +12,6 @@
   </header>
 
 
-  
-
   <div class="entry-content text-right">
 
     @php(the_content())
@@ -25,7 +23,7 @@
 
 @hasfield('sidebar')
 <div class="flex flex-1 text-left flex-col bg-light-green rounded-lg sm:p-10">
-<p class="uppercase text-white font-advent-pro-semi-bold mb-10">ΕΥΚΟΛΗ</p>
+<p class="uppercase text-white font-advent-pro-semi-bold mb-10">Εύκολη</p>
 <ul>
   @fields('sidebar')
     <li class="text-white">@sub('title') <br> @sub('details')</li>

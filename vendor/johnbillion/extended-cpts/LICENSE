@@ -31,7 +31,7 @@ These restrictions translate to certain responsibilities for you if you
 distribute copies of the software, or if you modify it.
 
   For example, if you distribute copies of such a program, whether
-gratis or for a fee, you must give the recipients all the rights that
+gratis or for a fee, you must give the recipents all the rights that
 you have.  You must make sure that they, too, receive or can get the
 source code.  And you must show them these terms so they know their
 rights.
@@ -43,7 +43,7 @@ distribute and/or modify the software.
   Also, for each author's protection and ours, we want to make certain
 that everyone understands that there is no warranty for this free
 software.  If the software is modified by someone else and passed on, we
-want its recipients to know that what they have is not the original, so
+want its recipents to know that what they have is not the original, so
 that any problems introduced by others will not reflect on the original
 authors' reputations.
 
@@ -81,7 +81,7 @@ source code as you receive it, in any medium, provided that you
 conspicuously and appropriately publish on each copy an appropriate
 copyright notice and disclaimer of warranty; keep intact all the
 notices that refer to this License and to the absence of any warranty;
-and give any other recipients of the Program a copy of this License
+and give any other recipents of the Program a copy of this License
 along with the Program.
 
 You may charge a fee for the physical act of transferring a copy, and
@@ -187,10 +187,10 @@ all its terms and conditions for copying, distributing or modifying
 the Program or works based on it.
 
   6. Each time you redistribute the Program (or any work based on the
-Program), the recipient automatically receives a license from the
+Program), the recipent automatically receives a license from the
 original licensor to copy, distribute or modify the Program subject to
 these terms and conditions.  You may not impose any further
-restrictions on the recipients' exercise of the rights granted herein.
+restrictions on the recipents' exercise of the rights granted herein.
 You are not responsible for enforcing compliance by third parties to
 this License.
 

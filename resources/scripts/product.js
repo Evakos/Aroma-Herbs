@@ -4,8 +4,8 @@
  import Splide from '@splidejs/splide';
 
 
- //Recipie Slider
- new Splide( '#splide-recipie-slider', {
+ //recipe Slider
+ new Splide( '#splide-recipe-slider', {
   type   : 'loop',
   perPage: 1,
   breakpoints: {
