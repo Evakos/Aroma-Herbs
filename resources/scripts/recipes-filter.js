@@ -8,6 +8,8 @@ jQuery(function ($) {
     if ($("input[name='viewall']").prop("checked")) {
       //console.log("Checked");
 
+      $('select').removeClass("style-select");
+
       $("select").val("select");
     }
 
