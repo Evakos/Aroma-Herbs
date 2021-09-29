@@ -60,7 +60,7 @@ window.addEventListener(
 
 
 
-var ppp = 8; // Post per page
+var ppp = 4; // Post per page
 var pageNumber = 1;
 
 
@@ -96,15 +96,6 @@ $("#more-posts").on("click",function(){ // When btn is pressed.
     $("#more-posts").attr("disabled",true); // Disable the button, temp.
     $("#loader").removeClass("hidden"); // Show loader.
 
-
-    // $("#ajax-posts").ajaxComplete(function() {
-    //   //$(this).fadeIn().delay(1000).fadeOut();
-
-    //   console.log('complete');
-    // });
-
-
-    //document.getElementById("ajax-posts").addEventListener("load", logWidth());
   
     loadPosts();
 
