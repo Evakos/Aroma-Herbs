@@ -17,7 +17,7 @@
 </div>
 
 @hasfield('hero_image')
-<div class="flex justify-center md:min-h-[930px] mx-auto animate__animated animate__fadeIn animate__slow ">
+<div class="flex justify-center mx-auto animate__animated animate__fadeIn animate__slow ">
 
 <img src="@field('hero_image')" alt="Hero Image" class="text-white object-cover w-screen min-h-[300px] md:min-h-[600px] -mt-16 md:-mt-32"/> 
 @endfield
