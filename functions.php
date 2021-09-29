@@ -390,7 +390,7 @@ else {echo 'row-span-1';}
         echo '</div>';
 		wp_reset_postdata();
 	else :
-		echo 'Nothing Found';
+		echo _e( 'Δεν βρέθηκε', 'sage');
 	endif;
  
 	die();
@@ -460,7 +460,7 @@ function filter_products(){
         echo '</div>';
 		wp_reset_postdata();
 	else :
-		echo 'Nothing Found';
+		echo _e( "Δεν βρέθηκε", "sage");
 	endif;
  
 

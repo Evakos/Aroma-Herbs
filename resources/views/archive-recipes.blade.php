@@ -54,8 +54,8 @@ $product = get_terms( array(
 ) );
 
 if ( !empty($product) ) :
-    echo '<select name="productrecipefilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
-    echo '<option value="select" name="select">Product</option>';
+    echo '<select name="productrecipefilter" class="default-select">';
+    echo '<option value="select" class="initial" name="select">Product</option>';
     foreach( $product as $term ) {
 
 		echo '<option value="' . esc_attr( $term->term_id )  . '">' . esc_html( $term->name ) . '</option>';
@@ -74,8 +74,8 @@ $restrictions = get_terms( array(
 ) );
 
 if ( !empty($restrictions) ) :
-    echo '<select name="dietrecipefilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
-    echo '<option value="select" name="select">Diet Requirements</option>';
+    echo '<select name="dietrecipefilter" class="default-select">';
+    echo '<option value="select" class="initial" name="select" selected>Diet Requirements</option>';
     foreach( $restrictions as $term ) {
 
 		echo '<option value="' . esc_attr( $term->term_id )  . '">' . esc_html( $term->name ) . '</option>';
@@ -93,8 +93,8 @@ $courses = get_terms( array(
 ) );
  
 if ( !empty($courses) ) :
-    echo '<select name="coursesrecipefilter" class="bg-light-green text-white p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">';
-    echo '<option value="select" name="select">Courses</option>';
+    echo '<select name="coursesrecipefilter" class="default-select">';
+    echo '<option value="select" class="initial" name="select">Courses</option>';
     
     foreach( $courses as $term ) {
      

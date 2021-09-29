@@ -668,5 +668,16 @@ select {
 
 }
 
+.style-select {
+
+  background-color: #B5D963; color: white !important; border:transparent !important;
+}
+
+.default-select {@apply border-aroma-light-grey border-2 border-solid text-light-green p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]}
+
+
+
+.initial {@apply text-white}
+
 
 
