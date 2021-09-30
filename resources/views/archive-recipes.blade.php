@@ -9,8 +9,8 @@
 
 @include('partials.modal')
 
-    @include('partials.header')
 
+    @include('partials.header')
 
 
 @section('content')

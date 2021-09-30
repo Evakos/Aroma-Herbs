@@ -1,5 +1,5 @@
 
-<a class="text-white no-underline hover:text-white hover:no-underline fixed h-[200px] w-[300px] ml-20" href="@permalink(11)" style="z-index:999">
+<a class="text-white no-underline hover:text-white hover:no-underline fixed h-[200px] w-[150px] sm:w-[300px] ml-20" href="@permalink(11)" style="z-index:999">
         
       </a>
 
