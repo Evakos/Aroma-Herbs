@@ -3,10 +3,10 @@
  */
 import "jquery";
 
-import lozad from 'lozad';
+// import lozad from 'lozad';
 
-const observer = lozad();
-observer.observe();
+// const observer = lozad();
+// observer.observe();
 
 
 const getSingleProducts = document.querySelectorAll(".single-product");

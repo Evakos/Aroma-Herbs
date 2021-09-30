@@ -6585,6 +6585,9 @@ select {
 .w-\[367px\]{
 	width: 367px;
 }
+.w-\[150px\]{
+	width: 150px;
+}
 .w-\[198px\]{
 	width: 198px;
 }
@@ -7132,6 +7135,9 @@ select {
 	}
 	.sm\:w-4\/12{
 		width: 33.333333%;
+	}
+	.sm\:w-\[300px\]{
+		width: 300px;
 	}
 	.sm\:w-\[1250px\]{
 		width: 1250px;

@@ -330,7 +330,7 @@ function filter_products(){
 <?php
 		while( $query->have_posts() ): $query->the_post(); 
 
-		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'large'); 
+		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'product-image'); 
 
         $product_link = get_permalink();
 

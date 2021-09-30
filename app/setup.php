@@ -102,6 +102,12 @@ add_action('enqueue_block_editor_assets', function () {
  * @return void
  */
 add_action('after_setup_theme', function () {
+
+
+    add_image_size( 'product-image', 400); // width, height, crop
+
+
+
     /**
      * Enable features from the Soil plugin if activated.
      * @link https://roots.io/plugins/soil/
@@ -237,6 +243,10 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('customize-selective-refresh-widgets');
 }, 20);
+
+
+
+
 
 
 /**
