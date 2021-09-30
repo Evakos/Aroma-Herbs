@@ -156,7 +156,7 @@ if( $packages ): ?>
 
         <div class="flex flex-col md:w-4/6 md:pr-10 md:pl-80 md:border-r md:border-gray-300">
 
-            <p class="uppercase font-advent-pro-semi-bold flex md:self-center mb-10 md:mb-20">περιγραφη</p>
+            <p class="uppercase font-advent-pro-semi-bold flex md:self-center mb-10 md:mb-20">Περιγραφή</p>
 
             <p>          <?php echo get_field('long_description');?></p>
 
@@ -168,9 +168,10 @@ if( $packages ): ?>
 
         <div class="flex flex-col mt-10 md:mt-0 md:w-2/6 md:pl-10">
 
-            <p class="uppercase flex font-advent-pro-semi-bold mb-10 md:mb-20">Περισσοτερες ΠΛΗΡΟΦΟΡΙΕΣ</p>
+            <p class="uppercase flex font-advent-pro-semi-bold mb-10 md:mb-20">
+Περισσότερες πληροφορίες</p>
 
-            <p class="flex font-advent-pro-bold uppercase mb-10 text-aroma-grey">ΟδηγΙες ΣυντΗρησης</p>
+            <p class="flex font-advent-pro-bold uppercase mb-10 text-aroma-grey">Οδηγίες Συντήρησης</p>
 
 
             <?php echo get_field('extra_info');?>

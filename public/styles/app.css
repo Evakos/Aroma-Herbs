@@ -6299,6 +6299,21 @@ select {
 .-bottom-10{
 	bottom: -2.5rem;
 }
+.top-\[105px\]{
+	top: 105px;
+}
+.top-\[115px\]{
+	top: 115px;
+}
+.top-\[120px\]{
+	top: 120px;
+}
+.top-\[130px\]{
+	top: 130px;
+}
+.top-\[150px\]{
+	top: 150px;
+}
 .z-0{
 	z-index: 0;
 }

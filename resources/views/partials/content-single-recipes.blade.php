@@ -1,4 +1,4 @@
-<div class="flex flex-col md:flex-row max-w-6xl mx-auto">
+<div class="flex flex-col md:flex-row max-w-6xl mx-auto relative">
 
 <div class="flex md:w-2/3 px-10 md:px-0 mb-10 md:mb-0">
 
@@ -98,7 +98,7 @@
 
 </div>
 
-<aside class="sidebar hidden md:flex flex-col md:self-start md:w-1/3 md:ml-12">
+<aside class="sidebar hidden md:flex flex-col md:self-start md:w-1/3 md:ml-12 sticky top-[150px]">
 
 <div class="flex flex-col ml-20 bg-light-green">
 
@@ -107,7 +107,7 @@
 <p class="uppercase text-white font-advent-pro-semi-bold mb-5">ΕΥΚΟΛΗ</p>
 <ul>
   @fields('sidebar')
-    <li class="text-white">@sub('title') <br> <span class="font-advent-pro-semi-bold">@sub('details')</span></li>
+    <li class="text-white mb-5">@sub('title') <br> <span class="font-advent-pro-semi-bold">@sub('details')</span></li>
   @endfields
 </ul>
 </div>
