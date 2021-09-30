@@ -281,7 +281,7 @@ else {echo 'row-span-1';}
 		  </div>
 
 		  
-	     <?php $count++ ?> 
+	     <!-- <?php $count++ ?>  -->
 		 <?php endwhile;
         echo '</div>';
 		wp_reset_postdata();
@@ -289,14 +289,14 @@ else {echo 'row-span-1';}
 		echo _e( 'Δεν βρέθηκε', 'sage');
 	endif;
  
-	// die();
+	die();
 }
 
 
 
 
 
-//Ajax Posts Filter
+//Ajax Products Filter
 
 add_action('wp_ajax_filterproducts', 'filter_products'); 
 add_action('wp_ajax_nopriv_filterproducts', 'filter_products');
@@ -357,6 +357,8 @@ function filter_products(){
 	else :
 		echo _e( "Δεν βρέθηκε", "sage");
 	endif;
- 	// die();
+ 	
+	die();
 
 }
+
