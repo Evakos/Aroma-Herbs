@@ -6962,13 +6962,13 @@ select {
 	--tw-text-opacity: 1;
 	color: rgba(209, 213, 219, var(--tw-text-opacity));
 }
-.text-light-green{
-	--tw-text-opacity: 1;
-	color: rgba(181, 217, 99, var(--tw-text-opacity));
-}
 .text-dark-green{
 	--tw-text-opacity: 1;
 	color: rgba(126, 154, 62, var(--tw-text-opacity));
+}
+.text-light-green{
+	--tw-text-opacity: 1;
+	color: rgba(181, 217, 99, var(--tw-text-opacity));
 }
 .text-white{
 	--tw-text-opacity: 1;

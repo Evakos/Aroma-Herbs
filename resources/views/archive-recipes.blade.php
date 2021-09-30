@@ -34,13 +34,7 @@
 Φιλτρα συνταγών
 </p>
 
-
-
-
-
 <!-- Start Filter by Category and Tasks Here: -->
-
-
 
 <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="recipefilter" class="flex flex-wrap mb-10">
 
@@ -116,22 +110,10 @@ endif;
   <span class="checkmark"></span>
 </label>
 
-
-
-
-
-
 	<input type="hidden" name="action" value="recipefilter">
 </form>
 
-
-
-
-
 <div id="recipe-response" class="container"></div>
-
-
-
 
 	<div class="flex items-center justify-center my-20">
 
@@ -181,8 +163,8 @@ else {echo 'row-span-1';}
 
 </a>
         </div>
-    <?php $count++ ; 
-    endwhile ?>
+    <?php $count++ ?> 
+    <?php endwhile ?>
 
 
 </div>

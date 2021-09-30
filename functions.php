@@ -30,107 +30,6 @@ require $composer;
 
 require_once __DIR__ . '/bootstrap/app.php';
 
-// add_action( 'init', 'recipes_cpt' );
-
-// function recipes_cpt() {
-
-// 	$labels = array(
-// 		'name' => __( 'recipes' ),
-// 		'singular_name' => __( 'recipe' ),
-// 		'all_items' => __('All recipes'),
-// 		'add_new' => _x('Add recipe', 'eks'),
-// 		'add_new_item' => __('Add recipe'),
-// 		'edit_item' => __('Edit recipe'),
-// 		'new_item' => __('New recipe'),
-// 		'view_item' => __('View recipe'),
-// 		'search_items' => __('Search in recipes'),
-// 		'not_found' =>  __('No recipe found'),
-// 		'not_found_in_trash' => __('No recipe found in trash'),
-// 		'parent_item_colon' => ''
-// 	);
-
-// 	$args = array (
-// 		'labels' => $labels,
-// 		'public' => true,
-// 		'has_archive' => true,
-// 		'menu_icon' => 'dashicons-food',
-// 		'rewrite' => true,
-// 		'taxonomies' => array( 'category', 'post_tag' ),
-// 		'query_var' => true,
-// 		'menu_position' => 5,
-// 		'supports' => array(
-// 			'title',
-// 			'editor',
-// 			'author',
-// 			'thumbnail',
-// 			'excerpt',
-// 			'custom-fields',
-// 			'revisions')
-
-// 	);
-
-// 	// flush_rewrite_rules( false );
-
-// 	register_post_type( 'recipes_cpt', $args);
-// }
-
-
-
-// add_action( 'init', 'products_cpt' );
-
-// function products_cpt() {
-
-// 	$labels = array(
-// 		'name' => __( 'Products' ),
-// 		'singular_name' => __( 'Product' ),
-// 		'all_items' => __('All Products'),
-// 		'add_new' => _x('Add Product', 'eks'),
-// 		'add_new_item' => __('Add Product'),
-// 		'edit_item' => __('Edit Product'),
-// 		'new_item' => __('New Product'),
-// 		'view_item' => __('View Product'),
-// 		'search_items' => __('Search in Products'),
-// 		'not_found' =>  __('No Product found'),
-// 		'not_found_in_trash' => __('No Product found in trash'),
-// 		'parent_item_colon' => ''
-// 	);
-
-// 	$args = array (
-// 		'labels' => $labels,
-// 		'public' => true,
-// 		'has_archive' => true,
-// 		'menu_icon' => 'dashicons-store',
-// 		'rewrite' => true,
-// 		'taxonomies' => array( 'products', 'post_tag' ),
-// 		'query_var' => true,
-// 		'menu_position' => 5,
-// 		'supports' => array(
-// 			'title',
-// 			'editor',
-// 			'author',
-// 			'thumbnail',
-// 			'excerpt',
-// 			'custom-fields',
-// 			'revisions')
-
-// 	);
-
-// 	// flush_rewrite_rules( false );
-
-// 	register_post_type( 'products_cpt', $args);
-// }
-
-
-// add_action( 'init', function() {
-// 	register_extended_post_type( 'products' );
-// } );
-
-// add_action( 'init', function() {
-// 	register_extended_taxonomy( 'location', 'article' );
-// } );
-
-
-
 
 
 
@@ -218,9 +117,6 @@ function aroma_social_media_icons() {
 	echo "</ul>";
 	}
 }
-
-
-
 
 
 // Fresh News Show More
@@ -384,16 +280,16 @@ else {echo 'row-span-1';}
 	  
 		  </div>
 
-		  <?php
-	    $count++; 
-		endwhile;
+		  
+	     <?php $count++ ?> 
+		 <?php endwhile;
         echo '</div>';
 		wp_reset_postdata();
 	else :
 		echo _e( 'Δεν βρέθηκε', 'sage');
 	endif;
  
-	die();
+	// die();
 }
 
 
@@ -430,7 +326,6 @@ function filter_products(){
 
         echo '<div id="product-grid" class="relative">'; ?>
 
-		<span id="loader-product" class="text-dark-green absolute"><i class="fas fa-circle-notch fa-7x fa-spin"></i></span>
 
 <?php
 		while( $query->have_posts() ): $query->the_post(); 
@@ -462,17 +357,6 @@ function filter_products(){
 	else :
 		echo _e( "Δεν βρέθηκε", "sage");
 	endif;
- 
+ 	// die();
 
 }
-
-
-// function book_setup_post_type() {
-//     $args = array(
-//         'public'    => true,
-//         'label'     => __( 'Recipes', 'sage' ),
-//         'menu_icon' => 'dashicons-book',
-//     );
-//     register_post_type( 'recipes', $args );
-// }
-// add_action( 'init', 'book_setup_post_type' );

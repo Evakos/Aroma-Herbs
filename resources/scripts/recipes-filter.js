@@ -1,6 +1,11 @@
-jQuery(function ($) {
-	
-  $("#recipefilter").change(function () {
+
+/**
+ * External Dependencies
+ */
+ import "jquery";
+
+
+  function getRecipes () {
     var recipefilter = $("#recipefilter");
 
 	$("#recipe-response").toggleClass('fade-in-fast'); 
@@ -27,29 +32,31 @@ jQuery(function ($) {
       },
     });
     return false;
-  }).change();
-})
+
+  }
+
+  getRecipes();
+
+  $("#recipefilter").change(function () {
+
+
+    getRecipes();
+  
+
+  });
+
 
 
 $("select").change(function () {
 
 	console.log("select changed");
 
-  // $(".sub-menu li").click(function(){
-  //   $(".sub-menu li").removeClass('active');//to make sure there will be only one with the class 'active'
-  //   $(this).addClass('active');
-  // });
-
   $(this).removeClass("style-select");
-
-
   $('option', this).removeClass("select-active");
   $('option:checked', this).addClass("select-active");
 
   $('option', this).parent('select').removeClass("style-select");
   $('option:checked:not(.initial)', this).parent('select').addClass("style-select");
-
-  
 
   //$(this).addClass('dark');
   $("input[name='viewall']").removeAttr("checked") 

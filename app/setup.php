@@ -42,7 +42,7 @@ add_action('wp_enqueue_scripts', function () {
 
         wp_enqueue_script('sage/front-page.js', asset('scripts/front-page.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         // wp_enqueue_script('sage/animation.js', asset('scripts/animation.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
-        wp_enqueue_script('sage/Recipes.js', asset('scripts/Recipes.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+        wp_enqueue_script('sage/recipes.js', asset('scripts/recipes.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
 
         wp_enqueue_script('sage/load-more.js', asset('scripts/load-more.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         
@@ -52,8 +52,8 @@ add_action('wp_enqueue_scripts', function () {
 
   {
 
-        wp_enqueue_script('sage/Recipes.js', asset('scripts/Recipes.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
-        wp_enqueue_script('sage/Recipes-filter.js', asset('scripts/Recipes-filter.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+        wp_enqueue_script('sage/recipes.js', asset('scripts/recipes.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+        wp_enqueue_script('sage/recipes-filter.js', asset('scripts/recipes-filter.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
 
         
         

@@ -53,14 +53,12 @@
     <img src="<?php the_field( "product_background_image", 11 ); ?>" class="object-cover w-screen min-h-[300px] md:min-h-[600px]" />
 </div>
 
-<div class="container mx-auto -mt-24 sm:-mt-96 min-h-[600px]">
+<div class="container relative mx-auto -mt-24 sm:-mt-96 min-h-[600px]">
+
+<span id="loader-product" class="text-dark-green absolute"><i class="fas fa-circle-notch fa-7x fa-spin"></i></span>
+
 
   <div id="products" class="hidden">
-
-
-
-
-<?php filter_products();?>
 
 </div>
 
