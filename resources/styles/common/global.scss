@@ -1,7 +1,12 @@
 @import '~hamburgers/_sass/hamburgers/hamburgers';
 @import '/node_modules/@splidejs/splide/dist/css/splide.min.css';
-@import '~animate.css/animate.css';
+//@import '~animate.css/animate.css';
 @import 'aos/dist/aos.css'; // You can also use <link> for styles 
+@import '/node_modules/simplelightbox/dist/simple-lightbox.css'; // You can also use <link> for styles 
+
+
+
+
 
 @font-face {
   font-family: 'takhie';
@@ -43,6 +48,23 @@ button:focus {
   outline: none;
 }
 
+
+.sl-wrapper .sl-close {
+	display: none;
+	position: fixed;
+	right: 6rem;
+	top: 6rem;
+	z-index: 10060;
+	margin-top: -14px;
+	margin-right: -14px;
+	height: 44px;
+	width: 44px;
+	line-height: 44px;
+	font-family: advent-pro-regular;
+  color: #7e9a3d;
+	font-size: 3rem;
+}
+
 .customize-support #sticky-nav, .customize-support #floating {margin-top:32px}
 
 
@@ -57,9 +79,7 @@ button:focus {
   display: block;
   position: relative;
   padding-left: 35px;
-
   cursor: pointer;
-
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -408,6 +428,34 @@ summary::marker {
   font-size: 0.6em;
 }
 
+.wpcf7 .ajax-loader {
+	/* visibility: hidden; */
+	display: inline-block;
+	background-color: #7e9a3d;
+	opacity: 0.75;
+	width: 24px;
+	height: 24px;
+	border: none;
+	border-radius: 100%;
+	padding: 0;
+	margin: 0 24px;
+	position: absolute;
+	right: 0;
+	bottom: 1rem;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+	border-color: #ffb900;
+	background-color: red;
+	color: white;
+}
+
+.wpcf7 form .wpcf7-response-output {
+	margin: 2em 0rem;
+	padding: 0.2em 1em;
+	border: transparent;
+}
+
 .wpcf7 input {
 
 	@apply bg-aroma-light-grey sm:w-[242px] sm:mr-10 px-10 py-5 text-aroma-grey;
@@ -424,7 +472,7 @@ input.contact-submit {
 }
 
 .contact-submit:hover {
-  @apply bg-light-green text-aroma-grey;
+  @apply bg-light-green text-white;
 }
 
 input::placeholder, textarea::placeholder {

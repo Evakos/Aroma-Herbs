@@ -6,8 +6,13 @@
     <?php wp_head(); ?>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script> 
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>  -->
     <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>  -->
+
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" /> -->
+
+   
 
     
     
@@ -25,6 +30,7 @@
     <?php wp_footer(); ?>
 
 
-    <script src="../wp-content/themes/aroma-herbs/public/scripts/animation-2.js"></script>
+    <!-- <script src="wp-content/themes/aroma-herbs/public/scripts/animation-2.js"></script>
+  
   </body>
 </html>

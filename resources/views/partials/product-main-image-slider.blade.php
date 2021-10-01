@@ -6,8 +6,8 @@ if( $images ): ?>
             <ul class="splide__list">
         <?php foreach( $images as $image ): ?>
           <li class="splide__slide">
-                <a href="<?php echo esc_url($image['url']); ?>">
-                     <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="w-[229px] sm:w-[340px] pt-32" alt="<?php echo esc_attr($image['alt']); ?>"/>
+                <a href="<?php echo esc_url($image['url']); ?>" class="product-image">
+                     <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="w-[229px] sm:w-[340px] pt-32" alt="<?php echo esc_attr($image['alt']); ?>" />
                 </a>
                 <p><?php echo esc_html($image['caption']); ?></p>
             </li>
@@ -20,4 +20,3 @@ endif; ?>
 
     
         
-   

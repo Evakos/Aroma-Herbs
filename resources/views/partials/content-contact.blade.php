@@ -23,7 +23,7 @@
 </div>
 
 
-<div class="flex flex-1 flex-col">
+<div class="flex flex-1 flex-col relative">
 
 <h3 class="text-3xl uppercase mb-10">Αποστολη μηνυματος</h3>
 

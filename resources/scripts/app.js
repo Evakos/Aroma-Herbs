@@ -3,6 +3,8 @@
  */
 import "jquery";
 
+
+
 // import lozad from 'lozad';
 
 // const observer = lozad();
@@ -158,7 +160,7 @@ for (var i = 0; i < btns.length; i++) {
 $(document).ready(function () {
   var $form = $('#mc-embedded-subscribe-form')
   if ($form.length > 0) {
-    $('form input[type="submit"]').bind('click', function (event) {
+    $('#mc-embedded-subscribe-form form input[type="submit"]').bind('click', function (event) {
 
 
       console.log("Subscribing...");
@@ -213,12 +215,12 @@ import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 
-import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
+import { faCircleNotch, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
 
 // add the imported icons to the library
-library.add(faFacebook, faInstagram, faCircleNotch);
+library.add(faFacebook, faInstagram, faCircleNotch, faTimes);
 
 // tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
 dom.watch();

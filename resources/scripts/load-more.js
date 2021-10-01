@@ -10,7 +10,7 @@
 // Set/update the viewportWidth value
  function setViewportWidth() {
 
-  console.log('Set Viewport Width Function')  
+  //console.log('Set Viewport Width Function')  
 
 viewportWidth =  document.documentElement.clientWidth || window.innerWidth || window.outerWidth;
 
@@ -20,18 +20,18 @@ viewportWidth =  document.documentElement.clientWidth || window.innerWidth || wi
 
 function logWidth() {
 
-  console.log('Log Width Function')  
+  //console.log('Log Width Function')  
 
   if (viewportWidth > 768) {
     
-    console.log("Large Viewport Width:" + viewportWidth);
+    //console.log("Large Viewport Width:" + viewportWidth);
 
     $("#blog-card:nth-child(4n + 1)").addClass("half-div-left");
 
     $("#blog-card:nth-child(4n + 2)").addClass("half-div-right");
 
   } else {
-    console.log("Small Viewport Width:" + viewportWidth);
+    //console.log("Small Viewport Width:" + viewportWidth);
 
     $("#blog-card:nth-child(4n + 1)").removeClass("half-div-left");
 

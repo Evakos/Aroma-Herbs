@@ -1,3 +1,22 @@
+import SimpleLightbox from "simplelightbox";
+
+new SimpleLightbox('.product-image', { 
+  
+  
+//   /* options */ 
+
+loop: true,
+nav: false,
+showCounter: false,
+alertError: false,
+closeText: 'X',
+close: false,
+
+});
+
+
+
+
 /**
  * Splide Imports
  */
@@ -66,7 +85,7 @@ function switchOrientation(){
        
       } ).mount();
 
-      console.log('Larger than 600');
+      //console.log('Larger than 600');
 
    
 
