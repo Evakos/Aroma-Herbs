@@ -1,6 +1,6 @@
 
 
-<div class="flex items-center justify-center mb-20 md:mt-44">
+<div class="flex items-center justify-center mb-20 mt-20 md:mt-44">
 
 
 
