@@ -9,7 +9,7 @@
       
       </div>
 
-<div class="flex flex-col">
+<div class="flex flex-col max-w-[900px] mx-auto">
 
 
 
@@ -17,12 +17,12 @@
   @fields('faq')
     <li>
 
-    <details class="mb-4">
-                <summary class="text-dark-green text-3xl sm:text-6xl py-2 px-4 cursor-pointer">
+    <details class="mb-4 border-aroma-light-grey border-b-2 pb-20">
+                <summary class="text-dark-green text-3xl sm:text-5xl py-2 px-4 uppercase cursor-pointer">
                 @sub('question') 
                 </summary>
 
-                <span class="pl-10">
+                <span class="pl-14 block my-10">
                 @sub('answer')
                 </span>
               </details>
