@@ -9,7 +9,7 @@
       
       </div>
 
-<div class="flex flex-col max-w-[1000px] mx-auto">
+<div class="flex flex-col max-w-[1200px] mx-auto">
 
 
 
@@ -22,7 +22,7 @@
                 @sub('question') 
                 </summary>
 
-                <span class="pl-14 block my-10">
+                <span class="pl-12 block my-10">
                 @sub('answer')
                 </span>
               </details>

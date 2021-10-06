@@ -2781,6 +2781,12 @@ select {
 .max-w-\[1000px\]{
 	max-width: 1000px;
 }
+.max-w-\[1100px\]{
+	max-width: 1100px;
+}
+.max-w-\[1200px\]{
+	max-width: 1200px;
+}
 .flex-1{
 	flex: 1 1 0%;
 }
@@ -3053,6 +3059,9 @@ select {
 }
 .pt-16{
 	padding-top: 4rem;
+}
+.pl-12{
+	padding-left: 3rem;
 }
 .text-center{
 	text-align: center;
