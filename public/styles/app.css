@@ -3380,6 +3380,12 @@ select {
 	.sm\:pr-44{
 		padding-right: 11rem;
 	}
+	.sm\:pb-20{
+		padding-bottom: 5rem;
+	}
+	.sm\:pb-10{
+		padding-bottom: 2.5rem;
+	}
 	.sm\:text-left{
 		text-align: left;
 	}
