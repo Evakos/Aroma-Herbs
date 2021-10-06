@@ -17,8 +17,8 @@
   @fields('faq')
     <li>
 
-    <details class="mb-4 border-aroma-light-grey border-b-2 pb-20">
-                <summary class="text-dark-green text-3xl sm:text-5xl py-2 px-4 uppercase cursor-pointer">
+    <details class="mb-4">
+                <summary class="text-dark-green text-3xl sm:text-4xl py-2 px-4 uppercase cursor-pointer" >
                 @sub('question') 
                 </summary>
 
@@ -35,6 +35,8 @@
   </li>
   @endfields
 </ul>
+
+<hr>
         </div>
 
 </div>
