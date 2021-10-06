@@ -12,7 +12,7 @@
 
   
 
-  <div class="entry-content text-right">
+  <div class="entry-content">
 
 
     @php(the_content())

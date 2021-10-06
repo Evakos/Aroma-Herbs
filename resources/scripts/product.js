@@ -91,7 +91,7 @@ function switchOrientation(){
 
   } else {
 
-    console.log('Smaller than 600');
+    //console.log('Smaller than 600');
 
     var secondarySlider  = new Splide( '#splide-product-thumbs-mobile', {
       direction: 'ltr',
