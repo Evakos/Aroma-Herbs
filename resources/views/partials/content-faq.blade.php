@@ -9,7 +9,7 @@
       
       </div>
 
-<div class="flex flex-col max-w-[900px] mx-auto">
+<div class="flex flex-col max-w-[1000px] mx-auto">
 
 
 
@@ -33,10 +33,11 @@
   
   
   </li>
+  <hr>
   @endfields
 </ul>
 
-<hr>
+
         </div>
 
 </div>
