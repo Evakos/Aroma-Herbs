@@ -3020,6 +3020,10 @@ select {
 	padding-left: 11rem;
 	padding-right: 11rem;
 }
+.py-16{
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
 .pt-24{
 	padding-top: 6rem;
 }
@@ -3046,6 +3050,9 @@ select {
 }
 .pt-32{
 	padding-top: 8rem;
+}
+.pt-16{
+	padding-top: 4rem;
 }
 .text-center{
 	text-align: center;

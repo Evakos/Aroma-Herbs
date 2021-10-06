@@ -18,7 +18,7 @@
     <li>
 
     <details class="mb-4">
-                <summary class="text-dark-green text-3xl sm:text-4xl py-2 px-4 uppercase cursor-pointer" >
+                <summary class="text-dark-green text-3xl sm:text-4xl pt-16 px-4 cursor-pointer" >
                 @sub('question') 
                 </summary>
 
