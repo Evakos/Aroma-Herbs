@@ -10,7 +10,7 @@
 
         <div class="container relative mx-auto">
         <!-- <div class="flex flex-col mt-10 md:m-0 md:flex-row md:py-24 md:px-48"> -->
-        <div class="flex flex-col px-24">
+        <div class="flex flex-col px-24 sm:px-8">
 
         @include('partials.page-header')
 
