@@ -426,6 +426,11 @@ register_extended_taxonomy( 'product', 'recipes', array(
 
 
 
+
+
+
+
+
 //Tips & Τwists CPT
 
 add_action( 'init', function() {
@@ -465,7 +470,7 @@ add_action( 'init', function() {
 
 	] );
 
-	register_extended_taxonomy( 'tags', 'tips', array(
+	register_extended_taxonomy( 'tip-tags', 'tips', array(
 
 		'dashboard_glance' => true,
 
@@ -479,13 +484,18 @@ add_action( 'init', function() {
 
 ), array(
 
-		'singular' => 'Tag',
-		'plural'   => 'Tags',
-		'slug'     => 'tag'
+		'singular' => 'Tip Tag',
+		'plural'   => 'Tip Tags',
+		'slug'     => 'tip-tag'
 
 ) );
 
 } );
+
+
+
+
+
 
 
 
@@ -528,7 +538,7 @@ add_action( 'init', function() {
 
 	] );
 
-	register_extended_taxonomy( 'tags', 'products', array(
+	register_extended_taxonomy( 'product-tags', 'products', array(
 
 		'dashboard_glance' => true,
 
@@ -542,9 +552,9 @@ add_action( 'init', function() {
 
 ), array(
 
-		'singular' => 'Tag',
-		'plural'   => 'Tags',
-		'slug'     => 'tag'
+		'singular' => 'Product Tag',
+		'plural'   => 'Product Tags',
+		'slug'     => 'product-tag'
 
 ) );
 
