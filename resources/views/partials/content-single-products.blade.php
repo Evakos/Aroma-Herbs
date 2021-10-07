@@ -5,8 +5,21 @@
         <div class="flex flex-col items-center justify-center my-10" id="product-title">
 
         <p class="text-dark-green font-advent-pro-semi-bold uppercase tracking-widest md:text-5xl"> @field('fresh_title')</p>
+        
+        <div class="relative flex">
+        <img src="@asset('images/whisker-left.svg')" class="absolute w-5 sm:w-10 -left-10 sm:-left-20"/> 
 
-        <p class="font-takhie text-dark-green tracking-widest text-7xl md:text-9xl">@title</p>
+        
+        <h2 class="font-takhie text-dark-green tracking-widest text-7xl md:text-9xl">
+        
+        @title
+        
+        
+</h2>
+
+<img src="@asset('images/whisker-right.svg')" class="absolute w-5 sm:w-10 -right-10 sm:-right-20 "/> 
+
+</div>
 
         </div>
 
