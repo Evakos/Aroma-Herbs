@@ -39,7 +39,7 @@
 <p class="uppercase text-white font-advent-pro-semi-bold mb-10">Υλικα</p>
 <ul>
   @fields('ingredients')
-  <li class="text-white">@sub('amount') @sub('details')</li>
+  <li class="text-white mb-3">@sub('amount') @sub('details')</li>
   @endfields
 </ul>
 </div>
@@ -48,10 +48,10 @@
 
 @hasfield('directions')
 <div class="flex flex-1 text-left flex-col mb-10 bg-light-green rounded-lg p-10">
-<p class="uppercase text-white font-advent-pro-semi-bold mb-10">ΕκτΕλεση</p>
+<p class="uppercase text-white font-advent-pro-semi-bold mb-10">Εκτέλεση</p>
 <ul>
   @fields('directions')
-    <li class="text-white">@sub('details')</li>
+    <li class="text-white mb-3">@sub('details')</li>
   @endfields
 </ul>
 </div>
@@ -60,11 +60,11 @@
 
   </div>
 
-  <div class="flex mb-10 md:my-20">
+  <!-- <div class="flex mb-10 md:my-20">
 
   <?php echo get_the_tag_list( sprintf( '<p class="font-advent-pro-light text-left"><span class="uppercase font-advent-pro-semi-bold">%s:&nbsp; &nbsp;</p> ', __( 'Tags', 'sage' ) ), ', ', '</p>' );?>
 
-</div>
+</div> -->
 
 
 @hasfield('chef_name')
