@@ -534,7 +534,7 @@ add_action( 'init', function() {
 
 		'singular' => 'Product',
 		'plural'   => 'Products',
-		'slug'     => 'product',
+		'slug'     => 'products',
 
 	] );
 
