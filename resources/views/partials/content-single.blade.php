@@ -17,9 +17,9 @@
 
     @php(the_content())
 
-   <div class="mt-10">
+   <!-- <div class="mt-10">
     <img src="@thumbnail('full', false)" alt="Full Image" />
-</div>
+</div> -->
 
   </div>
 
