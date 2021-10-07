@@ -435,7 +435,7 @@ add_action( 'init', function() {
 
 
 'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
-'taxonomies' => array('category'),
+'taxonomies' => array('category', 'post-tag'),
 
 
 # Add some custom columns to the admin screen:
@@ -465,25 +465,25 @@ add_action( 'init', function() {
 
 	] );
 
-// 	register_extended_taxonomy( 'courses', 'products', array(
+    register_extended_taxonomy( 'tags', 'products', array(
 
-// 		'dashboard_glance' => true,
+		'dashboard_glance' => true,
 
-// 		'admin_cols' => array(
-// 				'updated' => array(
-// 						'title'       => 'Updated',
-// 						'meta_key'    => 'updated_date',
-// 						'date_format' => 'd/m/Y'
-// 				),
-// 		),
+		'admin_cols' => array(
+				'updated' => array(
+						'title'       => 'Updated',
+						'meta_key'    => 'updated_date',
+						'date_format' => 'd/m/Y'
+				),
+		),
 
-// ), array(
+), array(
 
-// 		'singular' => 'Course',
-// 		'plural'   => 'Courses',
-// 		'slug'     => 'courses'
+		'singular' => 'Tags',
+		'plural'   => 'Tags',
+		'slug'     => 'tag'
 
-// ) );
+) );
 
 } );
 
@@ -501,7 +501,7 @@ add_action( 'init', function() {
 
 
 'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
-'taxonomies' => array('category'),
+'taxonomies' => array('category', 'tags'),
 
 
 # Add some custom columns to the admin screen:
@@ -514,6 +514,9 @@ add_action( 'init', function() {
 			'category' => [
             'taxonomy' => 'category'
 			],
+            'tags' => [
+                'taxonomy' => 'tags'
+                ],
 		// 	'team_role' => [
 		// 		'taxonomy' => 'team-roles'
 		// ]
@@ -531,25 +534,25 @@ add_action( 'init', function() {
 
 	] );
 
-// 	register_extended_taxonomy( 'courses', 'products', array(
+	register_extended_taxonomy( 'tags', 'tips', array(
 
-// 		'dashboard_glance' => true,
+		'dashboard_glance' => true,
 
-// 		'admin_cols' => array(
-// 				'updated' => array(
-// 						'title'       => 'Updated',
-// 						'meta_key'    => 'updated_date',
-// 						'date_format' => 'd/m/Y'
-// 				),
-// 		),
+		'admin_cols' => array(
+				'updated' => array(
+						'title'       => 'Updated',
+						'meta_key'    => 'updated_date',
+						'date_format' => 'd/m/Y'
+				),
+		),
 
-// ), array(
+), array(
 
-// 		'singular' => 'Course',
-// 		'plural'   => 'Courses',
-// 		'slug'     => 'courses'
+		'singular' => 'Tags',
+		'plural'   => 'Tags',
+		'slug'     => 'tag'
 
-// ) );
+) );
 
 } );
 

@@ -2997,6 +2997,10 @@ select {
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
 }
+.px-24{
+	padding-left: 6rem;
+	padding-right: 6rem;
+}
 .px-10{
 	padding-left: 2.5rem;
 	padding-right: 2.5rem;
@@ -3008,10 +3012,6 @@ select {
 .py-5{
 	padding-top: 1.25rem;
 	padding-bottom: 1.25rem;
-}
-.px-24{
-	padding-left: 6rem;
-	padding-right: 6rem;
 }
 .pt-24{
 	padding-top: 6rem;
@@ -3346,13 +3346,13 @@ select {
 		padding-left: 6rem;
 		padding-right: 6rem;
 	}
-	.sm\:px-0{
-		padding-left: 0px;
-		padding-right: 0px;
-	}
 	.sm\:px-8{
 		padding-left: 2rem;
 		padding-right: 2rem;
+	}
+	.sm\:px-0{
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 	.sm\:pr-44{
 		padding-right: 11rem;
