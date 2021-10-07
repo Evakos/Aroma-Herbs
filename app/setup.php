@@ -317,7 +317,7 @@ include_once( get_stylesheet_directory() . '/resources/acf/acf.php' );
  
 
 
-
+// Recipes CPT
 
 add_action( 'init', function() {
 	register_extended_post_type( 'recipes', [
@@ -424,82 +424,16 @@ register_extended_taxonomy( 'product', 'recipes', array(
 } );
 
 
-add_action( 'init', function() {
-	register_extended_post_type( 'products', [
-'show_in_feed' => true,
-'menu_icon'    => 'dashicons-store',
-'show_in_rest' => true,
 
 
-'has_archive'  => false,
-
-
-'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
-'taxonomies' => array('category', 'post-tag'),
-
-
-# Add some custom columns to the admin screen:
-		'admin_cols' => [
-
-            'product_featured_image' => [
-				'title'          => 'Product Image',
-				'featured_image' => 'thumbnail'
-			],
-			'category' => [
-            'taxonomy' => 'category'
-			],
-		// 	'team_role' => [
-		// 		'taxonomy' => 'team-roles'
-		// ]
-		],
-
-		'archive' => [
-			'nopaging' => true,
-		],
-
-	], [
-
-		'singular' => 'Product',
-		'plural'   => 'Products',
-		'slug'     => 'products',
-
-	] );
-
-    register_extended_taxonomy( 'tags', 'products', array(
-
-		'dashboard_glance' => true,
-
-		'admin_cols' => array(
-				'updated' => array(
-						'title'       => 'Updated',
-						'meta_key'    => 'updated_date',
-						'date_format' => 'd/m/Y'
-				),
-		),
-
-), array(
-
-		'singular' => 'Tags',
-		'plural'   => 'Tags',
-		'slug'     => 'tag'
-
-) );
-
-} );
-
-
-
+//Tips & Τwists CPT
 
 add_action( 'init', function() {
 	register_extended_post_type( 'tips', [
 'show_in_feed' => true,
 'menu_icon'    => 'dashicons-pressthis',
 'show_in_rest' => true,
-
-
 'has_archive'  => false,
-
-
 'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
 'taxonomies' => array('category', 'tags'),
 
@@ -517,9 +451,6 @@ add_action( 'init', function() {
             'tags' => [
                 'taxonomy' => 'tags'
                 ],
-		// 	'team_role' => [
-		// 		'taxonomy' => 'team-roles'
-		// ]
 		],
 
 		'archive' => [
@@ -548,7 +479,7 @@ add_action( 'init', function() {
 
 ), array(
 
-		'singular' => 'Tags',
+		'singular' => 'Tag',
 		'plural'   => 'Tags',
 		'slug'     => 'tag'
 
@@ -556,3 +487,65 @@ add_action( 'init', function() {
 
 } );
 
+
+
+//Products CPT
+
+add_action( 'init', function() {
+	register_extended_post_type( 'products', [
+'show_in_feed' => true,
+'menu_icon'    => 'dashicons-store',
+'show_in_rest' => true,
+'has_archive'  => false,
+'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+'taxonomies' => array('category', 'tags'),
+
+
+# Add some custom columns to the admin screen:
+		'admin_cols' => [
+
+            'product_featured_image' => [
+				'title'          => 'Product Image',
+				'featured_image' => 'thumbnail'
+			],
+			'category' => [
+            'taxonomy' => 'category'
+			],
+            'tags' => [
+                'taxonomy' => 'tags'
+                ],
+		],
+
+		'archive' => [
+			'nopaging' => true,
+		],
+
+	], [
+
+		'singular' => 'Product',
+		'plural'   => 'Products',
+		'slug'     => 'product',
+
+	] );
+
+	register_extended_taxonomy( 'tags', 'products', array(
+
+		'dashboard_glance' => true,
+
+		'admin_cols' => array(
+				'updated' => array(
+						'title'       => 'Updated',
+						'meta_key'    => 'updated_date',
+						'date_format' => 'd/m/Y'
+				),
+		),
+
+), array(
+
+		'singular' => 'Tag',
+		'plural'   => 'Tags',
+		'slug'     => 'tag'
+
+) );
+
+} );
