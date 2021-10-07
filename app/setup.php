@@ -487,3 +487,69 @@ add_action( 'init', function() {
 
 } );
 
+
+
+
+add_action( 'init', function() {
+	register_extended_post_type( 'tips', [
+'show_in_feed' => true,
+'menu_icon'    => 'dashicons-pressthis',
+'show_in_rest' => true,
+
+
+'has_archive'  => false,
+
+
+'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+'taxonomies' => array('category'),
+
+
+# Add some custom columns to the admin screen:
+		'admin_cols' => [
+
+            'product_featured_image' => [
+				'title'          => 'Product Image',
+				'featured_image' => 'thumbnail'
+			],
+			'category' => [
+            'taxonomy' => 'category'
+			],
+		// 	'team_role' => [
+		// 		'taxonomy' => 'team-roles'
+		// ]
+		],
+
+		'archive' => [
+			'nopaging' => true,
+		],
+
+	], [
+
+		'singular' => 'Tip',
+		'plural'   => 'Tips',
+		'slug'     => 'tips',
+
+	] );
+
+// 	register_extended_taxonomy( 'courses', 'products', array(
+
+// 		'dashboard_glance' => true,
+
+// 		'admin_cols' => array(
+// 				'updated' => array(
+// 						'title'       => 'Updated',
+// 						'meta_key'    => 'updated_date',
+// 						'date_format' => 'd/m/Y'
+// 				),
+// 		),
+
+// ), array(
+
+// 		'singular' => 'Course',
+// 		'plural'   => 'Courses',
+// 		'slug'     => 'courses'
+
+// ) );
+
+} );
+

@@ -124,16 +124,17 @@ endif;
 
 <?php
     $args = array(
-        'post_type' => 'post',
+        'post_type' => 'tips',
         'order' => 'ASC',
         'orderby' => 'ID',
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'category',
-                'field' => 'id',
-                'terms' => 5
-            ),
-    ));
+    //     'tax_query' => array(
+    //         array(
+    //             'taxonomy' => 'category',
+    //             'field' => 'id',
+    //             'terms' => 5
+    //         ),
+    // )
+);
     ?>
 
     <?php $count = 1 ?>
