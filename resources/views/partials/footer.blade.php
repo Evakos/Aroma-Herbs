@@ -59,8 +59,8 @@
 
             <div class="flex flex-col flex-1 mb-10">
              <nav class="">
-      @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav text-dark-green']) !!}
+      @if (has_nav_menu('secondary_navigation'))
+        {!! wp_nav_menu(['theme_location' => 'secondary_navigation', 'menu_class' => 'nav text-dark-green']) !!}
       @endif
     </nav>
             </div>
