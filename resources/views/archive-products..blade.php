@@ -39,7 +39,7 @@
 
   <div class="flex justify-center items-center ">
 
-      <a class="prod-filter font-takhie text-center leading-none text-gray-300 p-10 text-2xl sm:text-5xl transition duration-500 ease-in-out hover:text-dark-green filter-active"  product-id="3" href="#">ΦΡΕΣΚΑ ΜΥΡΩΔΙΚΑ</a>
+      <a class="prod-filter font-takhie text-center leading-none text-gray-300 p-10 text-3xl sm:text-5xl transition duration-500 ease-in-out hover:text-dark-green filter-active"  product-id="3" href="#">ΦΡΕΣΚΑ ΜΥΡΩΔΙΚΑ</a>
 
 <div id="leaf-element"><img src="@asset('images/leaf.svg')" class="flex -mt-5 w-[40px]"></div>
 
