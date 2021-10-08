@@ -104,7 +104,7 @@
 
 @hasfield('sidebar')
 <div class="flex flex-1 text-left flex-col bg-light-green rounded-lg sm:p-10">
-<p class="uppercase text-white font-advent-pro-semi-bold mb-5">ΕΥΚΟΛΗ</p>
+<p class="uppercase text-white font-advent-pro-semi-bold mb-5">@field('difficulty_level') </p>
 <ul>
   @fields('sidebar')
     <li class="text-white mb-5">@sub('title') <br> <span class="font-advent-pro-semi-bold">@sub('details')</span></li>
