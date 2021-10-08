@@ -272,7 +272,7 @@ else {echo 'row-span-1';}
 		<a href="<?php echo $product_link ?>" class="absolute flex flex-col w-full bottom-0 xl:bottom-auto p-3 xl:p-0 xl:h-full justify-center items-center bg-light-green" id="recipes-title"/>
 	  
 
-	  <p class="text-white text-2xl mb-2 xl:mb-10"><?php the_title(); ?></p>
+	  <p class="text-white text-center p-10 text-2xl mb-2 xl:mb-10"><?php the_title(); ?></p>
 
 <p class="font-takhie text-xl text-white"><?php _e( 'Μάθε Περισσότερα', 'sage'); ?></p>
 	  
