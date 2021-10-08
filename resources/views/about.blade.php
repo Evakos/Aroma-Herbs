@@ -133,9 +133,9 @@ if( $images ): ?>
 
           <div class="col-<?php echo $classes[$key % 3]; ?>">
 
-                <a href="<?php echo esc_url($image['url']); ?>">
+                <!-- <a href="<?php echo esc_url($image['url']); ?>"> -->
                      <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="object-cover h-full"/>
-                </a>
+                <!-- </a> -->
             
         </div>
         <?php endforeach; ?>
