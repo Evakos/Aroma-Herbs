@@ -43,7 +43,7 @@
 
 <div id="leaf-element"><img src="@asset('images/leaf.svg')" class="flex -mt-5 w-[40px]"></div>
 
-      <a class="prod-filter font-takhie text-gray-300 text-center leading-none p-10 text-2xl sm:text-5xl transition duration-500 ease-in-out hover:text-dark-green"  product-id="4" href="#">ΦΡΕΣΚΑ ΛΑΧΑΝΙΚΑ</a>
+      <a class="prod-filter font-takhie text-gray-300 text-center leading-none p-10 text-3xl sm:text-5xl transition duration-500 ease-in-out hover:text-dark-green"  product-id="4" href="#">ΦΡΕΣΚΑ ΛΑΧΑΝΙΚΑ</a>
 
       </div>
 
