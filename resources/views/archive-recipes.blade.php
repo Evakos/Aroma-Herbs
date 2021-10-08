@@ -49,7 +49,7 @@ $product = get_terms( array(
 
 if ( !empty($product) ) :
     echo '<select name="productrecipefilter" class="default-select">';
-    echo '<option value="select" class="initial" name="select">Product</option>';
+    echo '<option value="select" class="initial" name="select">Προϊόν</option>';
     foreach( $product as $term ) {
 
 		echo '<option value="' . esc_attr( $term->term_id )  . '">' . esc_html( $term->name ) . '</option>';
@@ -69,7 +69,7 @@ $restrictions = get_terms( array(
 
 if ( !empty($restrictions) ) :
     echo '<select name="dietrecipefilter" class="default-select">';
-    echo '<option value="select" class="initial" name="select" selected>Diet Requirements</option>';
+    echo '<option value="select" class="initial" name="select" selected>Είδος Συνταγής</option>';
     foreach( $restrictions as $term ) {
 
 		echo '<option value="' . esc_attr( $term->term_id )  . '">' . esc_html( $term->name ) . '</option>';
@@ -88,7 +88,7 @@ $courses = get_terms( array(
  
 if ( !empty($courses) ) :
     echo '<select name="coursesrecipefilter" class="default-select">';
-    echo '<option value="select" class="initial" name="select">Courses</option>';
+    echo '<option value="select" class="initial" name="select">Ευκολία</option>';
     
     foreach( $courses as $term ) {
      
