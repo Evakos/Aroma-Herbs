@@ -1,7 +1,7 @@
 <a href="@permalink" class="blog-card">
 
 
-<div class="blog-title transition duration-700 ease-in-out bg-light-green p-5 z-0 text-white absolute bottom-0 flex justify-right">
+<div class="blog-title transition duration-700 ease-in-out bg-light-green p-5 z-20 text-white absolute bottom-0 flex justify-right">
 
 <p>
 @title
