@@ -65,6 +65,15 @@ button:focus {
 	font-size: 3rem;
 }
 
+
+.dark span.hamburger-box span.hamburger-inner {background-color: red !important}
+
+.dark span.hamburger-box span.hamburger-inner::after, .dark span.hamburger-box span.hamburger-inner::before {background-color: red !important}
+
+.light span.hamburger-box span.hamburger-inner {background-color: green !important}
+
+.light span.hamburger-box span.hamburger-inner::after, .light span.hamburger-box span.hamburger-inner::before {background-color: green !important}
+
 .customize-support #sticky-nav, .customize-support #floating {margin-top:32px}
 
 

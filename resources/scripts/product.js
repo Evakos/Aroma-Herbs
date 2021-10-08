@@ -94,14 +94,13 @@ function switchOrientation(){
     //console.log('Smaller than 600');
 
     var secondarySlider  = new Splide( '#splide-product-thumbs-mobile', {
-      direction: 'ltr',
       isNavigation: true,
       pagination : false,
       arrows     : false,
       cover      : false,
       type     : 'slide',
       perPage: 2,
-      width: '160px',
+      width: '160px'
     
      
     } ).mount();

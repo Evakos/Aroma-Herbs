@@ -10,7 +10,7 @@
         <img src="@asset('images/whisker-left.svg')" class="absolute w-5 sm:w-10 -left-10 sm:-left-20"/> 
 
         
-        <h2 class="font-takhie text-dark-green tracking-widest text-7xl md:text-9xl">
+        <h2 class="font-takhie text-center text-dark-green tracking-widest text-7xl md:text-9xl">
         
         @title
         
@@ -49,7 +49,7 @@
 
             <!-- Main Image Column -->
 
-            <div class="flex relative min-h-[550px] justify-center md:w-4/12">
+            <div class="flex relative mb-10 sm:mb-0 min-h-[550px] justify-center md:w-4/12">
 
             <img src="@asset('images/product-bg.jpg')" alt="" class="absolute object-cover w-screen p-10 sm:p-0 sm:w-auto"/> 
 
