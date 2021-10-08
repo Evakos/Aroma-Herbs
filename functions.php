@@ -157,7 +157,7 @@ function more_news_ajax(){
 	<a href="<?php the_permalink();?>" class="blog-card">
 
 	
-	<div class="blog-title transition duration-700 ease-in-out bg-light-green p-5 z-50 text-white absolute bottom-0 flex justify-right opacity-80 xl:opacity-0">
+	<div class="blog-title transition duration-700 ease-in-out bg-light-green p-5 z-50 text-white absolute bottom-0 flex justify-right">
 
 
 	<?php $featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->ID ), 'full' ); ?>
