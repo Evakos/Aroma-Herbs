@@ -1,5 +1,4 @@
-
-    <div class="animationContainer">
+<div class="animationContainer">
         <div class="animationItem">
             <div class="svg">
                 <svg id='svg' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -342,10 +341,11 @@
            <path id="path" class="st3" d="M723.6,496.9c-22.7,363.5,236.6,345.4,338.2,443.4s96.7,264.6,86.2,453.3s-168.8,304.5-442.6,333.1
                s-368.6,93.8-386.1,179.8s-62.7,513.9,65.6,669.6s393.2,22.1,542,92s150.8,179.1,154.2,363.2s4.7,272,0,400.2
                s-140.5,147.8-420.4,230.7S338.4,3846.9,310.3,3924s-27.5,302-21.2,489.4s208.2,255.4,246.8,274.9s276.8,141.3,236.5,447.2"/>
-           <g id="H2">
                <g>
-                   <rect x="881" y="1112.7" class="st4" width="345" height="343"/>
-               </g>
+                <rect x="881" y="1112.7" class="st4" width="345" height="343"/>
+            </g>
+           <g id="H2">
+              
                <g>
                    <g>
                        <g class="st0">
