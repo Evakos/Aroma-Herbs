@@ -12,7 +12,7 @@
 
 
  //recipe Slider
- const recipeSlide = new Splide( '#splide-recipe-slider', {
+ new Splide( '#splide-recipe-slider', {
   type   : 'loop',
   perPage: 1,
   breakpoints: {

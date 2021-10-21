@@ -149,8 +149,6 @@ $(".hamburger").click(function () {
   // $("#menu-modal").css("width", "60%")
   $("#menu-modal").toggleClass("menu-active");
   $("#overlay").toggleClass("hidden animate__animated animate__fadeIn");
-
-  body.style.position = 'fixed';
   
 });
 
