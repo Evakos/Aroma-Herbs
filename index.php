@@ -12,7 +12,7 @@
 
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" /> -->
 
-    <script type="text/javascript" src="wp-content/themes/aroma-herbs/public/scripts/animation-2.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/aroma-herbs/public/scripts/animation-2.js"></script>
 
     
     
