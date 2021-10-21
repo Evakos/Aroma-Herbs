@@ -247,26 +247,6 @@ add_action('after_setup_theme', function () {
 
 
 
-
-
-
-/**
- * Async load CSS
- */
-
-// add_filter('style_loader_tag', function (string $html, string $handle): string {
-//     $dom = new \DOMDocument();
-//     $dom->loadHTML($html);
-//     $tag = $dom->getElementById($handle . '-css');
-//     $tag->setAttribute('media', 'print');
-//     $tag->setAttribute('onload', "this.media='all'");
-//     $tag->removeAttribute('type');
-//     $tag->removeAttribute('id');
-//     $html = $dom->saveHTML($tag);
-
-//     return $html;
-// }, 999, 2);
-
 /**
  * Register the theme sidebars.
  *
@@ -473,6 +453,7 @@ add_action( 'init', function() {
 	register_extended_taxonomy( 'tip-tags', 'tips', array(
 
 		'dashboard_glance' => true,
+        'show_in_rest'      => true, // Needed for tax to appear in Gutenberg editor.
 
 		'admin_cols' => array(
 				'updated' => array(
@@ -541,6 +522,7 @@ add_action( 'init', function() {
 	register_extended_taxonomy( 'product-tags', 'products', array(
 
 		'dashboard_glance' => true,
+        'show_in_rest'      => true, // Needed for tax to appear in Gutenberg editor.
 
 		'admin_cols' => array(
 				'updated' => array(

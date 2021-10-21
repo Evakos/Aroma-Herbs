@@ -20,8 +20,6 @@ eval("/*\n * jQuery Remove Uppercase Accents v1.2.0\n * http://github.com/ebabab
 
 },
 /******/ function(__webpack_require__) { // webpackRuntimeModules
-/******/ "use strict";
-/******/ 
 /******/ var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
 /******/ var __webpack_exports__ = (__webpack_exec__("./resources/scripts/accents.js"));
 /******/ }

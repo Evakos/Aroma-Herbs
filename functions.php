@@ -157,7 +157,7 @@ function more_news_ajax(){
 	<a href="<?php the_permalink();?>" class="blog-card">
 
 	
-	<div class="blog-title transition duration-700 ease-in-out bg-light-green p-5 z-30 hover:bg-dark-green text-white absolute bottom-0 flex justify-right">
+	<div class="blog-title transition duration-700 ease-in-out bg-light-green p-5 z-10 hover:bg-dark-green text-white absolute bottom-0 flex justify-right">
 
 
 	<?php $featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->ID ), 'full' ); ?>
@@ -272,7 +272,7 @@ else {echo 'row-span-1';}
 		<a href="<?php echo $product_link ?>" class="absolute flex flex-col w-full bottom-0 xl:bottom-auto p-3 xl:p-0 xl:h-full justify-center items-center bg-light-green" id="recipes-title"/>
 	  
 
-	  <p class="text-white text-center sm:p-10 text-xl sm:text-2xl mb-2 xl:mb-10"><?php the_title(); ?></p>
+	  <p class="text-white text-center lg:p-10 text-xl lg:text-2xl mb-2 xl:mb-10"><?php the_title(); ?></p>
 
 <p class="font-takhie text-xl text-white"><?php _e( 'Μάθε Περισσότερα', 'sage'); ?></p>
 	  

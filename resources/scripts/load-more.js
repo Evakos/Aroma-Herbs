@@ -1,26 +1,11 @@
-
-// Define our viewportWidth variable
-//let viewportWidth;
-// function printConsole() {
-
-// console.log('Hello!')  
-//   };
-
-
-// Set/update the viewportWidth value
- function setViewportWidth() {
-
-  //console.log('Set Viewport Width Function')  
-
-viewportWidth =  document.documentElement.clientWidth || window.innerWidth || window.outerWidth;
-
-};
-
 // Log the viewport width into the 
 
 function logWidth() {
 
   //console.log('Log Width Function')  
+
+  let viewportWidth =  document.documentElement.clientWidth || window.innerWidth || window.outerWidth;
+
 
   if (viewportWidth > 768) {
     
@@ -40,28 +25,20 @@ function logWidth() {
 };
 
 // Set our initial width and log it
-setViewportWidth();
+//setViewportWidth();
 logWidth();
 
 // On resize events, recalculate and log
 window.addEventListener(
   "resize",
   function () {
-    setViewportWidth();
     logWidth();
   },
   false
 );
 
-
-
-
-
-
-
-
-var ppp = 4; // Post per page
-var pageNumber = 1;
+let ppp = 4; // Post per page
+let pageNumber = 1;
 
 
 function loadPosts(){
@@ -79,6 +56,9 @@ function loadPosts(){
                 $("#ajax-posts").append($data);
                 $("#more-posts").attr("disabled",false);
                 $("#loader").addClass("hidden"); // Hide loader.
+
+                //setViewportWidth();
+                logWidth();
                 
                
             } else{
@@ -92,21 +72,28 @@ function loadPosts(){
     return false;
 }
 
-$("#more-posts").on("click",function(){ // When btn is pressed.
-    $("#more-posts").attr("disabled",true); // Disable the button, temp.
-    $("#loader").removeClass("hidden"); // Show loader.
 
-  
+const morePosts = document.getElementById("more-posts");
+const getLoader = document.getElementById("loader");
+
+// On resize events, recalculate and log
+morePosts.addEventListener(
+  "click",
+  function () {
+
+    this.setAttribute("disabled",true);
+
+    getLoader.classList.remove("hidden"); // Show loader.
+
+    //console.log('Click');
+    // setViewportWidth();
+
+    // setInterval(function(){ logWidth() }, 100);
+
+   
     loadPosts();
-
-    setViewportWidth();
-    
-    logWidth();
-
-    
-    
-    
-    $(this).insertAfter('#ajax-posts'); // Move the 'Load More' button to the end of the the newly added posts.
-});
+  },
+  false
+);
 
 

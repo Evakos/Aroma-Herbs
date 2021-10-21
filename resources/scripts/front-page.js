@@ -4,7 +4,6 @@
 import "jquery";
 
 
-
 import AOS from "aos";
 
 // You can also pass an optional settings object
@@ -59,10 +58,10 @@ AOS.init({
 	},
 	classes: {
 		// Add classes for arrows.
-		arrows: 'splide__arrows your-class-arrows',
-		arrow : 'splide__arrow your-class-arrow',
-		prev  : 'splide__arrow--prev -left-5 sm:-left-10',
-		next  : 'splide__arrow--next -right-5 sm:-right-10',
+		arrows: 'splide__arrows',
+		arrow : 'splide__arrow',
+		prev  : 'splide__arrow--prev -left-2',
+		next  : 'splide__arrow--next -right-2',
 		
 		// Add classes for pagination.
 		pagination: 'splide__pagination relative my-10', // container

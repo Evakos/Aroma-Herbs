@@ -82,9 +82,6 @@
                         <span id="weight-2" class="hidden"> <?php echo get_field('weight_2');?> </span>
                         
                        
-            
-                    
-                    
                     </p>
                     
                     
@@ -103,16 +100,23 @@
                     <p class="uppercase mb-10">Διαθεσιμο ΣΕ</p>
 
                     
-                    <?php $packages = get_field('packaging');
-if( $packages ): ?>
+                    @hasfields('packaging')
                     <ul class="flex">
-                        <?php foreach( $packages as $package ): ?>
-                        <li><span
-                                class="text-white py-3 md:py-4 px-8 md:px-10 mr-3 md:mr-6 bg-pink"><?php echo $package['label']; ?></span>
+                    @fields('packaging')
+
+
+                        <li>
+                        <a href="@sub('packaging-link')" class="flex">
+                            
+                        
+                        <span
+                                class="text-white py-3 md:py-4 px-8 md:px-10 mr-3 md:mr-6 bg-pink">
+                                @sub('packaging')</span>
+
+                        </a>
                         </li>
-                        <?php endforeach; ?>
-                    </ul>
-                    <?php endif; ?>
+                        @endfields                    </ul>
+                        @endhasfields
 
 
 
@@ -204,11 +208,11 @@ if( $packages ): ?>
 
 </div>
 
-<footer>
+<!-- <footer>
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav">
         <p>' . __('Pages:', 'sage'), 'after' => '</p>
     </nav>']) !!}
-</footer>
+</footer> -->
 
 
 

@@ -8,11 +8,55 @@
 
 </div>
 
+<?php 
+$terms = get_terms( 'product', array('get' => 'all', 'fields' => 'ids') );
+
+foreach ( $terms as $term ) {
+
+    $items[] = $term;
+}
+
+?>
+
+
     @php
-    $query = new WP_Query([
-    'post_type' => 'recipes'
-    ]);
+
+
+    $args = array(
+        'post_type' => 'recipes',
+		'tax_query' => array(
+            array(
+                'taxonomy' => 'product',
+                'field' => 'term_id',
+                'terms' => $items,
+            ),
+    ),
+
+  
+
+
+    );
+
+
+
+
+    $query = new WP_Query($args);
+
+
+    
+
     @endphp
+
+
+  
+
+
+
+
+
+
+
+
 
     <div class="flex mt-5 justify-center">
           <img src="<?php the_field('recipe_background_image', 11); ?>" class="w-screen object-cover"/>   

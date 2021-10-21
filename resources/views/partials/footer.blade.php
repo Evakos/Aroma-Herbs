@@ -15,8 +15,10 @@
  <div class="flex justify-between w-[260px] mt-10 md:mt-10 bg-light-green py-5 px-8 text-white rounded-full">
 
 
+ 
 
-    <form action="https://evakos.us5.list-manage.com/subscribe/post?u=dd1bc7cedc4df039c67a9f1ab&amp;id=66edf0c659" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate flex">
+
+    <form action="https://aroma-herbs.us5.list-manage.com/subscribe/post?u=e7af80d0d124ef0d1d2408f01&amp;id=fc0a9c6e19" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate flex">
                 <input type="email" value="" name="EMAIL" class="email bg-transparent w-[170px] placeholder-current" id="mce-EMAIL" placeholder="Email" required>
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                     <input type="text" name="b_e44c1f194bec93e238615469e_f6f826e769" tabindex="-1" value="">

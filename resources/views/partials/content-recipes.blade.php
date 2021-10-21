@@ -14,7 +14,7 @@
     
   </div>
 
-  <div class="flex flex-1 flex-col md:px-52 2xl:px-64 md:items-end md:text-right mt-20">
+  <div class="flex flex-1 flex-col mx-auto max-w-[36rem] md:items-end md:text-right mt-20">
     <h3 class="mb-10 text-center sm:text-right">@title</h3>
       <p class="mb-10 px-10 sm:px-0">@field('intro_text')</p>
 

@@ -8,7 +8,7 @@
 
 
 
-<button class="hamburger hamburger--collapse md:-mb-36 @field('class')" onclick="showDialog()" type="button" id="hamburger">
+<button class="hamburger hamburger--collapse md:-mb-36 @field('class')" type="button" id="hamburger">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
@@ -21,7 +21,7 @@
 
 <div class="items-center h-screen flex sm:w-[1250px]">
 
-<div class="hidden sm:flex sm:invisible 2xl:visible md:px-12 2xl:px-28 2xl:w-[500px] flex-col items-center justify-center modal-product">
+<div class="hidden sm:flex sm:w-[10rem] xl:w-auto sm:invisible 2xl:visible md:px-12 2xl:px-28 2xl:w-[500px] flex-col items-center justify-center modal-product">
 
 @php
   $query = new WP_Query([

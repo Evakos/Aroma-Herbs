@@ -5,6 +5,8 @@ import "jquery";
 
 
 
+
+
 // import lozad from 'lozad';
 
 // const observer = lozad();
@@ -64,6 +66,7 @@ $(document).ready(function () {
     } // End if
   });
 });
+
 
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
@@ -137,12 +140,21 @@ window.onscroll = function () {
 };
 
 
+
+
+
+
 $(".hamburger").click(function () {
   $(this).toggleClass("is-active");
   // $("#menu-modal").css("width", "60%")
   $("#menu-modal").toggleClass("menu-active");
   $("#overlay").toggleClass("hidden animate__animated animate__fadeIn");
+
+  body.style.position = 'fixed';
+  
 });
+
+
 
 // Add active class to the current button (highlight it)
 // var header = document.getElementById("myDIV");
@@ -208,6 +220,9 @@ function register($form) {
     }
   })
 };
+
+
+
 
 // import then needed Font Awesome functionality
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
