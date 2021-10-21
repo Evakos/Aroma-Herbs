@@ -30,7 +30,7 @@
     <?php wp_footer(); ?>
 
 
-    <!-- <script src="wp-content/themes/aroma-herbs/public/scripts/animation-2.js"></script>
+    <script src="wp-content/themes/aroma-herbs/public/scripts/animation-2.js"></script>
   
   </body>
 </html>
