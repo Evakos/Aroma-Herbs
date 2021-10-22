@@ -18,11 +18,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/app.js', asset('scripts/app.js')->uri(), ['sage/vendor.js'], null, true);
     wp_enqueue_script('sage/accents.js', asset('scripts/accents.js')->uri(), ['sage/vendor.js'], null, true);
     wp_enqueue_script('sage/load-more.js', asset('scripts/load-more.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
-    //wp_enqueue_script('sage/Recipes-filter.js', asset('scripts/Recipes-filter.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
 
-
-
-    
     if ( is_page( 34 )  ) {
 
         wp_enqueue_script('sage/product-archive.js', asset('scripts/product-archive.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
@@ -34,9 +30,6 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_script('sage/product.js', asset('scripts/product.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
         
     }
-
-
-    
 
     if ( is_front_page() ) {
 
@@ -402,13 +395,6 @@ register_extended_taxonomy( 'product', 'recipes', array(
 
 
 } );
-
-
-
-
-
-
-
 
 
 //Tips & Τwists CPT

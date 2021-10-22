@@ -19,7 +19,7 @@
 
 
 
-    <!-- <script type="text/javascript" src="/wp-content/themes/aroma-herbs/public/scripts/animation-2.js"></script> -->
+    <script type="text/javascript" src="/wp-content/themes/aroma-herbs/public/scripts/animation-2.js"></script>
 
   
   </body>
