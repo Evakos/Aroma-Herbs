@@ -9,14 +9,28 @@
 </div>
 
 <?php 
-$terms = get_terms( 'product', array('get' => 'all', 'fields' => 'ids') );
+$terms = get_terms(array(
+    'taxonomy' => 'product',
+    'hide_empty' => false,
+));
+// $slugs = wp_list_pluck( $terms, 'slug' ); 
+$names = wp_list_pluck( $terms, 'name' );
 
-foreach ( $terms as $term ) {
+//var_dump($names);
+
+
+
+foreach ( $names as $term ) {
 
     $items[] = $term;
 }
 
 ?>
+
+<?php var_dump($items); ?>
+
+
+<!-- Need to get id of recipies -->
 
 
     @php
@@ -27,7 +41,7 @@ foreach ( $terms as $term ) {
 		'tax_query' => array(
             array(
                 'taxonomy' => 'product',
-                'field' => 'term_id',
+                'field' => 'slug',
                 'terms' => $items,
             ),
     ),
