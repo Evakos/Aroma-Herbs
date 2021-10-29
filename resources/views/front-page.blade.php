@@ -8,7 +8,7 @@
 
 
 <!-- Animation Mark Up Desktop -->
-<div class="container mx-auto relative h-[5500px] hidden xl:flex">
+<div class="container mx-auto relative h-[5200px] hidden xl:flex">
 
     <!-- First Image Row -->
     <img src="@asset('images/home-img-1.jpg')" class="absolute top-64 left-0" data-aos="move-right" />
@@ -46,13 +46,13 @@
         class="absolute max-w-[420px] left-[600px] top-[3500px] 2xl:top-[4000px]" data-aos-delay="350"
         data-aos-offset="200" data-aos="rotate-left" />
     <img src="@asset('images/quark-with-herbs.png')"
-        class="max-w-[244px] absolute right-[180px] 2xl:right-[200px] top-[3800px] 2xl:top-[4400px]"
+        class="max-w-[244px] absolute right-[180px] 2xl:right-[320px] top-[3800px] 2xl:top-[4300px]"
         data-aos-offset="300" data-aos="rotate-right" />
 
     <!-- Last Image Row -->
     <img src="@asset('images/aroma_peppers_habanero_pack-front.png')"
-        class="absolute max-w-[500px] left-0 bottom-[900px] 2xl:bottom-[10px]" />
-    <img src="@asset('images/home-img-12.png')" class="absolute right-[100px] bottom-[900px] 2xl:bottom-[10px]" />
+        class="absolute max-w-[500px] left-0 bottom-[900px] 2xl:bottom-[50px]" />
+    <img src="@asset('images/home-img-12.png')" class="absolute right-[100px] bottom-[900px] 2xl:bottom-[50px]" />
 
 
     <div class="absolute mx-auto right-0 left-0 bottom-0 top-0 z-0" />

@@ -17,11 +17,7 @@ module.exports = {
 
       },
      
-    // screens: {
-    //   '3xl': '2560px',
-    //   // => @media (min-width: 2560px) { ... }
-
-    // },
+  
   
       
     backgroundImage: {
