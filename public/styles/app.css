@@ -3773,41 +3773,14 @@ select {
 	.\32xl\:top-\[4000px\]{
 		top: 4000px;
 	}
-	.\32xl\:right-\[200px\]{
-		right: 200px;
-	}
-	.\32xl\:top-\[4400px\]{
-		top: 4400px;
-	}
-	.\32xl\:bottom-\[270px\]{
-		bottom: 270px;
-	}
-	.\32xl\:bottom-\[100px\]{
-		bottom: 100px;
-	}
-	.\32xl\:bottom-\[50px\]{
-		bottom: 50px;
-	}
-	.\32xl\:top-\[3500px\]{
-		top: 3500px;
-	}
-	.\32xl\:right-\[150px\]{
-		right: 150px;
-	}
-	.\32xl\:top-\[4200px\]{
-		top: 4200px;
-	}
-	.\32xl\:top-\[4100px\]{
-		top: 4100px;
-	}
-	.\32xl\:right-\[250px\]{
-		right: 250px;
-	}
 	.\32xl\:right-\[320px\]{
 		right: 320px;
 	}
 	.\32xl\:top-\[4300px\]{
 		top: 4300px;
+	}
+	.\32xl\:bottom-\[50px\]{
+		bottom: 50px;
 	}
 	.\32xl\:h-\[720px\]{
 		height: 720px;
