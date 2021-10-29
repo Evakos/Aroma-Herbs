@@ -27,7 +27,7 @@ foreach ( $names as $term ) {
 
 ?>
 
-<?php var_dump($items); ?>
+
 
 
 <!-- Need to get id of recipies -->
