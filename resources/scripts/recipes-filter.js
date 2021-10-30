@@ -26,7 +26,7 @@
         recipefilter.find("button").text("Processing..."); // changing the button label
       },
       success: function (data) {
-        //console.log(data);
+        console.log(data.node);
         recipefilter.find("button").text("Apply filter"); // changing the button label back
         $("#recipe-response").html(data); // insert data
       },
@@ -37,17 +37,21 @@
 
   getRecipes();
 
-  $("#recipefilter").change(function () {
+  $("#recipefilter").change(function (e) {
 
-
+ e.preventDefault();
     getRecipes();
+
+    console.log("changed 1"); 
   
 
   });
 
 
 
-$("select").change(function () {
+$("select").change(function (e) {
+
+  e.preventDefault();
 
 	console.log("select changed");
 

@@ -181,7 +181,24 @@ function more_news_ajax(){
     
 	// die();
 }
-
+// $args['tax_query'] = array(
+// 	'relation' => 'OR',
+// 	 array(
+// 		'taxonomy' => 'product',
+// 		'field' => 'id',
+// 		'terms' => $_POST['productrecipefilter']
+// 	 ),
+// 	 array(
+// 		'taxonomy' => 'dietary_restrictions',
+// 		'field' => 'id',
+// 		'terms' => $_POST['dietrecipefilter']
+// 	 ),
+// 	 array(
+// 		'taxonomy' => 'courses',
+// 		'field' => 'id',
+// 		'terms' => $_POST['coursesrecipefilter']
+// 	 )
+// 	 );
 
 //recipe Ajax Posts Filter
 
@@ -199,36 +216,66 @@ function recipe_filter(){
 	);
  
 	//Taxonomy query for recipe linked to product.
-	if( isset( $_POST['productrecipefilter'] ) )
+	if( isset( $_POST['productrecipefilter'] ) || isset( $_POST['dietrecipefilter'] ) || isset( $_POST['coursesrecipefilter'] ) )
 		$args['tax_query'] = array(
+			'relation' => 'AND',
 			array(
 				'taxonomy' => 'product',
 				'field' => 'id',
-				'terms' => $_POST['productrecipefilter']
-			)
-		);
-
-	//Taxonomy query for diet type.
-	if( isset( $_POST['dietrecipefilter'] ) )
-	$args['tax_query'] = array(
-		array(
-			'taxonomy' => 'dietary_restrictions',
-			'field' => 'id',
-			'terms' => $_POST['dietrecipefilter']
-		)
-	);
-
-	 
-	//Taxonomy query for course type.
-	if( isset( $_POST['coursesrecipefilter'] ) )
-		$args['tax_query'] = array(
+				'terms' => $_POST['productrecipefilter'],
+				'operator' => 'IN',
+			),
+			array(
+				'taxonomy' => 'dietary_restrictions',
+				'field' => 'id',
+				'terms' => $_POST['dietrecipefilter'],
+				'operator' => 'IN',
+			),
 			array(
 				'taxonomy' => 'courses',
 				'field' => 'id',
-				'terms' => $_POST['coursesrecipefilter']
+				'terms' => $_POST['coursesrecipefilter'],
+				'operator' => 'IN',
 			)
 		);
+
+	
+
+//    var_dump($_POST['productrecipefilter']);
+
+//    var_dump($_POST['dietrecipefilter']);
+
+//    var_dump($_POST['coursesrecipefilter']);
+
+	//Taxonomy query for diet type.
+	// if( isset( $_POST['dietrecipefilter'] ) )
+	// $args['tax_query'] = array(
+	// 	array(
+	// 		'taxonomy' => 'dietary_restrictions',
+	// 		'field' => 'id',
+	// 		'terms' => $_POST['dietrecipefilter']
+	// 	)
+	// );
+
+	// var_dump($_POST['dietrecipefilter']);
+
+	 
+	// //Taxonomy query for course type.
+	// if( isset( $_POST['coursesrecipefilter'] ) )
+	// 	$args['tax_query'] = array(
+	// 		array(
+	// 			'taxonomy' => 'courses',
+	// 			'field' => 'id',
+	// 			'terms' => $_POST['coursesrecipefilter']
+	// 		)
+	// 	);
+
+	// 	var_dump($_POST['coursesrecipefilter']);
  
+	// }
+
+
+
 	}
 
 	else {
@@ -238,12 +285,13 @@ function recipe_filter(){
 			'order'	=> 'ASC', // ASC or DESC
 			'posts_per_page' => -1, // get all posts
 			'post_type' => 'recipes',
-			'post_status' => 'publish',
 		);
 	}
  
 	$count = 1;
 	$query = new WP_Query( $args );
+
+	//print_r($query);
  
 	if( $query->have_posts() ) :
         echo '<div class="grid md:grid-cols-4 md:gap-4">';
