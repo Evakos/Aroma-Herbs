@@ -221,4 +221,83 @@
 
 
 
-@include('partials.recipes-slider')
+<?php $recipes = get_field('recipes');?>
+
+<!-- <?php var_dump($recipes)?> -->
+
+<div class="flex mt-5 justify-center">
+          <img src="<?php the_field('recipe_background_image', 11); ?>" class="w-screen object-cover"/>   
+        </div>
+
+
+        <div class="container mx-auto -mt-10 md:-mt-48 lg:-mt-96">
+
+    <div id="splide-recipe-slider" class="splide">
+        <div class="splide__track">
+        <?php if( $recipes ): ?>
+            <ul class="splide__list">
+            <?php foreach( $recipes as $recipe ):
+
+       
+$slider_image_inset = get_field( 'slider_image_inset', $recipe->ID );
+$intro_text = get_field( 'intro_text', $recipe->ID );
+$featured_img_url = get_the_post_thumbnail_url($recipe->ID, 'full'); 
+
+
+?>
+
+
+                <li class="splide__slide">
+
+
+                <div class="flex flex-col lg:py-24 lg:px-48">
+
+<div class="flex relative justify-center">
+
+
+<!-- <img data-src="@thumbnail('full', false)" class="lozad md:h-[364px] lg:h-[464px]" alt="Full Image" /> -->
+
+<img data-src="<?php echo $featured_img_url ?>" class="lozad md:h-[364px] lg:h-[464px]" alt="Full Image" />
+
+<img data-src="<?php echo esc_html( $slider_image_inset ); ?>" class="lozad w-[100px] sm:w-[180px] lg:w-[220px] absolute left-0 -bottom-10 sm:left-28 sm:-bottom-14"/> 
+
+
+  
+</div>
+
+<div class="flex flex-1 flex-col mx-auto max-w-[36rem] md:items-end md:text-right mt-20">
+  <h3 class="mb-10 text-center sm:text-right">
+  <?php echo esc_html( $recipe->post_title ); ?></h3>
+    <p class="mb-10 px-10 sm:px-0"><?php echo esc_html( $intro_text ); ?></p>
+
+
+
+
+<a href="<?php echo get_permalink( $recipe->ID ); ?>" class="btn md:self-end mb-10 sm:mb-0">ΔΕΙΤΕ ΤΗ ΣΥΝΤΑΓΗ</a>
+
+
+
+  
+  </div>  
+
+  </div>
+
+
+
+
+
+
+                </li>
+                <?php endforeach; ?>
+            </ul>
+            </ul>
+            <?php endif; ?>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+

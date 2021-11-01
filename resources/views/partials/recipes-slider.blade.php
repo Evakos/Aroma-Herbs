@@ -14,7 +14,7 @@ $terms = get_terms(array(
     'hide_empty' => false,
 ));
 // $slugs = wp_list_pluck( $terms, 'slug' ); 
-$names = wp_list_pluck( $terms, 'slug' );
+$names = wp_list_pluck( $terms, 'name' );
 
 //var_dump($names);
 
