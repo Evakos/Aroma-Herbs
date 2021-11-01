@@ -6,9 +6,9 @@
   <div class="flex relative justify-center">
 
 
-  <img src="@thumbnail('full', false)" class="md:h-[364px] lg:h-[464px]" alt="Full Image" />
+  <img data-src="@thumbnail('full', false)" class="lozad md:h-[364px] lg:h-[464px]" alt="Full Image" />
 
-  <img src="@field('slider_image_inset')" class="w-[100px] sm:w-[180px] lg:w-[220px] absolute left-0 -bottom-10 sm:left-28 sm:-bottom-14"/> 
+  <img data-src="@field('slider_image_inset')" class="lozad w-[100px] sm:w-[180px] lg:w-[220px] absolute left-0 -bottom-10 sm:left-28 sm:-bottom-14"/> 
 
  
     

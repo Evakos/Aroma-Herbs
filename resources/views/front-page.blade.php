@@ -168,7 +168,7 @@
 
 
 <div class="flex mt-5 justify-center">
-    <img src="@field('product_background_image')" class="object-cover w-screen min-h-[300px] md:min-h-[600px]" />
+<img data-src="@field('product_background_image')" class="lozad object-cover w-screen min-h-[300px] md:min-h-[600px]" />
 </div>
 
 @php
@@ -280,7 +280,7 @@ $query = new WP_Query([
 
 </div>
 <div class="flex mt-5 justify-center">
-    <img src="@field('harvest_image')" class="h-[288px] sm:h-auto w-screen object-cover" />
+<img data-src="@field('harvest_image')" class="lozad h-[288px] sm:h-auto w-screen object-cover" />
 </div>
 
 <div class="container relative mx-auto mt-10 mb-10 md:mb-0 md:mt-10">
@@ -319,7 +319,7 @@ $query = new WP_Query([
 </div>
 
 <div class="flex flex-1 justify-center">
-    <img src="@field('locator_image')" class="h-[288px] sm:h-auto w-screen object-cover" />
+<img data-src="@field('locator_image')" class="lozad h-[288px] sm:h-auto w-screen object-cover" />
 </div>
 
 <div class="container relative mx-auto">

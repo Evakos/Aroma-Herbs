@@ -2,7 +2,7 @@
 
 <div class="flex justify-center p-20 md:p-12">
 
-<img src="@thumbnail('large', false)" alt="Full Image"  class="" />
+<img data-src="@thumbnail('large', false)" alt="" class="lozad" />
 
 </div>
 
