@@ -208,22 +208,12 @@
 
 </div>
 
-<!-- <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav">
-        <p>' . __('Pages:', 'sage'), 'after' => '</p>
-    </nav>']) !!}
-</footer> -->
-
-
-
-
 </div>
 
 
 
 <?php $recipes = get_field('recipes');?>
 
-<!-- <?php var_dump($recipes)?> -->
 
 <div class="flex mt-5 justify-center">
           <img src="<?php the_field('recipe_background_image', 11); ?>" class="w-screen object-cover"/>   
@@ -254,8 +244,6 @@ $featured_img_url = get_the_post_thumbnail_url($recipe->ID, 'full');
 
 <div class="flex relative justify-center">
 
-
-<!-- <img data-src="@thumbnail('full', false)" class="lozad md:h-[364px] lg:h-[464px]" alt="Full Image" /> -->
 
 <img data-src="<?php echo $featured_img_url ?>" class="lozad md:h-[364px] lg:h-[464px]" alt="Full Image" />
 
