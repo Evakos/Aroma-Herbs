@@ -24,9 +24,11 @@ close: false,
 
 
  //recipe Slider
- new Splide( '#splide-recipe-slider', {
+ const recipeSlider = new Splide( '#splide-recipe-slider', {
   type   : 'loop',
   perPage: 1,
+  pagination: true,
+  arrows: true,
   breakpoints: {
    640: {
      arrows: false
@@ -45,6 +47,29 @@ close: false,
  },
   
 } ).mount();
+
+// recipeSlider.on( 'mounted', function() {
+
+//   if ( recipeSlider.length <= recipeSlider.options.perPage ) {
+//       recipeSlider.options.pagination = false;
+//       recipeSlider.options.type = "";
+//       recipeSlider.options.arrows = false;
+//       console.log(recipeSlider.options);
+//   }
+// });
+
+var items = recipeSlider.length; //Amount of items
+var perPage = recipeSlider.options.perPage; //The perPage value
+
+if ( items <= perPage ) { 
+  recipeSlider.options = {
+          type: "slide",
+          pagination: false,
+          arrows: false,
+     };
+}
+
+//console.log(recipeSlider.options);
 
 
 
@@ -156,15 +181,15 @@ else  {
 
 
 
-const activePackage = document.getElementById("package");
+// const activePackage = document.getElementById("package");
 
-activePackage.addEventListener("click", function(e){
+// activePackage.addEventListener("click", function(e){
 
-  e.preventDefault();
+//   e.preventDefault();
 
-  console.log('Clicked');
+//   console.log('Clicked');
 
-  this.classList.add("active");
+//   this.classList.add("active");
 
-}
-);
+// }
+// );
