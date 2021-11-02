@@ -48,6 +48,16 @@ button:focus {
   outline: none;
 }
 
+.default {
+  pointer-events: none;
+  cursor: default;
+  // border-bottom: 5px solid rgb(181, 217, 99);
+}
+
+#package:not(.default) {
+  opacity: 0.8;
+}
+
 
 .sl-wrapper .sl-close {
 	display: none;
@@ -365,6 +375,7 @@ h3 {
 #splide-product-thumbs .splide__slide, #splide-product-thumbs-mobile .splide__slide {
 	padding: 1rem;
   display: flex;
+  justify-items: center;
 
 }
 

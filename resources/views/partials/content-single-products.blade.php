@@ -13,8 +13,6 @@
         <h2 class="font-takhie text-center text-dark-green tracking-widest text-7xl md:text-9xl">
         
         @title
-        
-        
 </h2>
 
 <img src="@asset('images/whisker-right.svg')" class="absolute w-5 sm:w-10 -right-10 sm:-right-20 "/> 
@@ -37,7 +35,6 @@
         <div class="flex flex-col md:flex-row mb-20">
 
             <div class="hidden md:flex justify-center md:w-3/12">
-
 
                 @include('partials.product-thumbs-slider')
 
@@ -97,20 +94,27 @@
 
                 <div class="flex flex-col mt-20 md:pl-20">
 
-                    <p class="uppercase mb-10">Διαθεσιμο ΣΕ</p>
+                    <p class="uppercase mb-10"><?php _e( 'Διαθεσιμο ΣΕ  ', 'sage' );?></p>
 
                     
                     @hasfields('packaging')
                     <ul class="flex">
                     @fields('packaging')
 
+        
 
+
+                    
                         <li>
-                        <a href="@sub('packaging_link')" class="flex">
+                        <?php if ( get_sub_field( 'packages_active' ) ): ?>
+                        <a href="@sub('packaging_link')" class="flex text-white py-3 md:py-4 px-8 md:px-10 mr-3 md:mr-6 bg-pink default" id="package">
+
+<?php else: // field_name returned false ?>
+    <a href="@sub('packaging_link')" class="flex text-white py-3 md:py-4 px-8 md:px-10 mr-3 md:mr-6 bg-pink" id="package">
                             
-                        
+    <?php endif; // end of if field_name logic ?>
                         <span
-                                class="text-white py-3 md:py-4 px-8 md:px-10 mr-3 md:mr-6 bg-pink">
+                                class="">
                                 @sub('packaging')</span>
 
                         </a>
@@ -231,7 +235,7 @@
        
 $slider_image_inset = get_field( 'slider_image_inset', $recipe->ID );
 $intro_text = get_field( 'intro_text', $recipe->ID );
-$featured_img_url = get_the_post_thumbnail_url($recipe->ID, 'full'); 
+$featured_img_url = get_the_post_thumbnail_url($recipe->ID, 'large'); 
 
 
 ?>

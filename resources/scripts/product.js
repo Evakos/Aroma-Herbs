@@ -153,3 +153,18 @@ else  {
 
 })
 })
+
+
+
+const activePackage = document.getElementById("package");
+
+activePackage.addEventListener("click", function(e){
+
+  e.preventDefault();
+
+  console.log('Clicked');
+
+  this.classList.add("active");
+
+}
+);
