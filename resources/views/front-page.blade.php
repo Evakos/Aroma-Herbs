@@ -287,7 +287,7 @@ $query = new WP_Query([
     <div class="flex md:py-24 md:px-24 lg:px-48">
 
         <div class="hidden md:flex flex-1 justify-center">
-            <img src="@asset('images/IFS.svg')" class="max-w-[287px]" />
+            <img src="@asset('images/IFS.svg')" class="max-w-[287px] w-full" />
         </div>
 
         <div class="flex flex-1 flex-col md:items-end md:text-right">
