@@ -2298,7 +2298,7 @@ select {
 }
 
 .single-product-grid {
-  align-items: end;
+  align-items: flex-end;
 }
 
 .slide-up-alt {
