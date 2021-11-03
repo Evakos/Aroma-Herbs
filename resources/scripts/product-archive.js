@@ -90,12 +90,15 @@ function preLoadIamges() {
 
 
 $(() => {
-  var term_id = jQuery(this).attr("product-id");
+
+  //var term_id = jQuery(this).attr("product-id");
+
+  //console.log(term_id);
 
   $.ajax({
     type: "post",
     url: "/wp-admin/admin-ajax.php",
-    data: { action: "filterproducts", categoryfilter: term_id },
+    data: { action: "filterproducts", categoryfilter: 3 },
     success: function (data) {
       $("#products").html(data);
 
