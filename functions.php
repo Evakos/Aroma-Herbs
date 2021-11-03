@@ -314,8 +314,8 @@ function recipe_filter(){
 else {echo 'row-span-1';}
         ?>
         ">
-
-		<img src="<?php echo $featured_img_url?>" alt="" class="object-cover h-full" />
+<div class="flex">
+		<img src="<?php echo $featured_img_url?>" alt="" class="object-cover" />
     
 		<a href="<?php echo $product_link ?>" class="absolute flex flex-col w-full bottom-0 xl:bottom-auto p-3 xl:p-0 xl:h-full justify-center items-center bg-light-green" id="recipes-title"/>
 	  
@@ -325,6 +325,8 @@ else {echo 'row-span-1';}
 <p class="font-takhie text-xl text-white"><?php _e( 'Μάθε Περισσότερα', 'sage'); ?></p>
 	  
 	  </a>
+
+	</div>
 	  
 		  </div>
 

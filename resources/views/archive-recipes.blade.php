@@ -152,6 +152,8 @@ endif;
 else {echo 'row-span-1';}
         ?>
         ">
+
+        <div class="flex">
         <img src="@thumbnail('full', false)" alt="Full Image" class="object-cover h-full" />
 
 
@@ -163,6 +165,7 @@ else {echo 'row-span-1';}
 <p class="font-takhie text-xl text-white"><?php _e( 'Μάθε Περισσότερα', 'sage'); ?></p>
 
 </a>
+</div>
         </div>
     <?php $count++ ?> 
     <?php endwhile ?>
