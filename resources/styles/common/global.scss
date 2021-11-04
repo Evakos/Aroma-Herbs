@@ -44,6 +44,11 @@
   font-display: swap;
 }
 
+.entry-content a {
+  text-decoration: underline;
+  color: inherit;
+}
+
 button:focus {
   outline: none;
 }

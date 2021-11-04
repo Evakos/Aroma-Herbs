@@ -52,6 +52,11 @@ add_action('wp_enqueue_scripts', function () {
         
     }
 
+    if ( !is_front_page() && is_home() ) {
+        wp_enqueue_script('sage/load-more.js', asset('scripts/load-more.js')->uri(), ['sage/vendor.js', 'sage/app.js'], null, true);
+
+      }
+
 
 
 
