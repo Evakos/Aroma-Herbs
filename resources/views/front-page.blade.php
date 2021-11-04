@@ -33,8 +33,7 @@
     <img src="@asset('images/leek.png')"
         class="absolute h-[520px] 2xl:h-[720px] left-[300px] 2xl-[400px] top-[2400px] 2xl:top-[2800px]"
         data-aos="rotate-right" />
-    <img src="@asset('images/leaves.png')" class="absolute left-[300px] 2xl:left-[350px] top-[2800px] 2xl:top-[3300px]"
-        data-aos="shake" />
+    <img src="@asset('images/leaves.png')" class="absolute left-[300px] 2xl:left-[350px] top-[2800px] 2xl:top-[3300px]"/>
 
     <!-- Fifth Image Row -->
     <img src="@asset('images/croutons.png')" class="absolute right-0 top-[2900px] 2xl:top-[3300px]" />
