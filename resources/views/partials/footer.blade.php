@@ -12,13 +12,13 @@
                     <!-- <div class="flex justify-between w-[260px] mt-10 md:mt-10 bg-light-green py-5 px-8 text-white rounded-full"> <input type="text" id="sign-up" class="bg-transparent w-3/4 placeholder-white" placeholder="Email Address" name=""><img src="@asset('images/envelope-white.svg')" class="w-[16px] fill-current text-white" /></div> -->
 
                     <!-- Begin MailChimp Signup Form -->
- <div class="flex justify-between w-[260px] mt-10 md:mt-10 bg-light-green py-5 px-8 text-white rounded-full">
+ <div class="flex justify-between w-[260px] mt-10 md:mt-10 bg-light-green py-5 px-8 text-white rounded-full" id="mail-chimp">
 
 
  
 
 
-    <form action="https://aroma-herbs.us5.list-manage.com/subscribe/post?u=e7af80d0d124ef0d1d2408f01&amp;id=fc0a9c6e19" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate flex">
+    <form action="https://aroma-herbs.us5.list-manage.com/subscribe/post-json?u=e7af80d0d124ef0d1d2408f01&amp;id=fc0a9c6e19&c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate flex">
                 <input type="email" value="" name="EMAIL" class="email bg-transparent w-[170px] placeholder-current" id="mce-EMAIL" placeholder="Email" required>
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                     <input type="text" name="b_e44c1f194bec93e238615469e_f6f826e769" tabindex="-1" value="">
@@ -26,19 +26,14 @@
 
 
                 <input type="image" value="" name="subscribe" id="mc-embedded-subscribe" src="@asset('images/envelope-white.svg')" border="0" alt="Submit" class="w-[22px] fill-current text-white">              
-                <div id="subscribe-result">
-                </div>
+               
             </form>
 
-
-
-
-
-
-
-
-
+        
 </div>
+
+<div id="subscribe-result">
+                </div>
 <!--End mc_embed_signup-->
 
 
@@ -90,7 +85,7 @@
             <div classs="mb-10 md:mb-0"><img src="@asset('images/IFS.svg')" class="w-[82px]" /></div>
 
             <div class="mt-10 md:mt-0">Site by 
-<a href="url" class="text-light-green">Fluid</a>
+<a href="https://fluidmedia.gr" target="_blank" class="text-light-green">Fluid</a>
 </div>
 
         </div>

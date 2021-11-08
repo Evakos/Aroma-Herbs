@@ -166,19 +166,6 @@ for (var i = 0; i < btns.length; i++) {
 }
 
 
-
-$(document).ready(function () {
-  var $form = $('#mc-embedded-subscribe-form')
-  if ($form.length > 0) {
-    $('#mc-embedded-subscribe-form form input[type="submit"]').bind('click', function (event) {
-
-
-      console.log("Subscribing...");
-      if (event) event.preventDefault()
-      register($form)
-    })
-  }
-})
 $(document).ready(function () {
   var $form = $('#mc-embedded-subscribe-form')
   if ($form.length > 0) {
@@ -204,22 +191,21 @@ function register($form) {
       if (data.result === 'success') {
         // Yeahhhh Success
         console.log(data.msg)
+        $('#mail-chimp').hide();
         $('#mce-EMAIL').css('borderColor', '#ffffff')
-        $('#subscribe-result').css('color', 'rgb(53, 114, 210)')
-        $('#subscribe-result').html('<p>Thank you for subscribing. We have sent you a confirmation email.</p>')
+        $('#subscribe-result').css('color', 'rgb(181, 217, 99')
+        $('#subscribe-result').html('<p style="margin-top:3rem">Thank you for subscribing. We have sent you a confirmation email.</p>')
         $('#mce-EMAIL').val('')
       } else {
         // Something went wrong, do something to notify the user.
         console.log(data.msg)
         $('#mce-EMAIL').css('borderColor', '#ff8282')
         $('#subscribe-result').css('color', '#ff8282')
-        $('#subscribe-result').html('<p>' + data.msg.substring(4) + '</p>')
+        $('#subscribe-result').html('<p style="margin-top:3rem">' + data.msg.substring(4) + '</p>')
       }
     }
   })
 };
-
-
 
 
 // import then needed Font Awesome functionality
