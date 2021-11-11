@@ -105,6 +105,10 @@ module.exports = {
       padding: ['first'],
     
   },
+  // corePlugins: {
+
+  //  ringColor: false,
+  // },
   plugins: [require('@tailwindcss/typography')],
 };
 

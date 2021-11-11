@@ -165,7 +165,6 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-
 $(document).ready(function () {
   var $form = $('#mc-embedded-subscribe-form')
   if ($form.length > 0) {

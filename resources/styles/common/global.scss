@@ -181,11 +181,6 @@ button:focus {
   transform: rotate(45deg);
 } 
 
-
-
-
-
-
 /* remember to define focus styles! */
 :focus {
   outline: none;
@@ -357,9 +352,9 @@ h3 {
   }
 }
 
-.splide__arrow {
-	background: transparent;
-}
+// .splide__arrow {
+// 	background: transparent;
+// }
 
 .splide__pagination__page.is-active {
 	transform: scale(1.4);
@@ -400,7 +395,7 @@ h3 {
 
 .splide__arrow svg {
 	width: 20em;
-	height: 20em;
+	height: auto;
 }
 
 
@@ -523,8 +518,7 @@ input::placeholder, textarea::placeholder {
 
 .contact-input {@apply mb-5 w-full sm:mb-0}
 
-.contact-input {@apply focus:outline-none focus:ring-2 focus:bg-transparent focus:ring-aroma-light-grey focus:border-transparent}
-
+.contact-input, .splide__arrow {@apply focus:outline-none outline-none focus:ring-0 focus:bg-transparent bg-transparent focus:ring-white focus:border-transparent}
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
 	width: 40px;
