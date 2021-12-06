@@ -166,7 +166,18 @@
 
 <div class="flex items-center justify-center my-20">
 
-    <img src="@asset('images/home-title-six.svg')" class="w-[573px]" />
+@if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/aroma-taste-gr.svg')" class="w-[158px] lg:w-[573px]" />
+@else
+<img src="@asset('images/aroma-taste-en.svg')" class="w-[158px] lg:w-[828px]" />
+@endif
+
+ 
+
+
+
+
+
 
 </div>
 

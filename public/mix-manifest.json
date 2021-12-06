@@ -12,10 +12,10 @@
     "/scripts/editor.js": "/scripts/editor.js?id=b1de49bf63c591d5d3d2",
     "/scripts/manifest.js": "/scripts/manifest.js?id=3c15c3490ad67d04c5bf",
     "/scripts/manifest.asset.php": "/scripts/manifest.asset.php?id=15a3fa87aec78b2433c8",
-    "/styles/app.css": "/styles/app.css?id=71cda05418d74a443001",
+    "/styles/app.css": "/styles/app.css?id=d1971f610997b2d7fc65",
     "/styles/editor.css": "/styles/editor.css?id=f4b0fdb346b8e76431a5",
     "/scripts/vendor.js": "/scripts/vendor.js?id=63bebdbb91438c80006e",
-    "/images/.DS_Store": "/images/.DS_Store?id=dd289dc1707b43dabf72",
+    "/images/.DS_Store": "/images/.DS_Store?id=d2910d33d793211552ce",
     "/images/.gitkeep": "/images/.gitkeep?id=d41d8cd98f00b204e980",
     "/images/IFS.svg": "/images/IFS.svg?id=7470b45af570154f608b",
     "/images/aroma_basil_pack.png": "/images/aroma_basil_pack.png?id=7cd7e520d3390cfbc83f",
@@ -160,5 +160,8 @@
     "/fonts/advent-pro-semi-bold.woff": "/fonts/advent-pro-semi-bold.woff?id=44110776d9dba5e019da",
     "/fonts/advent-pro-semi-bold.woff2": "/fonts/advent-pro-semi-bold.woff2?id=f09b5dc4bb6e704706fd",
     "/fonts/takhie.woff": "/fonts/takhie.woff?id=3ac731a535442ddfc931",
-    "/fonts/takhie.woff2": "/fonts/takhie.woff2?id=de0b5b47752c2798e46b"
+    "/fonts/takhie.woff2": "/fonts/takhie.woff2?id=de0b5b47752c2798e46b",
+    "/images/home-title-six.svg": "/images/home-title-six.svg?id=2554dc001b726ede56d3",
+    "/images/aroma-taste-en.svg": "/images/aroma-taste-en.svg?id=431d7a648dd48a5d9862",
+    "/images/aroma-taste-gr.svg": "/images/aroma-taste-gr.svg?id=2554dc001b726ede56d3"
 }

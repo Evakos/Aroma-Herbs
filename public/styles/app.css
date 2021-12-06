@@ -3717,6 +3717,12 @@ select {
 	.lg\:w-\[553px\]{
 		width: 553px;
 	}
+	.lg\:w-\[573px\]{
+		width: 573px;
+	}
+	.lg\:w-\[828px\]{
+		width: 828px;
+	}
 	.lg\:flex-row{
 		flex-direction: row;
 	}
