@@ -15,7 +15,11 @@
 
 <div class="flex items-center my-20 justify-center">
 
-<img src="@asset('images/harvest-title-alt.svg')" class="w-[289px] sm:w-[681px]"/> 
+@if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/our-farm-gr.svg')" class="w-[300px] lg:w-[711px]" />
+@else
+<img src="@asset('images/our-farm-en.svg')" class="w-[300px] lg:w-[440px]" />
+@endif
  
  </div>
 
@@ -44,8 +48,14 @@
 
 <div class="flex items-center my-20 justify-center">
 
+@if( ICL_LANGUAGE_CODE=='el')         
+<img src="@asset('images/our-story-gr.svg')" class="w-[681px]"/> 
+@else
+<img src="@asset('images/our-story-en.svg')" class="w-[681px]"/> 
+@endif
 
-<img src="@asset('images/our-history-title.svg')" class="w-[681px]"/> 
+
+
  
  </div>
 
@@ -93,8 +103,12 @@
 
 <div class="flex items-center my-20 justify-center">
 
+@if( ICL_LANGUAGE_CODE=='el')         
+<img src="@asset('images/our-mission-gr.svg')" class="w-[681px]"/> 
+@else
+<img src="@asset('images/our-mission-en.svg')" class="w-[681px]"/> 
+@endif
 
-<img src="@asset('images/our-mission-title.svg')" class="w-[680px]"/> 
  
  </div>
 
@@ -158,7 +172,13 @@ if( $images ): ?>
 <div class="flex items-center justify-center">
 
 
-<img src="@asset('images/center-excellence-title.svg')" class="w-[680px]"/> 
+
+
+@if( ICL_LANGUAGE_CODE=='el')         
+<img src="@asset('images/center-excellence-gr.svg')" class="w-[681px]"/> 
+@else
+<img src="@asset('images/center-excellence-en.svg')" class="w-[681px]"/> 
+@endif
  
  </div>
 

@@ -56,7 +56,13 @@
 
     <div class="absolute mx-auto right-0 left-0 bottom-0 top-0 z-0" />
 
+    @if( ICL_LANGUAGE_CODE=='el')         
     @include('partials.vine')
+@else
+@include('partials.vine-en')
+@endif
+
+ 
 
 </div>
 
@@ -222,7 +228,12 @@ $query = new WP_Query([
 
     <div class="flex items-center justify-center my-20">
 
-        <img src="@asset('images/home-title-eight.svg')" class="w-[158px] lg:w-[367px]" />
+
+    @if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/fresh-news-gr.svg')" class="w-[158px] lg:w-[367px]" />
+@else
+<img src="@asset('images/fresh-news-en.svg')" class="w-[158px] lg:w-[367px]" />
+@endif
 
     </div>
 
@@ -264,14 +275,18 @@ $query = new WP_Query([
 
 </div>
 
-<!-- Our Harvest -->
+<!-- Our Farm Section -->
 
 <div class="container relative mx-auto mb-10 sm:mb:0">
 
     <div class="flex items-center justify-center my-20">
 
 
-        <img src="@asset('images/home-title-nine.svg')" class="w-[300px] lg:w-[681px]" />
+    @if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/our-farm-gr.svg')" class="w-[300px] lg:w-[711px]" />
+@else
+<img src="@asset('images/our-farm-en.svg')" class="w-[300px] lg:w-[440px]" />
+@endif
 
     </div>
 
@@ -298,7 +313,7 @@ $query = new WP_Query([
             </a>
 
         </div>
-
+        
     </div>
 </div>
 
@@ -306,10 +321,13 @@ $query = new WP_Query([
 <!-- Find Us -->
 <div class="container relative mx-auto">
 
-    <div class="flex items-center justify-center">
+    <div class="flex items-center justify-center my-20"">
 
-
-        <img src="@asset('images/home-title-ten.svg')" class="my-20 w-[276px] lg:w-[681px]" />
+    @if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/find-us-gr.svg')" class="w-[300px] lg:w-[590px]" />
+@else
+<img src="@asset('images/find-us-en.svg')" class="w-[300px] lg:w-[495px]" />
+@endif
 
     </div>
 

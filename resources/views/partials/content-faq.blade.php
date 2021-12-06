@@ -2,10 +2,14 @@
 
         
         <div class="flex flex-col items-center justify-center sm:pb-20">
-          
-        <img src="@asset('images/faq-title.svg')" class="w-[310px] md:w-[411px]">
 
-        <p class="mt-10">Λάβετε απαντήσεις στις πιο συχνές ερωτήσεις</p>
+        @if( ICL_LANGUAGE_CODE=='el')         
+        <img src="@asset('images/faq-gr.svg')" class="w-[310px] md:w-[411px]">
+@else
+<img src="@asset('images/faq-en.svg')" class="w-[310px] md:w-[411px]">
+@endif
+
+        <p class="mt-10">	@php echo _e( 'Λάβετε απαντήσεις στις πιο συχνές ερωτήσεις', 'sage');  @endphp</p>
       
       </div>
 

@@ -8,9 +8,7 @@
 
 @include('partials.modal')
 
-
 @include('partials.header')
-
 
 
 <div class="container relative mx-auto mb-24">
@@ -18,7 +16,11 @@
         <div class="flex items-center justify-center">
     
         
-       <img src="@asset('images/fresh-news.svg')" class="w-[158px] md:w-[382px]"/> 
+       @if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/fresh-news-gr.svg')" class="w-[158px] lg:w-[367px]" />
+@else
+<img src="@asset('images/fresh-news-en.svg')" class="w-[158px] lg:w-[367px]" />
+@endif
          
          </div>
 

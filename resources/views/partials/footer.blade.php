@@ -9,14 +9,8 @@
 
                     <p><?php echo get_theme_mod( 'subscribe_text') ?></p>
 
-                    <!-- <div class="flex justify-between w-[260px] mt-10 md:mt-10 bg-light-green py-5 px-8 text-white rounded-full"> <input type="text" id="sign-up" class="bg-transparent w-3/4 placeholder-white" placeholder="Email Address" name=""><img src="@asset('images/envelope-white.svg')" class="w-[16px] fill-current text-white" /></div> -->
-
                     <!-- Begin MailChimp Signup Form -->
  <div class="flex justify-between w-[260px] mt-10 md:mt-10 bg-light-green py-5 px-8 text-white rounded-full" id="mail-chimp">
-
-
- 
-
 
     <form action="https://aroma-herbs.us5.list-manage.com/subscribe/post-json?u=e7af80d0d124ef0d1d2408f01&amp;id=fc0a9c6e19&c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate flex">
                 <input type="email" value="" name="EMAIL" class="email bg-transparent w-[170px] placeholder-current" id="mce-EMAIL" placeholder="Email" required>
@@ -27,32 +21,13 @@
 
                 <input type="image" value="" name="subscribe" id="mc-embedded-subscribe" src="@asset('images/envelope-white.svg')" border="0" alt="Submit" class="w-[22px] fill-current text-white">              
                
-            </form>
-
-        
+            </form>     
 </div>
 
 <div id="subscribe-result">
                 </div>
-<!--End mc_embed_signup-->
-
-
-
-<!--End mc_embed_signup-->
-                    
 
             </div>
-
-
-
-
-
-
-
-
-
-
-
 
             <div class="flex flex-col flex-1 mb-10">
              <nav class="">
@@ -65,9 +40,9 @@
             <address class="flex flex-col flex-1 not-italic">
                 <h4 class="text-dark-green mb-5">Επικοινωνία</h4>
                 <ul>
-                    <li>Διεύθυνση: <?php echo esc_html(get_theme_mod( 'head_office_address')); ?></li>
-                    <li>Τηλέφωνο: <?php echo esc_html(get_theme_mod( 'phone_number')); ?></li>
-                    <li>Email: <a href="<?php echo esc_url('mailto:' . get_theme_mod( 'email_address')) ?>" class=''><?php echo get_theme_mod( 'email_address') ?></a></li>
+                    <li> <?php _e( 'Διεύθυνση:', 'sage'); ?> <?php echo esc_html(get_theme_mod( 'head_office_address')); ?></li>
+                    <li><?php _e( 'Τηλέφωνο: ', 'sage'); ?> <?php echo esc_html(get_theme_mod( 'phone_number')); ?></li>
+                    <li> <?php _e( 'Email: ', 'sage'); ?><a href="<?php echo esc_url('mailto:' . get_theme_mod( 'email_address')) ?>" class=''><?php echo get_theme_mod( 'email_address') ?></a></li>
                 </ul>
            </address>
 

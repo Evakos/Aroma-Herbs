@@ -20,7 +20,11 @@
     <img src="@asset('images/products-img-1.jpg')" class=""/> 
     </div>
     <div class="flex flex-1 justify-center">
-    <img src="@asset('images/fresh-spices.svg')" class="">
+    @if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/fresh-herbs-veg-gr.svg')" class="w-[300px] lg:w-[711px]" />
+@else
+<img src="@asset('images/fresh-herbs-veg-en.svg')" class="w-[300px] lg:w-[440px]" />
+@endif
     </div>
     <div class="hidden sm:flex flex-1 justify-center">
     <img src="@asset('images/home-img-2.jpg')" class="">

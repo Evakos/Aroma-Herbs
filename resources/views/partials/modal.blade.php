@@ -6,6 +6,7 @@
 <div class="flex container mx-auto fixed left-0 right-0 top-0 justify-end pt-24 z-50" id="floating">
 
 
+<?php do_action('wpml_add_language_selector');?>
 
 
 <button class="hamburger hamburger--collapse md:-mb-36 @field('class')" type="button" id="hamburger">

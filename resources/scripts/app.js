@@ -3,10 +3,6 @@
  */
 import "jquery";
 
-
-
-
-
 import lozad from 'lozad';
 
 const observer = lozad();
@@ -72,52 +68,49 @@ $(document).ready(function () {
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyHeader() {
 
-  //console.log("This is the sticky logo:" + stickyLogo)
-
   const navOuter = document.getElementById("sticky-nav");
 
   // Get the header
-
   const header = document.getElementById("header");
-
-  // Get the offset position of the navbar
 
   const sticky = header.getBoundingClientRect().top;
 
-  //console.log(sticky);
-
   const logo = document.getElementById("site-logo");
+
   const navInner = document.getElementById("sticky-nav-inner");
  
   const floating = document.getElementById("floating");
 
   const hamburger = document.getElementById("hamburger");
 
+  const wpml = document.querySelector(".wpml-ls-statics-shortcode_actions");
+
+  //wpml.classList.add("wpml-sticky");
 
   if (sticky < 0) {
-
-
-//console.log("This is the sticky position:" + sticky)
-
+    wpml.classList.remove("wpml-ls");  
     navOuter.classList.add("is-sticky");
     logo.classList.add("shrink-logo");
     navOuter.classList.add("fade-in-fast");
-    navInner.classList.remove("py-10");
     navInner.classList.add("py-2");
-
-    hamburger.classList.remove("md:-mb-36");
-   
-    floating.classList.remove("pt-24");
-
     floating.classList.add("pt-6");
-  } else {
+    navInner.classList.remove("py-10");
+    hamburger.classList.remove("md:-mb-36");
+    floating.classList.remove("pt-24");
+   
+
+  } 
+  
+  else {
+    wpml.classList.add("wpml-ls");
     navOuter.classList.remove("is-sticky");
     logo.classList.remove("shrink-logo");
     navOuter.classList.remove("fade-in-fast");
-    navInner.classList.add("py-10");
+    floating.classList.remove("pt-6");
     navInner.classList.remove("py-2");
     floating.classList.add("pt-24");
-    floating.classList.remove("pt-6");
+    navInner.classList.add("py-10");
+  
 
     if ($(window).width() > 1024) {
 
@@ -138,6 +131,8 @@ function stickyHeader() {
 window.onscroll = function () {
   stickyHeader();
 };
+
+stickyHeader();
 
 
 

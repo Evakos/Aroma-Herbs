@@ -11,7 +11,6 @@
 
         <div class="flex items-center justify-center">
     
-        
        <img src="@asset('images/fresh-news.svg')" class="w-[382px]"/> 
          
          </div>

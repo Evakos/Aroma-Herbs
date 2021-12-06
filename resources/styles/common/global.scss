@@ -1,11 +1,8 @@
 @import '~hamburgers/_sass/hamburgers/hamburgers';
 @import '/node_modules/@splidejs/splide/dist/css/splide.min.css';
-//@import '~animate.css/animate.css';
-@import 'aos/dist/aos.css'; // You can also use <link> for styles 
-@import '/node_modules/simplelightbox/dist/simple-lightbox.css'; // You can also use <link> for styles 
 
-
-
+@import 'aos/dist/aos.css';
+@import '/node_modules/simplelightbox/dist/simple-lightbox.css'; 
 
 
 @font-face {
@@ -44,6 +41,20 @@
   font-display: swap;
 }
 
+// Language Styles
+.wpml-ls-native, .wpml-ls-display {
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #797979;
+	letter-spacing: 4px;
+}
+
+.wpml-ls, .wpml-sticky {
+	position: absolute;
+	bottom: 50%;
+	top: 50%;
+}
+
 .entry-content a {
   text-decoration: underline;
   color: inherit;
@@ -62,7 +73,6 @@ button:focus {
 .default {
   pointer-events: none;
   cursor: default;
-  // border-bottom: 5px solid rgb(181, 217, 99);
 }
 
 #package:not(.default) {

@@ -2,8 +2,16 @@
 
         
         <div class="flex flex-col items-center justify-center md:py-20">
+
+
+
+    @if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/store-locator-title-gr.svg')" class="w-[247px] md:w-[588px]">
+@else
+<img src="@asset('images/store-locator-title-en.svg')" class="w-[247px] md:w-[588px]">
+@endif
           
-        <img src="@asset('images/store-locator-title.svg')" class="w-[247px] md:w-[588px]">
+     
 
       
       </div>

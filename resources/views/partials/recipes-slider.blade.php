@@ -2,7 +2,14 @@
 
     <div class="flex items-center justify-center my-20">
 
-        <img src="@asset('images/from-kitchen.svg')" class="w-[328px] lg:w-[709px]" />
+    @if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/from-our-kitchen-gr.svg')" class="w-[328px] lg:w-[709px]">      
+@else
+<img src="@asset('images/from-our-kitchen-en.svg')" class="w-[328px] lg:w-[553px]"> 
+@endif
+
+    </div>
+
 
     </div>
 
@@ -18,8 +25,6 @@ $names = wp_list_pluck( $terms, 'name' );
 
 //var_dump($names);
 
-
-
 foreach ( $names as $term ) {
 
     $items[] = $term;
@@ -27,11 +32,7 @@ foreach ( $names as $term ) {
 
 ?>
 
-
-
-
 <!-- Need to get id of recipies -->
-
 
     @php
 
