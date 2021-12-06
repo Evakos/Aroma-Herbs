@@ -172,15 +172,7 @@
 <img src="@asset('images/aroma-taste-en.svg')" class="w-[158px] lg:w-[828px]" />
 @endif
 
- 
-
-
-
-
-
-
 </div>
-
 
 
 <div class="flex mt-5 justify-center">
