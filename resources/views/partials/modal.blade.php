@@ -35,7 +35,17 @@
 
 @posts($query)
 <div class="flex flex-col justify-center items-center">
-<img src="@asset('images/fresh-spices-menu-title.svg')" class="sm:w-[190px]"/>
+
+@if( ICL_LANGUAGE_CODE=='el')         
+<!-- <img src="@asset('images/center-excellence-gr.svg')" class="w-[681px]"/>  -->
+<img src="@asset('images/fresh-herbs-menu-gr.svg')" class="sm:w-[190px]"/>
+
+@else
+<img src="@asset('images/fresh-herbs-menu-en.svg')" class="sm:w-[298px]"/>
+@endif
+
+
+
   <h2 class="font-takhie text-dark-green my-6 text-5xl">@title</h2>
   <div class="bg-modal-product-bg bg-no-repeat bg-cover sm:w-[238px] sm:h-[400px] flex items-center justify-center p-10">
   <img src="@thumbnail('large', false)" class="w-[198px]" alt="Full Image" />

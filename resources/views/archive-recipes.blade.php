@@ -22,8 +22,14 @@
 
 <div class="flex items-center justify-center my-20">
 
+@if( ICL_LANGUAGE_CODE=='el')         
+<img src="@asset('images/recipes-gr.svg')" class="w-[300px] lg:w-[448px]" />
+@else
+<img src="@asset('images/recipes-en.svg')" class="w-[300px] lg:w-[448px]" />
+@endif
 
-    <img src="@asset('images/recipes-recipes-title.svg')" class="w-[300px] lg:w-[448px]" />
+
+    
 
 </div>
 
@@ -31,7 +37,7 @@
 <div class="container">
 
 <p class="text-light-green uppercase border-b-2 border-aroma-grey-light py-10 mb-10">
-Φιλτρα συνταγών
+ @php echo _e( 'Φιλτρα συνταγών', 'sage') @endphp
 </p>
 
 <!-- Start Filter by Category and Tasks Here: -->
@@ -49,7 +55,7 @@ $product = get_terms( array(
 
 if ( !empty($product) ) :
     echo '<select name="productrecipefilter" class="default-select">';
-    echo '<option value="select" class="initial" name="select">Προϊόν</option>';
+    echo '<option value="select" class="initial" name="select">' . __( 'Προϊόν', 'sage' ) .  '</option>';
     foreach( $product as $term ) {
 
 		echo '<option value="' . esc_attr( $term->term_id )  . '">' . esc_html( $term->name ) . '</option>';
@@ -69,7 +75,7 @@ $restrictions = get_terms( array(
 
 if ( !empty($restrictions) ) :
     echo '<select name="dietrecipefilter" class="default-select">';
-    echo '<option value="select" class="initial" name="select" selected>Είδος Συνταγής</option>';
+    echo '<option value="select" class="initial" name="select" selected>'  . __( 'Είδος Συνταγής', 'sage' ) .  '</option>';
     foreach( $restrictions as $term ) {
 
 		echo '<option value="' . esc_attr( $term->term_id )  . '">' . esc_html( $term->name ) . '</option>';
@@ -88,7 +94,7 @@ $courses = get_terms( array(
  
 if ( !empty($courses) ) :
     echo '<select name="coursesrecipefilter" class="default-select">';
-    echo '<option value="select" class="initial" name="select">Ευκολία</option>';
+    echo '<option value="select" class="initial" name="select">' . __( 'Ευκολία ', 'sage' ) . '</option>';
     
     foreach( $courses as $term ) {
      
@@ -105,7 +111,7 @@ endif;
 
 
 <label class="check-box flex text-dark-green p-5 mr-4 rounded-full mb-5 w-full md:w-[250px]">
-    <p class="pl-10">View All recipes</p>
+    <p class="pl-10">@php echo _e( 'Προβολή όλων', 'sage' ) @endphp </p>
   <input type="checkbox" name='viewall' checked="checked">
   <span class="checkmark"></span>
 </label>
