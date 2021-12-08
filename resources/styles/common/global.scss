@@ -51,8 +51,8 @@
 
 .wpml-ls, .wpml-sticky {
 	position: absolute;
-	bottom: 50%;
-	top: 50%;
+	bottom: auto%;
+	top: 30%;
 }
 
 .entry-content a {
@@ -149,7 +149,6 @@ button:focus {
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
-
   height: 30px;
   width: 30px;
   background-color: #eee;
