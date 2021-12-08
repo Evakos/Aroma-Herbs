@@ -51,7 +51,7 @@
 @if( ICL_LANGUAGE_CODE=='el')         
 <img src="@asset('images/our-story-gr.svg')" class="w-[681px]"/> 
 @else
-<img src="@asset('images/our-story-en.svg')" class="w-[681px]"/> 
+<img src="@asset('images/our-story-en.svg')" class="w-[487px]"/> 
 @endif
 
 
@@ -104,9 +104,9 @@
 <div class="flex items-center my-20 justify-center">
 
 @if( ICL_LANGUAGE_CODE=='el')         
-<img src="@asset('images/our-mission-gr.svg')" class="w-[681px]"/> 
+<img src="@asset('images/sustainability-gr.svg')" class="w-[681px]"/> 
 @else
-<img src="@asset('images/our-mission-en.svg')" class="w-[681px]"/> 
+<img src="@asset('images/sustainability-en.svg')" class="w-[837px]"/> 
 @endif
 
  
@@ -175,9 +175,9 @@ if( $images ): ?>
 
 
 @if( ICL_LANGUAGE_CODE=='el')         
-<img src="@asset('images/center-excellence-gr.svg')" class="w-[681px]"/> 
+<img src="@asset('images/innovation-gr.svg')" class="w-[681px]"/> 
 @else
-<img src="@asset('images/center-excellence-en.svg')" class="w-[681px]"/> 
+<img src="@asset('images/innovation-en.svg')" class="w-[843px]"/> 
 @endif
  
  </div>

@@ -99,7 +99,7 @@ function aroma_social_media_icons() {
 	?>
 	<li class="text-light-green">
 		<a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>">
-			<i class="fa fa-envelope" title="<?php _e('email icon', 'text-domain'); ?>"></i>
+			<i class="fa fa-envelope" title="<?php _e('email icon', 'sage'); ?>"></i>
 		</a>
 	</li>
 
@@ -108,7 +108,7 @@ function aroma_social_media_icons() {
 	else { ?>
 	<li class="text-light-green">
 		<a class="<?php echo $active_site; ?> hover:animate-bounce" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site) ); ?>">
-			<i class="<?php echo esc_attr( $class ); ?>" title="<?php printf( __('%s icon', 'text-domain'), $active_site ); ?>"></i>
+			<i class="<?php echo esc_attr( $class ); ?>" title="<?php printf( __('%s icon', 'sage'), $active_site ); ?>"></i>
 		</a>
 	</li>
 	<?php

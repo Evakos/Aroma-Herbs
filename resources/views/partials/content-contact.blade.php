@@ -10,9 +10,9 @@
 
 <div class="flex flex-1 flex-col sm:pr-44">
 
-<h3 class="text-3xl mb-10">Επικοινωνήστε μαζί μας</h3>
+<h3 class="text-3xl mb-10"> <?php _e( 'Επικοινωνήστε μαζί μας', 'sage'); ?></h3>
 
-<p class="mb-10 text-aroma-grey">Για οποιαδήποτε πληροφορία που μπορεί να χρειαστείτε, είμαστε στη διάθεση σας.</p>
+<p class="mb-10 text-aroma-grey"><?php _e( 'Για οποιαδήποτε πληροφορία που μπορεί να χρειαστείτε, είμαστε στη διάθεση σας.', 'sage'); ?></p>
 
 <p class="flex items-center text-aroma-grey mb-10"><img src="@asset('images/map-marker.svg')" class="pr-10"> <?php echo wp_kses_post(get_theme_mod( 'head_office_address')); ?></p>
 
@@ -25,7 +25,7 @@
 
 <div class="flex flex-1 flex-col relative">
 
-<h3 class="text-3xl uppercase mb-10">Αποστολη μηνυματος</h3>
+<h3 class="text-3xl uppercase mb-10"><?php _e( 'Αποστολη μηνυματος', 'sage'); ?></h3>
 
 
 @field('contact_form')
