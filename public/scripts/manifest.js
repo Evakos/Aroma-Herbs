@@ -138,6 +138,7 @@
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/scripts/manifest": 0,
+/******/ 			"styles/app": 0,
 /******/ 			"styles/editor": 0
 /******/ 		};
 /******/ 		

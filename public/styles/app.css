@@ -1564,8 +1564,8 @@ video {
 
 .wpml-ls, .wpml-sticky {
   position: absolute;
-  bottom: 50%;
-  top: 50%;
+  bottom: auto;
+  top: 30%;
 }
 
 .entry-content a {
