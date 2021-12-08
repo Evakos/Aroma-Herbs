@@ -388,7 +388,7 @@ function customize_register($wp_customize) {
 
     $wp_customize->add_section( 'my_social_settings', 
 		array(
-			'title'    => __('Social Media Icons', 'text-domain'),
+			'title'    => __('Social Media Icons', 'sage'),
 			'priority' => 35,
 		) 
 	);
@@ -406,7 +406,7 @@ function customize_register($wp_customize) {
 
 		$wp_customize->add_control( $social_site, 
 			array(
-				'label'    => __( "$social_site url:", 'text-domain' ),
+				'label'    => __( "$social_site url:", 'sage' ),
 				'section'  => 'my_social_settings',
 				'type'     => 'text',
 				'priority' => $priority,
