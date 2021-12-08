@@ -1,8 +1,15 @@
 <div class="container mx-auto">
 
         <div class="flex flex-col items-center justify-center md:py-20">
+
+        @if( ICL_LANGUAGE_CODE=='el')         
+        <img src="@asset('images/contact-gr.svg')" class="w-[229px] lg:w-[411px]">
+@else
+<img src="@asset('images/contact-en.svg')" class="w-[229px] lg:w-[411px]">
+@endif
+
+
           
-        <img src="@asset('images/contact-title.svg')" class="w-[229px] lg:w-[411px]">
       
       </div>
 
