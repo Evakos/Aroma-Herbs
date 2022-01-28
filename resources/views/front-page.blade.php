@@ -84,9 +84,14 @@
 
     <div class="flex items-center justify-center my-20">
 
-        <img src="@asset('images/fresh-spices.svg')" class="w-[300px]" />
+       @if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/fresh-herbs-veg-gr.svg')" class="w-[300px]" />
+@else
+<img src="@asset('images/fresh-herbs-veg-en.svg')" class="w-[300px]" />
+@endif
 
-    </div>
+</div>
+
 
     <div class="flex justify-center">
 
@@ -99,7 +104,11 @@
 
     <div class="flex items-center justify-center my-20">
 
-        <img src="@asset('images/grown-countryside-title.svg')" class="w-[272px]" />
+           @if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/grown-countryside-gr.svg')" class="w-[272px]" />
+@else
+<img src="@asset('images/grown-countryside-en.svg')" class="w-[200px]" />
+@endif
 
     </div>
 
@@ -116,8 +125,11 @@
     <div class="flex items-center justify-center my-20">
 
 
-        <img src="@asset('images/full-aroma-title.svg')" class="w-[226px]" />
-
+           @if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/full-aroma-gr.svg')" class="w-[226px]" />
+@else
+<img src="@asset('images/full-aroma-en.svg')" class="w-[226px]" />
+@endif
 
     </div>
 
@@ -131,9 +143,11 @@
 
     <div class="flex items-center justify-center my-20">
 
-
-        <img src="@asset('images/quality-guarantee-title.svg')" class="w-[300px]" />
-
+              @if( ICL_LANGUAGE_CODE=='el')         
+       <img src="@asset('images/quality-guarantee-gr.svg')" class="w-[300px]" />
+@else
+    <img src="@asset('images/quality-guarantee-en.svg')" class="w-[300px]" />
+@endif
 
     </div>
 
@@ -147,8 +161,11 @@
 
     <div class="flex items-center justify-center my-20">
 
-
-        <img src="@asset('images/fresh-listing-title.svg')" class="w-[300px]" />
+                  @if( ICL_LANGUAGE_CODE=='el')         
+       <img src="@asset('images/fresh-lasting-gr.svg')" class="w-[300px]" />
+@else
+    <img src="@asset('images/fresh-lasting-en.svg')" class="w-[300px]" />
+@endif
 
 
     </div>
@@ -169,7 +186,7 @@
 @if( ICL_LANGUAGE_CODE=='el')         
     <img src="@asset('images/aroma-taste-gr.svg')" class="w-[158px] lg:w-[573px]" />
 @else
-<img src="@asset('images/aroma-taste-en.svg')" class="w-[158px] lg:w-[828px]" />
+<img src="@asset('images/aroma-taste-en.svg')" class="w-[298px] lg:w-[828px]" />
 @endif
 
 </div>
