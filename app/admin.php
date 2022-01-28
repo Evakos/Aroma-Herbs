@@ -293,14 +293,14 @@ function customize_register($wp_customize) {
     //   )
     // );
   
-    $wp_customize->add_control(
-      'sub_office_address',
-      array(
-        'label' => 'Sub Office Address',
-        'section' => 'footercontactdetails',
-        'settings' => 'sub_office_address'
-      )
-    );
+    // $wp_customize->add_control(
+    //   'sub_office_address',
+    //   array(
+    //     'label' => 'Sub Office Address',
+    //     'section' => 'footercontactdetails',
+    //     'settings' => 'sub_office_address'
+    //   )
+    // );
   
     $wp_customize->add_setting(
       'phone_number',
@@ -381,6 +381,25 @@ function customize_register($wp_customize) {
         'label' => 'Subscribe Text',
         'section' => 'subscribedetails',
         'settings' => 'subscribe_text'
+      )
+    );
+
+    $wp_customize->add_setting(
+      'subscribe_text_english',
+      array(
+        'default' => '',
+        'section' => 'subscribedetails',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage'
+      )
+    );
+  
+    $wp_customize->add_control(
+      'subscribe_text_english',
+      array(
+        'label' => 'Subscribe Text English',
+        'section' => 'subscribedetails',
+        'settings' => 'subscribe_text_english'
       )
     );
 

@@ -1555,6 +1555,12 @@ video {
   font-style: normal;
   font-display: swap;
 }
+.animation-item-en {
+  width: 78%;
+  margin: 0 auto;
+  padding-right: 4rem;
+}
+
 .wpml-ls-native, .wpml-ls-display {
   text-transform: uppercase;
   font-size: 13px;

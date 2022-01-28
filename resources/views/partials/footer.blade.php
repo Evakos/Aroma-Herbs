@@ -6,8 +6,17 @@
             <div class="flex flex-col flex-1 justify-center mb-10 md:mb-0 lg:pr-32">
                 <img src="@asset('images/logo-footer.svg')" class="w-[93px] mb-5" />
             
-
+                <?php if ( ICL_LANGUAGE_CODE=='el' ) : ?>
+ 
                     <p><?php echo get_theme_mod( 'subscribe_text') ?></p>
+  
+ <?php else: ?>
+
+                    
+
+                    <p><?php echo get_theme_mod( 'subscribe_text_english') ?></p>
+
+                    <?php endif; ?>
 
                     <!-- Begin MailChimp Signup Form -->
  <div class="flex justify-between w-[260px] mt-10 md:mt-10 bg-light-green py-5 px-8 text-white rounded-full" id="mail-chimp">
