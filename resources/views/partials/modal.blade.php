@@ -1,19 +1,22 @@
 
-<a class="text-white no-underline hover:text-white hover:no-underline fixed h-[100px] md:h-[200px] w-[150px] sm:w-[300px] ml-20" href="@permalink(11)" style="z-index:999">
+<a class="text-white no-underline hover:text-white hover:no-underline fixed h-[100px] w-[80px] md:h-[200px]  sm:w-[300px]" href="@permalink(11)" style="z-index:999">
         
       </a>
 
 <div class="flex container mx-auto fixed left-0 right-0 top-0 justify-end pt-24 z-50" id="floating">
 
 
-<?php do_action('wpml_add_language_selector');?>
-
+ <div id="language-switcher" class="absolute left-0 mt-2 pl-8 z-50 hidden active sm:hidden"><?php do_action('wpml_add_language_selector');?></div>
 
 <button class="hamburger hamburger--collapse md:-mb-36 @field('class')" type="button" id="hamburger">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
         </button>
+
+<div class="hidden sm:block">
+<div id="language-switcher-screen" class="absolute top-10 right-20 hidden sm:block"><?php do_action('wpml_add_language_selector');?></div>
+</div>
 
 </div>
 
@@ -37,7 +40,6 @@
 <div class="flex flex-col justify-center items-center">
 
 @if( ICL_LANGUAGE_CODE=='el')         
-<!-- <img src="@asset('images/center-excellence-gr.svg')" class="w-[681px]"/>  -->
 <img src="@asset('images/fresh-herbs-menu-gr.svg')" class="sm:w-[190px]"/>
 
 @else
@@ -65,7 +67,7 @@
   
   <nav class="nav-primary text-right w-screen sm:w-auto">
       @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav advent-pro-semi-bold text-xl sm:text-2xl md:text-3xl 3xl:text-4xl text-white mr-10 ml-10', 'echo' => false]) !!}
+        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav advent-pro-semi-bold text-2xl md:text-3xl 3xl:text-4xl text-white mx-10 2xl:mx-28', 'echo' => false]) !!}
       @endif
     </nav>
 

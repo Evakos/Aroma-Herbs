@@ -144,8 +144,33 @@ $(".hamburger").click(function () {
   // $("#menu-modal").css("width", "60%")
   $("#menu-modal").toggleClass("menu-active");
   $("#overlay").toggleClass("hidden animate__animated animate__fadeIn");
+
+  // Do this instead
+
+  $("#language-switcher").toggleClass("hidden");
+
+  // $("#language-switcher-screen").css("display" , "none");
+
+  var active = $("#language-switcher-screen").toggleClass('active').hasClass('active');
+  $("#language-switcher-screen").css('display', !active ? 'block' : 'none');
+
+
+
   
 });
+
+
+
+const homeLogo = document.getElementById("site-logo");
+function goHome() {
+
+  window.location.href = '/';
+};
+
+homeLogo.addEventListener("click", goHome, false);
+
+
+
 
 
 

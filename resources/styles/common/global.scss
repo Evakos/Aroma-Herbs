@@ -59,6 +59,14 @@
 	position: absolute;
 	bottom: auto;
 	top: 30%;
+	// right: 0;
+}
+
+#language-switcher .wpml-ls-native, #language-switcher .wpml-ls-display {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 4px;
 }
 
 .entry-content a {
@@ -616,37 +624,6 @@ a.blog-card:hover .blog-title{
   }
 
 }
-
-// .spin-animation {
-//   animation: spin 2s linear forwards;
-// }
-
-
-//  .rotate-move {
-
-//   animation-name: shift, rotate;
-//   animation-duration: 2000ms, 1000ms;
-//   animation-delay: 0ms, 2000ms;
-//   animation-timing-function: ease-in, ease-out;
-//   animation-iteration-count: 1, 1;
-// }
-
-// @keyframes shift {
-
-//   100% {
-//     transform: translate(-40, 40);
-//   }
-// }
-// @keyframes rotate{
-
-//   0% {
-//     transform:  rotate(60deg);
-//   }
-  
-//   100% {
-//     transform:  rotate(60deg);
-//   }
-// }
 
 .rpwwt-post-title {@apply text-white block}
 
