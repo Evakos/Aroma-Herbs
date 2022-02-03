@@ -59,6 +59,16 @@ function customize_register($wp_customize) {
         )
       )
     );
+
+    $wp_customize->add_setting('custom_logo_eng');
+
+$wp_customize->add_control(new \WP_Customize_Image_Control($wp_customize, 'custom_logo_eng', array(
+    'label'    => __('English Logo'),
+    'section'  => 'title_tagline',
+    'settings' => 'custom_logo_eng',
+    // 'priority'       => 4,
+)));
+
   
     $wp_customize->add_setting(
       'header_static'

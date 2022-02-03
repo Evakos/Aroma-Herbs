@@ -6,7 +6,16 @@
 
     <div class="flex items-center flex-shrink-0 text-white mr-6 z-10">
       <a class="text-white no-underline hover:text-white hover:no-underline" href="@permalink(11)">
+
+@if( ICL_LANGUAGE_CODE=='el')         
+
         <span class="flex w-[63px] md:w-[171px]" id="site-logo"><img src="<?php echo get_theme_mod( 'custom_logo') ?> "/></span>  
+
+@else
+
+        <span class="flex w-[63px] md:w-[171px]" id="site-logo"><img src="<?php echo get_theme_mod( 'custom_logo_eng') ?> "/></span>  
+@endif
+
       </a>
     </div>
  
