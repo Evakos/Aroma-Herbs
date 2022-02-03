@@ -15,7 +15,7 @@
         </button>
 
 <div class="hidden sm:block">
-<div id="language-switcher-screen" class="absolute top-10 right-20 hidden sm:block"><?php do_action('wpml_add_language_selector');?></div>
+<div id="language-switcher-screen" class="absolute top-8 right-20 hidden sm:block"><?php do_action('wpml_add_language_selector');?></div>
 </div>
 
 </div>

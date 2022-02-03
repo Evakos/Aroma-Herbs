@@ -85,6 +85,8 @@ function stickyHeader() {
 
   const wpml = document.querySelector(".wpml-ls-statics-shortcode_actions");
 
+  const switchLang = document.getElementById("language-switcher-screen");
+
   //wpml.classList.add("wpml-sticky");
 
   if (sticky < 0) {
@@ -97,11 +99,15 @@ function stickyHeader() {
     navInner.classList.remove("py-10");
     hamburger.classList.remove("md:-mb-36");
     floating.classList.remove("pt-24");
+    switchLang.classList.remove("right-20");
+    switchLang.classList.add("right-44");
    
 
   } 
   
   else {
+    switchLang.classList.add("right-20");
+    switchLang.classList.remove("right-44");
     wpml.classList.add("wpml-ls");
     navOuter.classList.remove("is-sticky");
     logo.classList.remove("shrink-logo");
