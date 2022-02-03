@@ -57,8 +57,7 @@
 
 
 
-<a class="btn border-white text-white mt-10 hover:bg-dark-green hover:border-transparent" href="@permalink"> ΠΕΡΙΣΣΟΤΕΡΑ </a>
-
+<a class="btn border-white text-white mt-10 hover:bg-dark-green hover:border-transparent" href="@permalink"><?php _e( 'Περισσότερα', 'sage'); ?>  </a>
 @endposts
 
 </div>
