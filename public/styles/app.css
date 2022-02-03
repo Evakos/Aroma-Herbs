@@ -2474,11 +2474,11 @@ select {
 .sticky{
 	position: sticky;
 }
-.right-20{
-	right: 5rem;
+.right-32{
+	right: 8rem;
 }
-.right-44{
-	right: 11rem;
+.right-48{
+	right: 12rem;
 }
 .-left-2{
 	left: -0.5rem;
