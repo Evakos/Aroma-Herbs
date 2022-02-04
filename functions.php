@@ -353,10 +353,13 @@ add_action('wp_ajax_nopriv_filterproducts', 'filter_products');
  
 function filter_products(){
 
+
+
 	$args = array(
 		'orderby' => 'date', 
 		'post_type' => 'products',
 		'posts_per_page' => -1,
+		// 'post_status'     => 'publish'
 		
 	);
 
@@ -370,6 +373,8 @@ function filter_products(){
 		);
  
 	$query = new WP_Query( $args );
+
+	//var_dump($query);
 
  
 	if( $query->have_posts() ) :

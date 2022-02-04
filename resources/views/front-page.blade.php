@@ -232,7 +232,7 @@ $query = new WP_Query([
             <?php _e( 'Περισσοτερα', 'sage'); ?>
             </a>
 
-        </div>å
+        </div>
 
     </div>
 

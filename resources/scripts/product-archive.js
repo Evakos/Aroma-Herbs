@@ -28,6 +28,10 @@ AOS.init({
   anchorPlacement: "top-center", // defines which position of the element regarding to window should trigger the animation
 });
 
+
+console.log("Product Archive");
+
+
 //Creating Rows dynamically to animate separately.
 
 function createRow() {
@@ -94,6 +98,8 @@ $(() => {
   //var term_id = jQuery(this).attr("product-id");
 
   //console.log(term_id);
+
+
 
   $.ajax({
     type: "post",
