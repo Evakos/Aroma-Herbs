@@ -23,7 +23,7 @@
 
 @hasfield('sidebar')
 <div class="flex flex-1 text-left flex-col bg-light-green rounded-lg sm:p-10">
-<p class="uppercase text-white font-advent-pro-semi-bold mb-10">Εύκολη</p>
+<p class="uppercase text-white font-advent-pro-semi-bold mb-10">  <?php _e( 'Εύκολη', 'sage'); ?></p>
 <ul>
   @fields('sidebar')
     <li class="text-white">@sub('title') <br> @sub('details')</li>
@@ -36,7 +36,7 @@
 
 @hasfield('ingredients')
 <div class="flex text-left flex-1 flex-col mb-10 bg-light-green rounded-lg md:mr-10 p-10">
-<p class="uppercase text-white font-advent-pro-semi-bold mb-10">Υλικα</p>
+<p class="uppercase text-white font-advent-pro-semi-bold mb-10"><?php _e( 'Υλικα ', 'sage'); ?></p>
 <ul>
   @fields('ingredients')
   <li class="text-white mb-3">@sub('amount') @sub('details')</li>
@@ -48,7 +48,7 @@
 
 @hasfield('directions')
 <div class="flex flex-1 text-left flex-col mb-10 bg-light-green rounded-lg p-10">
-<p class="uppercase text-white font-advent-pro-semi-bold mb-10">Εκτέλεση</p>
+<p class="uppercase text-white font-advent-pro-semi-bold mb-10"> <?php _e( 'Εκτέλεση ', 'sage'); ?></p>
 <ul>
   @fields('directions')
     <li class="text-white mb-3">@sub('details')</li>

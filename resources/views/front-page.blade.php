@@ -228,11 +228,11 @@ $query = new WP_Query([
 
         <div class="flex justify-center mt-10">
 
-            <a href="/products/" class="btn">
+            <a href="<?php echo get_permalink(icl_object_id(1004,'page',false));?>" class="btn">
             <?php _e( 'Περισσοτερα', 'sage'); ?>
             </a>
 
-        </div>
+        </div>å
 
     </div>
 

@@ -109,6 +109,25 @@ $wp_customize->add_control(new \WP_Customize_Image_Control($wp_customize, 'custo
         'settings' => 'head_office_address'
       )
     );
+
+
+    $wp_customize->add_setting(
+      'head_office_address_en',
+      array(
+        'default' => '',
+        'sanitize_callback' => 'wp_kses_post',
+        'transport' => 'postMessage'
+      )
+    );
+  
+    $wp_customize->add_control(
+      'head_office_address_en',
+      array(
+        'label' => 'Head Office Address English',
+        'section' => 'footercontactdetails',
+        'settings' => 'head_office_address_en'
+      )
+    );
   
     $wp_customize->add_setting(
       'phone_number',

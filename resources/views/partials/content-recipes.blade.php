@@ -21,7 +21,7 @@
 
 
 
-<a href="@permalink" class="btn md:self-end mb-10 sm:mb-0">ΔΕΙΤΕ ΤΗ ΣΥΝΤΑΓΗ</a>
+<a href="@permalink" class="btn md:self-end mb-10 sm:mb-0"><?php _e( 'Δείτε τη Συνταγή', 'sage'); ?> </a>
 
 
   

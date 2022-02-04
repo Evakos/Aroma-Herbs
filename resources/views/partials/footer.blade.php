@@ -49,7 +49,27 @@
             <address class="flex flex-col flex-1 not-italic">
                 <h4 class="text-dark-green mb-5">Επικοινωνία</h4>
                 <ul>
-                    <li> <?php _e( 'Διεύθυνση:', 'sage'); ?> <?php echo esc_html(get_theme_mod( 'head_office_address')); ?></li>
+                    <li> <?php _e( 'Διεύθυνση:', 'sage'); ?>
+
+
+
+                          <?php if ( ICL_LANGUAGE_CODE=='el' ) : ?>
+ 
+                      <?php echo esc_html(get_theme_mod( 'head_office_address')); ?>
+  
+ <?php else: ?>
+
+                    
+           <?php echo esc_html(get_theme_mod( 'head_office_address_en')); ?>
+
+                    <?php endif; ?>
+                    
+                    
+          
+                     
+                     
+                     
+                     </li>
                     <li><?php _e( 'Τηλέφωνο: ', 'sage'); ?> <?php echo esc_html(get_theme_mod( 'phone_number')); ?></li>
                     <li> <?php _e( 'Email: ', 'sage'); ?><a href="<?php echo esc_url('mailto:' . get_theme_mod( 'email_address')) ?>" class=''><?php echo get_theme_mod( 'email_address') ?></a></li>
                 </ul>

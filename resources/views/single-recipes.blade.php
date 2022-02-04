@@ -9,9 +9,15 @@
 <div class="container relative mx-auto mb-24">
 
         <div class="flex items-center justify-center">
+
+          @if( ICL_LANGUAGE_CODE=='el')         
+    <img src="@asset('images/images/from-our-kitchen-gr.svg')" class="w-[700px">
+@else
+<img src="@asset('images/images/images/from-our-kitchen-en.svg')" class="w-[700px">
+@endif
     
         
-       <img src="@asset('images/from-kitchen.svg')" class="w-[700px]"/> 
+    
          
          </div>
 

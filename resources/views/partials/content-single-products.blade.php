@@ -126,7 +126,7 @@
 
                     <div class="flex flex-col mt-20 bg-light-green p-10">
 
-<p class="uppercase mb-10 font-advent-pro-semi-bold text-white">Αγορα ONLINE</p>
+<p class="uppercase mb-10 font-advent-pro-semi-bold text-white">Αγορα online</p>
 
 @hasfields('supermarkets')
                     <ul class="">
@@ -177,7 +177,7 @@
 
         <div class="flex flex-col md:w-4/6 md:pr-10 md:pl-80 md:border-r md:border-gray-300">
 
-            <p class="uppercase font-advent-pro-semi-bold flex md:self-center mb-10 md:mb-20">Περιγραφή</p>
+            <p class="uppercase font-advent-pro-semi-bold flex md:self-center mb-10 md:mb-20"><?php _e( 'Περιγραφή', 'sage'); ?></p>
 
             <p>          <?php echo get_field('long_description');?></p>
 
@@ -190,9 +190,9 @@
         <div class="flex flex-col mt-10 md:mt-0 md:w-2/6 md:pl-10">
 
             <p class="uppercase flex font-advent-pro-semi-bold mb-10 md:mb-20">
-Περισσότερες πληροφορίες</p>
+ <?php _e( 'Περισσότερες πληροφορίες', 'sage'); ?></p>
 
-            <p class="flex font-advent-pro-bold uppercase mb-10 text-aroma-grey">Οδηγίες Συντήρησης</p>
+            <p class="flex font-advent-pro-bold uppercase mb-10 text-aroma-grey"><?php _e( 'Οδηγίες Συντήρησης', 'sage'); ?></p>
 
 
             <?php echo get_field('extra_info');?>
@@ -265,7 +265,7 @@ $featured_img_url = get_the_post_thumbnail_url($recipe->ID, 'large');
 
 
 
-<a href="<?php echo get_permalink( $recipe->ID ); ?>" class="btn md:self-end mb-10 sm:mb-0">ΔΕΙΤΕ ΤΗ ΣΥΝΤΑΓΗ</a>
+<a href="<?php echo get_permalink( $recipe->ID ); ?>" class="btn md:self-end mb-10 sm:mb-0"><?php _e( 'Δείτε τη Συνταγή', 'sage'); ?></a>
 
 
 
