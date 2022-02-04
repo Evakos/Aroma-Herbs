@@ -212,7 +212,7 @@ $wp_customize->add_control(new \WP_Customize_Image_Control($wp_customize, 'custo
     );
 
     $wp_customize->add_setting(
-      'subscribe_text_english',
+      'subscribe_text_en',
       array(
         'default' => '',
         'section' => 'subscribedetails',
@@ -226,7 +226,7 @@ $wp_customize->add_control(new \WP_Customize_Image_Control($wp_customize, 'custo
       array(
         'label' => 'Subscribe Text English',
         'section' => 'subscribedetails',
-        'settings' => 'subscribe_text_english'
+        'settings' => 'subscribe_text_en'
       )
     );
 

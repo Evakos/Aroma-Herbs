@@ -14,7 +14,7 @@
 
                     
 
-                    <p><?php echo get_theme_mod( 'subscribe_text_english') ?></p>
+                    <p><?php echo get_theme_mod( 'subscribe_text_en') ?></p>
 
                     <?php endif; ?>
 
