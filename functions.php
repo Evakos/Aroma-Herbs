@@ -280,42 +280,17 @@ function recipe_filter(){
 
 	else {
 
-		$lang='en';
-
-		function query_by_language($lang){
-			global $sitepress;
-			// WPML Super power language switcher...
-			$sitepress->switch_lang( $lang );
-			$args = array(
-				// 'orderby' => 'date', // we will sort posts by date
-				// 'order'	=> 'ASC', // ASC or DESC
-				'posts_per_page' => -1, // get all posts
-			  
-			  'post_type'   => 'recipes', // Default: post
-			  'post_status' => 'publish',
-			  'suppress_filters' => false,
-			
-			);
-			$query = new WP_Query( $args );
-
-			return $query->post->ID;
-		}
-
-
-		query_by_language();
-
-		// $args = array(
-		// 	'orderby' => 'date', // we will sort posts by date
-		// 	'order'	=> 'ASC', // ASC or DESC
-		// 	'posts_per_page' => -1, // get all posts
-		// 	'post_type' => 'recipes',
-		// 	'suppress_filters' => true,
-		// 	'meta_value' => icl_object_id( $program_id, 'program', true, 'en' ), // With this function, WPML will try to find English $program_id in the case the current $program_id is Spanish
-		// );
+		$args = array(
+			//'orderby' => 'date', // we will sort posts by date
+			//'order'	=> 'ASC', // ASC or DESC
+			'posts_per_page' => -1, // get all posts
+			'post_type' => 'recipes',
+			'suppress_filters' => false
+		);
 	}
  
 	$count = 1;
-	$query = query_by_language($lang);
+	// $query = query_by_language($lang);
 
 	var_dump($query);
  
