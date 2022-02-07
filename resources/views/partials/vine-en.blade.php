@@ -1,6 +1,5 @@
 
-    <div class="animationContainer">
-        <div class="animation-item-en">
+<div class="animation-item-en">
             <div class="svg">
                 <svg id="svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1174.89 5211.33">
                     <defs>

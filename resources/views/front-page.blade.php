@@ -8,7 +8,7 @@
 
 
 <!-- Animation Mark Up Desktop -->
-<div class="container mx-auto relative h-[5200px] hidden xl:flex">
+<div class="container mx-auto relative h-[4600px] 2xl:h-[5200px] hidden xl:flex">
 
     <!-- First Image Row -->
     <img src="@asset('images/home-img-1.jpg')" class="absolute top-64 left-0" data-aos="move-right" />
@@ -50,8 +50,8 @@
 
     <!-- Last Image Row -->
     <img src="@asset('images/aroma_peppers_habanero_pack-front.png')"
-        class="absolute max-w-[500px] left-0 bottom-[900px] 2xl:bottom-[50px]" />
-    <img src="@asset('images/home-img-12.png')" class="absolute right-[100px] bottom-[900px] 2xl:bottom-[50px]" />
+        class="absolute max-w-[500px] left-0 bottom-0 " />
+    <img src="@asset('images/home-img-12.png')" class="absolute right-[100px] bottom-0" />
 
 
     <div class="absolute mx-auto right-0 left-0 bottom-0 top-0 z-0" />

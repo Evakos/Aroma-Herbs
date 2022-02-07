@@ -1,5 +1,5 @@
-<div class="animationContainer">
-        <div class="animationItem">
+
+ <div class="animationItem">
             <div class="svg">
                 <svg id='svg' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 1530.2 5143" style="enable-background:new 0 0 1530.2 5143;" xml:space="preserve">
