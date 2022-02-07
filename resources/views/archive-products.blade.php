@@ -35,8 +35,14 @@
 </div>
 
 <div class="flex justify-center py-10">
+
+@if( ICL_LANGUAGE_CODE=='el')         
+     <img src="@asset('images/discover-gr.svg')" class="w-[254px]">
+@else
+ <img src="@asset('images/discover-en.svg')" class="w-[154px]">
+@endif
   
-    <img src="@asset('images/discover.svg')" class="w-[254px]">
+   
 
   </div>
 

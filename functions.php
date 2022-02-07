@@ -223,19 +223,19 @@ function recipe_filter(){
 				'taxonomy' => 'product',
 				'field' => 'id',
 				'terms' => $_POST['productrecipefilter'],
-				'operator' => 'IN',
+				'operator' => 'AND',
 			),
 			array(
 				'taxonomy' => 'dietary_restrictions',
 				'field' => 'id',
 				'terms' => $_POST['dietrecipefilter'],
-				'operator' => 'IN',
+				'operator' => 'AND',
 			),
 			array(
 				'taxonomy' => 'courses',
 				'field' => 'id',
 				'terms' => $_POST['coursesrecipefilter'],
-				'operator' => 'IN',
+				'operator' => 'AND',
 			)
 		);
 
@@ -280,18 +280,44 @@ function recipe_filter(){
 
 	else {
 
-		$args = array(
-			'orderby' => 'date', // we will sort posts by date
-			'order'	=> 'ASC', // ASC or DESC
-			'posts_per_page' => -1, // get all posts
-			'post_type' => 'recipes',
-		);
+		$lang='en';
+
+		function query_by_language($lang){
+			global $sitepress;
+			// WPML Super power language switcher...
+			$sitepress->switch_lang( $lang );
+			$args = array(
+				// 'orderby' => 'date', // we will sort posts by date
+				// 'order'	=> 'ASC', // ASC or DESC
+				'posts_per_page' => -1, // get all posts
+			  
+			  'post_type'   => 'recipes', // Default: post
+			  'post_status' => 'publish',
+			  'suppress_filters' => false,
+			
+			);
+			$query = new WP_Query( $args );
+
+			return $query->post->ID;
+		}
+
+
+		query_by_language();
+
+		// $args = array(
+		// 	'orderby' => 'date', // we will sort posts by date
+		// 	'order'	=> 'ASC', // ASC or DESC
+		// 	'posts_per_page' => -1, // get all posts
+		// 	'post_type' => 'recipes',
+		// 	'suppress_filters' => true,
+		// 	'meta_value' => icl_object_id( $program_id, 'program', true, 'en' ), // With this function, WPML will try to find English $program_id in the case the current $program_id is Spanish
+		// );
 	}
  
 	$count = 1;
-	$query = new WP_Query( $args );
+	$query = query_by_language($lang);
 
-	//print_r($query);
+	var_dump($query);
  
 	if( $query->have_posts() ) :
         echo '<div class="grid md:grid-cols-4 md:gap-4">';
@@ -302,6 +328,8 @@ function recipe_filter(){
 		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
 
         $product_link = get_permalink();
+
+		
 
 		?>
 		    <div class="grid relative mb-10 sm:m-0
@@ -353,7 +381,7 @@ add_action('wp_ajax_nopriv_filterproducts', 'filter_products');
  
 function filter_products(){
 
-
+	
 
 	$args = array(
 		'orderby' => 'date', 

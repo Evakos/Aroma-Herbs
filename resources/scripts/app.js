@@ -79,9 +79,11 @@ function stickyHeader() {
 
   const navInner = document.getElementById("sticky-nav-inner");
  
-  const floating = document.getElementById("floating");
+  //const floating = document.getElementById("floating");
 
   const hamburger = document.getElementById("hamburger");
+
+  const hamburgerOpen = document.getElementById("hamburger-open");
 
   const wpml = document.querySelector(".wpml-ls-statics-shortcode_actions");
 
@@ -90,44 +92,75 @@ function stickyHeader() {
   //wpml.classList.add("wpml-sticky");
 
   if (sticky < 0) {
-    wpml.classList.remove("wpml-ls");  
+    //wpml.classList.remove("wpml-ls");  
     navOuter.classList.add("is-sticky");
     logo.classList.add("shrink-logo");
     navOuter.classList.add("fade-in-fast");
     navInner.classList.add("py-2");
-    floating.classList.add("pt-6");
+    //floating.classList.add("pt-6");
     navInner.classList.remove("py-10");
-    hamburger.classList.remove("md:-mb-36");
-    floating.classList.remove("pt-24");
-    switchLang.classList.remove("right-32");
-    switchLang.classList.add("right-48");
+ 
+    //floating.classList.remove("pt-24");
+    // switchLang.classList.remove("right-32");
+    // switchLang.classList.add("right-48");
+    hamburger.classList.remove("top-32");
+    hamburger.classList.add("top-9");
+
+   
+
+    switchLang.classList.remove("right-0");
+    switchLang.classList.add("right-24");
+
+    switchLang.classList.add("top-10");
+ 
+
+
+    if ($(window).width() <  1024) {
+
+      //     hamburger.classList.add("md:-mb-36");
+    
+      hamburger.classList.remove("top-16");
+      hamburger.classList.add("top-4");
+       
+    }
    
 
   } 
   
   else {
-    switchLang.classList.add("right-32");
-    switchLang.classList.remove("right-48");
+
+    switchLang.classList.remove("right-24");
+    switchLang.classList.add("right-0");
+
+    switchLang.classList.remove("top-10");
+
+   
+    // switchLang.classList.remove("right-48");
     wpml.classList.add("wpml-ls");
     navOuter.classList.remove("is-sticky");
     logo.classList.remove("shrink-logo");
     navOuter.classList.remove("fade-in-fast");
-    floating.classList.remove("pt-6");
+    //floating.classList.remove("pt-6");
     navInner.classList.remove("py-2");
-    floating.classList.add("pt-24");
+    //floating.classList.add("pt-24");
     navInner.classList.add("py-10");
+    
+    hamburger.classList.add("top-32");
+    hamburger.classList.remove("top-9");
+
+  
   
 
-    if ($(window).width() > 1024) {
+if ($(window).width() <  1024) {
 
-      hamburger.classList.add("md:-mb-36");
+  //     hamburger.classList.add("md:-mb-36");
+
+  hamburger.classList.add("top-16");
+  hamburger.classList.remove("top-4");
    
-  }
+}
    
-  else {
-      
-    hamburger.classList.remove("md:-mb-36");   
-  }
+
     
 
 
@@ -145,7 +178,7 @@ stickyHeader();
 
 
 
-$(".hamburger").click(function () {
+$("#hamburger").click(function () {
   $(this).toggleClass("is-active");
   // $("#menu-modal").css("width", "60%")
   $("#menu-modal").toggleClass("menu-active");
@@ -153,12 +186,34 @@ $(".hamburger").click(function () {
 
   // Do this instead
 
-  $("#language-switcher").toggleClass("hidden");
+  // $("#language-switcher").toggleClass("hidden");
 
   // $("#language-switcher-screen").css("display" , "none");
 
-  var active = $("#language-switcher-screen").toggleClass('active').hasClass('active');
-  $("#language-switcher-screen").css('display', !active ? 'block' : 'none');
+  // var active = $("#language-switcher-screen").toggleClass('active').hasClass('active');
+  // $("#language-switcher-screen").css('display', !active ? 'block' : 'none');
+
+
+
+  
+});
+
+$("#hamburger-open").click(function () {
+  $(this).toggleClass("is-active");
+  // // $("#menu-modal").css("width", "60%")
+  $("#menu-modal").toggleClass("menu-active");
+  $("#overlay").toggleClass("hidden animate__animated animate__fadeIn");
+  $("#hamburger").toggleClass("is-active");
+  $("#hamburger-open").toggleClass("is-active");
+
+  // Do this instead
+
+  // $("#language-switcher").toggleClass("hidden");
+
+  // // $("#language-switcher-screen").css("display" , "none");
+
+  // var active = $("#language-switcher-screen").toggleClass('active').hasClass('active');
+  // $("#language-switcher-screen").css('display', !active ? 'block' : 'none');
 
 
 
@@ -231,6 +286,14 @@ function register($form) {
     }
   })
 };
+
+
+
+document.getElementById("site-logo").addEventListener("click", function (event) {
+
+console.log('Logo Clicked');
+
+});
 
 
 // import then needed Font Awesome functionality

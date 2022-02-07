@@ -313,6 +313,9 @@ add_action( 'init', function() {
 
 # Add some custom columns to the admin screen:
 		'admin_cols' => [
+            'products' => [
+                'taxonomy' => 'product'
+                ],
 			'courses' => [
             'taxonomy' => 'courses'
             ],

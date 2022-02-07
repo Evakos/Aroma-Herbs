@@ -21,7 +21,31 @@
 
 <p class="mb-10 text-aroma-grey"><?php _e( 'Για οποιαδήποτε πληροφορία που μπορεί να χρειαστείτε, είμαστε στη διάθεση σας.', 'sage'); ?></p>
 
-<p class="flex items-center text-aroma-grey mb-10"><img src="@asset('images/map-marker.svg')" class="pr-10"> <?php echo wp_kses_post(get_theme_mod( 'head_office_address')); ?></p>
+<p class="flex items-center text-aroma-grey mb-10"><img src="@asset('images/map-marker.svg')" class="pr-10"> 
+
+
+
+
+  <?php if ( ICL_LANGUAGE_CODE=='el' ) : ?>
+ 
+                      <?php echo esc_html(get_theme_mod( 'head_office_address')); ?>
+  
+ <?php else: ?>
+
+                    
+           <?php echo esc_html(get_theme_mod( 'head_office_address_en')); ?>
+
+                    <?php endif; ?>
+
+
+
+
+
+
+
+
+
+</p>
 
 <p class="flex items-center text-aroma-grey mb-10"><img src="@asset('images/mobile.svg')" class="pr-10"><?php echo get_theme_mod( 'phone_number') ?></p>
 

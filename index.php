@@ -26,6 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+    <script type="text/javascript" src="/wp-content/themes/aroma-herbs/public/scripts/animation-2.js"></script>
 
   
   </body>

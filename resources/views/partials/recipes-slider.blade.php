@@ -58,19 +58,7 @@ foreach ( $names as $term ) {
     $query = new WP_Query($args);
 
 
-    
-
     @endphp
-
-
-  
-
-
-
-
-
-
-
 
 
     <div class="flex mt-5 justify-center">

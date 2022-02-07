@@ -5,7 +5,7 @@
  import "jquery";
 
 
-  function getRecipes () {
+  function getRecipes() {
     var recipefilter = $("#recipefilter");
 
 	$("#recipe-response").toggleClass('fade-in-fast'); 
@@ -24,9 +24,12 @@
       type: recipefilter.attr("method"), // POST
       beforeSend: function (xhr) {
         recipefilter.find("button").text("Processing..."); // changing the button label
+
+
+
       },
       success: function (data) {
-        console.log(data.node);
+        // console.log('This is the ' + data);
         recipefilter.find("button").text("Apply filter"); // changing the button label back
         $("#recipe-response").html(data); // insert data
       },
@@ -42,7 +45,7 @@
  e.preventDefault();
     getRecipes();
 
-    console.log("changed 1"); 
+    //console.log("changed 1"); 
   
 
   });
@@ -53,7 +56,7 @@ $("select").change(function (e) {
 
   e.preventDefault();
 
-	console.log("select changed");
+	//console.log("select changed");
 
   $(this).removeClass("style-select");
   $('option', this).removeClass("select-active");

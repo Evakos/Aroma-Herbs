@@ -47,7 +47,7 @@
             </div>
 
             <address class="flex flex-col flex-1 not-italic">
-                <h4 class="text-dark-green mb-5">Επικοινωνία</h4>
+                <h4 class="text-dark-green mb-5"><?php _e( 'Επικοινωνία', 'sage'); ?></h4>
                 <ul>
                     <li> <?php _e( 'Διεύθυνση:', 'sage'); ?>
 
