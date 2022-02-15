@@ -2,7 +2,7 @@
   Template Name: Front Page Template
 --}}
 
-@include('partials.modal')
+
 
 @include('partials.header')
 

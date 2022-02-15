@@ -2561,9 +2561,6 @@ select {
 .top-\[3800px\]{
 	top: 3800px;
 }
-.bottom-\[900px\]{
-	bottom: 900px;
-}
 .right-\[100px\]{
 	right: 100px;
 }
@@ -2591,20 +2588,11 @@ select {
 .top-5{
 	top: 1.25rem;
 }
-.right-\[15\%\]{
-	right: 15%;
+.right-\[8\%\]{
+	right: 8%;
 }
 .right-5{
 	right: 1.25rem;
-}
-.top-8{
-	top: 2rem;
-}
-.right-\[10\%\]{
-	right: 10%;
-}
-.right-\[8\%\]{
-	right: 8%;
 }
 .z-0{
 	z-index: 0;
@@ -2725,9 +2713,6 @@ select {
 .-mt-16{
 	margin-top: -4rem;
 }
-.mt-2{
-	margin-top: 0.5rem;
-}
 .block{
 	display: block;
 }
@@ -2758,8 +2743,8 @@ select {
 .h-full{
 	height: 100%;
 }
-.h-\[5200px\]{
-	height: 5200px;
+.h-\[4600px\]{
+	height: 4600px;
 }
 .h-\[520px\]{
 	height: 520px;
@@ -2773,29 +2758,8 @@ select {
 .h-screen{
 	height: 100vh;
 }
-.h-\[100px\]{
-	height: 100px;
-}
 .h-0{
 	height: 0px;
-}
-.h-\[3200px\]{
-	height: 3200px;
-}
-.h-\[4200px\]{
-	height: 4200px;
-}
-.h-\[4800px\]{
-	height: 4800px;
-}
-.h-\[4000px\]{
-	height: 4000px;
-}
-.h-\[4400px\]{
-	height: 4400px;
-}
-.h-\[4600px\]{
-	height: 4600px;
 }
 .max-h-\[300px\]{
 	max-height: 300px;
@@ -2919,9 +2883,6 @@ select {
 }
 .w-\[367px\]{
 	width: 367px;
-}
-.w-\[80px\]{
-	width: 80px;
 }
 .w-\[140px\]{
 	width: 140px;
@@ -3207,9 +3168,6 @@ select {
 .pt-20{
 	padding-top: 5rem;
 }
-.pl-8{
-	padding-left: 2rem;
-}
 .pt-44{
 	padding-top: 11rem;
 }
@@ -3428,12 +3386,6 @@ select {
 	.sm\:-right-20{
 		right: -5rem;
 	}
-	.sm\:right-\[15\%\]{
-		right: 15%;
-	}
-	.sm\:bottom-\[900px\]{
-		bottom: 900px;
-	}
 	.sm\:m-0{
 		margin: 0px;
 	}
@@ -3490,9 +3442,6 @@ select {
 	}
 	.sm\:w-\[238px\]{
 		width: 238px;
-	}
-	.sm\:w-\[300px\]{
-		width: 300px;
 	}
 	.sm\:w-\[340px\]{
 		width: 340px;
@@ -3555,9 +3504,6 @@ select {
 	.md\:absolute{
 		position: absolute;
 	}
-	.md\:right-\[15\%\]{
-		right: 15%;
-	}
 	.md\:m-0{
 		margin: 0px;
 	}
@@ -3612,9 +3558,6 @@ select {
 	}
 	.md\:h-28{
 		height: 7rem;
-	}
-	.md\:h-\[200px\]{
-		height: 200px;
 	}
 	.md\:min-h-\[600px\]{
 		min-height: 600px;
@@ -3849,9 +3792,6 @@ select {
 	.xl\:bottom-auto{
 		bottom: auto;
 	}
-	.xl\:right-\[15\%\]{
-		right: 15%;
-	}
 	.xl\:mb-10{
 		margin-bottom: 2.5rem;
 	}
@@ -3917,9 +3857,6 @@ select {
 	.\32xl\:top-\[4300px\]{
 		top: 4300px;
 	}
-	.\32xl\:bottom-\[50px\]{
-		bottom: 50px;
-	}
 	.\32xl\:right-\[15\%\]{
 		right: 15%;
 	}
@@ -3927,11 +3864,11 @@ select {
 		margin-left: 7rem;
 		margin-right: 7rem;
 	}
-	.\32xl\:h-\[720px\]{
-		height: 720px;
-	}
 	.\32xl\:h-\[5200px\]{
 		height: 5200px;
+	}
+	.\32xl\:h-\[720px\]{
+		height: 720px;
 	}
 	.\32xl\:w-auto{
 		width: auto;

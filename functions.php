@@ -213,6 +213,7 @@ function recipe_filter(){
 		'orderby' => 'date', // we will sort posts by date
 		'order'	=> 'ASC', // ASC or DESC
 		'posts_per_page' => -1, // get all posts
+		'suppress_filters' => 0,
 	);
  
 	//Taxonomy query for recipe linked to product.
@@ -279,7 +280,8 @@ function recipe_filter(){
 	}
 
 	else {
-
+		
+	
 		$args = array(
 			//'orderby' => 'date', // we will sort posts by date
 			//'order'	=> 'ASC', // ASC or DESC
@@ -290,9 +292,9 @@ function recipe_filter(){
 	}
  
 	$count = 1;
-	// $query = query_by_language($lang);
+	$query = new WP_Query( $args );
 
-	var_dump($query);
+	//print_r($query);
  
 	if( $query->have_posts() ) :
         echo '<div class="grid md:grid-cols-4 md:gap-4">';
@@ -303,8 +305,6 @@ function recipe_filter(){
 		$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
 
         $product_link = get_permalink();
-
-		
 
 		?>
 		    <div class="grid relative mb-10 sm:m-0
@@ -356,13 +356,13 @@ add_action('wp_ajax_nopriv_filterproducts', 'filter_products');
  
 function filter_products(){
 
-	
+//var_dump( $_POST['categoryfilter'] );
 
 	$args = array(
 		'orderby' => 'date', 
 		'post_type' => 'products',
 		'posts_per_page' => -1,
-		// 'post_status'     => 'publish'
+		//'post_status'     => 'publish'
 		
 	);
 

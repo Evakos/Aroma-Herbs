@@ -32,7 +32,7 @@ interface Mailable
     public function later($delay, Queue $queue);
 
     /**
-     * Set the recipents of the message.
+     * Set the recipients of the message.
      *
      * @param  object|array|string  $address
      * @param  string|null  $name
@@ -41,7 +41,7 @@ interface Mailable
     public function cc($address, $name = null);
 
     /**
-     * Set the recipents of the message.
+     * Set the recipients of the message.
      *
      * @param  object|array|string  $address
      * @param  string|null  $name
@@ -50,7 +50,7 @@ interface Mailable
     public function bcc($address, $name = null);
 
     /**
-     * Set the recipents of the message.
+     * Set the recipients of the message.
      *
      * @param  object|array|string  $address
      * @param  string|null  $name

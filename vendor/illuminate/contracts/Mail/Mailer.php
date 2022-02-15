@@ -40,7 +40,7 @@ interface Mailer
     public function send($view, array $data = [], $callback = null);
 
     /**
-     * Get the array of failed recipents.
+     * Get the array of failed recipients.
      *
      * @return array
      */
