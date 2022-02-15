@@ -4,7 +4,7 @@
 
 @extends('layouts.app')
 
-@include('partials.modal')
+
 
 
   @include('partials.header')
